@@ -1,0 +1,634 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebooks - Introduction to MySQL - MySQL Notes</title>
+    <link rel="stylesheet" href="../../../../assets/css/app.css">
+    <link href='//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+  </head>
+  <body>
+
+<div class="row navigation-row">
+    <div class="columns small-12">
+
+        <div class="mobile-branding show-for-small-only">
+          <a href="../../../../index.html"><div class="menu-text mobile-branding">Smerth</div></a>
+        </div>
+        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+          <div class="title-bar-title">Menu</div>
+        </div>
+        <nav id="main-menu" class="top-bar">
+
+            <div class="top-bar-left">
+                <!-- Navigation on medium and up screens -->
+                <ul class="vertical menu medium-horizontal show-for-medium" data-responsive-menu="dropdown">
+<li class="menu-text"><a class="sitename" href="../../../../index.html">Smerth</a></li>
+<li><a href="../../../../projects.html">Projects</a></li>
+<li><a href="../../../../cases.html">Case Studies</a></li>
+<li>
+    <a href="../../../../books.html">Notebooks</a>
+        <ul class="menu vertical" style="width: 300px;">
+            <li><a href="../../../../content/books/javascript-working-with-the-dom/book/index.html">Javascript: working with the dom</a></li>
+            <li><a href="../../../../content/books/unix-for-macos/book/index.html">Unix for MacOS</a></li>
+            <li><a href="../../../../content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="../../../../content/books/webpack/book/index.html">Webpack</a></li>
+            
+        </ul>
+<!--           <ul class="menu vertical" style="width: 300px;">
+            <li><a href="content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="content/books/easybook_notes/book/index.html">Easybook Notes</a></li>
+            <li><a href="content/books/introduction-to-mysql/book/index.html">Introduction to MySQL</a></li>
+            <li><a href="content/books/javascript-and-ajax/book/index.html">Javascript and AJAX</a></li>
+            <li><a href="content/books/javascript-and-json/book/index.html">Javascript and JSON</a></li>
+            <li><a href="content/books/jquery-data-with-ajax/book/index.html">jQuery Data with AJAX</a></li>
+            <li><a href="content/books/unix-for-macos/book/index.html">UNIX for MacOS</a></li>
+            <li><a href="content/books/GIT-Workflow/book/index.html">GIT Workflow</a></li>
+            <li><a href="content/books/webpack/book/index.html">Webpack</a></li>
+        </ul> -->
+<!--     <ul class="menu vertical" style="width: 100%;">
+        <li><a href="/content/books/applescript-notes/book"><span class="fi-book-bookmark"></span> AppleScript Notes</a></li>
+        <li><a href="/content/books/build-a-polling-app-with-socket-io-and-react/book"><span class="fi-book-bookmark"></span> Polling App with Socket.io and React.js</a></li>
+        <li><a href="/content/books/introduction-to-mysql/book"><span class="fi-book-bookmark"></span> Introduction to MySQL</a></li>
+        <li><a href="/content/books/unix-for-macos/book"><span class="fi-book-bookmark"></span> UNIX for MacOS</a></li>
+        <li><a href="/content/books/javascript-working-with-the-dom/book"><span class="fi-book-bookmark"></span> Javascript working with the DOM</a></li>
+    </ul> -->
+</li>
+<!-- <li><a href="../../../../about.html">About</a></li> -->
+<li><a href="../../../../content/books/about/book/chapter-1.html">About</a></li>
+                </ul>
+                <!-- Navigation on small screens -->
+                <ul class="vertical menu medium-horizontal show-for-small-only" data-responsive-menu="dropdown" data-accordion-menu>
+<li class="menu-text"><a href="../../../../index.html">Notebook</a></li>
+<li><a href="../../../../projects.html">Projects</a></li>
+<li><a href="../../../../cases.html">Case Studies</a></li>
+<li>
+    <a href="../../../../books.html">Notebooks</a>
+        <ul class="menu vertical" style="width: 100%;">
+            <li><a href="../../../../content/books/javascript-working-with-the-dom/book/index.html">Javascript: working with the dom</a></li>
+            <li><a href="../../../../content/books/unix-for-macos/book/index.html">Unix for MacOS</a></li>
+            <li><a href="../../../../content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="../../../../content/books/webpack/book/index.html">Webpack</a></li>
+            
+        </ul>
+<!--     <ul class="menu vertical" style="width: 100%;">
+        <li><a href="/content/books/applescript-notes/book"><span class="fi-book-bookmark"></span> AppleScript Notes</a></li>
+        <li><a href="/content/books/build-a-polling-app-with-socket-io-and-react/book"><span class="fi-book-bookmark"></span> Polling App with Socket.io and React.js</a></li>
+        <li><a href="/content/books/introduction-to-mysql/book"><span class="fi-book-bookmark"></span> Introduction to MySQL</a></li>
+        <li><a href="/content/books/unix-for-macos/book"><span class="fi-book-bookmark"></span> UNIX for MacOS</a></li>
+        <li><a href="/content/books/javascript-working-with-the-dom/book"><span class="fi-book-bookmark"></span> Javascript working with the DOM</a></li>
+    </ul> -->
+</li>
+<!-- <li><a href="../../../../about.html">About</a></li> -->
+<li><a href="../../../../content/books/about/book/chapter-1.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="row pageheader-row">
+    <div class="small-12 column index text-center">
+        <div class="callout small pageheader">
+            <h1 id="mysql-notes" class="book-title title-text">
+                <a href="./index.html" class="">Introduction to MySQL</a>
+            </h1>
+            <h6>Smerth</h6>
+        </div>
+    </div>
+</div>
+
+
+<div class="row " data-sticky-container>
+    <div class="column small-12 chapter-navigation-bar sticky" data-sticky data-anchor="main" data-options="marginTop:0;" style="width: 100%;">
+
+
+
+<div class="row chapter-navigation-row">
+    <div class="column small-6 small-order-2 medium-order-1 medium-3 prev-container">
+                    <h6><a class="prev" href="./index.html">&larr; Previous<div><small> - </small></div></a></h6>
+            </div>
+
+    <div class="column small-12 small-order-1 medium-order-2 medium-6 text-center title-container">
+        <h6 id="mysql-notes" class="bk-title"><span class="fi-book-bookmark"></span> <a href="./index.html">Introduction to MySQL</a></h6>
+        <h6 id="mysql-notes" class="ch-title align-self-middle"><small>Chapter 1 - MySQL Notes</small></h6>
+    </div>
+
+    <div class="column small-6 small-order-3 medium-order-3 medium-3 next-container">
+                    <p class="next disabled">Next
+                &rarr;
+                <span></span>
+            </p>
+            </div>
+
+</div>
+</div>
+    </div> 
+    <div id="book-page" class="row">
+        
+        
+        <div id="sidebar" class="column small-12 medium-4  large-3" data-sticky-container>
+            <nav id="sidebar-toc" class=" sticky" data-sticky data-anchor="main" data-options="marginTop:5;">
+
+                
+                                <h3>
+                    <a href=".">Table of contents</a>
+                </h3>
+                <ul class="toc">
+                                                                                                    <li class="level-1 active">
+                                <a class="chapter" href="./chapter-1.html">
+                                    <span class="chapter-label">Chapter 1.</span>
+                                    MySQL Notes
+                                </a>
+                                <ul id="page-toc" class="unstyled toc-l2">
+                                                                                                                        <li class="level-3" data-scroll="which-mysql">
+                                                <span>1.1.1</span>
+                                                <a class="internal" href="./chapter-1.html#which-mysql">Which MySQL</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="current-mysql-version">
+                                                <span>1.1.2</span>
+                                                <a class="internal" href="./chapter-1.html#current-mysql-version">Current MySQL Version</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="get-help">
+                                                <span>1.1.3</span>
+                                                <a class="internal" href="./chapter-1.html#get-help">Get Help</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="mysql-comments">
+                                                <span>1.1.4</span>
+                                                <a class="internal" href="./chapter-1.html#mysql-comments">MySQL Comments</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="commands-start-at-the-mysql-prompt">
+                                                <span>1.1.5</span>
+                                                <a class="internal" href="./chapter-1.html#commands-start-at-the-mysql-prompt">Commands start at the MySQL prompt</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="current-version">
+                                                <span>1.1.6</span>
+                                                <a class="internal" href="./chapter-1.html#current-version">Current Version</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="multi-line-commands">
+                                                <span>1.1.7</span>
+                                                <a class="internal" href="./chapter-1.html#multi-line-commands">Multi-line Commands</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="connect-to-a-database">
+                                                <span>1.1.8</span>
+                                                <a class="internal" href="./chapter-1.html#connect-to-a-database">Connect To A Database</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="quit">
+                                                <span>1.2.1</span>
+                                                <a class="internal" href="./chapter-1.html#quit">QUIT</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="show">
+                                                <span>1.2.2</span>
+                                                <a class="internal" href="./chapter-1.html#show">SHOW</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="use">
+                                                <span>1.2.3</span>
+                                                <a class="internal" href="./chapter-1.html#use">USE</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="create">
+                                                <span>1.2.4</span>
+                                                <a class="internal" href="./chapter-1.html#create">CREATE</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="grant">
+                                                <span>1.2.5</span>
+                                                <a class="internal" href="./chapter-1.html#grant">GRANT</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="show-tables">
+                                                <span>1.2.6</span>
+                                                <a class="internal" href="./chapter-1.html#show-tables">SHOW TABLES</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="create-table">
+                                                <span>1.2.7</span>
+                                                <a class="internal" href="./chapter-1.html#create-table">CREATE TABLE</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="describe-table">
+                                                <span>1.2.8</span>
+                                                <a class="internal" href="./chapter-1.html#describe-table">DESCRIBE TABLE</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="load-data">
+                                                <span>1.2.9</span>
+                                                <a class="internal" href="./chapter-1.html#load-data">LOAD DATA</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="insert">
+                                                <span>1.2.10</span>
+                                                <a class="internal" href="./chapter-1.html#insert">INSERT</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="troubleshooting">
+                                                <span>1.2.11</span>
+                                                <a class="internal" href="./chapter-1.html#troubleshooting">Troubleshooting</a>
+                                            </li>
+                                                                                                    </ul>
+                    </li>
+                                            </ul>
+        </nav>
+    </div>
+
+        <div id="main" class="main column small-12 medium-8 large-9 ">
+        <div class="main-content">
+                                                    <h2 id="introduction">1.1 Introduction</h2>
+
+<p>Here are some quick reminders about how to work with MySQL...</p>
+
+<h3 id="which-mysql">1.1.1 Which MySQL</h3>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">which</span> mysql</pre>
+</div>
+
+<p>returns...</p>
+
+<div class="code bash">
+<pre class="bash"><span class="sy0">/</span>usr<span class="sy0">/</span>local<span class="sy0">/</span>mysql<span class="sy0">/</span>bin<span class="sy0">/</span>mysql</pre>
+</div>
+
+<h3 id="current-mysql-version">1.1.2 Current MySQL Version</h3>
+
+<div class="code bash">
+<pre class="bash">mysql <span class="re5">-v</span></pre>
+</div>
+
+<p>returns...</p>
+
+<div class="code bash">
+<pre class="bash">Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection <span class="kw2">id</span> is <span class="nu0">2</span>
+Server version: 5.6.21 MySQL Community Server <span class="br0">&#40;</span>GPL<span class="br0">&#41;</span>
+&nbsp;
+etc...</pre>
+</div>
+
+<h3 id="get-help">1.1.3 Get Help</h3>
+
+<div class="code bash">
+<pre class="bash">mysql <span class="re5">--help</span></pre>
+</div>
+
+<h3 id="mysql-comments">1.1.4 MySQL Comments</h3>
+
+<div class="code mysql">
+<pre class="mysql"><span class="coMULTI">/*
+this is a
+multiple-line comment
+*/</span></pre>
+</div>
+
+<h3 id="commands-start-at-the-mysql-prompt">1.1.5 Commands start at the MySQL prompt</h3>
+
+<div class="code bash">
+<pre class="bash">mysql<span class="sy0">&gt;</span></pre>
+</div>
+
+<p>Note that all text commands must be first on line and end with a semi-colon ';'</p>
+
+<h3 id="current-version">1.1.6 Current Version</h3>
+
+<div class="code mysql">
+<pre class="mysql"><span class="kw1">SELECT</span> <span class="kw23">VERSION</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy2">,</span> <span class="kw17">CURRENT_DATE</span><span class="sy2">;</span></pre>
+</div>
+
+<h3 id="multi-line-commands">1.1.7 Multi-line Commands</h3>
+
+<p>Entering return gives you a new line, the command isn't complete until the semi-colon is added. Entering return after the semi-colon executes the command.</p>
+
+<div class="code mysql">
+<pre class="mysql"><span class="kw1">SELECT</span>
+    <span class="sy1">-&gt;</span> <span class="kw23">USER</span><span class="br0">&#40;</span><span class="br0">&#41;</span>
+    <span class="sy1">-&gt;</span> <span class="sy2">,</span>
+    <span class="sy1">-&gt;</span> <span class="kw17">CURRENT_DATE</span><span class="sy2">;</span></pre>
+</div>
+
+<h3 id="connect-to-a-database">1.1.8 Connect To A Database</h3>
+
+<div class="code bash">
+<pre class="bash">mysql <span class="re5">-h</span> localhost <span class="re5">-u</span> root <span class="re5">-p</span></pre>
+</div>
+
+<p>passwords are case sensitive.</p>
+
+<h2 id="mysql-commands">1.2 MySQL Commands</h2>
+
+<h3 id="quit">1.2.1 QUIT</h3>
+
+<div class="code mysql">
+<pre class="mysql">\q</pre>
+</div>
+
+<p>Not necessary to end with a semi-colon ;-)</p>
+
+<h3 id="show">1.2.2 SHOW</h3>
+
+<div class="code mysql">
+<pre class="mysql"><span class="kw1">SHOW</span> <span class="kw1">DATABASES</span><span class="sy2">;</span></pre>
+</div>
+
+<h3 id="use">1.2.3 USE</h3>
+
+<div class="code mysql">
+<pre class="mysql"><span class="kw1">USE</span> test</pre>
+</div>
+
+<p>Where test is the name of a database.</p>
+
+<p>Like QUIT, the USE command does not require a semicolon to follow it.</p>
+
+<h3 id="create">1.2.4 CREATE</h3>
+
+<div class="code mysql">
+<pre class="mysql"><span class="kw1">CREATE</span> <span class="kw2">DATABASE</span> menagerie<span class="sy2">;</span></pre>
+</div>
+
+<p>Where menagerie is the name of the new DB you want to create.</p>
+
+<h3 id="grant">1.2.5 GRANT</h3>
+
+<div class="code mysql">
+<pre class="mysql"><span class="kw1">GRANT</span> <span class="kw1">ALL</span> <span class="kw1">ON</span> menagerie.<span class="sy1">*</span> <span class="kw1">TO</span> <span class="st0">'your<span class="es1">_</span>mysql<span class="es1">_</span>name'</span>@<span class="st0">'your<span class="es1">_</span>client<span class="es1">_</span>host'</span><span class="sy2">;</span></pre>
+</div>
+
+<p>In this case the '.*' means 'all tables' in the db named menagerie</p>
+
+<h3 id="show-tables">1.2.6 SHOW TABLES</h3>
+
+<p>List Tables in a DB</p>
+
+<div class="code mysql">
+<pre class="mysql"><span class="kw1">SHOW</span> <span class="kw1">TABLES</span><span class="sy2">;</span></pre>
+</div>
+
+<h3 id="create-table">1.2.7 CREATE TABLE</h3>
+
+<div class="code sql">
+<pre class="sql"><span class="kw1">CREATE</span> <span class="kw1">TABLE</span> pet <span class="br0">&#40;</span>
+  name <span class="kw1">VARCHAR</span><span class="br0">&#40;</span><span class="nu0">20</span><span class="br0">&#41;</span><span class="sy0">,</span> 
+  owner <span class="kw1">VARCHAR</span><span class="br0">&#40;</span><span class="nu0">20</span><span class="br0">&#41;</span><span class="sy0">,</span> 
+  species <span class="kw1">VARCHAR</span><span class="br0">&#40;</span><span class="nu0">20</span><span class="br0">&#41;</span><span class="sy0">,</span> 
+  sex <span class="kw1">CHAR</span><span class="br0">&#40;</span><span class="nu0">1</span><span class="br0">&#41;</span><span class="sy0">,</span> 
+  birth <span class="kw1">DATE</span><span class="sy0">,</span> 
+  death <span class="kw1">DATE</span><span class="br0">&#41;</span>;</pre>
+</div>
+
+<h3 id="describe-table">1.2.8 DESCRIBE TABLE</h3>
+
+<div class="code mysql">
+<pre class="mysql"><span class="kw1">DESCRIBE</span> pet<span class="sy2">;</span></pre>
+</div>
+
+<p>Where pet is the name of the table</p>
+
+<h3 id="load-data">1.2.9 LOAD DATA</h3>
+
+<p>From External File into Table</p>
+
+<div class="code mysql">
+<pre class="mysql"><span class="kw1">LOAD</span> <span class="kw1">DATA</span> <span class="kw1">LOCAL</span> <span class="kw1">INFILE</span> <span class="st0">'/Library/WebServer/Documents/Code hints/Pet-table.csv'</span> <span class="kw1">INTO</span> <span class="kw1">TABLE</span> pet<span class="sy2">;</span></pre>
+</div>
+
+<p>On a Mac you may want to add 'lines terminated by'</p>
+
+<div class="code mysql">
+<pre class="mysql"><span class="kw1">LOAD</span> <span class="kw1">DATA</span> <span class="kw1">LOCAL</span> <span class="kw1">INFILE</span> <span class="st0">'/path/pet.txt'</span> <span class="kw1">INTO</span> <span class="kw1">TABLE</span> pet <span class="kw1">LINES</span> <span class="kw1">TERMINATED BY</span> <span class="st0">'<span class="es0">\r</span>'</span><span class="sy2">;</span></pre>
+</div>
+
+<p><em>Nota bene:</em></p>
+
+<ol>
+<li>datafiles should be tab delimited</li>
+<li>tab delimited files should be appended with .txt</li>
+<li>empty cells should contain "\N" (<em>which will result in a value of 'null' being imported for that cell</em>)</li>
+</ol>
+
+<h3 id="insert">1.2.10 INSERT</h3>
+
+<p>To insert a single data record into a table</p>
+
+<div class="code mysql">
+<pre class="mysql"><span class="kw2">INSERT</span> <span class="kw1">INTO</span> pet
+    <span class="sy1">-&gt;</span> <span class="kw1">VALUES</span> <span class="br0">&#40;</span><span class="st0">'Puffball'</span><span class="sy2">,</span><span class="st0">'Diane'</span><span class="sy2">,</span><span class="st0">'hamster'</span><span class="sy2">,</span><span class="st0">'f'</span><span class="sy2">,</span><span class="st0">'1999-03-30'</span><span class="sy2">,</span><span class="kw3">NULL</span><span class="br0">&#41;</span><span class="sy2">;</span></pre>
+</div>
+
+<p>Nota bene:</p>
+
+<ol>
+<li>String and date values are specified as quoted strings here. </li>
+<li>Also, with INSERT, you can insert NULL directly to represent a missing value. (<em>as opposed to the LOAD command above.</em>)</li>
+</ol>
+
+<h3 id="troubleshooting">1.2.11 Troubleshooting</h3>
+
+<p>When you have a problem and things don't work</p>
+
+<div class="code mysql">
+<pre class="mysql"><span class="kw1">SHOW</span> <span class="kw1">WARNINGS</span>\G</pre>
+</div>
+
+<h2 id="quick-reference">1.3 Quick reference</h2>
+
+<div class="table" id="table-1-1">
+
+    <table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Command</th>
+  <th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>?</td>
+  <td>(\?)</td>
+  <td>Synonym for `help'.</td>
+</tr>
+<tr>
+  <td>clear</td>
+  <td>(\c)</td>
+  <td>Clear the current input statement.</td>
+</tr>
+<tr>
+  <td>connect</td>
+  <td>(\r)</td>
+  <td>Reconnect to the server. Optional arguments are db and host.</td>
+</tr>
+<tr>
+  <td>delimiter</td>
+  <td>(\d)</td>
+  <td>Set statement delimiter.</td>
+</tr>
+<tr>
+  <td>edit</td>
+  <td>(\e)</td>
+  <td>Edit command with $EDITOR.</td>
+</tr>
+<tr>
+  <td>ego</td>
+  <td>(\G)</td>
+  <td>Send command to mysql server, display result vertically.</td>
+</tr>
+<tr>
+  <td>exit</td>
+  <td>(\q)</td>
+  <td>Exit mysql. Same as quit.</td>
+</tr>
+<tr>
+  <td>go</td>
+  <td>(\g)</td>
+  <td>Send command to mysql server.</td>
+</tr>
+<tr>
+  <td>help</td>
+  <td>(\h)</td>
+  <td>Display this help.</td>
+</tr>
+<tr>
+  <td>nopager</td>
+  <td>(\n)</td>
+  <td>Disable pager, print to stdout.</td>
+</tr>
+<tr>
+  <td>notee</td>
+  <td>(\t)</td>
+  <td>Don't write into outfile.</td>
+</tr>
+<tr>
+  <td>pager</td>
+  <td>(\P)</td>
+  <td>Set PAGER [to_pager]. Print the query results via PAGER.</td>
+</tr>
+<tr>
+  <td>print</td>
+  <td>(\p)</td>
+  <td>Print current command.</td>
+</tr>
+<tr>
+  <td>prompt</td>
+  <td>(\R)</td>
+  <td>Change your mysql prompt.</td>
+</tr>
+<tr>
+  <td>quit</td>
+  <td>(\q)</td>
+  <td>Quit mysql.</td>
+</tr>
+<tr>
+  <td>rehash</td>
+  <td>(#)</td>
+  <td>Rebuild completion hash.</td>
+</tr>
+<tr>
+  <td>source</td>
+  <td>(&#46;)</td>
+  <td>Execute an SQL script file. Takes a file name as an argument.</td>
+</tr>
+<tr>
+  <td>status</td>
+  <td>(\s)</td>
+  <td>Get status information from the server.</td>
+</tr>
+<tr>
+  <td>system</td>
+  <td>(&#33;)</td>
+  <td>Execute a system shell command.</td>
+</tr>
+<tr>
+  <td>tee</td>
+  <td>(\T)</td>
+  <td>Set outfile [to_outfile]. Append everything into given outfile.</td>
+</tr>
+<tr>
+  <td>use</td>
+  <td>(\u)</td>
+  <td>Use another database. Takes database name as argument.</td>
+</tr>
+<tr>
+  <td>charset</td>
+  <td>(\C)</td>
+  <td>Switch to another charset. Might be needed for processing binlog with multi-byte charsets.</td>
+</tr>
+<tr>
+  <td>warnings</td>
+  <td>(\W)</td>
+  <td>Show warnings after every statement.</td>
+</tr>
+<tr>
+  <td>nowarning</td>
+  <td>(\w)</td>
+  <td>Don't show warnings after every statement.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<hr />
+
+                    </div>
+    </div>
+</div>
+
+<footer class="columns small-12 topspace">
+    <div class="row footer-top">
+        <div class="medium-6 columns">
+<!--             <ul class="menu">
+                <li><a href="#">Legal</a></li>
+                <li><a href="#">Partner</a></li>
+                <li><a href="#">Explore</a></li>
+            </ul> -->
+        </div>
+        <div class="medium-6 columns align-middle text-right">
+            
+                <div class="copyright">Copyright © 2016 Smedia</div>
+            
+        </div>
+    </div>
+    <div class="row footer-middle">
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Offices</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Solar Systems</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+        <div class="small-6 medium-offset-6 large-3 columns">
+            <p class="lead">Contact</p>
+            <ul class="menu vertical">
+                <li><a href="#"><i class="fi-social-twitter"></i> Twitter</a></li>
+                <li><a href="#"><i class="fi-social-facebook"></i> Facebook</a></li>
+                <li><a href="#"><i class="fi-social-instagram"></i> Instagram</a></li>
+                <li><a href="#"><i class="fi-social-pinterest"></i> Pinterest</a></li>
+            </ul>
+        </div>
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Widgets</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+    </div>
+    <div class="row footer-bottom">
+        <div class="large-12 columns text-center">
+            <p>Le Grande Hotel, Latin Quarter, Paris • 261 Rue Saint-Séverin, 75005 Paris, France </p>
+            <p>Phone 01 42 517 85 • info@dummy.com • www.dummy.com</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="../../../../assets/js/app.js"></script>
+  </body>
+</html>

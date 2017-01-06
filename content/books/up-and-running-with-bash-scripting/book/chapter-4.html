@@ -1,0 +1,485 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebooks - Up and Running with Bash Scripting - Interacting with the User</title>
+    <link rel="stylesheet" href="../../../../assets/css/app.css">
+    <link href='//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+  </head>
+  <body>
+
+<div class="row navigation-row">
+    <div class="columns small-12">
+
+        <div class="mobile-branding show-for-small-only">
+          <a href="../../../../index.html"><div class="menu-text mobile-branding">Smerth</div></a>
+        </div>
+        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+          <div class="title-bar-title">Menu</div>
+        </div>
+        <nav id="main-menu" class="top-bar">
+
+            <div class="top-bar-left">
+                <!-- Navigation on medium and up screens -->
+                <ul class="vertical menu medium-horizontal show-for-medium" data-responsive-menu="dropdown">
+<li class="menu-text"><a class="sitename" href="../../../../index.html">Smerth</a></li>
+<li><a href="../../../../projects.html">Projects</a></li>
+<li><a href="../../../../cases.html">Case Studies</a></li>
+<li>
+    <a href="../../../../books.html">Notebooks</a>
+        <ul class="menu vertical" style="width: 300px;">
+            <li><a href="../../../../content/books/javascript-working-with-the-dom/book/index.html">Javascript: working with the dom</a></li>
+            <li><a href="../../../../content/books/unix-for-macos/book/index.html">Unix for MacOS</a></li>
+            <li><a href="../../../../content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="../../../../content/books/webpack/book/index.html">Webpack</a></li>
+            
+        </ul>
+<!--           <ul class="menu vertical" style="width: 300px;">
+            <li><a href="content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="content/books/easybook_notes/book/index.html">Easybook Notes</a></li>
+            <li><a href="content/books/introduction-to-mysql/book/index.html">Introduction to MySQL</a></li>
+            <li><a href="content/books/javascript-and-ajax/book/index.html">Javascript and AJAX</a></li>
+            <li><a href="content/books/javascript-and-json/book/index.html">Javascript and JSON</a></li>
+            <li><a href="content/books/jquery-data-with-ajax/book/index.html">jQuery Data with AJAX</a></li>
+            <li><a href="content/books/unix-for-macos/book/index.html">UNIX for MacOS</a></li>
+            <li><a href="content/books/GIT-Workflow/book/index.html">GIT Workflow</a></li>
+            <li><a href="content/books/webpack/book/index.html">Webpack</a></li>
+        </ul> -->
+<!--     <ul class="menu vertical" style="width: 100%;">
+        <li><a href="/content/books/applescript-notes/book"><span class="fi-book-bookmark"></span> AppleScript Notes</a></li>
+        <li><a href="/content/books/build-a-polling-app-with-socket-io-and-react/book"><span class="fi-book-bookmark"></span> Polling App with Socket.io and React.js</a></li>
+        <li><a href="/content/books/introduction-to-mysql/book"><span class="fi-book-bookmark"></span> Introduction to MySQL</a></li>
+        <li><a href="/content/books/unix-for-macos/book"><span class="fi-book-bookmark"></span> UNIX for MacOS</a></li>
+        <li><a href="/content/books/javascript-working-with-the-dom/book"><span class="fi-book-bookmark"></span> Javascript working with the DOM</a></li>
+    </ul> -->
+</li>
+<!-- <li><a href="../../../../about.html">About</a></li> -->
+<li><a href="../../../../content/books/about/book/chapter-1.html">About</a></li>
+                </ul>
+                <!-- Navigation on small screens -->
+                <ul class="vertical menu medium-horizontal show-for-small-only" data-responsive-menu="dropdown" data-accordion-menu>
+<li class="menu-text"><a href="../../../../index.html">Notebook</a></li>
+<li><a href="../../../../projects.html">Projects</a></li>
+<li><a href="../../../../cases.html">Case Studies</a></li>
+<li>
+    <a href="../../../../books.html">Notebooks</a>
+        <ul class="menu vertical" style="width: 100%;">
+            <li><a href="../../../../content/books/javascript-working-with-the-dom/book/index.html">Javascript: working with the dom</a></li>
+            <li><a href="../../../../content/books/unix-for-macos/book/index.html">Unix for MacOS</a></li>
+            <li><a href="../../../../content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="../../../../content/books/webpack/book/index.html">Webpack</a></li>
+            
+        </ul>
+<!--     <ul class="menu vertical" style="width: 100%;">
+        <li><a href="/content/books/applescript-notes/book"><span class="fi-book-bookmark"></span> AppleScript Notes</a></li>
+        <li><a href="/content/books/build-a-polling-app-with-socket-io-and-react/book"><span class="fi-book-bookmark"></span> Polling App with Socket.io and React.js</a></li>
+        <li><a href="/content/books/introduction-to-mysql/book"><span class="fi-book-bookmark"></span> Introduction to MySQL</a></li>
+        <li><a href="/content/books/unix-for-macos/book"><span class="fi-book-bookmark"></span> UNIX for MacOS</a></li>
+        <li><a href="/content/books/javascript-working-with-the-dom/book"><span class="fi-book-bookmark"></span> Javascript working with the DOM</a></li>
+    </ul> -->
+</li>
+<!-- <li><a href="../../../../about.html">About</a></li> -->
+<li><a href="../../../../content/books/about/book/chapter-1.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="row pageheader-row">
+    <div class="small-12 column index text-center">
+        <div class="callout small pageheader">
+            <h1 id="interacting-with-the-user" class="book-title title-text">
+                <a href="./index.html" class="">Up and Running with Bash Scripting</a>
+            </h1>
+            <h6>Smerth</h6>
+        </div>
+    </div>
+</div>
+
+
+<div class="row " data-sticky-container>
+    <div class="column small-12 chapter-navigation-bar sticky" data-sticky data-anchor="main" data-options="marginTop:0;" style="width: 100%;">
+
+
+
+<div class="row chapter-navigation-row">
+    <div class="column small-6 small-order-2 medium-order-1 medium-3 prev-container">
+                    <h6><a class="prev" href="./chapter-3.html">&larr; Previous<div><small>Chapter 3 - Control Structures</small></div></a></h6>
+            </div>
+
+    <div class="column small-12 small-order-1 medium-order-2 medium-6 text-center title-container">
+        <h6 id="interacting-with-the-user" class="bk-title"><span class="fi-book-bookmark"></span> <a href="./index.html">Up and Running with Bash Scripting</a></h6>
+        <h6 id="interacting-with-the-user" class="ch-title align-self-middle"><small>Chapter 4 - Interacting with the User</small></h6>
+    </div>
+
+    <div class="column small-6 small-order-3 medium-order-3 medium-3 next-container">
+                    <p class="next disabled">Next
+                &rarr;
+                <span></span>
+            </p>
+            </div>
+
+</div>
+</div>
+    </div> 
+    <div id="book-page" class="row">
+        
+        
+        <div id="sidebar" class="column small-12 medium-4  large-3" data-sticky-container>
+            <nav id="sidebar-toc" class=" sticky" data-sticky data-anchor="main" data-options="marginTop:5;">
+
+                
+                                <h3>
+                    <a href=".">Table of contents</a>
+                </h3>
+                <ul class="toc">
+                                                                                <li class="level-1">
+                        <span class="chapter-label">1.</span> <a href="./chapter-1.html"> Working with the Command Line</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">2.</span> <a href="./chapter-2.html"> Building Bash Scripts</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">3.</span> <a href="./chapter-3.html"> Control Structures</a>
+                    </li>
+                                                                                                                <li class="level-1 active">
+                                <a class="chapter" href="./chapter-4.html">
+                                    <span class="chapter-label">Chapter 4.</span>
+                                    Interacting with the User
+                                </a>
+                                <ul id="page-toc" class="unstyled toc-l2">
+                                                                                                                        <li class="level-2" data-scroll="working-with-arguments">
+                                                <span>4.1</span>
+                                                <a class="internal" href="./chapter-4.html#working-with-arguments">Working with arguments</a>
+                                            </li>
+                                                                                    <li class="level-2" data-scroll="working-with-flags">
+                                                <span>4.2</span>
+                                                <a class="internal" href="./chapter-4.html#working-with-flags">Working with flags</a>
+                                            </li>
+                                                                                    <li class="level-2" data-scroll="getting-input-during-execution">
+                                                <span>4.3</span>
+                                                <a class="internal" href="./chapter-4.html#getting-input-during-execution">Getting input during execution</a>
+                                            </li>
+                                                                                    <li class="level-2" data-scroll="ensuring-a-response">
+                                                <span>4.4</span>
+                                                <a class="internal" href="./chapter-4.html#ensuring-a-response">Ensuring a response</a>
+                                            </li>
+                                                                                    <li class="level-2" data-scroll="example">
+                                                <span>4.5</span>
+                                                <a class="internal" href="./chapter-4.html#example">Example</a>
+                                            </li>
+                                                                                                    </ul>
+                    </li>
+                                            </ul>
+        </nav>
+    </div>
+
+        <div id="main" class="main column small-12 medium-8 large-9 ">
+        <div class="main-content">
+                                                    <h2 id="working-with-arguments">4.1 Working with arguments</h2>
+
+<p>Arguments are specificied by the user when your script is run.  They can be almost anything, a file or folder, a user name, a string of text you want to search for etc.</p>
+
+<p>They are passed into the script by typing them after the script name.</p>
+
+<h4 id="411sh">4.1.0.1 4.1.1.sh</h4>
+
+<div class="code bash">
+<pre class="bash"><span class="co0">#! /bin/bash</span>
+&nbsp;
+<span class="co0"># arugments are assigned numbered variables according to their position on the command line.</span>
+<span class="kw3">echo</span> <span class="re4">$1</span></pre>
+</div>
+
+<p>This program echos the value of the first argument provided on the command line</p>
+
+<h4 id="412sh">4.1.0.2 4.1.2.sh</h4>
+
+<p>To deal with an array of arguments of arbitrary length bash gives us an array of arguments <code>$@</code> also bash gives us <code>$#</code> which is the number of items in the arguments array.</p>
+
+<div class="code bash">
+<pre class="bash"><span class="co0">#! /bin/bash</span>
+&nbsp;
+<span class="kw1">for</span> i <span class="kw1">in</span> $<span class="sy0">@</span>
+<span class="kw1">do</span>
+    <span class="kw3">echo</span> <span class="re1">$i</span>
+<span class="kw1">done</span>
+&nbsp;
+<span class="kw3">echo</span> <span class="st0">&quot;There were $# arguments.&quot;</span></pre>
+</div>
+
+<h2 id="working-with-flags">4.2 Working with flags</h2>
+
+<p>You know you can feed flags into your C programs on the command line using the <code>-</code>.  You can do the same with a Bash script.</p>
+
+<h4 id="421sh">4.2.0.1 4.2.1.sh</h4>
+
+<div class="code bash">
+<pre class="bash"><span class="co0">#! /bin/bash</span>
+&nbsp;
+<span class="kw1">while</span> <span class="kw3">getopts</span> u:p: option; <span class="kw1">do</span>
+    <span class="kw1">case</span> <span class="re1">$option</span> <span class="kw1">in</span>
+        u<span class="br0">&#41;</span> <span class="re2">user</span>=<span class="re1">$OPTARG</span><span class="sy0">;;</span>
+        p<span class="br0">&#41;</span> <span class="re2">pass</span>=<span class="re1">$OPTARG</span><span class="sy0">;;</span>
+    <span class="kw1">esac</span>
+<span class="kw1">done</span>
+&nbsp;
+<span class="kw3">echo</span> <span class="st0">&quot;User: <span class="es2">$user</span> / Pass: <span class="es2">$pass</span>&quot;</span></pre>
+</div>
+
+<p>Run by passing in the arguments <code>-u your name -p yourpassword</code></p>
+
+<p>In the above case we specify two flags with each one followed by a collon.  This means we expect to use them and they are added to the <code>$options</code> array.</p>
+
+<p>However if we add flags and do not follow them with a collon we are only able to see if they were entered on the command line when the script is run.</p>
+
+<h4 id="422sh">4.2.0.2 4.2.2.sh</h4>
+
+<div class="code bash">
+<pre class="bash"><span class="co0">#! /bin/bash</span>
+&nbsp;
+<span class="kw1">while</span> <span class="kw3">getopts</span> u:p:ab option; <span class="kw1">do</span>
+    <span class="kw1">case</span> <span class="re1">$option</span> <span class="kw1">in</span>
+        u<span class="br0">&#41;</span> <span class="re2">user</span>=<span class="re1">$OPTARG</span><span class="sy0">;;</span>
+        p<span class="br0">&#41;</span> <span class="re2">pass</span>=<span class="re1">$OPTARG</span><span class="sy0">;;</span>
+        a<span class="br0">&#41;</span> I got the A flag.
+        b<span class="br0">&#41;</span> I got the B flag.
+    <span class="kw1">esac</span>
+<span class="kw1">done</span>
+&nbsp;
+<span class="kw3">echo</span> <span class="st0">&quot;User: <span class="es2">$user</span> / Pass: <span class="es2">$pass</span>&quot;</span></pre>
+</div>
+
+<p>run</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">bash</span> 4.2.2.sh <span class="re5">-u</span> Apple <span class="re5">-p</span> Orange <span class="re5">-a</span> <span class="re5">-b</span></pre>
+</div>
+
+<p>adding a colon at the beginning of the list of flags lets bash know you wan to know about any flag that that is entered when the program is run but are not defined in the program.</p>
+
+<h4 id="423sh">4.2.0.3 4.2.3.sh</h4>
+
+<div class="code bash">
+<pre class="bash"><span class="co0">#! /bin/bash</span>
+&nbsp;
+<span class="co0"># added a colon before the flag list</span>
+<span class="kw1">while</span> <span class="kw3">getopts</span> :u:p:ab option; <span class="kw1">do</span>
+    <span class="kw1">case</span> <span class="re1">$option</span> <span class="kw1">in</span>
+        u<span class="br0">&#41;</span> <span class="re2">user</span>=<span class="re1">$OPTARG</span><span class="sy0">;;</span>
+        p<span class="br0">&#41;</span> <span class="re2">pass</span>=<span class="re1">$OPTARG</span><span class="sy0">;;</span>
+        a<span class="br0">&#41;</span> <span class="kw3">echo</span> <span class="st0">&quot;Got the A flag&quot;</span><span class="sy0">;;</span>
+        b<span class="br0">&#41;</span> <span class="kw3">echo</span> <span class="st0">&quot;Got the B flag&quot;</span><span class="sy0">;;</span>
+        ?<span class="br0">&#41;</span> <span class="kw3">echo</span> <span class="st0">&quot;I don't know what <span class="es2">$OPTARG</span> is...&quot;</span><span class="sy0">;;</span>
+    <span class="kw1">esac</span>
+<span class="kw1">done</span>
+&nbsp;
+<span class="kw3">echo</span> <span class="st0">&quot;User: <span class="es2">$user</span> / Pass: <span class="es2">$pass</span>&quot;</span></pre>
+</div>
+
+<p>run</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">bash</span> 4.2.3.sh <span class="re5">-u</span> Sampson <span class="re5">-p</span> <span class="nu0">54321</span> <span class="re5">-a</span> <span class="re5">-b</span> <span class="re5">-f</span> example</pre>
+</div>
+
+<h2 id="getting-input-during-execution">4.3 Getting input during execution</h2>
+
+<h4 id="431sh">4.3.0.1 4.3.1.sh</h4>
+
+<div class="code bash">
+<pre class="bash"><span class="co0">#! /bin/bash</span>
+&nbsp;
+<span class="kw3">echo</span> <span class="st0">&quot;What is your good name?&quot;</span>
+<span class="kw2">read</span> name
+&nbsp;
+<span class="co0"># -s stands for silent the input won't be shown in terminal</span>
+<span class="kw3">echo</span> <span class="st0">&quot;What is your preferred password?&quot;</span>
+<span class="kw2">read</span> <span class="re5">-s</span> pass
+&nbsp;
+<span class="co0"># you can write everything on the same line with -p for prompt</span>
+<span class="kw2">read</span> <span class="re5">-p</span> <span class="st0">&quot;What's your favorite type of camel?&quot;</span> camel
+&nbsp;
+<span class="kw3">echo</span> name: <span class="re1">$name</span>, pass: <span class="re1">$pass</span>, camel: <span class="re1">$camel</span></pre>
+</div>
+
+<h4 id="432sh">4.3.0.2 4.3.2.sh</h4>
+
+<p>Getting input in a handy menu form:</p>
+
+<div class="code bash">
+<pre class="bash"><span class="co0">#! /bin/bash</span>
+&nbsp;
+<span class="co0"># &quot;select&quot; is followed by the &quot;variable name&quot; you want to store the selection in folloed by the word &quot;in&quot;</span>
+<span class="kw1">select</span> animal <span class="kw1">in</span> <span class="st0">&quot;cat&quot;</span> <span class="st0">&quot;dog&quot;</span> <span class="st0">&quot;bird&quot;</span> <span class="st0">&quot;cucumber&quot;</span>
+&nbsp;
+<span class="kw1">do</span>
+    <span class="kw3">echo</span> <span class="st0">&quot;You selected <span class="es2">$animal</span>!&quot;</span>
+    <span class="co0">#remember to break out of the loop</span>
+    <span class="kw3">break</span>
+<span class="kw1">done</span></pre>
+</div>
+
+<h4 id="433sh">4.3.0.3 4.3.3.sh</h4>
+
+<p>Use the select list with a case function</p>
+
+<div class="code bash">
+<pre class="bash"><span class="co0">#! /bin/bash</span>
+&nbsp;
+<span class="co0"># &quot;select&quot; is followed by the &quot;variable name&quot; you want to store the selection in folloed by the word &quot;in&quot;</span>
+<span class="kw1">select</span> option <span class="kw1">in</span> <span class="st0">&quot;cat&quot;</span> <span class="st0">&quot;dog&quot;</span> <span class="st0">&quot;bird&quot;</span> <span class="st0">&quot;cucumber&quot;</span> <span class="st0">&quot;quit&quot;</span>
+&nbsp;
+<span class="kw1">do</span>
+    <span class="kw1">case</span> <span class="re1">$option</span> <span class="kw1">in</span>
+        <span class="kw2">cat</span><span class="br0">&#41;</span> <span class="kw3">echo</span> <span class="st0">&quot;But cats are selfish and loathsome.&quot;</span><span class="sy0">;;</span>
+        dog<span class="br0">&#41;</span> <span class="kw3">echo</span> <span class="st0">&quot;Arff... Your answer is consistant with above average intelligence.&quot;</span><span class="sy0">;;</span>
+        bird<span class="br0">&#41;</span> <span class="kw3">echo</span> <span class="st0">&quot;We have tweeted your response to your employer!&quot;</span><span class="sy0">;;</span>
+        cucumber<span class="br0">&#41;</span> <span class="kw3">echo</span> <span class="st0">&quot;Ummmm....&quot;</span><span class="sy0">;;</span>
+        quit<span class="br0">&#41;</span> <span class="kw3">break</span><span class="sy0">;;</span>
+        <span class="sy0">*</span><span class="br0">&#41;</span> <span class="kw3">echo</span> <span class="st0">&quot;I'm not sure what that input means,... unless... maybe you are a HAACCKKKER!!!&quot;</span>
+    <span class="kw1">esac</span>
+<span class="kw1">done</span></pre>
+</div>
+
+<h2 id="ensuring-a-response">4.4 Ensuring a response</h2>
+
+<h4 id="441sh">4.4.0.1 4.4.1.sh</h4>
+
+<p>Here we use an if/else statement to prevent the program from executing if it doesn't get the required number of arguments.</p>
+
+<div class="code bash">
+<pre class="bash"><span class="co0">#! /bin/bash</span>
+&nbsp;
+<span class="kw1">if</span> <span class="br0">&#91;</span> <span class="re4">$#</span> <span class="re5">-lt</span> <span class="nu0">3</span> <span class="br0">&#93;</span>; <span class="kw1">then</span>
+    <span class="kw2">cat</span> <span class="sy0">&lt;&lt;</span>- EOM
+    This <span class="kw3">command</span> requires <span class="nu0">3</span> arguments:
+    username, userid, and favorite number.
+    EOM
+<span class="kw1">else</span>
+    <span class="co0"># The program goes here</span>
+    <span class="kw3">echo</span> <span class="st0">&quot;Username: $1&quot;</span>
+    <span class="kw3">echo</span> <span class="st0">&quot;UserID: $2&quot;</span>
+    <span class="kw3">echo</span> <span class="st0">&quot;Favorite Number: $3&quot;</span>
+<span class="kw1">fi</span></pre>
+</div>
+
+<h4 id="442sh">4.4.0.2 4.4.2.sh</h4>
+
+<p>Here we use the <code>-z</code> option to check if the variable a is empty</p>
+
+<div class="code bash">
+<pre class="bash"><span class="co0">#! /bin/bash</span>
+&nbsp;
+<span class="kw2">read</span> <span class="re5">-p</span> <span class="st0">&quot;Favorite animal? &quot;</span> a
+<span class="kw1">while</span> <span class="br0">&#91;</span><span class="br0">&#91;</span> <span class="re5">-z</span> <span class="st0">&quot;<span class="es2">$a</span>&quot;</span> <span class="br0">&#93;</span><span class="br0">&#93;</span>; <span class="kw1">do</span>
+    <span class="kw2">read</span> <span class="re5">-p</span> <span class="st0">&quot;I need an answer! &quot;</span> a
+<span class="kw1">done</span>
+<span class="kw3">echo</span> <span class="st0">&quot;<span class="es2">$a</span> was selected.&quot;</span></pre>
+</div>
+
+<h4 id="443sh">4.4.0.3 4.4.3.sh</h4>
+
+<p>Assume a default answer if none is given</p>
+
+<div class="code bash">
+<pre class="bash"><span class="co0">#! /bin/bash</span>
+&nbsp;
+<span class="kw2">read</span> <span class="re5">-p</span> <span class="st0">&quot;Favorite animal? [cat] &quot;</span> a
+<span class="kw1">while</span> <span class="br0">&#91;</span><span class="br0">&#91;</span> <span class="re5">-z</span> <span class="st0">&quot;<span class="es2">$a</span>&quot;</span> <span class="br0">&#93;</span><span class="br0">&#93;</span>; <span class="kw1">do</span>
+    <span class="re2">a</span>=<span class="st0">&quot;cat&quot;</span>
+<span class="kw1">done</span>
+<span class="kw3">echo</span> <span class="st0">&quot;<span class="es2">$a</span> was selected.&quot;</span></pre>
+</div>
+
+<h4 id="444sh">4.4.0.4 4.4.4.sh</h4>
+
+<p>Basic validation of input using a regex.</p>
+
+<div class="code bash">
+<pre class="bash"><span class="co0">#! /bin/bash</span>
+&nbsp;
+<span class="kw2">read</span> <span class="re5">-p</span> <span class="st0">&quot;What year? [nnnn] &quot;</span> a
+<span class="kw1">while</span> <span class="br0">&#91;</span><span class="br0">&#91;</span> <span class="sy0">!</span> <span class="re1">$a</span>=~ <span class="br0">&#91;</span><span class="nu0">0</span>-<span class="nu0">9</span><span class="br0">&#93;</span><span class="br0">&#123;</span><span class="nu0">4</span><span class="br0">&#125;</span> <span class="br0">&#93;</span><span class="br0">&#93;</span>; <span class="kw1">do</span>
+    <span class="kw2">read</span> <span class="re5">-p</span> <span class="st0">&quot;A year, please! [nnnn] &quot;</span> a
+<span class="kw1">done</span>
+<span class="kw3">echo</span> <span class="st0">&quot;Selected year: <span class="es2">$a</span>&quot;</span></pre>
+</div>
+
+<h2 id="example">4.5 Example</h2>
+
+<p>Here's a little game. The script takes interactive input from the user who is trting to gues a to guess a random number. Use a loop and a condition to check if the answer is right, and keep asking if it isn't. Make the script respond to having an argument, and give it some functionality if there isn't an argument provided as well. And finally, make sure to use a function in your script. This should take about 20 minutes. Good luck.</p>
+
+                    </div>
+    </div>
+</div>
+
+<footer class="columns small-12 topspace">
+    <div class="row footer-top">
+        <div class="medium-6 columns">
+<!--             <ul class="menu">
+                <li><a href="#">Legal</a></li>
+                <li><a href="#">Partner</a></li>
+                <li><a href="#">Explore</a></li>
+            </ul> -->
+        </div>
+        <div class="medium-6 columns align-middle text-right">
+            
+                <div class="copyright">Copyright © 2016 Smedia</div>
+            
+        </div>
+    </div>
+    <div class="row footer-middle">
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Offices</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Solar Systems</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+        <div class="small-6 medium-offset-6 large-3 columns">
+            <p class="lead">Contact</p>
+            <ul class="menu vertical">
+                <li><a href="#"><i class="fi-social-twitter"></i> Twitter</a></li>
+                <li><a href="#"><i class="fi-social-facebook"></i> Facebook</a></li>
+                <li><a href="#"><i class="fi-social-instagram"></i> Instagram</a></li>
+                <li><a href="#"><i class="fi-social-pinterest"></i> Pinterest</a></li>
+            </ul>
+        </div>
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Widgets</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+    </div>
+    <div class="row footer-bottom">
+        <div class="large-12 columns text-center">
+            <p>Le Grande Hotel, Latin Quarter, Paris • 261 Rue Saint-Séverin, 75005 Paris, France </p>
+            <p>Phone 01 42 517 85 • info@dummy.com • www.dummy.com</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="../../../../assets/js/app.js"></script>
+  </body>
+</html>

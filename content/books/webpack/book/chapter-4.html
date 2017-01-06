@@ -1,0 +1,538 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebooks - Webpack - Code Splitting with webpack</title>
+    <link rel="stylesheet" href="../../../../assets/css/app.css">
+    <link href='//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+  </head>
+  <body>
+
+<div class="row navigation-row">
+    <div class="columns small-12">
+
+        <div class="mobile-branding show-for-small-only">
+          <a href="../../../../index.html"><div class="menu-text mobile-branding">Smerth</div></a>
+        </div>
+        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+          <div class="title-bar-title">Menu</div>
+        </div>
+        <nav id="main-menu" class="top-bar">
+
+            <div class="top-bar-left">
+                <!-- Navigation on medium and up screens -->
+                <ul class="vertical menu medium-horizontal show-for-medium" data-responsive-menu="dropdown">
+<li class="menu-text"><a class="sitename" href="../../../../index.html">Smerth</a></li>
+<li><a href="../../../../projects.html">Projects</a></li>
+<li><a href="../../../../cases.html">Case Studies</a></li>
+<li>
+    <a href="../../../../books.html">Notebooks</a>
+        <ul class="menu vertical" style="width: 300px;">
+            <li><a href="../../../../content/books/javascript-working-with-the-dom/book/index.html">Javascript: working with the dom</a></li>
+            <li><a href="../../../../content/books/unix-for-macos/book/index.html">Unix for MacOS</a></li>
+            <li><a href="../../../../content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="../../../../content/books/webpack/book/index.html">Webpack</a></li>
+            
+        </ul>
+<!--           <ul class="menu vertical" style="width: 300px;">
+            <li><a href="content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="content/books/easybook_notes/book/index.html">Easybook Notes</a></li>
+            <li><a href="content/books/introduction-to-mysql/book/index.html">Introduction to MySQL</a></li>
+            <li><a href="content/books/javascript-and-ajax/book/index.html">Javascript and AJAX</a></li>
+            <li><a href="content/books/javascript-and-json/book/index.html">Javascript and JSON</a></li>
+            <li><a href="content/books/jquery-data-with-ajax/book/index.html">jQuery Data with AJAX</a></li>
+            <li><a href="content/books/unix-for-macos/book/index.html">UNIX for MacOS</a></li>
+            <li><a href="content/books/GIT-Workflow/book/index.html">GIT Workflow</a></li>
+            <li><a href="content/books/webpack/book/index.html">Webpack</a></li>
+        </ul> -->
+<!--     <ul class="menu vertical" style="width: 100%;">
+        <li><a href="/content/books/applescript-notes/book"><span class="fi-book-bookmark"></span> AppleScript Notes</a></li>
+        <li><a href="/content/books/build-a-polling-app-with-socket-io-and-react/book"><span class="fi-book-bookmark"></span> Polling App with Socket.io and React.js</a></li>
+        <li><a href="/content/books/introduction-to-mysql/book"><span class="fi-book-bookmark"></span> Introduction to MySQL</a></li>
+        <li><a href="/content/books/unix-for-macos/book"><span class="fi-book-bookmark"></span> UNIX for MacOS</a></li>
+        <li><a href="/content/books/javascript-working-with-the-dom/book"><span class="fi-book-bookmark"></span> Javascript working with the DOM</a></li>
+    </ul> -->
+</li>
+<!-- <li><a href="../../../../about.html">About</a></li> -->
+<li><a href="../../../../content/books/about/book/chapter-1.html">About</a></li>
+                </ul>
+                <!-- Navigation on small screens -->
+                <ul class="vertical menu medium-horizontal show-for-small-only" data-responsive-menu="dropdown" data-accordion-menu>
+<li class="menu-text"><a href="../../../../index.html">Notebook</a></li>
+<li><a href="../../../../projects.html">Projects</a></li>
+<li><a href="../../../../cases.html">Case Studies</a></li>
+<li>
+    <a href="../../../../books.html">Notebooks</a>
+        <ul class="menu vertical" style="width: 100%;">
+            <li><a href="../../../../content/books/javascript-working-with-the-dom/book/index.html">Javascript: working with the dom</a></li>
+            <li><a href="../../../../content/books/unix-for-macos/book/index.html">Unix for MacOS</a></li>
+            <li><a href="../../../../content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="../../../../content/books/webpack/book/index.html">Webpack</a></li>
+            
+        </ul>
+<!--     <ul class="menu vertical" style="width: 100%;">
+        <li><a href="/content/books/applescript-notes/book"><span class="fi-book-bookmark"></span> AppleScript Notes</a></li>
+        <li><a href="/content/books/build-a-polling-app-with-socket-io-and-react/book"><span class="fi-book-bookmark"></span> Polling App with Socket.io and React.js</a></li>
+        <li><a href="/content/books/introduction-to-mysql/book"><span class="fi-book-bookmark"></span> Introduction to MySQL</a></li>
+        <li><a href="/content/books/unix-for-macos/book"><span class="fi-book-bookmark"></span> UNIX for MacOS</a></li>
+        <li><a href="/content/books/javascript-working-with-the-dom/book"><span class="fi-book-bookmark"></span> Javascript working with the DOM</a></li>
+    </ul> -->
+</li>
+<!-- <li><a href="../../../../about.html">About</a></li> -->
+<li><a href="../../../../content/books/about/book/chapter-1.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="row pageheader-row">
+    <div class="small-12 column index text-center">
+        <div class="callout small pageheader">
+            <h1 id="code-splitting-with-webpack" class="book-title title-text">
+                <a href="./index.html" class="">Webpack</a>
+            </h1>
+            <h6>Smerth</h6>
+        </div>
+    </div>
+</div>
+
+
+<div class="row " data-sticky-container>
+    <div class="column small-12 chapter-navigation-bar sticky" data-sticky data-anchor="main" data-options="marginTop:0;" style="width: 100%;">
+
+
+
+<div class="row chapter-navigation-row">
+    <div class="column small-6 small-order-2 medium-order-1 medium-3 prev-container">
+                    <h6><a class="prev" href="./chapter-3.html">&larr; Previous<div><small>Chapter 3 - Webpack &amp; CSS</small></div></a></h6>
+            </div>
+
+    <div class="column small-12 small-order-1 medium-order-2 medium-6 text-center title-container">
+        <h6 id="code-splitting-with-webpack" class="bk-title"><span class="fi-book-bookmark"></span> <a href="./index.html">Webpack</a></h6>
+        <h6 id="code-splitting-with-webpack" class="ch-title align-self-middle"><small>Chapter 4 - Code Splitting with webpack</small></h6>
+    </div>
+
+    <div class="column small-6 small-order-3 medium-order-3 medium-3 next-container">
+                    <h6><a class="next" href="./chapter-5.html"><div class="text-right">Next &rarr;</div><div class="text-right"><small>Chapter 5 - Webpack dev server</small></div></a></h6>
+            </div>
+
+</div>
+</div>
+    </div> 
+    <div id="book-page" class="row">
+        
+        
+        <div id="sidebar" class="column small-12 medium-4  large-3" data-sticky-container>
+            <nav id="sidebar-toc" class=" sticky" data-sticky data-anchor="main" data-options="marginTop:5;">
+
+                
+                                <h3>
+                    <a href=".">Table of contents</a>
+                </h3>
+                <ul class="toc">
+                                                                                <li class="level-1">
+                        <span class="chapter-label">1.</span> <a href="./chapter-1.html"> Webpack</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">2.</span> <a href="./chapter-2.html"> Webpack Loaders</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">3.</span> <a href="./chapter-3.html"> Webpack &amp; CSS</a>
+                    </li>
+                                                                                                                <li class="level-1 active">
+                                <a class="chapter" href="./chapter-4.html">
+                                    <span class="chapter-label">Chapter 4.</span>
+                                    Code Splitting with webpack
+                                </a>
+                                <ul id="page-toc" class="unstyled toc-l2">
+                                                                                                                                        </ul>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">5.</span> <a href="./chapter-5.html"> Webpack dev server</a>
+                    </li>
+                                            </ul>
+        </nav>
+    </div>
+
+        <div id="main" class="main column small-12 medium-8 large-9 ">
+        <div class="main-content">
+                                                    <h2 id="what-is-code-splitting">4.1 What is code splitting?</h2>
+
+<p>Code splitting allows you to break your code up into different bundles. This can be done using multiple entry points.</p>
+
+<p>If an application has an About-us page and a Contact-us page we can tell Webpack to create bundles for each of these and then only the resources necessary for the page will be loaded.</p>
+
+<p>This reduces the size of the request and if someone visits the site and only goes to the About-us page, they won't load the Contact-us information.</p>
+
+<p>Additionally, we can use Webpack to create bundles for shared code and for vendor code. So, for example, if I have About-us and Contact-us that use similar libraries or similar code, we can create a common file and the common file will be loaded first and cached.</p>
+
+<p>This added optimization is used widely.</p>
+
+<h2 id="adding-multiple-entry-points">4.2 Adding multiple entry points</h2>
+
+<p>With multiple entry points we create separate bundles for different pages. That way we'll only load the code that we need for each page.</p>
+
+<p>Create a folder called dist. Inside of the dist folder create four different files.</p>
+
+<p>@ <code>terminal</code></p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">mkdir</span> dist <span class="sy0">&amp;&amp;</span> <span class="kw2">touch</span> dist<span class="sy0">/</span>about.js dist<span class="sy0">/</span>about.html dist<span class="sy0">/</span>contact.js dist<span class="sy0">/</span>contact.html</pre>
+</div>
+
+<p><code>about.js</code> file is going to just be a simple react component. So we're going to require react. We're also going to require react dom, and then we'll just create a simple class component.</p>
+
+<p>It's going to have a render method, and inside the render method we'll return a div that says about us.</p>
+
+<p>Render this component to our react container.</p>
+
+<p>@ <code>about.js</code></p>
+
+<div class="code javascript">
+<pre class="javascript"><span class="kw1">var</span> React <span class="sy0">=</span> require<span class="br0">&#40;</span><span class="st0">'react'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">var</span> ReactDOM <span class="sy0">=</span> require<span class="br0">&#40;</span><span class="st0">'react-dom'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+<span class="kw5">class</span> About <span class="kw5">extends</span> React.<span class="me1">Component</span> <span class="br0">&#123;</span>
+    render<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        <span class="kw1">return</span> <span class="sy0">&lt;</span>div<span class="sy0">&gt;</span>About us<span class="sy0">&lt;/</span>div<span class="sy0">&gt;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+ReactDOM.<span class="me1">render</span><span class="br0">&#40;</span><span class="sy0">&lt;</span>About <span class="sy0">/&gt;,</span> document.<span class="me1">getElementById</span><span class="br0">&#40;</span><span class="st0">'react-container'</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+</div>
+
+<p>Copy and paste this into <code>contact.js</code>.</p>
+
+<p>Change about to contact. Print "Contact us".</p>
+
+<p>@ contact.js</p>
+
+<div class="code javascript">
+<pre class="javascript"><span class="kw1">var</span> React <span class="sy0">=</span> require<span class="br0">&#40;</span><span class="st0">'react'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">var</span> ReactDOM <span class="sy0">=</span> require<span class="br0">&#40;</span><span class="st0">'react-dom'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+<span class="kw5">class</span> Contact <span class="kw5">extends</span> React.<span class="me1">Component</span> <span class="br0">&#123;</span>
+    render<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        <span class="kw1">return</span> <span class="sy0">&lt;</span>div<span class="sy0">&gt;</span>Contact us<span class="sy0">&lt;/</span>div<span class="sy0">&gt;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+ReactDOM.<span class="me1">render</span><span class="br0">&#40;</span><span class="sy0">&lt;</span>Contact <span class="sy0">/&gt;,</span> document.<span class="me1">getElementById</span><span class="br0">&#40;</span><span class="st0">'react-container'</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+</div>
+
+<p>So the next thing we need to do inside of dist is create a new file. Now this new file is going to be an html file, which we'll save as about dot html and let's create another one while we're at it for, you guessed it, contact dot html.</p>
+
+<p>Create files</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">touch</span> dist<span class="sy0">/</span>about.html dist<span class="sy0">/</span>contact.html</pre>
+</div>
+
+<p>Edit about and contact files:</p>
+
+<p>@ <code>about.html</code></p>
+
+<div class="code html">
+<pre class="html5"><span class="sc0">&lt;!DOCTYPE html&gt;</span>
+<span class="sc2">&lt;<span class="kw2">html</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">head</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">title</span>&gt;</span>About Us<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">title</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">head</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">body</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">'react-container'</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">script</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;../build/about.bundle.js&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">script</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">html</span>&gt;</span></pre>
+</div>
+
+<p>@ <code>contact.html</code></p>
+
+<div class="code html">
+<pre class="html5"><span class="sc0">&lt;!DOCTYPE html&gt;</span>
+<span class="sc2">&lt;<span class="kw2">html</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">head</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">title</span>&gt;</span>Contact Us<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">title</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">head</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">body</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">div</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">'react-container'</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">div</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">script</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;../build/contact.bundle.js&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">script</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">html</span>&gt;</span></pre>
+</div>
+
+<p>Note the new src for the bundle files for each page.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">script</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;../build/contact.bundle.js&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">script</span>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<span class="kw2">script</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;../build/about.bundle.js&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">script</span>&gt;</span></pre>
+</div>
+
+<p>Edit <code>webpack.config.js</code></p>
+
+<p>Get rid of everything for the entry and the output.</p>
+
+<p>Require webpack, and require path.</p>
+
+<p>The path module is part of node.js and it's going to allow us to create paths.</p>
+
+<p>Use an object to define multiple entry points.</p>
+
+<p>For output we use an object as well. The first key in here is going to be path.</p>
+
+<p>The second key is the name of the file and the directory name for webpack to output.</p>
+
+<p><code>[name]</code> is a placeholder variable for whatever the incoming filename was...</p>
+
+<p>@ <code>webpack.config.js</code></p>
+
+<div class="code json">
+<pre class="json">var webpack = require('webpack');
+var path = require('path');
+&nbsp;
+module.exports = {
+    entry: {
+        about: './dist/about',
+        contact: './dist/contact'
+    },
+    output: {
+        path: path.join(__dirname, 'build'),
+        filename: '[name].bundle.js'
+    },
+    module: {
+        loaders: [
+            {
+                test: /\.js$/,
+                exclude: /(node_modules)/,
+                loader: 'babel',
+                query: {
+                    presets: ['react', 'es2015']
+                }
+            },
+            {
+                test: /\.scss$/,
+                loader: 'style-loader!css-loader!sass-loader'
+            }, 
+                {
+                test: /\.(png|jpg)$/,
+                loader: 'url-loader?limit=10000'
+            }
+     ]
+    }
+};</pre>
+</div>
+
+<p>Run webpack.</p>
+
+<p>Webpack creates the about and the contact bundles, you should see them in the build folder.</p>
+
+<p>Webpack has bundled two different files from multiple entry points. One bundle for each page.</p>
+
+<h2 id="using-the-commons-chunk-bundle">4.3 Using the commons chunk bundle</h2>
+
+<p>The CommonsChunkPlugin will look for reused code and will create a separate bundle with common code. Then we'll load the common code into the page first and load in page specific code after that.</p>
+
+<p>Add the CommonsChunkPlugin to our <code>webpack.config.js</code>  This is an optional plugin, we're opting in to use it.</p>
+
+<p>We need to bring it in from <code>./node_modules/webpack/lib/optimize/CommonsChunkPlugin</code></p>
+
+<p>@ <code>webpack.config.js</code></p>
+
+<div class="code javascript">
+<pre class="javascript"><span class="kw1">var</span> webpack <span class="sy0">=</span> require<span class="br0">&#40;</span><span class="st0">'webpack'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">var</span> path <span class="sy0">=</span> require<span class="br0">&#40;</span><span class="st0">'path'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">var</span> CommonsChunkPlugin <span class="sy0">=</span> require<span class="br0">&#40;</span><span class="st0">'./node_modules/webpack/lib/optimize/CommonsChunkPlugin'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+module.<span class="me1">exports</span> <span class="sy0">=</span> <span class="br0">&#123;</span>
+    entry<span class="sy0">:</span> <span class="br0">&#123;</span>
+        about<span class="sy0">:</span> <span class="st0">'./dist/about'</span><span class="sy0">,</span>
+        contact<span class="sy0">:</span> <span class="st0">'./dist/contact'</span>
+    <span class="br0">&#125;</span><span class="sy0">,</span>
+    output<span class="sy0">:</span> <span class="br0">&#123;</span>
+        path<span class="sy0">:</span> path.<span class="me1">join</span><span class="br0">&#40;</span>__dirname<span class="sy0">,</span> <span class="st0">'build'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+        filename<span class="sy0">:</span> <span class="st0">'[name].bundle.js'</span>
+    <span class="br0">&#125;</span><span class="sy0">,</span>
+    module<span class="sy0">:</span> <span class="br0">&#123;</span>
+        loaders<span class="sy0">:</span> <span class="br0">&#91;</span>
+            <span class="br0">&#123;</span>
+                test<span class="sy0">:</span> <span class="co2">/\.js$/</span><span class="sy0">,</span>
+                exclude<span class="sy0">:</span> <span class="co2">/(node_modules)/</span><span class="sy0">,</span>
+                loader<span class="sy0">:</span> <span class="st0">'babel'</span><span class="sy0">,</span>
+                query<span class="sy0">:</span> <span class="br0">&#123;</span>
+                    presets<span class="sy0">:</span> <span class="br0">&#91;</span><span class="st0">'react'</span><span class="sy0">,</span> <span class="st0">'es2015'</span><span class="br0">&#93;</span>
+                <span class="br0">&#125;</span>
+            <span class="br0">&#125;</span><span class="sy0">,</span>
+            <span class="br0">&#123;</span>
+                test<span class="sy0">:</span> <span class="co2">/\.scss$/</span><span class="sy0">,</span>
+                loader<span class="sy0">:</span> <span class="st0">'style-loader!css-loader!sass-loader'</span>
+            <span class="br0">&#125;</span><span class="sy0">,</span> 
+                <span class="br0">&#123;</span>
+                test<span class="sy0">:</span> <span class="co2">/\.(png|jpg)$/</span><span class="sy0">,</span>
+                loader<span class="sy0">:</span> <span class="st0">'url-loader?limit=10000'</span>
+            <span class="br0">&#125;</span>
+     <span class="br0">&#93;</span>
+    <span class="br0">&#125;</span><span class="sy0">,</span>
+    plugins<span class="sy0">:</span> <span class="br0">&#91;</span>
+        <span class="kw1">new</span> CommonsChunkPlugin<span class="br0">&#40;</span><span class="st0">'commons'</span><span class="sy0">,</span> <span class="st0">'commons.bundle.js'</span><span class="br0">&#41;</span>
+    <span class="br0">&#93;</span>
+&nbsp;
+<span class="br0">&#125;</span><span class="sy0">;</span></pre>
+</div>
+
+<p>Run webpack again.</p>
+
+<p>So, notice that we've an about bundle, a contact bundle, and a commons bundle. So, if we go to our build folder, we'll see it here too. And commons just has any code that is common inbetween about and contact. So, about is code just for the about page. Contact is code just for the contact page and commons works for both.</p>
+
+<p>Lastly we need to link to the common code file.</p>
+
+<p>@ <code>contact.html</code></p>
+
+<p>@ <code>about.html</code></p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">script</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;../build/commons.bundle.js&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">script</span>&gt;</span></pre>
+</div>
+
+<h2 id="bundling-vendor-files">4.4 Bundling vendor files</h2>
+
+<p>Now that we know how to incorporate the CommonsChunkPlugin, we can use it to create a bundle of all of library files. In other words, a vendor bundle.</p>
+
+<p>A vendor bundle is just filled with code that probably we didn't write, it's code that's from different libraries. Things like React, jQuery, et cetera. And we're going to bundle that all up by adjusting our CommonsChunkPlugin.</p>
+
+<p>Instead of using commons, we use vendor, and we use vendor as the name of the bundle.</p>
+
+<p>Also add vendor here to our entry point, and instead of linking to a specific file, this is going to use an array of these libraries. You can use many of these, as many as you need, just put it inside of an array.</p>
+
+<p>@ <code>webpack.config.js</code></p>
+
+<div class="code javascript">
+<pre class="javascript"><span class="kw1">var</span> webpack <span class="sy0">=</span> require<span class="br0">&#40;</span><span class="st0">'webpack'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">var</span> path <span class="sy0">=</span> require<span class="br0">&#40;</span><span class="st0">'path'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">var</span> CommonsChunkPlugin <span class="sy0">=</span> require<span class="br0">&#40;</span><span class="st0">'./node_modules/webpack/lib/optimize/CommonsChunkPlugin'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+module.<span class="me1">exports</span> <span class="sy0">=</span> <span class="br0">&#123;</span>
+    entry<span class="sy0">:</span> <span class="br0">&#123;</span>
+        about<span class="sy0">:</span> <span class="st0">'./dist/about'</span><span class="sy0">,</span>
+        contact<span class="sy0">:</span> <span class="st0">'./dist/contact'</span><span class="sy0">,</span>
+        vendor<span class="sy0">:</span> <span class="br0">&#91;</span><span class="st0">'react'</span><span class="sy0">,</span> <span class="st0">'react-dom'</span><span class="br0">&#93;</span>
+    <span class="br0">&#125;</span><span class="sy0">,</span>
+    output<span class="sy0">:</span> <span class="br0">&#123;</span>
+        path<span class="sy0">:</span> path.<span class="me1">join</span><span class="br0">&#40;</span>__dirname<span class="sy0">,</span> <span class="st0">'build'</span><span class="br0">&#41;</span><span class="sy0">,</span>
+        filename<span class="sy0">:</span> <span class="st0">'[name].bundle.js'</span>
+    <span class="br0">&#125;</span><span class="sy0">,</span>
+    module<span class="sy0">:</span> <span class="br0">&#123;</span>
+        loaders<span class="sy0">:</span> <span class="br0">&#91;</span>
+            <span class="br0">&#123;</span>
+                test<span class="sy0">:</span> <span class="co2">/\.js$/</span><span class="sy0">,</span>
+                exclude<span class="sy0">:</span> <span class="co2">/(node_modules)/</span><span class="sy0">,</span>
+                loader<span class="sy0">:</span> <span class="st0">'babel'</span><span class="sy0">,</span>
+                query<span class="sy0">:</span> <span class="br0">&#123;</span>
+                    presets<span class="sy0">:</span> <span class="br0">&#91;</span><span class="st0">'react'</span><span class="sy0">,</span> <span class="st0">'es2015'</span><span class="br0">&#93;</span>
+                <span class="br0">&#125;</span>
+            <span class="br0">&#125;</span><span class="sy0">,</span>
+            <span class="br0">&#123;</span>
+                test<span class="sy0">:</span> <span class="co2">/\.scss$/</span><span class="sy0">,</span>
+                loader<span class="sy0">:</span> <span class="st0">'style-loader!css-loader!sass-loader'</span>
+            <span class="br0">&#125;</span><span class="sy0">,</span> 
+                <span class="br0">&#123;</span>
+                test<span class="sy0">:</span> <span class="co2">/\.(png|jpg)$/</span><span class="sy0">,</span>
+                loader<span class="sy0">:</span> <span class="st0">'url-loader?limit=10000'</span>
+            <span class="br0">&#125;</span>
+     <span class="br0">&#93;</span>
+    <span class="br0">&#125;</span><span class="sy0">,</span>
+    plugins<span class="sy0">:</span> <span class="br0">&#91;</span>
+        <span class="kw1">new</span> CommonsChunkPlugin<span class="br0">&#40;</span><span class="st0">'vendor'</span><span class="sy0">,</span> <span class="st0">'vendor.bundle.js'</span><span class="br0">&#41;</span>
+    <span class="br0">&#93;</span>
+&nbsp;
+<span class="br0">&#125;</span><span class="sy0">;</span></pre>
+</div>
+
+<p>Lastly, instead of linking to commons, we'll link to vendor.</p>
+
+<p>@ <code>contact.html</code></p>
+
+<p>@ <code>about.html</code></p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">script</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;../build/vendor.bundle.js&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">script</span>&gt;</span></pre>
+</div>
+
+<p>Run webpack again.</p>
+
+<p>We have three different bundles: our about, our contact, and our vendor. So, vendor just has all of that react and react-dom code, which both of our files will use.</p>
+
+<p>Creating a vendor bundle will allow us to explicitly list which vendor code we want to bundle and then we can require that as part of our HTML pages.</p>
+
+                    </div>
+    </div>
+</div>
+
+<footer class="columns small-12 topspace">
+    <div class="row footer-top">
+        <div class="medium-6 columns">
+<!--             <ul class="menu">
+                <li><a href="#">Legal</a></li>
+                <li><a href="#">Partner</a></li>
+                <li><a href="#">Explore</a></li>
+            </ul> -->
+        </div>
+        <div class="medium-6 columns align-middle text-right">
+            
+                <div class="copyright">Copyright © 2016 Smedia</div>
+            
+        </div>
+    </div>
+    <div class="row footer-middle">
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Offices</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Solar Systems</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+        <div class="small-6 medium-offset-6 large-3 columns">
+            <p class="lead">Contact</p>
+            <ul class="menu vertical">
+                <li><a href="#"><i class="fi-social-twitter"></i> Twitter</a></li>
+                <li><a href="#"><i class="fi-social-facebook"></i> Facebook</a></li>
+                <li><a href="#"><i class="fi-social-instagram"></i> Instagram</a></li>
+                <li><a href="#"><i class="fi-social-pinterest"></i> Pinterest</a></li>
+            </ul>
+        </div>
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Widgets</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+    </div>
+    <div class="row footer-bottom">
+        <div class="large-12 columns text-center">
+            <p>Le Grande Hotel, Latin Quarter, Paris • 261 Rue Saint-Séverin, 75005 Paris, France </p>
+            <p>Phone 01 42 517 85 • info@dummy.com • www.dummy.com</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="../../../../assets/js/app.js"></script>
+  </body>
+</html>

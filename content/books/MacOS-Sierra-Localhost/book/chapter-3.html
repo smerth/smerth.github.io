@@ -1,0 +1,452 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebooks - Building a Development Environment in MacOS Sierra - Apache Installation</title>
+    <link rel="stylesheet" href="../../../../assets/css/app.css">
+    <link href='//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+  </head>
+  <body>
+
+<div class="row navigation-row">
+    <div class="columns small-12">
+
+        <div class="mobile-branding show-for-small-only">
+          <a href="../../../../index.html"><div class="menu-text mobile-branding">Smerth</div></a>
+        </div>
+        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+          <div class="title-bar-title">Menu</div>
+        </div>
+        <nav id="main-menu" class="top-bar">
+
+            <div class="top-bar-left">
+                <!-- Navigation on medium and up screens -->
+                <ul class="vertical menu medium-horizontal show-for-medium" data-responsive-menu="dropdown">
+<li class="menu-text"><a class="sitename" href="../../../../index.html">Smerth</a></li>
+<li><a href="../../../../projects.html">Projects</a></li>
+<li><a href="../../../../cases.html">Case Studies</a></li>
+<li>
+    <a href="../../../../books.html">Notebooks</a>
+        <ul class="menu vertical" style="width: 300px;">
+            <li><a href="../../../../content/books/javascript-working-with-the-dom/book/index.html">Javascript: working with the dom</a></li>
+            <li><a href="../../../../content/books/unix-for-macos/book/index.html">Unix for MacOS</a></li>
+            <li><a href="../../../../content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="../../../../content/books/webpack/book/index.html">Webpack</a></li>
+            
+        </ul>
+<!--           <ul class="menu vertical" style="width: 300px;">
+            <li><a href="content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="content/books/easybook_notes/book/index.html">Easybook Notes</a></li>
+            <li><a href="content/books/introduction-to-mysql/book/index.html">Introduction to MySQL</a></li>
+            <li><a href="content/books/javascript-and-ajax/book/index.html">Javascript and AJAX</a></li>
+            <li><a href="content/books/javascript-and-json/book/index.html">Javascript and JSON</a></li>
+            <li><a href="content/books/jquery-data-with-ajax/book/index.html">jQuery Data with AJAX</a></li>
+            <li><a href="content/books/unix-for-macos/book/index.html">UNIX for MacOS</a></li>
+            <li><a href="content/books/GIT-Workflow/book/index.html">GIT Workflow</a></li>
+            <li><a href="content/books/webpack/book/index.html">Webpack</a></li>
+        </ul> -->
+<!--     <ul class="menu vertical" style="width: 100%;">
+        <li><a href="/content/books/applescript-notes/book"><span class="fi-book-bookmark"></span> AppleScript Notes</a></li>
+        <li><a href="/content/books/build-a-polling-app-with-socket-io-and-react/book"><span class="fi-book-bookmark"></span> Polling App with Socket.io and React.js</a></li>
+        <li><a href="/content/books/introduction-to-mysql/book"><span class="fi-book-bookmark"></span> Introduction to MySQL</a></li>
+        <li><a href="/content/books/unix-for-macos/book"><span class="fi-book-bookmark"></span> UNIX for MacOS</a></li>
+        <li><a href="/content/books/javascript-working-with-the-dom/book"><span class="fi-book-bookmark"></span> Javascript working with the DOM</a></li>
+    </ul> -->
+</li>
+<!-- <li><a href="../../../../about.html">About</a></li> -->
+<li><a href="../../../../content/books/about/book/chapter-1.html">About</a></li>
+                </ul>
+                <!-- Navigation on small screens -->
+                <ul class="vertical menu medium-horizontal show-for-small-only" data-responsive-menu="dropdown" data-accordion-menu>
+<li class="menu-text"><a href="../../../../index.html">Notebook</a></li>
+<li><a href="../../../../projects.html">Projects</a></li>
+<li><a href="../../../../cases.html">Case Studies</a></li>
+<li>
+    <a href="../../../../books.html">Notebooks</a>
+        <ul class="menu vertical" style="width: 100%;">
+            <li><a href="../../../../content/books/javascript-working-with-the-dom/book/index.html">Javascript: working with the dom</a></li>
+            <li><a href="../../../../content/books/unix-for-macos/book/index.html">Unix for MacOS</a></li>
+            <li><a href="../../../../content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="../../../../content/books/webpack/book/index.html">Webpack</a></li>
+            
+        </ul>
+<!--     <ul class="menu vertical" style="width: 100%;">
+        <li><a href="/content/books/applescript-notes/book"><span class="fi-book-bookmark"></span> AppleScript Notes</a></li>
+        <li><a href="/content/books/build-a-polling-app-with-socket-io-and-react/book"><span class="fi-book-bookmark"></span> Polling App with Socket.io and React.js</a></li>
+        <li><a href="/content/books/introduction-to-mysql/book"><span class="fi-book-bookmark"></span> Introduction to MySQL</a></li>
+        <li><a href="/content/books/unix-for-macos/book"><span class="fi-book-bookmark"></span> UNIX for MacOS</a></li>
+        <li><a href="/content/books/javascript-working-with-the-dom/book"><span class="fi-book-bookmark"></span> Javascript working with the DOM</a></li>
+    </ul> -->
+</li>
+<!-- <li><a href="../../../../about.html">About</a></li> -->
+<li><a href="../../../../content/books/about/book/chapter-1.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="row pageheader-row">
+    <div class="small-12 column index text-center">
+        <div class="callout small pageheader">
+            <h1 id="apache-installation" class="book-title title-text">
+                <a href="./index.html" class="">Building a Development Environment in MacOS Sierra</a>
+            </h1>
+            <h6>Smerth</h6>
+        </div>
+    </div>
+</div>
+
+
+<div class="row " data-sticky-container>
+    <div class="column small-12 chapter-navigation-bar sticky" data-sticky data-anchor="main" data-options="marginTop:0;" style="width: 100%;">
+
+
+
+<div class="row chapter-navigation-row">
+    <div class="column small-6 small-order-2 medium-order-1 medium-3 prev-container">
+                    <h6><a class="prev" href="./chapter-2.html">&larr; Previous<div><small>Chapter 2 - Editors and Packages</small></div></a></h6>
+            </div>
+
+    <div class="column small-12 small-order-1 medium-order-2 medium-6 text-center title-container">
+        <h6 id="apache-installation" class="bk-title"><span class="fi-book-bookmark"></span> <a href="./index.html">Building a Development Environment in MacOS Sierra</a></h6>
+        <h6 id="apache-installation" class="ch-title align-self-middle"><small>Chapter 3 - Apache Installation</small></h6>
+    </div>
+
+    <div class="column small-6 small-order-3 medium-order-3 medium-3 next-container">
+                    <h6><a class="next" href="./chapter-4.html"><div class="text-right">Next &rarr;</div><div class="text-right"><small>Chapter 4 - PHP Installation</small></div></a></h6>
+            </div>
+
+</div>
+</div>
+    </div> 
+    <div id="book-page" class="row">
+        
+        
+        <div id="sidebar" class="column small-12 medium-4  large-3" data-sticky-container>
+            <nav id="sidebar-toc" class=" sticky" data-sticky data-anchor="main" data-options="marginTop:5;">
+
+                
+                                <h3>
+                    <a href=".">Table of contents</a>
+                </h3>
+                <ul class="toc">
+                                                                                <li class="level-1">
+                        <span class="chapter-label">1.</span> <a href="./chapter-1.html"> Package Mangers and Toolsets</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">2.</span> <a href="./chapter-2.html"> Editors and Packages</a>
+                    </li>
+                                                                                                                <li class="level-1 active">
+                                <a class="chapter" href="./chapter-3.html">
+                                    <span class="chapter-label">Chapter 3.</span>
+                                    Apache Installation
+                                </a>
+                                <ul id="page-toc" class="unstyled toc-l2">
+                                                                                                                        <li class="level-2" data-scroll="install-apache-with-homebrew">
+                                                <span>3.1</span>
+                                                <a class="internal" href="./chapter-3.html#install-apache-with-homebrew">Install Apache with Homebrew</a>
+                                            </li>
+                                                                                    <li class="level-2" data-scroll="troubleshooting-tips">
+                                                <span>3.2</span>
+                                                <a class="internal" href="./chapter-3.html#troubleshooting-tips">Troubleshooting Tips</a>
+                                            </li>
+                                                                                    <li class="level-2" data-scroll="alias-apache-config">
+                                                <span>3.3</span>
+                                                <a class="internal" href="./chapter-3.html#alias-apache-config">Alias Apache Config</a>
+                                            </li>
+                                                                                    <li class="level-2" data-scroll="apache-configuration">
+                                                <span>3.4</span>
+                                                <a class="internal" href="./chapter-3.html#apache-configuration">Apache Configuration</a>
+                                            </li>
+                                                                                                    </ul>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">4.</span> <a href="./chapter-4.html"> PHP Installation</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">5.</span> <a href="./chapter-5.html"> MySQL</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">6.</span> <a href="./chapter-6.html"> Apache Virtual Hosts</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">7.</span> <a href="./chapter-7.html"> PHP Exentions</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">8.</span> <a href="./chapter-8.html"> Drupal DevOps</a>
+                    </li>
+                                            </ul>
+        </nav>
+    </div>
+
+        <div id="main" class="main column small-12 medium-8 large-9 ">
+        <div class="main-content">
+                                                    <h2 id="install-apache-with-homebrew">3.1 Install Apache with Homebrew</h2>
+
+<p>The latest macOS 10.12 Sierra comes with Apache 2.4 pre-installed, however, it is no longer a simple task to use this version with Homebrew because Apple has removed some required scripts in this release.</p>
+
+<p>However, the solution is to install Apache 2.4 via Homebrew and then configure it to run on the standard ports (80/443).</p>
+
+<p>Shutdown, and remove any auto-loading scripts for the built-in Apache.</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">sudo</span> <span class="kw2">apachectl stop</span>
+$ <span class="kw2">sudo</span> launchctl unload <span class="re5">-w</span> <span class="sy0">/</span>System<span class="sy0">/</span>Library<span class="sy0">/</span>LaunchDaemons<span class="sy0">/</span>org.apache.httpd.plist <span class="nu0">2</span><span class="sy0">&gt;/</span>dev<span class="sy0">/</span>null</pre>
+</div>
+
+<p>Install Apache from Homebrew</p>
+
+<div class="code bash">
+<pre class="bash">brew <span class="kw2">install</span> httpd24 <span class="re5">--with-privileged-ports</span> <span class="re5">--with-http2</span></pre>
+</div>
+
+<p>This step takes a little while as it builds Apache from source. Upon completion you should see a message like:</p>
+
+<div class="code bash">
+<pre class="bash">🍺  <span class="sy0">/</span>usr<span class="sy0">/</span>local<span class="sy0">/</span>Cellar<span class="sy0">/</span>httpd24<span class="sy0">/</span>2.4.23_2: <span class="nu0">212</span> files, 4.4M, built <span class="kw1">in</span> <span class="nu0">1</span> minute <span class="nu0">45</span> seconds</pre>
+</div>
+
+<p>Copy this path and use in the next step.</p>
+
+<p>In this example the path was <code>/usr/local/Cellar/httpd24/2.4.23_2</code>. If you get a newer version, simply use that path in the next line:</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">sudo</span> <span class="kw2">cp</span> <span class="re5">-v</span> <span class="sy0">/</span>usr<span class="sy0">/</span>local<span class="sy0">/</span>Cellar<span class="sy0">/</span>httpd24<span class="sy0">/</span>2.4.23_2<span class="sy0">/</span>homebrew.mxcl.httpd24.plist <span class="sy0">/</span>Library<span class="sy0">/</span>LaunchDaemons
+<span class="kw2">sudo</span> <span class="kw2">chown</span> <span class="re5">-v</span> root:wheel <span class="sy0">/</span>Library<span class="sy0">/</span>LaunchDaemons<span class="sy0">/</span>homebrew.mxcl.httpd24.plist
+<span class="kw2">sudo</span> <span class="kw2">chmod</span> <span class="re5">-v</span> <span class="nu0">644</span> <span class="sy0">/</span>Library<span class="sy0">/</span>LaunchDaemons<span class="sy0">/</span>homebrew.mxcl.httpd24.plist
+<span class="kw2">sudo</span> launchctl load <span class="sy0">/</span>Library<span class="sy0">/</span>LaunchDaemons<span class="sy0">/</span>homebrew.mxcl.httpd24.plist</pre>
+</div>
+
+<p>You now have installed Homebrew's Apache, and configured it to auto-start with a privileged account. It should already be running, so you can try to reach your server in a browser by pointing it at your localhost, you should see a simple header that says "It works!".</p>
+
+<h2 id="troubleshooting-tips">3.2 Troubleshooting Tips</h2>
+
+<p>If you get a message that the browser can't connect to the server, first check to ensure the server is up.</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">ps</span> <span class="re5">-aef</span> <span class="sy0">|</span> <span class="kw2">grep</span> httpd</pre>
+</div>
+
+<p>You should see a few <code>httpd processes</code> if Apache is up and running.</p>
+
+<p>Try to restart Apache with:</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">sudo</span> <span class="kw2">apachectl</span> <span class="re5">-k</span> restart</pre>
+</div>
+
+<p>You can watch the Apache error log in a new Terminal tab/window during a restart to see if anything is invalid or causing a problem:</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">tail</span> <span class="re5">-f</span> <span class="sy0">/</span>usr<span class="sy0">/</span>local<span class="sy0">/</span>var<span class="sy0">/</span>log<span class="sy0">/</span>apache2<span class="sy0">/</span>error_log</pre>
+</div>
+
+<p>If that doesn't work, check to ensure you have <code>Listen: 80</code> in your <code>/usr/local/etc/apache2/2.4/httpd.conf</code> configuration file.</p>
+
+<div class="code bash">
+<pre class="bash">sublime <span class="sy0">/</span>usr<span class="sy0">/</span>local<span class="sy0">/</span>etc<span class="sy0">/</span>apache2<span class="sy0">/</span><span class="nu0">2.4</span><span class="sy0">/</span>httpd.conf</pre>
+</div>
+
+<p>Apache is controlled via the <code>apachectl</code> command so some useful commands to use are:</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">sudo</span> <span class="kw2">apachectl start</span>
+<span class="kw2">sudo</span> <span class="kw2">apachectl stop</span>
+<span class="kw2">sudo</span> <span class="kw2">apachectl</span> <span class="re5">-k</span> restart</pre>
+</div>
+
+<p>The -k will force a restart immediately rather than asking politely to restart when apache is good and ready</p>
+
+<h2 id="alias-apache-config">3.3 Alias Apache Config</h2>
+
+<p>To make life easier, alias opening the apache folder with your favourite editor.</p>
+
+<p>@ bashrc</p>
+
+<div class="code code">
+<pre class="code"># Edit apache in the &quot;httpd.conf&quot; file
+alias config_apache=&quot;sublime /usr/local/etc/apache2/2.4/&quot;</pre>
+</div>
+
+<p>Reload bash</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw3">source</span> ~<span class="sy0">/</span>.bashrc</pre>
+</div>
+
+<p>To quickly get to the apache folder</p>
+
+<div class="code bash">
+<pre class="bash">config_apache</pre>
+</div>
+
+<h2 id="apache-configuration">3.4 Apache Configuration</h2>
+
+<p>Now make some configuration changes so Apache works better as a local development server.</p>
+
+<p>Set the document root for Apache. This is the folder where Apache looks for files to serve.</p>
+
+<p>By default, the document root is configured as <code>/Library/WebServer/Documents</code>. As this is a development machine, let's assume we want to change the document root to point to a folder in our own home directory.</p>
+
+<p>To do this, we will need to edit Apache's configuration file.</p>
+
+<div class="code bash">
+<pre class="bash">config_apache</pre>
+</div>
+
+<h3 id="document-root">3.4.1 Document Root</h3>
+
+<p>Search for the term <code>DocumentRoot</code>, and you should see the following line:</p>
+
+<div class="code code">
+<pre class="code">DocumentRoot &quot;/usr/local/var/www/htdocs&quot;</pre>
+</div>
+
+<p>Change this to point to your user directory where your_user is the name of your user account:</p>
+
+<div class="code code">
+<pre class="code">DocumentRoot /Users/your_user/Sites</pre>
+</div>
+
+<h3 id="directory">3.4.2 Directory</h3>
+
+<p>You also need to change the <code>&lt;Directory&gt;</code> tag reference right below the DocumentRoot line. This should also be changed to point to your new document root also:</p>
+
+<div class="code code">
+<pre class="code">&lt;Directory /Users/your_user/Sites&gt;</pre>
+</div>
+
+<p>Note: We removed the optional quotes around the directory paths as TextEdit will probably try to convert those to smart-quotes and that will result in a Syntax error when you try to restart Apache. Even if you edit around the quotes and leave them where they are, saving the document may result in their conversion and cause an error.</p>
+
+<p>In that same <code>&lt;Directory&gt;</code> block you will find an <code>AllowOverride</code> setting, this should be changed as follows:</p>
+
+<div class="code apache">
+<pre class="apache"><span class="co1">#AllowOverride controls what directives may be placed in .htaccess files.</span>
+<span class="co1">#It can be &quot;All&quot;, &quot;None&quot;, or any combination of the keywords:</span>
+  <span class="co1">#AllowOverride FileInfo AuthConfig Limit</span>
+&nbsp;
+<span class="kw1">AllowOverride</span> <span class="kw2">All</span></pre>
+</div>
+
+<p>Also we should now enable <code>mod_rewrite</code> which is commented out by default. Search for <code>mod_rewrite.so</code> and uncomment the line by removing the leading #:</p>
+
+<div class="code bash">
+<pre class="bash">LoadModule rewrite_module libexec<span class="sy0">/</span>mod_rewrite.so</pre>
+</div>
+
+<h3 id="user-amp-group">3.4.3 User &amp; Group</h3>
+
+<p>Now we have the Apache configuration pointing to a Sites folder in our home directory. One problem still exists, however. By default, apache runs as the user daemon and group daemon.</p>
+
+<p>This will cause permission problems when trying to access files in our home directory. About a third of the way down the <code>httpd.conf</code> file there are two settings to set the User and Group Apache will run under.</p>
+
+<p>Change these to match your user account (replace your_user with your real username), with a group of staff:</p>
+
+<div class="code code">
+<pre class="code">User your_user
+Group staff</pre>
+</div>
+
+<h3 id="sites-folder">3.4.4 Sites Folder</h3>
+
+<p>Now, you need to create a Sites folder in the root of your home directory.</p>
+
+<div class="code code">
+<pre class="code">mkdir ~/Sites</pre>
+</div>
+
+<p>In this new Sites folder create a simple index.html and put some dummy content in it like:</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw3">echo</span> <span class="st0">&quot;&lt;h1&gt;My User Web Root&lt;/h1&gt;&quot;</span> <span class="sy0">&gt;</span> ~<span class="sy0">/</span>Sites<span class="sy0">/</span>index.html</pre>
+</div>
+
+<p>Restart apache to ensure your configuration changes have taken effect:</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">sudo</span> <span class="kw2">apachectl</span> <span class="re5">-k</span> restart</pre>
+</div>
+
+<p>If you receive an error upon restarting Apache, try removing the quotes around the <code>DocumentRoot</code> and <code>Directory</code> designations we set up earlier.</p>
+
+<p>Any error involving <code>apr_sockaddr_info_get()</code> may be resolved by searching your <code>httpd.conf</code> file for the line <code>ServerName localhost</code> and removing the #.</p>
+
+<p>Once you have done this, try resetting Apache again.</p>
+
+<p>Pointing your browser to http://localhost should display your new message.</p>
+
+<p>If you have that working, we can move on!</p>
+
+                    </div>
+    </div>
+</div>
+
+<footer class="columns small-12 topspace">
+    <div class="row footer-top">
+        <div class="medium-6 columns">
+<!--             <ul class="menu">
+                <li><a href="#">Legal</a></li>
+                <li><a href="#">Partner</a></li>
+                <li><a href="#">Explore</a></li>
+            </ul> -->
+        </div>
+        <div class="medium-6 columns align-middle text-right">
+            
+                <div class="copyright">Copyright © 2016 Smedia</div>
+            
+        </div>
+    </div>
+    <div class="row footer-middle">
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Offices</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Solar Systems</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+        <div class="small-6 medium-offset-6 large-3 columns">
+            <p class="lead">Contact</p>
+            <ul class="menu vertical">
+                <li><a href="#"><i class="fi-social-twitter"></i> Twitter</a></li>
+                <li><a href="#"><i class="fi-social-facebook"></i> Facebook</a></li>
+                <li><a href="#"><i class="fi-social-instagram"></i> Instagram</a></li>
+                <li><a href="#"><i class="fi-social-pinterest"></i> Pinterest</a></li>
+            </ul>
+        </div>
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Widgets</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+    </div>
+    <div class="row footer-bottom">
+        <div class="large-12 columns text-center">
+            <p>Le Grande Hotel, Latin Quarter, Paris • 261 Rue Saint-Séverin, 75005 Paris, France </p>
+            <p>Phone 01 42 517 85 • info@dummy.com • www.dummy.com</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="../../../../assets/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,375 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebooks - Building a Development Environment in MacOS Sierra - Apache Virtual Hosts</title>
+    <link rel="stylesheet" href="../../../../assets/css/app.css">
+    <link href='//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+  </head>
+  <body>
+
+<div class="row navigation-row">
+    <div class="columns small-12">
+
+        <div class="mobile-branding show-for-small-only">
+          <a href="../../../../index.html"><div class="menu-text mobile-branding">Smerth</div></a>
+        </div>
+        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+          <div class="title-bar-title">Menu</div>
+        </div>
+        <nav id="main-menu" class="top-bar">
+
+            <div class="top-bar-left">
+                <!-- Navigation on medium and up screens -->
+                <ul class="vertical menu medium-horizontal show-for-medium" data-responsive-menu="dropdown">
+<li class="menu-text"><a class="sitename" href="../../../../index.html">Smerth</a></li>
+<li><a href="../../../../projects.html">Projects</a></li>
+<li><a href="../../../../cases.html">Case Studies</a></li>
+<li>
+    <a href="../../../../books.html">Notebooks</a>
+        <ul class="menu vertical" style="width: 300px;">
+            <li><a href="../../../../content/books/javascript-working-with-the-dom/book/index.html">Javascript: working with the dom</a></li>
+            <li><a href="../../../../content/books/unix-for-macos/book/index.html">Unix for MacOS</a></li>
+            <li><a href="../../../../content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="../../../../content/books/webpack/book/index.html">Webpack</a></li>
+            
+        </ul>
+<!--           <ul class="menu vertical" style="width: 300px;">
+            <li><a href="content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="content/books/easybook_notes/book/index.html">Easybook Notes</a></li>
+            <li><a href="content/books/introduction-to-mysql/book/index.html">Introduction to MySQL</a></li>
+            <li><a href="content/books/javascript-and-ajax/book/index.html">Javascript and AJAX</a></li>
+            <li><a href="content/books/javascript-and-json/book/index.html">Javascript and JSON</a></li>
+            <li><a href="content/books/jquery-data-with-ajax/book/index.html">jQuery Data with AJAX</a></li>
+            <li><a href="content/books/unix-for-macos/book/index.html">UNIX for MacOS</a></li>
+            <li><a href="content/books/GIT-Workflow/book/index.html">GIT Workflow</a></li>
+            <li><a href="content/books/webpack/book/index.html">Webpack</a></li>
+        </ul> -->
+<!--     <ul class="menu vertical" style="width: 100%;">
+        <li><a href="/content/books/applescript-notes/book"><span class="fi-book-bookmark"></span> AppleScript Notes</a></li>
+        <li><a href="/content/books/build-a-polling-app-with-socket-io-and-react/book"><span class="fi-book-bookmark"></span> Polling App with Socket.io and React.js</a></li>
+        <li><a href="/content/books/introduction-to-mysql/book"><span class="fi-book-bookmark"></span> Introduction to MySQL</a></li>
+        <li><a href="/content/books/unix-for-macos/book"><span class="fi-book-bookmark"></span> UNIX for MacOS</a></li>
+        <li><a href="/content/books/javascript-working-with-the-dom/book"><span class="fi-book-bookmark"></span> Javascript working with the DOM</a></li>
+    </ul> -->
+</li>
+<!-- <li><a href="../../../../about.html">About</a></li> -->
+<li><a href="../../../../content/books/about/book/chapter-1.html">About</a></li>
+                </ul>
+                <!-- Navigation on small screens -->
+                <ul class="vertical menu medium-horizontal show-for-small-only" data-responsive-menu="dropdown" data-accordion-menu>
+<li class="menu-text"><a href="../../../../index.html">Notebook</a></li>
+<li><a href="../../../../projects.html">Projects</a></li>
+<li><a href="../../../../cases.html">Case Studies</a></li>
+<li>
+    <a href="../../../../books.html">Notebooks</a>
+        <ul class="menu vertical" style="width: 100%;">
+            <li><a href="../../../../content/books/javascript-working-with-the-dom/book/index.html">Javascript: working with the dom</a></li>
+            <li><a href="../../../../content/books/unix-for-macos/book/index.html">Unix for MacOS</a></li>
+            <li><a href="../../../../content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="../../../../content/books/webpack/book/index.html">Webpack</a></li>
+            
+        </ul>
+<!--     <ul class="menu vertical" style="width: 100%;">
+        <li><a href="/content/books/applescript-notes/book"><span class="fi-book-bookmark"></span> AppleScript Notes</a></li>
+        <li><a href="/content/books/build-a-polling-app-with-socket-io-and-react/book"><span class="fi-book-bookmark"></span> Polling App with Socket.io and React.js</a></li>
+        <li><a href="/content/books/introduction-to-mysql/book"><span class="fi-book-bookmark"></span> Introduction to MySQL</a></li>
+        <li><a href="/content/books/unix-for-macos/book"><span class="fi-book-bookmark"></span> UNIX for MacOS</a></li>
+        <li><a href="/content/books/javascript-working-with-the-dom/book"><span class="fi-book-bookmark"></span> Javascript working with the DOM</a></li>
+    </ul> -->
+</li>
+<!-- <li><a href="../../../../about.html">About</a></li> -->
+<li><a href="../../../../content/books/about/book/chapter-1.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="row pageheader-row">
+    <div class="small-12 column index text-center">
+        <div class="callout small pageheader">
+            <h1 id="apache-virtual-hosts" class="book-title title-text">
+                <a href="./index.html" class="">Building a Development Environment in MacOS Sierra</a>
+            </h1>
+            <h6>Smerth</h6>
+        </div>
+    </div>
+</div>
+
+
+<div class="row " data-sticky-container>
+    <div class="column small-12 chapter-navigation-bar sticky" data-sticky data-anchor="main" data-options="marginTop:0;" style="width: 100%;">
+
+
+
+<div class="row chapter-navigation-row">
+    <div class="column small-6 small-order-2 medium-order-1 medium-3 prev-container">
+                    <h6><a class="prev" href="./chapter-5.html">&larr; Previous<div><small>Chapter 5 - MySQL</small></div></a></h6>
+            </div>
+
+    <div class="column small-12 small-order-1 medium-order-2 medium-6 text-center title-container">
+        <h6 id="apache-virtual-hosts" class="bk-title"><span class="fi-book-bookmark"></span> <a href="./index.html">Building a Development Environment in MacOS Sierra</a></h6>
+        <h6 id="apache-virtual-hosts" class="ch-title align-self-middle"><small>Chapter 6 - Apache Virtual Hosts</small></h6>
+    </div>
+
+    <div class="column small-6 small-order-3 medium-order-3 medium-3 next-container">
+                    <h6><a class="next" href="./chapter-7.html"><div class="text-right">Next &rarr;</div><div class="text-right"><small>Chapter 7 - PHP Exentions</small></div></a></h6>
+            </div>
+
+</div>
+</div>
+    </div> 
+    <div id="book-page" class="row">
+        
+        
+        <div id="sidebar" class="column small-12 medium-4  large-3" data-sticky-container>
+            <nav id="sidebar-toc" class=" sticky" data-sticky data-anchor="main" data-options="marginTop:5;">
+
+                
+                                <h3>
+                    <a href=".">Table of contents</a>
+                </h3>
+                <ul class="toc">
+                                                                                <li class="level-1">
+                        <span class="chapter-label">1.</span> <a href="./chapter-1.html"> Package Mangers and Toolsets</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">2.</span> <a href="./chapter-2.html"> Editors and Packages</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">3.</span> <a href="./chapter-3.html"> Apache Installation</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">4.</span> <a href="./chapter-4.html"> PHP Installation</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">5.</span> <a href="./chapter-5.html"> MySQL</a>
+                    </li>
+                                                                                                                <li class="level-1 active">
+                                <a class="chapter" href="./chapter-6.html">
+                                    <span class="chapter-label">Chapter 6.</span>
+                                    Apache Virtual Hosts
+                                </a>
+                                <ul id="page-toc" class="unstyled toc-l2">
+                                                                                                                        <li class="level-2" data-scroll="virtual-hosts">
+                                                <span>6.1</span>
+                                                <a class="internal" href="./chapter-6.html#virtual-hosts">Virtual Hosts</a>
+                                            </li>
+                                                                                    <li class="level-2" data-scroll="dnsmasq">
+                                                <span>6.2</span>
+                                                <a class="internal" href="./chapter-6.html#dnsmasq">Dnsmasq</a>
+                                            </li>
+                                                                                                    </ul>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">7.</span> <a href="./chapter-7.html"> PHP Exentions</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">8.</span> <a href="./chapter-8.html"> Drupal DevOps</a>
+                    </li>
+                                            </ul>
+        </nav>
+    </div>
+
+        <div id="main" class="main column small-12 medium-8 large-9 ">
+        <div class="main-content">
+                                                    <p>A very handy development option is to have multiple virtual hosts set up for you various projects. This means that you can set up names such as <code>project-x.mydomain.com</code> for a project-specific URL.</p>
+
+<p>Apache generally performs name-based matching, so you don't need to configure multiple IP addresses. Detailed information can be found on the <code>apache.org</code> site.</p>
+
+<h2 id="virtual-hosts">6.1 Virtual Hosts</h2>
+
+<p>Apache already comes preconfigured to support this behavior but it is not enabled. First you will need to uncomment the following lines in: <code>/usr/local/etc/apache2/2.4/httpd.conf</code></p>
+
+<div class="code code">
+<pre class="code">LoadModule vhost_alias_module libexec/mod_vhost_alias.so</pre>
+</div>
+
+<p>and:</p>
+
+<div class="code code">
+<pre class="code"># Virtual Hosts
+Include /usr/local/etc/apache2/2.4/extra/httpd-vhosts.conf</pre>
+</div>
+
+<p>Then you can edit this referenced file and configure it to your needs.</p>
+
+<p>@ .bashrc</p>
+
+<div class="code code">
+<pre class="code"># Manage Virtual Hosts
+alias conf_vhosts=&quot;sublime /private/etc/hosts &amp;&amp; sublime /private/etc/apache2/extra/httpd-vhosts.conf&quot;</pre>
+</div>
+
+<p>This file has some instructions already but the important thing to remember is that these rules are matched in order.</p>
+
+<p>When you set up virtual hosts, you will lose your older document root, so you will need to add back support for that first as a virtual host.</p>
+
+<p>@ httpd-vhosts.conf</p>
+
+<div class="code code">
+<pre class="code">&lt;VirtualHost *:80&gt;
+    DocumentRoot &quot;/Users/your_user/Sites&quot;
+    ServerName localhost
+&lt;/VirtualHost&gt;
+&nbsp;
+&lt;VirtualHost *:80&gt;
+    DocumentRoot &quot;/Users/your_user/Sites/this-site&quot;
+    ServerName this-site.com
+&lt;/VirtualHost&gt;</pre>
+</div>
+
+<p>This just lets you know that the source directory listed for your virtual hosts is not present on the drive. It's an issue that can be resolved by editing this file with the corrected DocumentRoot.</p>
+
+<h2 id="dnsmasq">6.2 Dnsmasq</h2>
+
+<p><strong>Note</strong> - not implemented on my server</p>
+
+<p>In the example virtualhost we setup above, we defined a ServerName of <code>this-site.com</code>.</p>
+
+<p>This by default will not resolve to your local machine.  Make it so by manually adding entries to <code>/etc/hosts</code> every time you define a new server for a new site.</p>
+
+<p>@ hosts</p>
+
+<div class="code code">
+<pre class="code">127.0.0.1    this-site.com
+127.0.0.1    www.this-site.com</pre>
+</div>
+
+<p>However when managing a large number of site thsi becomes tedious.</p>
+
+<p>One option is to install and configure Dnsmasq to automatically handle wildcard <code>*.dev</code> names and forward all of them to localhost (127.0.0.1).</p>
+
+<p>First we install it with brew:</p>
+
+<div class="code bash">
+<pre class="bash">brew <span class="kw2">install</span> dnsmasq</pre>
+</div>
+
+<p>To configure dnsmasq, copy the example configuration to /usr/local/etc/dnsmasq.conf
+and edit to taste.</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">cp</span> <span class="sy0">/</span>usr<span class="sy0">/</span>local<span class="sy0">/</span>opt<span class="sy0">/</span>dnsmasq<span class="sy0">/</span>dnsmasq.conf.example <span class="sy0">/</span>usr<span class="sy0">/</span>local<span class="sy0">/</span>etc<span class="sy0">/</span>dnsmasq.conf</pre>
+</div>
+
+<p>Then we setup <code>*.dev</code> hosts:</p>
+
+<p>Add dnsmasq.conf to the conf_hosts definition</p>
+
+<p>@.bashrc</p>
+
+<div class="code code">
+<pre class="code"># Manage Virtual Hosts
+alias conf_vhosts=&quot;sublime /private/etc/hosts &amp;&amp; sublime /private/etc/apache2/extra/httpd-vhosts.conf &amp;&amp; /usr/local/etc/dnsmasq.conf&quot;</pre>
+</div>
+
+<p>edit dnsmasq.conf</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw3">echo</span> <span class="st_h">'address=/.dev/127.0.0.1'</span> <span class="sy0">&gt;</span> <span class="sy0">/</span>usr<span class="sy0">/</span>local<span class="sy0">/</span>etc<span class="sy0">/</span>dnsmasq.conf</pre>
+</div>
+
+<p>Start it and ensure it auto-starts on reboot in the future:</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">sudo</span> brew services start dnsmasq</pre>
+</div>
+
+<p>And lastly, add it to the resolvers:</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">sudo</span> <span class="kw2">mkdir</span> <span class="re5">-v</span> <span class="sy0">/</span>etc<span class="sy0">/</span>resolver
+<span class="kw2">sudo</span> <span class="kw2">bash</span> <span class="re5">-c</span> <span class="st_h">'echo &quot;nameserver 127.0.0.1&quot; &gt; /etc/resolver/dev'</span></pre>
+</div>
+
+<p>Now you can test it out by pinging some <code>bogus.dev</code> name:</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">ping</span> bogus.dev</pre>
+</div>
+
+<p>returns:</p>
+
+<div class="code bash">
+<pre class="bash">PING bogus.dev <span class="br0">&#40;</span>127.0.0.1<span class="br0">&#41;</span>: <span class="nu0">56</span> data bytes
+<span class="nu0">64</span> bytes from 127.0.0.1: <span class="re2">icmp_seq</span>=<span class="nu0">0</span> <span class="re2">ttl</span>=<span class="nu0">64</span> <span class="re2">time</span>=<span class="nu0">0.044</span> ms
+<span class="nu0">64</span> bytes from 127.0.0.1: <span class="re2">icmp_seq</span>=<span class="nu0">1</span> <span class="re2">ttl</span>=<span class="nu0">64</span> <span class="re2">time</span>=<span class="nu0">0.118</span> ms
+<span class="nu0">64</span> bytes from 127.0.0.1: <span class="re2">icmp_seq</span>=<span class="nu0">2</span> <span class="re2">ttl</span>=<span class="nu0">64</span> <span class="re2">time</span>=<span class="nu0">0.045</span> ms</pre>
+</div>
+
+<p>Voila! we have successfully setup wildcard forwarding of all <code>*.dev</code> DNS names to localhost.</p>
+
+                    </div>
+    </div>
+</div>
+
+<footer class="columns small-12 topspace">
+    <div class="row footer-top">
+        <div class="medium-6 columns">
+<!--             <ul class="menu">
+                <li><a href="#">Legal</a></li>
+                <li><a href="#">Partner</a></li>
+                <li><a href="#">Explore</a></li>
+            </ul> -->
+        </div>
+        <div class="medium-6 columns align-middle text-right">
+            
+                <div class="copyright">Copyright © 2016 Smedia</div>
+            
+        </div>
+    </div>
+    <div class="row footer-middle">
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Offices</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Solar Systems</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+        <div class="small-6 medium-offset-6 large-3 columns">
+            <p class="lead">Contact</p>
+            <ul class="menu vertical">
+                <li><a href="#"><i class="fi-social-twitter"></i> Twitter</a></li>
+                <li><a href="#"><i class="fi-social-facebook"></i> Facebook</a></li>
+                <li><a href="#"><i class="fi-social-instagram"></i> Instagram</a></li>
+                <li><a href="#"><i class="fi-social-pinterest"></i> Pinterest</a></li>
+            </ul>
+        </div>
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Widgets</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+    </div>
+    <div class="row footer-bottom">
+        <div class="large-12 columns text-center">
+            <p>Le Grande Hotel, Latin Quarter, Paris • 261 Rue Saint-Séverin, 75005 Paris, France </p>
+            <p>Phone 01 42 517 85 • info@dummy.com • www.dummy.com</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="../../../../assets/js/app.js"></script>
+  </body>
+</html>

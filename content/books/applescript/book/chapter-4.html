@@ -1,0 +1,558 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebooks - Applescript - Loops</title>
+    <link rel="stylesheet" href="../../../../assets/css/app.css">
+    <link href='//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+  </head>
+  <body>
+
+<div class="row navigation-row">
+    <div class="columns small-12">
+
+        <div class="mobile-branding show-for-small-only">
+          <a href="../../../../index.html"><div class="menu-text mobile-branding">Smerth</div></a>
+        </div>
+        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+          <div class="title-bar-title">Menu</div>
+        </div>
+        <nav id="main-menu" class="top-bar">
+
+            <div class="top-bar-left">
+                <!-- Navigation on medium and up screens -->
+                <ul class="vertical menu medium-horizontal show-for-medium" data-responsive-menu="dropdown">
+<li class="menu-text"><a class="sitename" href="../../../../index.html">Smerth</a></li>
+<li><a href="../../../../projects.html">Projects</a></li>
+<li><a href="../../../../cases.html">Case Studies</a></li>
+<li>
+    <a href="../../../../books.html">Notebooks</a>
+        <ul class="menu vertical" style="width: 300px;">
+            <li><a href="../../../../content/books/javascript-working-with-the-dom/book/index.html">Javascript: working with the dom</a></li>
+            <li><a href="../../../../content/books/unix-for-macos/book/index.html">Unix for MacOS</a></li>
+            <li><a href="../../../../content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="../../../../content/books/webpack/book/index.html">Webpack</a></li>
+            
+        </ul>
+<!--           <ul class="menu vertical" style="width: 300px;">
+            <li><a href="content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="content/books/easybook_notes/book/index.html">Easybook Notes</a></li>
+            <li><a href="content/books/introduction-to-mysql/book/index.html">Introduction to MySQL</a></li>
+            <li><a href="content/books/javascript-and-ajax/book/index.html">Javascript and AJAX</a></li>
+            <li><a href="content/books/javascript-and-json/book/index.html">Javascript and JSON</a></li>
+            <li><a href="content/books/jquery-data-with-ajax/book/index.html">jQuery Data with AJAX</a></li>
+            <li><a href="content/books/unix-for-macos/book/index.html">UNIX for MacOS</a></li>
+            <li><a href="content/books/GIT-Workflow/book/index.html">GIT Workflow</a></li>
+            <li><a href="content/books/webpack/book/index.html">Webpack</a></li>
+        </ul> -->
+<!--     <ul class="menu vertical" style="width: 100%;">
+        <li><a href="/content/books/applescript-notes/book"><span class="fi-book-bookmark"></span> AppleScript Notes</a></li>
+        <li><a href="/content/books/build-a-polling-app-with-socket-io-and-react/book"><span class="fi-book-bookmark"></span> Polling App with Socket.io and React.js</a></li>
+        <li><a href="/content/books/introduction-to-mysql/book"><span class="fi-book-bookmark"></span> Introduction to MySQL</a></li>
+        <li><a href="/content/books/unix-for-macos/book"><span class="fi-book-bookmark"></span> UNIX for MacOS</a></li>
+        <li><a href="/content/books/javascript-working-with-the-dom/book"><span class="fi-book-bookmark"></span> Javascript working with the DOM</a></li>
+    </ul> -->
+</li>
+<!-- <li><a href="../../../../about.html">About</a></li> -->
+<li><a href="../../../../content/books/about/book/chapter-1.html">About</a></li>
+                </ul>
+                <!-- Navigation on small screens -->
+                <ul class="vertical menu medium-horizontal show-for-small-only" data-responsive-menu="dropdown" data-accordion-menu>
+<li class="menu-text"><a href="../../../../index.html">Notebook</a></li>
+<li><a href="../../../../projects.html">Projects</a></li>
+<li><a href="../../../../cases.html">Case Studies</a></li>
+<li>
+    <a href="../../../../books.html">Notebooks</a>
+        <ul class="menu vertical" style="width: 100%;">
+            <li><a href="../../../../content/books/javascript-working-with-the-dom/book/index.html">Javascript: working with the dom</a></li>
+            <li><a href="../../../../content/books/unix-for-macos/book/index.html">Unix for MacOS</a></li>
+            <li><a href="../../../../content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="../../../../content/books/webpack/book/index.html">Webpack</a></li>
+            
+        </ul>
+<!--     <ul class="menu vertical" style="width: 100%;">
+        <li><a href="/content/books/applescript-notes/book"><span class="fi-book-bookmark"></span> AppleScript Notes</a></li>
+        <li><a href="/content/books/build-a-polling-app-with-socket-io-and-react/book"><span class="fi-book-bookmark"></span> Polling App with Socket.io and React.js</a></li>
+        <li><a href="/content/books/introduction-to-mysql/book"><span class="fi-book-bookmark"></span> Introduction to MySQL</a></li>
+        <li><a href="/content/books/unix-for-macos/book"><span class="fi-book-bookmark"></span> UNIX for MacOS</a></li>
+        <li><a href="/content/books/javascript-working-with-the-dom/book"><span class="fi-book-bookmark"></span> Javascript working with the DOM</a></li>
+    </ul> -->
+</li>
+<!-- <li><a href="../../../../about.html">About</a></li> -->
+<li><a href="../../../../content/books/about/book/chapter-1.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="row pageheader-row">
+    <div class="small-12 column index text-center">
+        <div class="callout small pageheader">
+            <h1 id="loops" class="book-title title-text">
+                <a href="./index.html" class="">Applescript</a>
+            </h1>
+            <h6>Smerth</h6>
+        </div>
+    </div>
+</div>
+
+
+<div class="row " data-sticky-container>
+    <div class="column small-12 chapter-navigation-bar sticky" data-sticky data-anchor="main" data-options="marginTop:0;" style="width: 100%;">
+
+
+
+<div class="row chapter-navigation-row">
+    <div class="column small-6 small-order-2 medium-order-1 medium-3 prev-container">
+                    <h6><a class="prev" href="./chapter-3.html">&larr; Previous<div><small>Chapter 3 - Lists and Records</small></div></a></h6>
+            </div>
+
+    <div class="column small-12 small-order-1 medium-order-2 medium-6 text-center title-container">
+        <h6 id="loops" class="bk-title"><span class="fi-book-bookmark"></span> <a href="./index.html">Applescript</a></h6>
+        <h6 id="loops" class="ch-title align-self-middle"><small>Chapter 4 - Loops</small></h6>
+    </div>
+
+    <div class="column small-6 small-order-3 medium-order-3 medium-3 next-container">
+                    <h6><a class="next" href="./chapter-5.html"><div class="text-right">Next &rarr;</div><div class="text-right"><small>Chapter 5 - Conditionals</small></div></a></h6>
+            </div>
+
+</div>
+</div>
+    </div> 
+    <div id="book-page" class="row">
+        
+        
+        <div id="sidebar" class="column small-12 medium-4  large-3" data-sticky-container>
+            <nav id="sidebar-toc" class=" sticky" data-sticky data-anchor="main" data-options="marginTop:5;">
+
+                
+                                <h3>
+                    <a href=".">Table of contents</a>
+                </h3>
+                <ul class="toc">
+                                                                                <li class="level-1">
+                        <span class="chapter-label">1.</span> <a href="./chapter-1.html"> AppleScript Overview</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">2.</span> <a href="./chapter-2.html"> Files and Folders</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">3.</span> <a href="./chapter-3.html"> Lists and Records</a>
+                    </li>
+                                                                                                                <li class="level-1 active">
+                                <a class="chapter" href="./chapter-4.html">
+                                    <span class="chapter-label">Chapter 4.</span>
+                                    Loops
+                                </a>
+                                <ul id="page-toc" class="unstyled toc-l2">
+                                                                                                                        <li class="level-2" data-scroll="using-conditionals">
+                                                <span>4.1</span>
+                                                <a class="internal" href="./chapter-4.html#using-conditionals">Using conditionals</a>
+                                            </li>
+                                                                                                    </ul>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">5.</span> <a href="./chapter-5.html"> Conditionals</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">6.</span> <a href="./chapter-6.html"> Functions</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">7.</span> <a href="./chapter-7.html"> Alerts, Dialogs, and Notifications</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">8.</span> <a href="./chapter-8.html"> Using AppleScript with Applications</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">9.</span> <a href="./chapter-9.html"> AppleScript from the command line</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">10.</span> <a href="./chapter-10.html"> Preventing and catching errors</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">11.</span> <a href="./chapter-11.html"> Saving and distributing applications</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">12.</span> <a href="./chapter-12.html"> AppleScript Examples</a>
+                    </li>
+                                            </ul>
+        </nav>
+    </div>
+
+        <div id="main" class="main column small-12 medium-8 large-9 ">
+        <div class="main-content">
+                                                    <p>First lets create a folder with some files we can play with</p>
+
+<div class="code Applescript">
+<pre class="applescript"><span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+&nbsp;
+    <span class="co1">-- todo check if Test_folder exists from a previous run, if so delete it.</span>
+&nbsp;
+    <span class="co1">-- start on the desktop and create a folder</span>
+    <span class="kw3">set</span> myStartPath <span class="kw3">to</span> <span class="br0">&#40;</span><span class="kw1">path to</span> <span class="kw1">desktop</span> <span class="kw1">folder</span><span class="br0">&#41;</span>
+    <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">folder</span> at myStartPath <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;Test_folder&quot;</span><span class="br0">&#125;</span>
+&nbsp;
+    <span class="co1">-- make a test file in the folder</span>
+    <span class="kw3">set</span> myFolderPath <span class="kw3">to</span> <span class="br0">&#40;</span><span class="kw1">path to</span> <span class="kw1">desktop</span> <span class="kw1">folder</span> <span class="kw2">as</span> <span class="kw1">string</span><span class="br0">&#41;</span> <span class="sy0">&amp;</span> <span class="st0">&quot;Test_folder&quot;</span>
+&nbsp;
+    <span class="co1">-- Lets create 5 files in the test folder, we will do this more efficiently later, but for now:</span>
+    <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">file</span> at myFolderPath <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;file-1&quot;</span>, type:<span class="st0">&quot;jpg&quot;</span><span class="br0">&#125;</span>
+    <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">file</span> at myFolderPath <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;file-2&quot;</span>, type:<span class="st0">&quot;jpg&quot;</span><span class="br0">&#125;</span>
+    <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">file</span> at myFolderPath <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;file-3&quot;</span>, type:<span class="st0">&quot;jpg&quot;</span><span class="br0">&#125;</span>
+    <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">file</span> at myFolderPath <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;file-4&quot;</span>, type:<span class="st0">&quot;jpg&quot;</span><span class="br0">&#125;</span>
+    <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">file</span> at myFolderPath <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;file-5&quot;</span>, type:<span class="st0">&quot;jpg&quot;</span><span class="br0">&#125;</span>
+&nbsp;
+    <span class="co1">-- access the Test_folder as an alias</span>
+    <span class="kw3">set</span> myFolder <span class="kw3">to</span> <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="kw1">path to</span> <span class="kw1">desktop</span> <span class="kw1">folder</span><span class="br0">&#41;</span> <span class="sy0">&amp;</span> <span class="st0">&quot;Test_folder&quot;</span> <span class="kw2">as</span> <span class="kw1">string</span> <span class="kw2">as</span> <span class="kw1">alias</span><span class="br0">&#41;</span>
+    <span class="kw3">set</span> myFiles <span class="kw3">to</span> <span class="kw2">the</span> <span class="kw1">name</span> <span class="kw3">of</span> <span class="kw2">every</span> <span class="kw1">file</span> <span class="kw3">of</span> myFolder
+&nbsp;
+<span class="kw3">end</span> <span class="kw3">tell</span></pre>
+</div>
+
+<p>In this script the variable <code>myFiles</code> contains a list of file names.  To loop through this list of file names we use the <code>repeat</code> operator.</p>
+
+<div class="code applescript">
+<pre class="applescript"><span class="kw3">set</span> myOutput <span class="kw3">to</span> <span class="st0">&quot;I see the following files: &quot;</span>
+  <span class="kw3">repeat</span> <span class="kw3">with</span> i <span class="kw3">from</span> <span class="nu0">1</span> <span class="kw3">to</span> <span class="kw2">the</span> <span class="kw1">count</span> <span class="kw3">of</span> myFiles
+      <span class="kw3">set</span> myOutput <span class="kw3">to</span> myOutput <span class="sy0">&amp;</span> <span class="st0">&quot; &quot;</span> <span class="sy0">&amp;</span> i <span class="sy0">&amp;</span> <span class="st0">&quot; - &quot;</span> <span class="sy0">&amp;</span> <span class="kw1">item</span> i <span class="kw3">of</span> myFiles
+  <span class="kw3">end</span> <span class="kw3">repeat</span></pre>
+</div>
+
+<p>We can add the Output loop to at the end of our program:</p>
+
+<div class="code applescript">
+<pre class="applescript"><span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+&nbsp;
+    <span class="co1">-- todo check if Test_folder exists from a previous run, if so delete it.</span>
+&nbsp;
+    <span class="co1">-- start on the desktop and create a folder</span>
+    <span class="kw3">set</span> myStartPath <span class="kw3">to</span> <span class="br0">&#40;</span><span class="kw1">path to</span> <span class="kw1">desktop</span> <span class="kw1">folder</span><span class="br0">&#41;</span>
+    <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">folder</span> at myStartPath <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;Test_folder&quot;</span><span class="br0">&#125;</span>
+&nbsp;
+    <span class="co1">-- make a test file in the folder</span>
+    <span class="kw3">set</span> myFolderPath <span class="kw3">to</span> <span class="br0">&#40;</span><span class="kw1">path to</span> <span class="kw1">desktop</span> <span class="kw1">folder</span> <span class="kw2">as</span> <span class="kw1">string</span><span class="br0">&#41;</span> <span class="sy0">&amp;</span> <span class="st0">&quot;Test_folder&quot;</span>
+&nbsp;
+    <span class="co1">-- Lets create 5 files in the test folder, we will do this more efficiently later, but for now:</span>
+    <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">file</span> at myFolderPath <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;image-a&quot;</span>, type:<span class="st0">&quot;jpg&quot;</span><span class="br0">&#125;</span>
+    <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">file</span> at myFolderPath <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;image-b&quot;</span>, type:<span class="st0">&quot;jpg&quot;</span><span class="br0">&#125;</span>
+    <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">file</span> at myFolderPath <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;image-c&quot;</span>, type:<span class="st0">&quot;jpg&quot;</span><span class="br0">&#125;</span>
+    <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">file</span> at myFolderPath <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;image-d&quot;</span>, type:<span class="st0">&quot;jpg&quot;</span><span class="br0">&#125;</span>
+    <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">file</span> at myFolderPath <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;image-e&quot;</span>, type:<span class="st0">&quot;jpg&quot;</span><span class="br0">&#125;</span>
+&nbsp;
+    <span class="co1">-- access the Test_folder as an alias</span>
+    <span class="kw3">set</span> myFolder <span class="kw3">to</span> <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="kw1">path to</span> <span class="kw1">desktop</span> <span class="kw1">folder</span><span class="br0">&#41;</span> <span class="sy0">&amp;</span> <span class="st0">&quot;Test_folder&quot;</span> <span class="kw2">as</span> <span class="kw1">string</span> <span class="kw2">as</span> <span class="kw1">alias</span><span class="br0">&#41;</span>
+    <span class="kw3">set</span> myFiles <span class="kw3">to</span> <span class="kw2">the</span> <span class="kw1">name</span> <span class="kw3">of</span> <span class="kw2">every</span> <span class="kw1">file</span> <span class="kw3">of</span> myFolder
+&nbsp;
+    <span class="co1">-- If you just want the position of items in the list</span>
+    <span class="kw3">set</span> myOutput <span class="kw3">to</span> <span class="st0">&quot;I see the following files: &quot;</span>
+    <span class="kw3">repeat</span> <span class="kw3">with</span> i <span class="kw3">from</span> <span class="nu0">1</span> <span class="kw3">to</span> <span class="kw2">the</span> <span class="kw1">count</span> <span class="kw3">of</span> myFiles
+        <span class="kw3">set</span> myOutput <span class="kw3">to</span> myOutput <span class="sy0">&amp;</span> <span class="st0">&quot; &quot;</span> <span class="sy0">&amp;</span> i <span class="sy0">&amp;</span> <span class="st0">&quot; - &quot;</span> <span class="sy0">&amp;</span> <span class="kw1">item</span> i <span class="kw3">of</span> myFiles
+    <span class="kw3">end</span> <span class="kw3">repeat</span>
+&nbsp;
+<span class="kw3">end</span> <span class="kw3">tell</span></pre>
+</div>
+
+<p>In the above script there is another obvious place we can use a loop to clean up the code.  We can use a loop to create nuerous files to play with</p>
+
+<div class="code applescript">
+<pre class="applescript"><span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+    <span class="co1">-- start on the desktop and create a folder</span>
+    <span class="kw3">set</span> myStartPath <span class="kw3">to</span> <span class="br0">&#40;</span><span class="kw1">path to</span> <span class="kw1">desktop</span> <span class="kw1">folder</span><span class="br0">&#41;</span>
+    <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">folder</span> at myStartPath <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;Test_folder&quot;</span><span class="br0">&#125;</span>
+&nbsp;
+    <span class="co1">-- make a test file in the folder</span>
+    <span class="kw3">set</span> myFolderPath <span class="kw3">to</span> <span class="br0">&#40;</span><span class="kw1">path to</span> <span class="kw1">desktop</span> <span class="kw1">folder</span> <span class="kw2">as</span> <span class="kw1">string</span><span class="br0">&#41;</span> <span class="sy0">&amp;</span> <span class="st0">&quot;Test_folder&quot;</span>
+&nbsp;
+    <span class="co1">-- how many files do you want to create?</span>
+    <span class="kw3">set</span> numberOfFiles <span class="kw3">to</span> <span class="nu0">10</span>
+&nbsp;
+    <span class="co1">-- number the files using the iterator &quot;i&quot;</span>
+    <span class="kw3">repeat</span> <span class="kw3">with</span> i <span class="kw3">from</span> <span class="nu0">1</span> <span class="kw3">to</span> numberOfFiles
+        <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">file</span> at myFolderPath <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;image-&quot;</span> <span class="sy0">&amp;</span> i <span class="sy0">&amp;</span> <span class="st0">&quot;.jpg&quot;</span><span class="br0">&#125;</span>
+    <span class="kw3">end</span> <span class="kw3">repeat</span>
+&nbsp;
+    <span class="co1">-- access the Test_folder as an alias</span>
+    <span class="kw3">set</span> myFolder <span class="kw3">to</span> <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="kw1">path to</span> <span class="kw1">desktop</span> <span class="kw1">folder</span><span class="br0">&#41;</span> <span class="sy0">&amp;</span> <span class="st0">&quot;Test_folder&quot;</span> <span class="kw2">as</span> <span class="kw1">string</span> <span class="kw2">as</span> <span class="kw1">alias</span><span class="br0">&#41;</span>
+    <span class="kw3">set</span> myFiles <span class="kw3">to</span> <span class="kw2">the</span> <span class="kw1">name</span> <span class="kw3">of</span> <span class="kw2">every</span> <span class="kw1">file</span> <span class="kw3">of</span> myFolder
+&nbsp;
+    <span class="co1">-- If you just want the position of items in the list</span>
+    <span class="kw3">set</span> myOutput <span class="kw3">to</span> <span class="st0">&quot;I see the following files: &quot;</span>
+    <span class="kw3">repeat</span> <span class="kw3">with</span> i <span class="kw3">from</span> <span class="nu0">1</span> <span class="kw3">to</span> <span class="kw2">the</span> <span class="kw1">count</span> <span class="kw3">of</span> myFiles
+        <span class="kw3">set</span> myOutput <span class="kw3">to</span> myOutput <span class="sy0">&amp;</span> <span class="st0">&quot; &quot;</span> <span class="sy0">&amp;</span> i <span class="sy0">&amp;</span> <span class="st0">&quot; - &quot;</span> <span class="sy0">&amp;</span> <span class="kw1">item</span> i <span class="kw3">of</span> myFiles
+    <span class="kw3">end</span> <span class="kw3">repeat</span>
+&nbsp;
+<span class="kw3">end</span> <span class="kw3">tell</span></pre>
+</div>
+
+<p>Create a loop using repeat with an array</p>
+
+<div class="code applescript">
+<pre class="applescript"><span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+    <span class="co1">-- start on the desktop and create a folder</span>
+    <span class="kw3">set</span> myStartPath <span class="kw3">to</span> <span class="br0">&#40;</span><span class="kw1">path to</span> <span class="kw1">desktop</span> <span class="kw1">folder</span><span class="br0">&#41;</span>
+    <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">folder</span> at myStartPath <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;Test_folder&quot;</span><span class="br0">&#125;</span>
+&nbsp;
+    <span class="co1">-- make a test file in the folder</span>
+    <span class="kw3">set</span> myFolderPath <span class="kw3">to</span> <span class="br0">&#40;</span><span class="kw1">path to</span> <span class="kw1">desktop</span> <span class="kw1">folder</span> <span class="kw2">as</span> <span class="kw1">string</span><span class="br0">&#41;</span> <span class="sy0">&amp;</span> <span class="st0">&quot;Test_folder&quot;</span>
+&nbsp;
+    <span class="co1">-- how many files do you want to create?</span>
+    <span class="kw3">set</span> myFileNames <span class="kw3">to</span> <span class="br0">&#123;</span><span class="st0">&quot;building&quot;</span>, <span class="st0">&quot;car&quot;</span>, <span class="st0">&quot;blue&quot;</span> <span class="sy0">&amp;</span> <span class="st0">&quot;berries&quot;</span>, <span class="st0">&quot;20&quot;</span>, <span class="st0">&quot;cake&quot;</span><span class="br0">&#125;</span>
+    <span class="kw3">set</span> fileCount <span class="kw3">to</span> <span class="kw2">the</span> <span class="kw1">number</span> <span class="kw3">of</span> <span class="kw1">items</span> <span class="kw3">in</span> myFileNames
+&nbsp;
+    <span class="co1">-- loop through array of file names to create new files</span>
+    <span class="kw3">repeat</span> <span class="kw3">with</span> i <span class="kw3">from</span> <span class="nu0">1</span> <span class="kw3">to</span> fileCount
+        <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">file</span> at myFolderPath <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="kw1">item</span> i <span class="kw3">of</span> myFileNames <span class="sy0">&amp;</span> <span class="st0">&quot;.jpg&quot;</span><span class="br0">&#125;</span>
+    <span class="kw3">end</span> <span class="kw3">repeat</span>
+&nbsp;
+    <span class="co1">-- access the Test_folder as an alias</span>
+    <span class="kw3">set</span> myFolder <span class="kw3">to</span> <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="kw1">path to</span> <span class="kw1">desktop</span> <span class="kw1">folder</span><span class="br0">&#41;</span> <span class="sy0">&amp;</span> <span class="st0">&quot;Test_folder&quot;</span> <span class="kw2">as</span> <span class="kw1">string</span> <span class="kw2">as</span> <span class="kw1">alias</span><span class="br0">&#41;</span>
+    <span class="kw3">set</span> myFiles <span class="kw3">to</span> <span class="kw2">the</span> <span class="kw1">name</span> <span class="kw3">of</span> <span class="kw2">every</span> <span class="kw1">file</span> <span class="kw3">of</span> myFolder
+&nbsp;
+    <span class="co1">-- If you just want the position of items in the list</span>
+    <span class="kw3">set</span> myOutput <span class="kw3">to</span> <span class="st0">&quot;I see the following files: &quot;</span>
+    <span class="kw3">repeat</span> <span class="kw3">with</span> i <span class="kw3">from</span> <span class="nu0">1</span> <span class="kw3">to</span> <span class="kw2">the</span> <span class="kw1">count</span> <span class="kw3">of</span> myFiles
+        <span class="kw3">set</span> myOutput <span class="kw3">to</span> myOutput <span class="sy0">&amp;</span> <span class="st0">&quot; &quot;</span> <span class="sy0">&amp;</span> i <span class="sy0">&amp;</span> <span class="st0">&quot; - &quot;</span> <span class="sy0">&amp;</span> <span class="kw1">item</span> i <span class="kw3">of</span> myFiles
+    <span class="kw3">end</span> <span class="kw3">repeat</span>
+&nbsp;
+<span class="kw3">end</span> <span class="kw3">tell</span></pre>
+</div>
+
+<h4 id="example-setting-the-file-extention-of-items-selected-in-the-finder">4.0.0.1 Example: Setting the file extention of items selected in the finder</h4>
+
+<div class="code applescript">
+<pre class="applescript"><span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+    <span class="kw3">set</span> the_files <span class="kw3">to</span> <span class="kw2">the</span> <span class="kw1">selection</span>
+    <span class="kw3">repeat</span> <span class="kw3">with</span> f <span class="kw3">in</span> the_files
+        <span class="kw3">set</span> ext <span class="kw3">to</span> <span class="kw2">the</span> <span class="kw1">name</span> <span class="kw1">extension</span> <span class="kw3">of</span> f
+        <span class="kw3">if</span> <span class="kw2">the</span> <span class="kw1">name</span> <span class="kw1">extension</span> <span class="kw3">of</span> f <span class="kw3">is</span> <span class="st0">&quot;&quot;</span> <span class="kw2">and</span> <span class="kw2">the</span> class <span class="kw3">of</span> f <span class="kw3">is</span> <span class="kw1">document</span> <span class="kw1">file</span> <span class="kw3">then</span>
+            <span class="kw3">set</span> <span class="kw2">the</span> <span class="kw1">name</span> <span class="kw3">of</span> f <span class="kw3">to</span> <span class="kw2">the</span> <span class="kw1">name</span> <span class="kw3">of</span> f <span class="sy0">&amp;</span> <span class="st0">&quot;.mp3&quot;</span>
+        <span class="kw3">end</span> <span class="kw3">if</span>
+    <span class="kw3">end</span> <span class="kw3">repeat</span>
+<span class="kw3">end</span> <span class="kw3">tell</span></pre>
+</div>
+
+<h3 id="nested-loops">4.0.1 Nested loops</h3>
+
+<p><code>return</code> breaks you out of a loop.</p>
+
+<p>If you have three nested loops with <code>return</code> in the third nested loop AppleScript will travel into the nested loops until it reaches the <code>return</code> then back out a level before carrying on with the script</p>
+
+<h2 id="using-conditionals">4.1 Using conditionals</h2>
+
+<p>You can use conditionals to check the value of one thing against something else.</p>
+
+<h3 id="equal">4.1.1 Equal</h3>
+
+<div class="code applescript">
+<pre class="applescript"><span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+  <span class="kw3">set</span> var1 <span class="kw3">to</span> <span class="st0">&quot;Hello&quot;</span>
+  <span class="kw3">set</span> var2 <span class="kw3">to</span> var1 <span class="sy0">=</span> <span class="st0">&quot;Hello&quot;</span>
+<span class="kw3">end</span> <span class="kw3">tell</span></pre>
+</div>
+
+<p>First we set the value of var1 to the string "Hello"</p>
+
+<p>Next we evaluate the statement <code>var1 = "Hello"</code> and set the output from that evaluation to var2 <code>set var2 to var1 = "Hello"</code></p>
+
+<p>So the outcome is that <code>var2</code> returns "true"</p>
+
+<p>The <code>=</code> conditional compares to values and returns "true" of "false"</p>
+
+<p>The above script is easier to read when you use brackets</p>
+
+<div class="code applescript">
+<pre class="applescript"><span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+  <span class="kw3">set</span> var1 <span class="kw3">to</span> <span class="st0">&quot;Hello&quot;</span>
+  <span class="kw3">set</span> var2 <span class="kw3">to</span> <span class="br0">&#40;</span>var1 <span class="sy0">=</span> <span class="st0">&quot;Hello&quot;</span><span class="br0">&#41;</span>
+<span class="kw3">end</span> <span class="kw3">tell</span></pre>
+</div>
+
+<p>You may be used to using <code>==</code> to test equality (as in the C language) but AppleScript breaks this convention becuase it is a natural language pardigm.  So the following syntaxes are also valid:</p>
+
+<div class="code applescript">
+<pre class="applescript"><span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+    <span class="kw3">set</span> var1 <span class="kw3">to</span> <span class="st0">&quot;Hello&quot;</span>
+    <span class="kw3">set</span> var2 <span class="kw3">to</span> var1 <span class="kw3">is</span> <span class="kw2">equal</span> <span class="kw3">to</span> <span class="st0">&quot;Hello&quot;</span>
+<span class="kw3">end</span> <span class="kw3">tell</span></pre>
+</div>
+
+<h3 id="greater-than-less-than">4.1.2 Greater than, Less than</h3>
+
+<p>As you would expect the following comparisons work: ie they all return "true"...</p>
+
+<div class="code applescript">
+<pre class="applescript"><span class="kw3">set</span> var1 <span class="kw3">to</span> <span class="nu0">3</span> &gt; <span class="nu0">1</span>
+<span class="kw3">set</span> var1 <span class="kw3">to</span> <span class="nu0">3</span> &gt; <span class="nu0">1</span>
+<span class="kw3">set</span> var1 <span class="kw3">to</span> <span class="nu0">3</span> ≥ <span class="nu0">1</span></pre>
+</div>
+
+<p>While</p>
+
+<div class="code applescript">
+<pre class="applescript"><span class="kw3">set</span> var1 <span class="kw3">to</span> <span class="nu0">3</span> ≤ <span class="nu0">1</span></pre>
+</div>
+
+<p>returns false</p>
+
+<h3 id="not-equal">4.1.3 Not equal</h3>
+
+<p>You may be used to <code>!=</code> for not equal.  AppleScript uses a dedicated  "not equal character".  To enter the "not equal character" from the keyboard use <code>opt + =</code></p>
+
+<div class="code applescript">
+<pre class="applescript"><span class="kw3">set</span> var1 <span class="kw3">to</span> <span class="nu0">3</span> ≠ <span class="nu0">1</span></pre>
+</div>
+
+<p>you can also use natural language operators for "not equals"</p>
+
+<div class="code applescript">
+<pre class="applescript"><span class="kw3">set</span> var1 <span class="kw3">to</span> <span class="nu0">3</span> <span class="kw3">is</span> <span class="kw2">greater</span> than <span class="nu0">1</span>
+<span class="kw3">set</span> var1 <span class="kw3">to</span> <span class="nu0">3</span> <span class="kw3">is</span> <span class="kw2">less</span> than <span class="nu0">1</span></pre>
+</div>
+
+<p><strong>For more on operators see the operators table in AppleScript docs</strong></p>
+
+<h3 id="example-using-conditionals-to-check-if-an-application-is-present">4.1.4 Example: Using conditionals to check if an application is present</h3>
+
+<p>Build if/else statements as follows:</p>
+
+<div class="code applescript">
+<pre class="applescript"><span class="co1">-- Use conditionals to check if photoshop is in the application folder</span>
+<span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+    <span class="kw3">set</span> hasPS <span class="kw3">to</span> <span class="kw3">get</span> <span class="kw1">exists</span> <span class="kw1">folder</span> <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="kw1">path to</span> applications <span class="kw1">folder</span> <span class="kw2">as</span> <span class="kw1">string</span><span class="br0">&#41;</span> <span class="sy0">&amp;</span> <span class="st0">&quot;Adobe Photoshop CS6&quot;</span><span class="br0">&#41;</span>
+<span class="kw3">end</span> <span class="kw3">tell</span>
+&nbsp;
+<span class="kw3">if</span> hasPS <span class="kw3">is</span> <span class="kw1">false</span> <span class="kw3">then</span>
+    <span class="co1">-- no photoshop</span>
+    <span class="kw3">repeat</span> <span class="kw3">with</span> anImage <span class="kw3">in</span> theImages
+&nbsp;
+    <span class="kw3">end</span> <span class="kw3">repeat</span>
+<span class="kw3">else</span>
+    <span class="co1">-- has photshop</span>
+    <span class="kw3">repeat</span> <span class="kw3">with</span> anImage <span class="kw3">in</span> theImages
+&nbsp;
+    <span class="kw3">end</span> <span class="kw3">repeat</span>
+<span class="kw3">end</span> <span class="kw3">if</span></pre>
+</div>
+
+<p>Now we can begin to build out a program</p>
+
+<div class="code applescript">
+<pre class="applescript"><span class="co1">-- Create an Images folder containing Image files to play with</span>
+<span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+&nbsp;
+    <span class="co1">-- Path variables</span>
+    <span class="kw3">set</span> pathToDesktop <span class="kw3">to</span> <span class="br0">&#40;</span><span class="kw1">path to</span> <span class="kw1">desktop</span> <span class="kw1">folder</span><span class="br0">&#41;</span>
+    <span class="kw3">set</span> pathToImages <span class="kw3">to</span> <span class="br0">&#40;</span><span class="kw1">path to</span> <span class="kw1">desktop</span> <span class="kw1">folder</span> <span class="kw2">as</span> <span class="kw1">string</span><span class="br0">&#41;</span> <span class="sy0">&amp;</span> <span class="st0">&quot;Images&quot;</span>
+&nbsp;
+    <span class="co1">-- Create folders</span>
+    <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">folder</span> at pathToDesktop <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;Images&quot;</span><span class="br0">&#125;</span>
+&nbsp;
+    <span class="co1">-- How many files do you want to create?</span>
+    <span class="kw3">set</span> numberOfImageFiles <span class="kw3">to</span> <span class="nu0">10</span>
+&nbsp;
+    <span class="co1">-- Create Image files</span>
+    <span class="kw3">repeat</span> <span class="kw3">with</span> i <span class="kw3">from</span> <span class="nu0">1</span> <span class="kw3">to</span> numberOfImageFiles
+        <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">file</span> at pathToImages <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;Image-&quot;</span> <span class="sy0">&amp;</span> i <span class="sy0">&amp;</span> <span class="st0">&quot;.jpg&quot;</span><span class="br0">&#125;</span>
+    <span class="kw3">end</span> <span class="kw3">repeat</span>
+&nbsp;
+    <span class="co1">-- Folder and file aliases</span>
+    <span class="kw3">set</span> theImagesFolder <span class="kw3">to</span> <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="kw1">path to</span> <span class="kw1">desktop</span> <span class="kw1">folder</span><span class="br0">&#41;</span> <span class="sy0">&amp;</span> <span class="st0">&quot;Images&quot;</span> <span class="kw2">as</span> <span class="kw1">string</span> <span class="kw2">as</span> <span class="kw1">alias</span><span class="br0">&#41;</span>
+&nbsp;
+    <span class="co1">-- File names</span>
+    <span class="kw3">set</span> theImages <span class="kw3">to</span> <span class="kw2">the</span> <span class="kw1">name</span> <span class="kw3">of</span> <span class="kw2">every</span> <span class="kw1">file</span> <span class="kw3">of</span> theImagesFolder
+&nbsp;
+<span class="kw3">end</span> <span class="kw3">tell</span>
+&nbsp;
+<span class="co1">-- Use conditionals to check if photoshop is in the application folder</span>
+<span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+&nbsp;
+    <span class="kw3">set</span> hasPS <span class="kw3">to</span> <span class="kw3">get</span> <span class="kw1">exists</span> <span class="kw1">folder</span> <span class="br0">&#40;</span><span class="br0">&#40;</span><span class="kw1">path to</span> applications <span class="kw1">folder</span> <span class="kw2">as</span> <span class="kw1">string</span><span class="br0">&#41;</span> <span class="sy0">&amp;</span> <span class="st0">&quot;Adobe Photoshop CS6&quot;</span><span class="br0">&#41;</span>
+&nbsp;
+<span class="kw3">end</span> <span class="kw3">tell</span>
+&nbsp;
+<span class="kw3">if</span> hasPS <span class="kw3">is</span> <span class="kw1">false</span> <span class="kw3">then</span>
+    <span class="co1">-- no photoshop</span>
+    <span class="kw3">repeat</span> <span class="kw3">with</span> anImage <span class="kw3">in</span> theImages
+&nbsp;
+    <span class="kw3">end</span> <span class="kw3">repeat</span>
+<span class="kw3">else</span>
+    <span class="co1">-- has photshop</span>
+    <span class="kw3">repeat</span> <span class="kw3">with</span> anImage <span class="kw3">in</span> theImages
+&nbsp;
+    <span class="kw3">end</span> <span class="kw3">repeat</span>
+<span class="kw3">end</span> <span class="kw3">if</span></pre>
+</div>
+
+                    </div>
+    </div>
+</div>
+
+<footer class="columns small-12 topspace">
+    <div class="row footer-top">
+        <div class="medium-6 columns">
+<!--             <ul class="menu">
+                <li><a href="#">Legal</a></li>
+                <li><a href="#">Partner</a></li>
+                <li><a href="#">Explore</a></li>
+            </ul> -->
+        </div>
+        <div class="medium-6 columns align-middle text-right">
+            
+                <div class="copyright">Copyright © 2016 Smedia</div>
+            
+        </div>
+    </div>
+    <div class="row footer-middle">
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Offices</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Solar Systems</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+        <div class="small-6 medium-offset-6 large-3 columns">
+            <p class="lead">Contact</p>
+            <ul class="menu vertical">
+                <li><a href="#"><i class="fi-social-twitter"></i> Twitter</a></li>
+                <li><a href="#"><i class="fi-social-facebook"></i> Facebook</a></li>
+                <li><a href="#"><i class="fi-social-instagram"></i> Instagram</a></li>
+                <li><a href="#"><i class="fi-social-pinterest"></i> Pinterest</a></li>
+            </ul>
+        </div>
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Widgets</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+    </div>
+    <div class="row footer-bottom">
+        <div class="large-12 columns text-center">
+            <p>Le Grande Hotel, Latin Quarter, Paris • 261 Rue Saint-Séverin, 75005 Paris, France </p>
+            <p>Phone 01 42 517 85 • info@dummy.com • www.dummy.com</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="../../../../assets/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,559 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebooks - Webpack - Webpack</title>
+    <link rel="stylesheet" href="../../../../assets/css/app.css">
+    <link href='//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+  </head>
+  <body>
+
+<div class="row navigation-row">
+    <div class="columns small-12">
+
+        <div class="mobile-branding show-for-small-only">
+          <a href="../../../../index.html"><div class="menu-text mobile-branding">Smerth</div></a>
+        </div>
+        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+          <div class="title-bar-title">Menu</div>
+        </div>
+        <nav id="main-menu" class="top-bar">
+
+            <div class="top-bar-left">
+                <!-- Navigation on medium and up screens -->
+                <ul class="vertical menu medium-horizontal show-for-medium" data-responsive-menu="dropdown">
+<li class="menu-text"><a class="sitename" href="../../../../index.html">Smerth</a></li>
+<li><a href="../../../../projects.html">Projects</a></li>
+<li><a href="../../../../cases.html">Case Studies</a></li>
+<li>
+    <a href="../../../../books.html">Notebooks</a>
+        <ul class="menu vertical" style="width: 300px;">
+            <li><a href="../../../../content/books/javascript-working-with-the-dom/book/index.html">Javascript: working with the dom</a></li>
+            <li><a href="../../../../content/books/unix-for-macos/book/index.html">Unix for MacOS</a></li>
+            <li><a href="../../../../content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="../../../../content/books/webpack/book/index.html">Webpack</a></li>
+            
+        </ul>
+<!--           <ul class="menu vertical" style="width: 300px;">
+            <li><a href="content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="content/books/easybook_notes/book/index.html">Easybook Notes</a></li>
+            <li><a href="content/books/introduction-to-mysql/book/index.html">Introduction to MySQL</a></li>
+            <li><a href="content/books/javascript-and-ajax/book/index.html">Javascript and AJAX</a></li>
+            <li><a href="content/books/javascript-and-json/book/index.html">Javascript and JSON</a></li>
+            <li><a href="content/books/jquery-data-with-ajax/book/index.html">jQuery Data with AJAX</a></li>
+            <li><a href="content/books/unix-for-macos/book/index.html">UNIX for MacOS</a></li>
+            <li><a href="content/books/GIT-Workflow/book/index.html">GIT Workflow</a></li>
+            <li><a href="content/books/webpack/book/index.html">Webpack</a></li>
+        </ul> -->
+<!--     <ul class="menu vertical" style="width: 100%;">
+        <li><a href="/content/books/applescript-notes/book"><span class="fi-book-bookmark"></span> AppleScript Notes</a></li>
+        <li><a href="/content/books/build-a-polling-app-with-socket-io-and-react/book"><span class="fi-book-bookmark"></span> Polling App with Socket.io and React.js</a></li>
+        <li><a href="/content/books/introduction-to-mysql/book"><span class="fi-book-bookmark"></span> Introduction to MySQL</a></li>
+        <li><a href="/content/books/unix-for-macos/book"><span class="fi-book-bookmark"></span> UNIX for MacOS</a></li>
+        <li><a href="/content/books/javascript-working-with-the-dom/book"><span class="fi-book-bookmark"></span> Javascript working with the DOM</a></li>
+    </ul> -->
+</li>
+<!-- <li><a href="../../../../about.html">About</a></li> -->
+<li><a href="../../../../content/books/about/book/chapter-1.html">About</a></li>
+                </ul>
+                <!-- Navigation on small screens -->
+                <ul class="vertical menu medium-horizontal show-for-small-only" data-responsive-menu="dropdown" data-accordion-menu>
+<li class="menu-text"><a href="../../../../index.html">Notebook</a></li>
+<li><a href="../../../../projects.html">Projects</a></li>
+<li><a href="../../../../cases.html">Case Studies</a></li>
+<li>
+    <a href="../../../../books.html">Notebooks</a>
+        <ul class="menu vertical" style="width: 100%;">
+            <li><a href="../../../../content/books/javascript-working-with-the-dom/book/index.html">Javascript: working with the dom</a></li>
+            <li><a href="../../../../content/books/unix-for-macos/book/index.html">Unix for MacOS</a></li>
+            <li><a href="../../../../content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="../../../../content/books/webpack/book/index.html">Webpack</a></li>
+            
+        </ul>
+<!--     <ul class="menu vertical" style="width: 100%;">
+        <li><a href="/content/books/applescript-notes/book"><span class="fi-book-bookmark"></span> AppleScript Notes</a></li>
+        <li><a href="/content/books/build-a-polling-app-with-socket-io-and-react/book"><span class="fi-book-bookmark"></span> Polling App with Socket.io and React.js</a></li>
+        <li><a href="/content/books/introduction-to-mysql/book"><span class="fi-book-bookmark"></span> Introduction to MySQL</a></li>
+        <li><a href="/content/books/unix-for-macos/book"><span class="fi-book-bookmark"></span> UNIX for MacOS</a></li>
+        <li><a href="/content/books/javascript-working-with-the-dom/book"><span class="fi-book-bookmark"></span> Javascript working with the DOM</a></li>
+    </ul> -->
+</li>
+<!-- <li><a href="../../../../about.html">About</a></li> -->
+<li><a href="../../../../content/books/about/book/chapter-1.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="row pageheader-row">
+    <div class="small-12 column index text-center">
+        <div class="callout small pageheader">
+            <h1 id="webpack" class="book-title title-text">
+                <a href="./index.html" class="">Webpack</a>
+            </h1>
+            <h6>Smerth</h6>
+        </div>
+    </div>
+</div>
+
+
+<div class="row " data-sticky-container>
+    <div class="column small-12 chapter-navigation-bar sticky" data-sticky data-anchor="main" data-options="marginTop:0;" style="width: 100%;">
+
+
+
+<div class="row chapter-navigation-row">
+    <div class="column small-6 small-order-2 medium-order-1 medium-3 prev-container">
+                    <h6><a class="prev" href="./index.html">&larr; Previous<div><small> - </small></div></a></h6>
+            </div>
+
+    <div class="column small-12 small-order-1 medium-order-2 medium-6 text-center title-container">
+        <h6 id="webpack" class="bk-title"><span class="fi-book-bookmark"></span> <a href="./index.html">Webpack</a></h6>
+        <h6 id="webpack" class="ch-title align-self-middle"><small>Chapter 1 - Webpack</small></h6>
+    </div>
+
+    <div class="column small-6 small-order-3 medium-order-3 medium-3 next-container">
+                    <h6><a class="next" href="./chapter-2.html"><div class="text-right">Next &rarr;</div><div class="text-right"><small>Chapter 2 - Webpack Loaders</small></div></a></h6>
+            </div>
+
+</div>
+</div>
+    </div> 
+    <div id="book-page" class="row">
+        
+        
+        <div id="sidebar" class="column small-12 medium-4  large-3" data-sticky-container>
+            <nav id="sidebar-toc" class=" sticky" data-sticky data-anchor="main" data-options="marginTop:5;">
+
+                
+                                <h3>
+                    <a href=".">Table of contents</a>
+                </h3>
+                <ul class="toc">
+                                                                                                    <li class="level-1 active">
+                                <a class="chapter" href="./chapter-1.html">
+                                    <span class="chapter-label">Chapter 1.</span>
+                                    Webpack
+                                </a>
+                                <ul id="page-toc" class="unstyled toc-l2">
+                                                                                                                        <li class="level-3" data-scroll="install-npm">
+                                                <span>1.2.1</span>
+                                                <a class="internal" href="./chapter-1.html#install-npm">Install npm</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="create-a-project-folder">
+                                                <span>1.2.2</span>
+                                                <a class="internal" href="./chapter-1.html#create-a-project-folder">Create a project folder</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="initiate-the-project">
+                                                <span>1.2.3</span>
+                                                <a class="internal" href="./chapter-1.html#initiate-the-project">Initiate the project</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="install-web-pack">
+                                                <span>1.2.4</span>
+                                                <a class="internal" href="./chapter-1.html#install-web-pack">Install web pack</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="check-the-dependancy-is-saved">
+                                                <span>1.2.5</span>
+                                                <a class="internal" href="./chapter-1.html#check-the-dependancy-is-saved">Check the dependancy is saved</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="install-jquery">
+                                                <span>1.2.6</span>
+                                                <a class="internal" href="./chapter-1.html#install-jquery">Install jQuery</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="create-main-js">
+                                                <span>1.3.1</span>
+                                                <a class="internal" href="./chapter-1.html#create-main-js">Create main js</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="put-jquery-to-work">
+                                                <span>1.3.2</span>
+                                                <a class="internal" href="./chapter-1.html#put-jquery-to-work">Put jQuery to work</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="create-indexhtml">
+                                                <span>1.3.3</span>
+                                                <a class="internal" href="./chapter-1.html#create-indexhtml">Create index.html</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="run-webpack">
+                                                <span>1.3.4</span>
+                                                <a class="internal" href="./chapter-1.html#run-webpack">Run Webpack</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="create-webpackconfigjs">
+                                                <span>1.4.1</span>
+                                                <a class="internal" href="./chapter-1.html#create-webpackconfigjs">Create webpack.config.js</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="organize-the-project-code">
+                                                <span>1.4.2</span>
+                                                <a class="internal" href="./chapter-1.html#organize-the-project-code">Organize the project code</a>
+                                            </li>
+                                                                                    <li class="level-3" data-scroll="run-webpack-with-a-watch-flag">
+                                                <span>1.4.3</span>
+                                                <a class="internal" href="./chapter-1.html#run-webpack-with-a-watch-flag">Run webpack with a watch flag</a>
+                                            </li>
+                                                                                                    </ul>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">2.</span> <a href="./chapter-2.html"> Webpack Loaders</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">3.</span> <a href="./chapter-3.html"> Webpack &amp; CSS</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">4.</span> <a href="./chapter-4.html"> Code Splitting with webpack</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">5.</span> <a href="./chapter-5.html"> Webpack dev server</a>
+                    </li>
+                                            </ul>
+        </nav>
+    </div>
+
+        <div id="main" class="main column small-12 medium-8 large-9 ">
+        <div class="main-content">
+                                                    <h2 id="what-is-webpack">1.1 What is webpack?</h2>
+
+<p>Webpack is a build tool that takes asset dependencies and turns them into a production ready bundle.</p>
+
+<p>All code files are considered modules.  Webpack loads the modules and requires them according to how the project is configured.</p>
+
+<p>Why not load recuired JavaScript code via script tags?</p>
+
+<p>Loading JavaScript resources as libraries using script tags can lead problems arising from:</p>
+
+<ul>
+<li>the hierarchy of these scripts</li>
+<li>global variables being overwritten</li>
+<li>functions being called before others</li>
+</ul>
+
+<p>In addition each script tag results in an HTTP request, which causes delays and it's very taxing on browsers.</p>
+
+<p>Webpack provides an alternative to these complications with the concept of dependency graph.</p>
+
+<p>We require assets like images, CSS files, and JavaScript files, and those are only loaded when they're needed for the page.</p>
+
+<p>We can split up our app into different files and load just the code the page requires, then when a user goes to a new page they don't download the already downloaded code again. This minimizes the loading time of the app as well.</p>
+
+<p>Webpack also helps us deal with transformations. For using Sass or LESS we can build that code into CSS prior to production.</p>
+
+<p>Also for using React or ES6, we can transform that into vanilla JavaScript. All of this can be configured and then automated so that these transforms don't have to occur manually.</p>
+
+<h2 id="installing-webpack">1.2 Installing webpack</h2>
+
+<p>Webpack is an NPM package: <a href="https://www.npmjs.com/package/webpack">Webpack</a></p>
+
+<h3 id="install-npm">1.2.1 Install npm</h3>
+
+<p>Check to see which version of node and npm we're running.</p>
+
+<p>@ <code>terminal</code></p>
+
+<div class="code bash">
+<pre class="bash">node <span class="re5">-v</span> <span class="sy0">&amp;&amp;</span> npm <span class="re5">-v</span></pre>
+</div>
+
+<p>If node is not present install node from: <a href="nodejs.org">nodejs.org</a></p>
+
+<h3 id="create-a-project-folder">1.2.2 Create a project folder</h3>
+
+<p>@ <code>terminal</code></p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw3">cd</span> ~<span class="sy0">/</span>Desktop <span class="sy0">&amp;&amp;</span> <span class="kw2">mkdir</span> project <span class="sy0">&amp;&amp;</span> <span class="kw3">cd</span> project</pre>
+</div>
+
+<h3 id="initiate-the-project">1.2.3 Initiate the project</h3>
+
+<div class="code bash">
+<pre class="bash">npm init</pre>
+</div>
+
+<p>NPM init is a utility that steps you through the process of setting up a node project.</p>
+
+<p>It will create a package json file which will document your project and how you expect it to work (what its name is, etc…)</p>
+
+<p>For entry point use the <code>index.js</code> file.  For keywords use: Webpack, Transpiling, ES6...</p>
+
+<p>Check the project folder for a <code>package.json</code> file.</p>
+
+<p>@ <code>terminal</code></p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">ls</span>
+&nbsp;
+<span class="re5">-rw-r--r--</span>  <span class="nu0">1</span> smerth  staff   326B <span class="nu0">27</span> Aug <span class="nu0">14</span>:<span class="nu0">41</span> package.json</pre>
+</div>
+
+<p>with the contents:</p>
+
+<p>@ <code>package.json</code></p>
+
+<div class="code bash">
+<pre class="bash"><span class="br0">&#123;</span>
+  <span class="st0">&quot;name&quot;</span>: <span class="st0">&quot;getting-started-webpack&quot;</span>,
+  <span class="st0">&quot;version&quot;</span>: <span class="st0">&quot;1.0.0&quot;</span>,
+  <span class="st0">&quot;description&quot;</span>: <span class="st0">&quot;Running a build with webpack&quot;</span>,
+  <span class="st0">&quot;main&quot;</span>: <span class="st0">&quot;index.js&quot;</span>,
+  <span class="st0">&quot;scripts&quot;</span>: <span class="br0">&#123;</span>
+    <span class="st0">&quot;test&quot;</span>: <span class="st0">&quot;echo <span class="es1">\&quot;</span>Error: no test specified<span class="es1">\&quot;</span> &amp;&amp; exit 1&quot;</span>
+  <span class="br0">&#125;</span>,
+  <span class="st0">&quot;keywords&quot;</span>: <span class="br0">&#91;</span>
+    <span class="st0">&quot;webpack&quot;</span>,
+    <span class="st0">&quot;transpiling&quot;</span>,
+    <span class="st0">&quot;es6&quot;</span>
+  <span class="br0">&#93;</span>,
+  <span class="st0">&quot;author&quot;</span>: <span class="st0">&quot;smerth&quot;</span>,
+  <span class="st0">&quot;license&quot;</span>: <span class="st0">&quot;MIT&quot;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<h3 id="install-web-pack">1.2.4 Install web pack</h3>
+
+<p>@ <code>terminal</code></p>
+
+<div class="code bash">
+<pre class="bash">npm <span class="kw2">install</span> web pack <span class="re5">--save-dev</span></pre>
+</div>
+
+<h3 id="check-the-dependancy-is-saved">1.2.5 Check the dependancy is saved</h3>
+
+<p>@ <code>package.json</code></p>
+
+<div class="code bash">
+<pre class="bash">  <span class="st0">&quot;devDependencies&quot;</span>: <span class="br0">&#123;</span>
+    <span class="st0">&quot;webpack&quot;</span>: <span class="st0">&quot;^1.13.2&quot;</span>
+  <span class="br0">&#125;</span></pre>
+</div>
+
+<p>This same pattern applies to installing all other dependancies</p>
+
+<h3 id="install-jquery">1.2.6 Install jQuery</h3>
+
+<div class="code bash">
+<pre class="bash">npm <span class="kw2">install</span> jquery <span class="re5">--save</span></pre>
+</div>
+
+<p>Installs the most recent version of jQuery.</p>
+
+<p>@ <code>package.json</code></p>
+
+<div class="code bash">
+<pre class="bash">  <span class="st0">&quot;devDependencies&quot;</span>: <span class="br0">&#123;</span>
+    <span class="st0">&quot;webpack&quot;</span>: <span class="st0">&quot;^1.13.2&quot;</span>
+  <span class="br0">&#125;</span>,
+  <span class="st0">&quot;dependencies&quot;</span>: <span class="br0">&#123;</span>
+    <span class="st0">&quot;jquery&quot;</span>: <span class="st0">&quot;^3.1.0&quot;</span>
+  <span class="br0">&#125;</span></pre>
+</div>
+
+<p><strong>Dev dependencies</strong> are everything needed in development, things like testing frameworks and transpiling frameworks like webpack, etc. ...</p>
+
+<p><strong>Dependencies</strong> are everything we need for the browser (jquery, react…) Things that your application will need to run in production.</p>
+
+<h2 id="running-a-webpack-build">1.3 Running a webpack build</h2>
+
+<h3 id="create-main-js">1.3.1 Create main js</h3>
+
+<p>@ <code>terminal</code></p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">touch</span> main.js</pre>
+</div>
+
+<p><code>main.js</code>  is going to be the location for the JavaScript code for this particular example.</p>
+
+<h3 id="put-jquery-to-work">1.3.2 Put jQuery to work</h3>
+
+<p>@ <code>main.js</code></p>
+
+<div class="code javascript">
+<pre class="javascript"><span class="kw1">var</span> $ <span class="sy0">=</span> require<span class="br0">&#40;</span><span class="st0">'jquery'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+$<span class="br0">&#40;</span><span class="st0">'target'</span><span class="br0">&#41;</span>.<span class="me1">html</span><span class="br0">&#40;</span><span class="st0">'Hello World!'</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+</div>
+
+<h3 id="create-indexhtml">1.3.3 Create index.html</h3>
+
+<p>@ <code>terminal</code></p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">touch</span> index.html</pre>
+</div>
+
+<p>Code the index page.</p>
+
+<p>@ <code>index.html</code></p>
+
+<div class="code html">
+<pre class="html5"><span class="sc0">&lt;!DOCTYPE html&gt;</span>
+<span class="sc2">&lt;<span class="kw2">html</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">head</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">meta</span> <span class="kw3">charset</span><span class="sy0">=</span><span class="st0">&quot;utf-8&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">meta</span> <span class="kw3">http-equiv</span><span class="sy0">=</span><span class="st0">&quot;X-UA-Compatible&quot;</span> <span class="kw3">content</span><span class="sy0">=</span><span class="st0">&quot;IE=edge&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">title</span>&gt;</span>My First Webpack Project<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">title</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">link</span> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;&quot;</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">head</span>&gt;</span>
+<span class="sc2">&lt;<span class="kw2">body</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">h1</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;target&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">h1</span>&gt;</span>
+    <span class="sc2">&lt;<span class="kw2">script</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;/bundle.js&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">charset</span><span class="sy0">=</span><span class="st0">&quot;utf-8&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">script</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">body</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><span class="kw2">html</span>&gt;</span></pre>
+</div>
+
+<p>The script tag links to our JavaScript file called <code>bundle.js</code>. This will be created for us by Webpack.</p>
+
+<h3 id="run-webpack">1.3.4 Run Webpack</h3>
+
+<p>Specify the entry point (the file that we want to put through the webpack process).</p>
+
+<p>Specify where we want the output file to be created.</p>
+
+<p>@ <code>terminal</code></p>
+
+<div class="code bash">
+<pre class="bash">webpack main.js .<span class="sy0">/</span>bundle.js</pre>
+</div>
+
+<p>In the folder there is a new file called <code>bundle.js.</code></p>
+
+<p>Around line 45, find the code from the <code>main.js</code> file. Webpack is also loading in jQuery.</p>
+
+<h2 id="the-webpackconfig-file">1.4 The webpack.config file</h2>
+
+<p>A webpack configuration file can automate the process of running Webpack.</p>
+
+<h3 id="create-webpackconfigjs">1.4.1 Create webpack.config.js</h3>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">touch</span> webpack.config.js</pre>
+</div>
+
+<p>Creates a module.exports object.</p>
+
+<p>Define a key called entry and the entry point will be the file that you want to put through the webpack process.</p>
+
+<p>Define the output file, or where you want Webpack to write the output.</p>
+
+<p>@ <code>webpack.config.js</code></p>
+
+<div class="code javascript">
+<pre class="javascript">module.<span class="me1">exports</span> <span class="sy0">=</span> <span class="br0">&#123;</span>
+    entry<span class="sy0">:</span> <span class="st0">'./src/main.js'</span><span class="sy0">,</span>
+    output<span class="sy0">:</span> <span class="br0">&#123;</span>
+        filename<span class="sy0">:</span> <span class="st0">'bundle.js'</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span><span class="sy0">;</span></pre>
+</div>
+
+<h3 id="organize-the-project-code">1.4.2 Organize the project code</h3>
+
+<p>Create a folder called <code>src</code> and move that <code>main.js</code> file into the <code>src</code> folder.</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">mkdir</span> src <span class="sy0">&amp;&amp;</span> <span class="kw2">mv</span> main.js src<span class="sy0">/</span>main.js</pre>
+</div>
+
+<p>Add the <code>src</code> folder to the Webpack config and add a build folder path for <code>bundle.js</code>.</p>
+
+<p>Make sure to add a comma between the path and the file name.</p>
+
+<p>@ <code>webpack.config.js</code></p>
+
+<div class="code javascript">
+<pre class="javascript">module.<span class="me1">exports</span> <span class="sy0">=</span> <span class="br0">&#123;</span>
+    entry<span class="sy0">:</span> <span class="st0">'./src/main.js'</span><span class="sy0">,</span>
+    output<span class="sy0">:</span> <span class="br0">&#123;</span>
+        path<span class="sy0">:</span> <span class="st0">'build'</span><span class="sy0">,</span>
+        filename<span class="sy0">:</span> <span class="st0">'bundle.js'</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+</div>
+
+<p>Run webpack.</p>
+
+<p>Webpack has looked in the source folder for that <code>main.js</code> file and also created a build folder with a <code>bundle.js</code> file in it.</p>
+
+<p>Change the path in <code>index.html</code>, to link to the <code>bundle.js</code> file in the build folder.</p>
+
+<div class="code html">
+<pre class="html5"><span class="sc2">&lt;<span class="kw2">script</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;./build/bundle.js&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">charset</span><span class="sy0">=</span><span class="st0">&quot;utf-8&quot;</span>&gt;&lt;<span class="sy0">/</span><span class="kw2">script</span>&gt;</span></pre>
+</div>
+
+<h3 id="run-webpack-with-a-watch-flag">1.4.3 Run webpack with a watch flag</h3>
+
+<div class="code bash">
+<pre class="bash">webpack <span class="re5">-w</span></pre>
+</div>
+
+<p>Webpack will watch to see if any changes have occurred in the <code>main.js</code> file.  When changes occur Webpack will rebundle the files.</p>
+
+                    </div>
+    </div>
+</div>
+
+<footer class="columns small-12 topspace">
+    <div class="row footer-top">
+        <div class="medium-6 columns">
+<!--             <ul class="menu">
+                <li><a href="#">Legal</a></li>
+                <li><a href="#">Partner</a></li>
+                <li><a href="#">Explore</a></li>
+            </ul> -->
+        </div>
+        <div class="medium-6 columns align-middle text-right">
+            
+                <div class="copyright">Copyright © 2016 Smedia</div>
+            
+        </div>
+    </div>
+    <div class="row footer-middle">
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Offices</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Solar Systems</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+        <div class="small-6 medium-offset-6 large-3 columns">
+            <p class="lead">Contact</p>
+            <ul class="menu vertical">
+                <li><a href="#"><i class="fi-social-twitter"></i> Twitter</a></li>
+                <li><a href="#"><i class="fi-social-facebook"></i> Facebook</a></li>
+                <li><a href="#"><i class="fi-social-instagram"></i> Instagram</a></li>
+                <li><a href="#"><i class="fi-social-pinterest"></i> Pinterest</a></li>
+            </ul>
+        </div>
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Widgets</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+    </div>
+    <div class="row footer-bottom">
+        <div class="large-12 columns text-center">
+            <p>Le Grande Hotel, Latin Quarter, Paris • 261 Rue Saint-Séverin, 75005 Paris, France </p>
+            <p>Phone 01 42 517 85 • info@dummy.com • www.dummy.com</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="../../../../assets/js/app.js"></script>
+  </body>
+</html>

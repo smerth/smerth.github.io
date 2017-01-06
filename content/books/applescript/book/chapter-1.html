@@ -1,0 +1,590 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebooks - Applescript - AppleScript Overview</title>
+    <link rel="stylesheet" href="../../../../assets/css/app.css">
+    <link href='//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+  </head>
+  <body>
+
+<div class="row navigation-row">
+    <div class="columns small-12">
+
+        <div class="mobile-branding show-for-small-only">
+          <a href="../../../../index.html"><div class="menu-text mobile-branding">Smerth</div></a>
+        </div>
+        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+          <div class="title-bar-title">Menu</div>
+        </div>
+        <nav id="main-menu" class="top-bar">
+
+            <div class="top-bar-left">
+                <!-- Navigation on medium and up screens -->
+                <ul class="vertical menu medium-horizontal show-for-medium" data-responsive-menu="dropdown">
+<li class="menu-text"><a class="sitename" href="../../../../index.html">Smerth</a></li>
+<li><a href="../../../../projects.html">Projects</a></li>
+<li><a href="../../../../cases.html">Case Studies</a></li>
+<li>
+    <a href="../../../../books.html">Notebooks</a>
+        <ul class="menu vertical" style="width: 300px;">
+            <li><a href="../../../../content/books/javascript-working-with-the-dom/book/index.html">Javascript: working with the dom</a></li>
+            <li><a href="../../../../content/books/unix-for-macos/book/index.html">Unix for MacOS</a></li>
+            <li><a href="../../../../content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="../../../../content/books/webpack/book/index.html">Webpack</a></li>
+            
+        </ul>
+<!--           <ul class="menu vertical" style="width: 300px;">
+            <li><a href="content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="content/books/easybook_notes/book/index.html">Easybook Notes</a></li>
+            <li><a href="content/books/introduction-to-mysql/book/index.html">Introduction to MySQL</a></li>
+            <li><a href="content/books/javascript-and-ajax/book/index.html">Javascript and AJAX</a></li>
+            <li><a href="content/books/javascript-and-json/book/index.html">Javascript and JSON</a></li>
+            <li><a href="content/books/jquery-data-with-ajax/book/index.html">jQuery Data with AJAX</a></li>
+            <li><a href="content/books/unix-for-macos/book/index.html">UNIX for MacOS</a></li>
+            <li><a href="content/books/GIT-Workflow/book/index.html">GIT Workflow</a></li>
+            <li><a href="content/books/webpack/book/index.html">Webpack</a></li>
+        </ul> -->
+<!--     <ul class="menu vertical" style="width: 100%;">
+        <li><a href="/content/books/applescript-notes/book"><span class="fi-book-bookmark"></span> AppleScript Notes</a></li>
+        <li><a href="/content/books/build-a-polling-app-with-socket-io-and-react/book"><span class="fi-book-bookmark"></span> Polling App with Socket.io and React.js</a></li>
+        <li><a href="/content/books/introduction-to-mysql/book"><span class="fi-book-bookmark"></span> Introduction to MySQL</a></li>
+        <li><a href="/content/books/unix-for-macos/book"><span class="fi-book-bookmark"></span> UNIX for MacOS</a></li>
+        <li><a href="/content/books/javascript-working-with-the-dom/book"><span class="fi-book-bookmark"></span> Javascript working with the DOM</a></li>
+    </ul> -->
+</li>
+<!-- <li><a href="../../../../about.html">About</a></li> -->
+<li><a href="../../../../content/books/about/book/chapter-1.html">About</a></li>
+                </ul>
+                <!-- Navigation on small screens -->
+                <ul class="vertical menu medium-horizontal show-for-small-only" data-responsive-menu="dropdown" data-accordion-menu>
+<li class="menu-text"><a href="../../../../index.html">Notebook</a></li>
+<li><a href="../../../../projects.html">Projects</a></li>
+<li><a href="../../../../cases.html">Case Studies</a></li>
+<li>
+    <a href="../../../../books.html">Notebooks</a>
+        <ul class="menu vertical" style="width: 100%;">
+            <li><a href="../../../../content/books/javascript-working-with-the-dom/book/index.html">Javascript: working with the dom</a></li>
+            <li><a href="../../../../content/books/unix-for-macos/book/index.html">Unix for MacOS</a></li>
+            <li><a href="../../../../content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="../../../../content/books/webpack/book/index.html">Webpack</a></li>
+            
+        </ul>
+<!--     <ul class="menu vertical" style="width: 100%;">
+        <li><a href="/content/books/applescript-notes/book"><span class="fi-book-bookmark"></span> AppleScript Notes</a></li>
+        <li><a href="/content/books/build-a-polling-app-with-socket-io-and-react/book"><span class="fi-book-bookmark"></span> Polling App with Socket.io and React.js</a></li>
+        <li><a href="/content/books/introduction-to-mysql/book"><span class="fi-book-bookmark"></span> Introduction to MySQL</a></li>
+        <li><a href="/content/books/unix-for-macos/book"><span class="fi-book-bookmark"></span> UNIX for MacOS</a></li>
+        <li><a href="/content/books/javascript-working-with-the-dom/book"><span class="fi-book-bookmark"></span> Javascript working with the DOM</a></li>
+    </ul> -->
+</li>
+<!-- <li><a href="../../../../about.html">About</a></li> -->
+<li><a href="../../../../content/books/about/book/chapter-1.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="row pageheader-row">
+    <div class="small-12 column index text-center">
+        <div class="callout small pageheader">
+            <h1 id="applescript-overview" class="book-title title-text">
+                <a href="./index.html" class="">Applescript</a>
+            </h1>
+            <h6>Smerth</h6>
+        </div>
+    </div>
+</div>
+
+
+<div class="row " data-sticky-container>
+    <div class="column small-12 chapter-navigation-bar sticky" data-sticky data-anchor="main" data-options="marginTop:0;" style="width: 100%;">
+
+
+
+<div class="row chapter-navigation-row">
+    <div class="column small-6 small-order-2 medium-order-1 medium-3 prev-container">
+                    <h6><a class="prev" href="./index.html">&larr; Previous<div><small> - </small></div></a></h6>
+            </div>
+
+    <div class="column small-12 small-order-1 medium-order-2 medium-6 text-center title-container">
+        <h6 id="applescript-overview" class="bk-title"><span class="fi-book-bookmark"></span> <a href="./index.html">Applescript</a></h6>
+        <h6 id="applescript-overview" class="ch-title align-self-middle"><small>Chapter 1 - AppleScript Overview</small></h6>
+    </div>
+
+    <div class="column small-6 small-order-3 medium-order-3 medium-3 next-container">
+                    <h6><a class="next" href="./chapter-2.html"><div class="text-right">Next &rarr;</div><div class="text-right"><small>Chapter 2 - Files and Folders</small></div></a></h6>
+            </div>
+
+</div>
+</div>
+    </div> 
+    <div id="book-page" class="row">
+        
+        
+        <div id="sidebar" class="column small-12 medium-4  large-3" data-sticky-container>
+            <nav id="sidebar-toc" class=" sticky" data-sticky data-anchor="main" data-options="marginTop:5;">
+
+                
+                                <h3>
+                    <a href=".">Table of contents</a>
+                </h3>
+                <ul class="toc">
+                                                                                                    <li class="level-1 active">
+                                <a class="chapter" href="./chapter-1.html">
+                                    <span class="chapter-label">Chapter 1.</span>
+                                    AppleScript Overview
+                                </a>
+                                <ul id="page-toc" class="unstyled toc-l2">
+                                                                                                                        <li class="level-2" data-scroll="introduction">
+                                                <span>1.1</span>
+                                                <a class="internal" href="./chapter-1.html#introduction">Introduction</a>
+                                            </li>
+                                                                                    <li class="level-2" data-scroll="documentation">
+                                                <span>1.2</span>
+                                                <a class="internal" href="./chapter-1.html#documentation">Documentation</a>
+                                            </li>
+                                                                                    <li class="level-2" data-scroll="comments-variables-strings-and-numbers">
+                                                <span>1.3</span>
+                                                <a class="internal" href="./chapter-1.html#comments-variables-strings-and-numbers">Comments, Variables, Strings, and Numbers</a>
+                                            </li>
+                                                                                    <li class="level-2" data-scroll="the-dictionary">
+                                                <span>1.4</span>
+                                                <a class="internal" href="./chapter-1.html#the-dictionary">The Dictionary</a>
+                                            </li>
+                                                                                                    </ul>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">2.</span> <a href="./chapter-2.html"> Files and Folders</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">3.</span> <a href="./chapter-3.html"> Lists and Records</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">4.</span> <a href="./chapter-4.html"> Loops</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">5.</span> <a href="./chapter-5.html"> Conditionals</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">6.</span> <a href="./chapter-6.html"> Functions</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">7.</span> <a href="./chapter-7.html"> Alerts, Dialogs, and Notifications</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">8.</span> <a href="./chapter-8.html"> Using AppleScript with Applications</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">9.</span> <a href="./chapter-9.html"> AppleScript from the command line</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">10.</span> <a href="./chapter-10.html"> Preventing and catching errors</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">11.</span> <a href="./chapter-11.html"> Saving and distributing applications</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">12.</span> <a href="./chapter-12.html"> AppleScript Examples</a>
+                    </li>
+                                            </ul>
+        </nav>
+    </div>
+
+        <div id="main" class="main column small-12 medium-8 large-9 ">
+        <div class="main-content">
+                                                    <h2 id="introduction">1.1 Introduction</h2>
+
+<p>AppleScript is intended to be a natural language. In other words writing programs in AppleScript should be as close to speaking as possible.  A very common pattern in AppleScript is: verb, noun, followed by some modifiers.</p>
+
+<h2 id="documentation">1.2 Documentation</h2>
+
+<h3 id="apple-documentation">1.2.1 Apple documentation</h3>
+
+<p>The AppleScript language guide can be found here: <a href="https://developer.apple.com/library/prerelease/content/documentation/AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html">Introduction to AppleScript Language</a></p>
+
+<p>For an overivew of Commands read: <a href="https://developer.apple.com/library/prerelease/content/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW8">Commands Overview</a></p>
+
+<p>For a list of Commands and an explaination to how to use them see: <a href="https://developer.apple.com/library/prerelease/content/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW59">Commands Reference</a></p>
+
+<h3 id="third-party-sites">1.2.2 Third party sites:</h3>
+
+<p><a href="http://macosxautomation.com/AppleScript/resources.html">Mac OSX Automation</a></p>
+
+<p><a href="http://www.macscripter.net">Mac Scriptor</a></p>
+
+<h2 id="comments-variables-strings-and-numbers">1.3 Comments, Variables, Strings, and Numbers</h2>
+
+<h3 id="comments">1.3.1 Comments</h3>
+
+<p>Single line comments begin with <code>--</code></p>
+
+<div class="code applescript">
+<pre class="applescript"><span class="co1">-- this is a comment</span></pre>
+</div>
+
+<p>you can also use the "#" character for comments, like this:</p>
+
+<div class="code applescript">
+<pre class="applescript"># this <span class="kw3">is</span> a comment</pre>
+</div>
+
+<p>Here's a multi-line comment</p>
+
+<div class="code applescript">
+<pre class="applescript"><span class="coMULTI">(* Hello world, 
+this is my first multi-line AppleScript
+comment. *)</span></pre>
+</div>
+
+<h3 id="variables">1.3.2 Variables</h3>
+
+<p>To create a variable you use the keywords "set" and "to"</p>
+
+<div class="code applescript">
+<pre class="applescript"><span class="co1">-- set var to</span>
+<span class="kw3">set</span> myVariable <span class="kw3">to</span> <span class="nu0">5</span></pre>
+</div>
+
+<p>Variables cannot have any spaces in them. They cannot start with a number.</p>
+
+<h3 id="strings">1.3.3 Strings</h3>
+
+<p>A string is one or more characters enclosed in double quotes.</p>
+
+<div class="code applescript">
+<pre class="applescript"><span class="co1">-- set var to &quot;string&quot;</span>
+<span class="kw3">set</span> otherVariable <span class="kw3">to</span> <span class="st0">&quot;This is a string.&quot;</span></pre>
+</div>
+
+<p>Variables may be combined using the ampersand:  <code>&amp;</code></p>
+
+<div class="code applescript">
+<pre class="applescript"><span class="co1">-- combine vars using &amp;</span>
+<span class="kw3">set</span> combinedVariable <span class="kw3">to</span> myVariable <span class="sy0">&amp;</span> otherVariable</pre>
+</div>
+
+<p>Combining these variables returns a list (an array.)</p>
+
+<h3 id="numbers-and-operators">1.3.4 Numbers and operators</h3>
+
+<p>All standard operators work on number variables. However, there are some math symbols you cannot use like the arithmetic "multiplication sign" or "square root"</p>
+
+<div class="code applescript">
+<pre class="applescript"><span class="co1">-- operators &quot;+, -, /, *&quot; work as expected</span>
+&nbsp;
+<span class="kw3">set</span> mathResult1 <span class="kw3">to</span> <span class="nu0">3</span> <span class="sy0">+</span> <span class="nu0">5</span>
+&nbsp;
+<span class="kw3">set</span> mathResult2 <span class="kw3">to</span> <span class="nu0">3</span> <span class="sy0">-</span> <span class="nu0">5</span>
+&nbsp;
+<span class="kw3">set</span> mathResult3 <span class="kw3">to</span> <span class="nu0">3</span> <span class="sy0">/</span> <span class="nu0">5</span>
+&nbsp;
+<span class="kw3">set</span> mathResult4 <span class="kw3">to</span> <span class="nu0">3</span> <span class="sy0">*</span> <span class="nu0">5</span>
+&nbsp;
+<span class="kw3">set</span> output <span class="kw3">to</span> mathResult1 <span class="sy0">&amp;</span> mathResult2 <span class="sy0">&amp;</span> mathResult3 <span class="sy0">&amp;</span> mathResult4</pre>
+</div>
+
+<h3 id="variable-types">1.3.5 Variable types</h3>
+
+<p>AppleScript is loosely typed and tries to make sense of the variable types for you.</p>
+
+<p>However, if you want to explicitly cast a variable as a type use "as string", "as number", etc.</p>
+
+<div class="code applescript">
+<pre class="applescript"><span class="co1">-- Cast a var as a specific type using &quot;as&quot;</span>
+<span class="kw3">set</span> combinedVariable <span class="kw3">to</span> <span class="br0">&#40;</span>myVariable <span class="kw2">as</span> <span class="kw1">string</span><span class="br0">&#41;</span> <span class="sy0">&amp;</span> otherVariable</pre>
+</div>
+
+<h3 id="auto-corrections">1.3.6 Auto-corrections</h3>
+
+<p>ScriptEditor is smart enough to make obvious corrections as you go. Prior ot running a script use the hammer icon to check whether the script compiles properly, this also activates text highlighting after an edit is complete.</p>
+
+<p>Upon attempting to run a script any errors ScriptEditor detects will be flagged up.</p>
+
+<p>N.B. AppleScript remembers all the variables that are set in a script even if they are not used.</p>
+
+<h2 id="the-dictionary">1.4 The Dictionary</h2>
+
+<p>A dictionary is a place where other apps list the things they will let AppleScript do. Open a dictionary for the program you want to interact with to see what is possible.</p>
+
+<p>Apple's system dictionaries are located in the Library.  Go to: <code>Menu &gt; Window &gt; Library</code></p>
+
+<p>The Dictionary window is split into a column view on the top and a detail window at the bottom.</p>
+
+<p>On the left of the column view is the listing of Suites within the dictionary. You can think of these Suites like chapters in a book, organizing the different classes and commands together into related groupings.</p>
+
+<p>A quick look at some of the components of dictionary listings for the Finder Dictionary:</p>
+
+<div class="table" id="table-1-1">
+
+    <table>
+<thead>
+<tr>
+  <th>symbol</th>
+  <th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>small square orange "S" icon</td>
+  <td>Suite (a grouping of related classes and their related properties, commands, etc...)</td>
+</tr>
+<tr>
+  <td>small blue "C" icon</td>
+  <td>Command (something you can execute on a class)</td>
+</tr>
+<tr>
+  <td>purple "C" icon</td>
+  <td>Class (a type of thing)</td>
+</tr>
+<tr>
+  <td>square purple "P" icon</td>
+  <td>Property (Classes have properties. Each of these properties has a value that you can read or set.)</td>
+</tr>
+<tr>
+  <td>"r/o" signifier icon</td>
+  <td>A flag to indicate if a proptery is Read-Only.</td>
+</tr>
+<tr>
+  <td>square orange "E" icon</td>
+  <td>Element (things that can be contained within a Container)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<p>Etc...</p>
+
+<h3 id="classes">1.4.1 Classes</h3>
+
+<p>AppleScript is object oriented. The dictionary lists the classes you can interact with.</p>
+
+<p>In Object Oriented Programming, "Inheritance" is a term that means an object has all the properties of something else.  In AppleScript all classes inherit from a Super Class called "item".</p>
+
+<p>For example the "Disk" Class has all of the properties of  "item".</p>
+
+<h3 id="commands">1.4.2 Commands</h3>
+
+<div class="code applescript">
+<pre class="applescript"><span class="co1">-- &quot;tell&quot; and &quot;end tell&quot; frame a command to an application</span>
+<span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Atom&quot;</span>
+    <span class="kw1">activate</span>
+<span class="kw3">end</span> <span class="kw3">tell</span></pre>
+</div>
+
+<p>In a Dictionary a C in a round blue circle indicates a "Command".</p>
+
+<p>One command is: <code>activate</code></p>
+
+<p>This is the finder command you use to open an application.  You must "tell" the finder what application to use and the what commands to run.</p>
+
+<p>For an overivew of Commands read: <a href="https://developer.apple.com/library/prerelease/content/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW8">Commands Overview</a></p>
+
+<p>For a list of Commands and an explaination to how to use them see: <a href="https://developer.apple.com/library/prerelease/content/documentation/AppleScript/Conceptual/AppleScriptLangGuide/reference/ASLR_cmds.html#//apple_ref/doc/uid/TP40000983-CH216-SW59">Commands Reference</a></p>
+
+<p>The language reference lays out what each of the commands are and what kind of arguments or properties they expect and accept.</p>
+
+<p>Some examples of commands are: <code>activate</code>, <code>beep</code>, <code>choose folder</code>, or <code>set path to folder</code>.</p>
+
+<p>Commands are grouped into suites.  Suites are indicated by square sand colored 'S' icons.</p>
+
+<p>Many of these commands work with different data types like, strings of text, or numbers of files. In AppleScript, these data objects are called classes. You can find them in the Class Reference section of the Language Guide.</p>
+
+<h3 id="properties">1.4.3 Properties</h3>
+
+<p>An <code>item</code> is the archtypal class, all other object classes inherit from item</p>
+
+<p>Items have properties, for example the property "path to" is a property of all items.</p>
+
+<div class="code applescript">
+<pre class="applescript"><span class="co1">-- &quot;path to&quot; is a property of &quot;item&quot;</span>
+<span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+    <span class="kw3">set</span> var1 <span class="kw3">to</span> <span class="kw2">every</span> <span class="kw1">item</span> <span class="kw3">of</span> <span class="br0">&#40;</span><span class="kw1">path to</span> <span class="kw1">desktop</span><span class="br0">&#41;</span>
+<span class="kw3">end</span> <span class="kw3">tell</span></pre>
+</div>
+
+<p>...here "path to desktop" is like an alias to the desktop folder item</p>
+
+<p>All <code>Classes</code> have properties, some of which are already existing, while others can be set. For example, an object of the <code>file</code> class will have a <code>name</code> and a <code>size</code>. The <code>name</code> can be set to something different, but you can't modify the size directly.</p>
+
+<p>In dictionary listings the square purple colored 'p' icons indicate Properties of Classes.</p>
+
+<div class="code applescript">
+<pre class="applescript"><span class="co1">-- name is a property of the folder &quot;desktop&quot;</span>
+<span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+    <span class="kw3">set</span> var1 <span class="kw3">to</span> <span class="kw2">the</span> <span class="kw1">name</span> <span class="kw3">of</span> <span class="br0">&#40;</span><span class="kw1">path to</span> <span class="kw1">desktop</span><span class="br0">&#41;</span>
+<span class="kw3">end</span> <span class="kw3">tell</span></pre>
+</div>
+
+<p>Say your interested in the name of a disk, so you look up disk in the dictionary.  You see that disk inherits from container which inherits from item. So, in addition to the properties of disk (listed below) you can also interact with properties of container and item.</p>
+
+<p>A dictionary listing for disk reads:</p>
+
+<blockquote>
+  <p>disk n [inh. container > item] : A disk</p>
+  
+  <p>properties</p>
+  
+  <p>id (integer, r/o) : the unique id for this disk (unchanged while disk remains connected and Finder remains running)</p>
+  
+  <p>capacity (double integer, r/o) : the total number of bytes (free or used) on the disk</p>
+  
+  <p>free space (double integer, r/o) : the number of free bytes left on the disk</p>
+  
+  <p>ejectable (boolean, r/o) : Can the media be ejected (floppies, CDs, and so on)?</p>
+  
+  <p>local volume (boolean, r/o) : Is the media a local volume (as opposed to a file server)?</p>
+  
+  <p>startup (boolean, r/o) : Is this disk the boot disk?</p>
+  
+  <p>format (Mac OS format/‌Mac OS Extended format/‌UFS format/‌NFS format/‌audio format/‌ProDOS format/‌MSDOS format/‌NTFS format/‌ISO 9660 format/‌High Sierra format/‌QuickTake format/‌Apple Photo format/‌AppleShare format/‌UDF format/‌WebDAV format/‌FTP format/‌Packet written UDF format/‌Xsan format/‌unknown format, r/o) : the filesystem format of this disk</p>
+  
+  <p>journaling enabled (boolean, r/o) : Does this disk do file system journaling?</p>
+  
+  <p>ignore privileges (boolean) : Ignore permissions on this disk?</p>
+</blockquote>
+
+<p>In this script we can make use of any properties of "item" which "disk" inherits.  And we can also use properties of "disk" itself.</p>
+
+<div class="code applescript">
+<pre class="applescript"><span class="co1">-- the &quot;name&quot; property is inherited from &quot;item&quot;</span>
+<span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+    <span class="kw3">set</span> var1 <span class="kw3">to</span> <span class="kw2">the</span> <span class="kw1">name</span> <span class="kw3">of</span> <span class="br0">&#40;</span>startup <span class="kw1">disk</span><span class="br0">&#41;</span>
+<span class="kw3">end</span> <span class="kw3">tell</span>
+&nbsp;
+<span class="co1">-- the &quot;owner&quot; property is inherited from &quot;item&quot;</span>
+<span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+    <span class="kw3">set</span> var2 <span class="kw3">to</span> <span class="kw2">the</span> owner <span class="kw3">of</span> <span class="br0">&#40;</span>startup <span class="kw1">disk</span><span class="br0">&#41;</span>
+<span class="kw3">end</span> <span class="kw3">tell</span>
+&nbsp;
+<span class="st0">&quot;Disk Name = &quot;</span> <span class="sy0">&amp;</span> var1 <span class="sy0">&amp;</span> <span class="st0">&quot;, Disk Owner = &quot;</span> <span class="sy0">&amp;</span> var2
+&nbsp;
+<span class="co1">-- &quot;format&quot; is a property of &quot;Disk&quot; itself</span>
+<span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+    <span class="kw3">set</span> var3 <span class="kw3">to</span> <span class="kw2">the</span> format <span class="kw3">of</span> <span class="br0">&#40;</span>startup <span class="kw1">disk</span><span class="br0">&#41;</span>
+<span class="kw3">end</span> <span class="kw3">tell</span>
+&nbsp;
+<span class="co1">-- &quot;free space&quot; is a property of &quot;Disk&quot; itself</span>
+<span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+    <span class="kw3">set</span> var4 <span class="kw3">to</span> <span class="kw2">the</span> free <span class="kw1">space</span> <span class="kw3">of</span> <span class="br0">&#40;</span>startup <span class="kw1">disk</span><span class="br0">&#41;</span>
+<span class="kw3">end</span> <span class="kw3">tell</span>
+&nbsp;
+<span class="st0">&quot;Disk Name = &quot;</span> <span class="sy0">&amp;</span> var1 <span class="sy0">&amp;</span> <span class="st0">&quot;, Disk Owner = &quot;</span> <span class="sy0">&amp;</span> var2 <span class="sy0">&amp;</span> <span class="st0">&quot; Disk Format = &quot;</span> <span class="sy0">&amp;</span> var3 <span class="sy0">&amp;</span> <span class="st0">&quot;, Disk Free Space = &quot;</span> <span class="sy0">&amp;</span> var4</pre>
+</div>
+
+<h3 id="elements">1.4.4 Elements</h3>
+
+<p>Something is an element of an object if it can be contained by the object.</p>
+
+<p>A file is an element of startup disk (something that startup disk can contain)</p>
+
+<div class="code applescript">
+<pre class="applescript"><span class="co1">-- &quot;file&quot; is an element of startup disk</span>
+<span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+    <span class="kw3">set</span> var1 <span class="kw3">to</span> <span class="kw2">every</span> <span class="kw1">file</span> <span class="kw3">of</span> <span class="br0">&#40;</span>startup <span class="kw1">disk</span><span class="br0">&#41;</span>
+<span class="kw3">end</span> <span class="kw3">tell</span></pre>
+</div>
+
+<p>...in this case an empty array is returned because there are no files on the startup disc, only folders</p>
+
+<p>A folder is an element of startup disk (something that startup disk can contain)</p>
+
+<div class="code applescript">
+<pre class="applescript"><span class="co1">-- &quot;folder&quot; is an element of startup disk</span>
+<span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+    <span class="kw3">set</span> var1 <span class="kw3">to</span> <span class="kw2">every</span> <span class="kw1">folder</span> <span class="kw3">of</span> <span class="br0">&#40;</span>startup <span class="kw1">disk</span><span class="br0">&#41;</span>
+<span class="kw3">end</span> <span class="kw3">tell</span></pre>
+</div>
+
+<p>…returns an array...</p>
+
+<p>Natural language variations of the statement also work: you can use "the folders" instead of "to every folder".</p>
+
+<div class="code applescript">
+<pre class="applescript"><span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+    <span class="kw3">set</span> var1 <span class="kw3">to</span> <span class="kw2">the</span> <span class="kw1">folders</span> <span class="kw3">of</span> <span class="br0">&#40;</span>startup <span class="kw1">disk</span><span class="br0">&#41;</span>
+<span class="kw3">end</span> <span class="kw3">tell</span></pre>
+</div>
+
+<h3 id="conditions">1.4.5 Conditions</h3>
+
+<p>AppleScript also provides control statements, which let you control program flow based on various conditions.</p>
+
+<h3 id="operators">1.4.6 Operators</h3>
+
+<p>The control statements often work in conjunction with the operators which evaluate and combine information in various ways. These can test if a value is "greater than", "less than", or "equal" to another value, or is "contained within" a list.</p>
+
+                    </div>
+    </div>
+</div>
+
+<footer class="columns small-12 topspace">
+    <div class="row footer-top">
+        <div class="medium-6 columns">
+<!--             <ul class="menu">
+                <li><a href="#">Legal</a></li>
+                <li><a href="#">Partner</a></li>
+                <li><a href="#">Explore</a></li>
+            </ul> -->
+        </div>
+        <div class="medium-6 columns align-middle text-right">
+            
+                <div class="copyright">Copyright © 2016 Smedia</div>
+            
+        </div>
+    </div>
+    <div class="row footer-middle">
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Offices</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Solar Systems</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+        <div class="small-6 medium-offset-6 large-3 columns">
+            <p class="lead">Contact</p>
+            <ul class="menu vertical">
+                <li><a href="#"><i class="fi-social-twitter"></i> Twitter</a></li>
+                <li><a href="#"><i class="fi-social-facebook"></i> Facebook</a></li>
+                <li><a href="#"><i class="fi-social-instagram"></i> Instagram</a></li>
+                <li><a href="#"><i class="fi-social-pinterest"></i> Pinterest</a></li>
+            </ul>
+        </div>
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Widgets</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+    </div>
+    <div class="row footer-bottom">
+        <div class="large-12 columns text-center">
+            <p>Le Grande Hotel, Latin Quarter, Paris • 261 Rue Saint-Séverin, 75005 Paris, France </p>
+            <p>Phone 01 42 517 85 • info@dummy.com • www.dummy.com</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="../../../../assets/js/app.js"></script>
+  </body>
+</html>

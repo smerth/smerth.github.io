@@ -1,0 +1,658 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebooks - Applescript - Files and Folders</title>
+    <link rel="stylesheet" href="../../../../assets/css/app.css">
+    <link href='//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+  </head>
+  <body>
+
+<div class="row navigation-row">
+    <div class="columns small-12">
+
+        <div class="mobile-branding show-for-small-only">
+          <a href="../../../../index.html"><div class="menu-text mobile-branding">Smerth</div></a>
+        </div>
+        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+          <div class="title-bar-title">Menu</div>
+        </div>
+        <nav id="main-menu" class="top-bar">
+
+            <div class="top-bar-left">
+                <!-- Navigation on medium and up screens -->
+                <ul class="vertical menu medium-horizontal show-for-medium" data-responsive-menu="dropdown">
+<li class="menu-text"><a class="sitename" href="../../../../index.html">Smerth</a></li>
+<li><a href="../../../../projects.html">Projects</a></li>
+<li><a href="../../../../cases.html">Case Studies</a></li>
+<li>
+    <a href="../../../../books.html">Notebooks</a>
+        <ul class="menu vertical" style="width: 300px;">
+            <li><a href="../../../../content/books/javascript-working-with-the-dom/book/index.html">Javascript: working with the dom</a></li>
+            <li><a href="../../../../content/books/unix-for-macos/book/index.html">Unix for MacOS</a></li>
+            <li><a href="../../../../content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="../../../../content/books/webpack/book/index.html">Webpack</a></li>
+            
+        </ul>
+<!--           <ul class="menu vertical" style="width: 300px;">
+            <li><a href="content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="content/books/easybook_notes/book/index.html">Easybook Notes</a></li>
+            <li><a href="content/books/introduction-to-mysql/book/index.html">Introduction to MySQL</a></li>
+            <li><a href="content/books/javascript-and-ajax/book/index.html">Javascript and AJAX</a></li>
+            <li><a href="content/books/javascript-and-json/book/index.html">Javascript and JSON</a></li>
+            <li><a href="content/books/jquery-data-with-ajax/book/index.html">jQuery Data with AJAX</a></li>
+            <li><a href="content/books/unix-for-macos/book/index.html">UNIX for MacOS</a></li>
+            <li><a href="content/books/GIT-Workflow/book/index.html">GIT Workflow</a></li>
+            <li><a href="content/books/webpack/book/index.html">Webpack</a></li>
+        </ul> -->
+<!--     <ul class="menu vertical" style="width: 100%;">
+        <li><a href="/content/books/applescript-notes/book"><span class="fi-book-bookmark"></span> AppleScript Notes</a></li>
+        <li><a href="/content/books/build-a-polling-app-with-socket-io-and-react/book"><span class="fi-book-bookmark"></span> Polling App with Socket.io and React.js</a></li>
+        <li><a href="/content/books/introduction-to-mysql/book"><span class="fi-book-bookmark"></span> Introduction to MySQL</a></li>
+        <li><a href="/content/books/unix-for-macos/book"><span class="fi-book-bookmark"></span> UNIX for MacOS</a></li>
+        <li><a href="/content/books/javascript-working-with-the-dom/book"><span class="fi-book-bookmark"></span> Javascript working with the DOM</a></li>
+    </ul> -->
+</li>
+<!-- <li><a href="../../../../about.html">About</a></li> -->
+<li><a href="../../../../content/books/about/book/chapter-1.html">About</a></li>
+                </ul>
+                <!-- Navigation on small screens -->
+                <ul class="vertical menu medium-horizontal show-for-small-only" data-responsive-menu="dropdown" data-accordion-menu>
+<li class="menu-text"><a href="../../../../index.html">Notebook</a></li>
+<li><a href="../../../../projects.html">Projects</a></li>
+<li><a href="../../../../cases.html">Case Studies</a></li>
+<li>
+    <a href="../../../../books.html">Notebooks</a>
+        <ul class="menu vertical" style="width: 100%;">
+            <li><a href="../../../../content/books/javascript-working-with-the-dom/book/index.html">Javascript: working with the dom</a></li>
+            <li><a href="../../../../content/books/unix-for-macos/book/index.html">Unix for MacOS</a></li>
+            <li><a href="../../../../content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="../../../../content/books/webpack/book/index.html">Webpack</a></li>
+            
+        </ul>
+<!--     <ul class="menu vertical" style="width: 100%;">
+        <li><a href="/content/books/applescript-notes/book"><span class="fi-book-bookmark"></span> AppleScript Notes</a></li>
+        <li><a href="/content/books/build-a-polling-app-with-socket-io-and-react/book"><span class="fi-book-bookmark"></span> Polling App with Socket.io and React.js</a></li>
+        <li><a href="/content/books/introduction-to-mysql/book"><span class="fi-book-bookmark"></span> Introduction to MySQL</a></li>
+        <li><a href="/content/books/unix-for-macos/book"><span class="fi-book-bookmark"></span> UNIX for MacOS</a></li>
+        <li><a href="/content/books/javascript-working-with-the-dom/book"><span class="fi-book-bookmark"></span> Javascript working with the DOM</a></li>
+    </ul> -->
+</li>
+<!-- <li><a href="../../../../about.html">About</a></li> -->
+<li><a href="../../../../content/books/about/book/chapter-1.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="row pageheader-row">
+    <div class="small-12 column index text-center">
+        <div class="callout small pageheader">
+            <h1 id="files-and-folders" class="book-title title-text">
+                <a href="./index.html" class="">Applescript</a>
+            </h1>
+            <h6>Smerth</h6>
+        </div>
+    </div>
+</div>
+
+
+<div class="row " data-sticky-container>
+    <div class="column small-12 chapter-navigation-bar sticky" data-sticky data-anchor="main" data-options="marginTop:0;" style="width: 100%;">
+
+
+
+<div class="row chapter-navigation-row">
+    <div class="column small-6 small-order-2 medium-order-1 medium-3 prev-container">
+                    <h6><a class="prev" href="./chapter-1.html">&larr; Previous<div><small>Chapter 1 - AppleScript Overview</small></div></a></h6>
+            </div>
+
+    <div class="column small-12 small-order-1 medium-order-2 medium-6 text-center title-container">
+        <h6 id="files-and-folders" class="bk-title"><span class="fi-book-bookmark"></span> <a href="./index.html">Applescript</a></h6>
+        <h6 id="files-and-folders" class="ch-title align-self-middle"><small>Chapter 2 - Files and Folders</small></h6>
+    </div>
+
+    <div class="column small-6 small-order-3 medium-order-3 medium-3 next-container">
+                    <h6><a class="next" href="./chapter-3.html"><div class="text-right">Next &rarr;</div><div class="text-right"><small>Chapter 3 - Lists and Records</small></div></a></h6>
+            </div>
+
+</div>
+</div>
+    </div> 
+    <div id="book-page" class="row">
+        
+        
+        <div id="sidebar" class="column small-12 medium-4  large-3" data-sticky-container>
+            <nav id="sidebar-toc" class=" sticky" data-sticky data-anchor="main" data-options="marginTop:5;">
+
+                
+                                <h3>
+                    <a href=".">Table of contents</a>
+                </h3>
+                <ul class="toc">
+                                                                                <li class="level-1">
+                        <span class="chapter-label">1.</span> <a href="./chapter-1.html"> AppleScript Overview</a>
+                    </li>
+                                                                                                                <li class="level-1 active">
+                                <a class="chapter" href="./chapter-2.html">
+                                    <span class="chapter-label">Chapter 2.</span>
+                                    Files and Folders
+                                </a>
+                                <ul id="page-toc" class="unstyled toc-l2">
+                                                                                                                        <li class="level-2" data-scroll="make-files-and-folders">
+                                                <span>2.1</span>
+                                                <a class="internal" href="./chapter-2.html#make-files-and-folders">Make files and folders</a>
+                                            </li>
+                                                                                    <li class="level-2" data-scroll="deleting-items">
+                                                <span>2.2</span>
+                                                <a class="internal" href="./chapter-2.html#deleting-items">Deleting items</a>
+                                            </li>
+                                                                                    <li class="level-2" data-scroll="setting-the-path-to-files-and-folders">
+                                                <span>2.3</span>
+                                                <a class="internal" href="./chapter-2.html#setting-the-path-to-files-and-folders">Setting the path to files and folders</a>
+                                            </li>
+                                                                                    <li class="level-2" data-scroll="moving-files-and-folders">
+                                                <span>2.4</span>
+                                                <a class="internal" href="./chapter-2.html#moving-files-and-folders">Moving files and folders</a>
+                                            </li>
+                                                                                    <li class="level-2" data-scroll="read-properties-of-a-file">
+                                                <span>2.5</span>
+                                                <a class="internal" href="./chapter-2.html#read-properties-of-a-file">Read properties of a file</a>
+                                            </li>
+                                                                                    <li class="level-2" data-scroll="add-properties-to-files-and-folders">
+                                                <span>2.6</span>
+                                                <a class="internal" href="./chapter-2.html#add-properties-to-files-and-folders">Add Properties to files and folders</a>
+                                            </li>
+                                                                                    <li class="level-2" data-scroll="check-if-a-file-exists">
+                                                <span>2.7</span>
+                                                <a class="internal" href="./chapter-2.html#check-if-a-file-exists">Check if a file exists.</a>
+                                            </li>
+                                                                                                    </ul>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">3.</span> <a href="./chapter-3.html"> Lists and Records</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">4.</span> <a href="./chapter-4.html"> Loops</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">5.</span> <a href="./chapter-5.html"> Conditionals</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">6.</span> <a href="./chapter-6.html"> Functions</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">7.</span> <a href="./chapter-7.html"> Alerts, Dialogs, and Notifications</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">8.</span> <a href="./chapter-8.html"> Using AppleScript with Applications</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">9.</span> <a href="./chapter-9.html"> AppleScript from the command line</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">10.</span> <a href="./chapter-10.html"> Preventing and catching errors</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">11.</span> <a href="./chapter-11.html"> Saving and distributing applications</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">12.</span> <a href="./chapter-12.html"> AppleScript Examples</a>
+                    </li>
+                                            </ul>
+        </nav>
+    </div>
+
+        <div id="main" class="main column small-12 medium-8 large-9 ">
+        <div class="main-content">
+                                                    <h2 id="make-files-and-folders">2.1 Make files and folders</h2>
+
+<p>Under the standard suite of the finder dictionary you can find "make".  You can create a new folder or a new file with the command (verb) <code>make</code>.</p>
+
+<h3 id="ex-make-a-folder">2.1.1 ex: make a folder</h3>
+
+<div class="code applescript">
+<pre class="applescript"><span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+    <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">folder</span>
+<span class="kw3">end</span> <span class="kw3">tell</span></pre>
+</div>
+
+<h3 id="ex-make-a-file">2.1.2 ex: make a file</h3>
+
+<div class="code applescript">
+<pre class="applescript"><span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+    <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">file</span>
+<span class="kw3">end</span> <span class="kw3">tell</span></pre>
+</div>
+
+<h3 id="ex-make-a-folder-at-a-specific-location">2.1.3 ex: make a folder at a specific location</h3>
+
+<div class="code applescript">
+<pre class="applescript"><span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+    <span class="kw3">set</span> p <span class="kw3">to</span> <span class="kw1">path to</span> <span class="kw1">desktop</span> <span class="co1">-- Or whatever path you want</span>
+    <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">folder</span> at p <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;New Folder&quot;</span><span class="br0">&#125;</span>
+<span class="kw3">end</span> <span class="kw3">tell</span></pre>
+</div>
+
+<h3 id="example-create-a-folder-and-create-a-file-within-it">2.1.4 example: create a folder, and create a file within it</h3>
+
+<div class="code applescript">
+<pre class="applescript"><span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+    <span class="kw3">set</span> p <span class="kw3">to</span> <span class="kw1">path to</span> <span class="kw1">desktop</span> <span class="co1">-- Or whatever path you want</span>
+    <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">folder</span> at p <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;Applescript_Test_Folder&quot;</span><span class="br0">&#125;</span>
+&nbsp;
+    <span class="kw3">set</span> e <span class="kw3">to</span> <span class="br0">&#40;</span><span class="kw1">path to</span> <span class="kw1">desktop</span> <span class="kw1">folder</span> <span class="kw2">as</span> <span class="kw1">string</span><span class="br0">&#41;</span> <span class="sy0">&amp;</span> <span class="st0">&quot;Applescript_Test_Folder&quot;</span> <span class="co1">-- Path to folder we just created</span>
+    <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">file</span> at e <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;Applescript_Test_File&quot;</span><span class="br0">&#125;</span>
+<span class="kw3">end</span> <span class="kw3">tell</span></pre>
+</div>
+
+<h2 id="deleting-items">2.2 Deleting items</h2>
+
+<p>You can delete items using the <code>delete</code> command</p>
+
+<h3 id="ex-delete-folder-items-and-file-items">2.2.1 ex: delete folder items and file items</h3>
+
+<div class="code applescript">
+<pre class="applescript"><span class="kw3">try</span>
+    <span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+        <span class="kw1">delete</span> <span class="br0">&#40;</span><span class="kw2">every</span> <span class="kw1">item</span> <span class="kw3">of</span> <span class="kw1">folder</span> <span class="br0">&#40;</span><span class="kw1">path to</span> <span class="kw1">desktop</span> <span class="kw1">folder</span><span class="br0">&#41;</span> <span class="kw2">whose</span> <span class="kw1">name</span> begins <span class="kw3">with</span> <span class="st0">&quot;Screen Shot&quot;</span><span class="br0">&#41;</span>
+        <span class="kw1">delete</span> <span class="br0">&#40;</span><span class="kw2">every</span> <span class="kw1">item</span> <span class="kw3">of</span> <span class="kw1">folder</span> <span class="br0">&#40;</span><span class="kw1">path to</span> downloads <span class="kw1">folder</span><span class="br0">&#41;</span> <span class="kw2">whose</span> <span class="kw1">name</span> ends <span class="kw3">with</span> <span class="st0">&quot;.jpg&quot;</span><span class="br0">&#41;</span>
+    <span class="kw3">end</span> <span class="kw3">tell</span>
+<span class="kw3">on</span> <span class="kw3">error</span>
+    <span class="kw1">display dialog</span> <span class="br0">&#40;</span><span class="st0">&quot;Error. Couldn't Move the File&quot;</span><span class="br0">&#41;</span> <span class="kw1">buttons</span> <span class="br0">&#123;</span><span class="st0">&quot;OK&quot;</span><span class="br0">&#125;</span>
+<span class="kw3">end</span> <span class="kw3">try</span></pre>
+</div>
+
+<p>Be careful! This deletes items and their contents!!!</p>
+
+<p>You can modify it yourself to point to a different folder or to target different files. If you remove the qualifier "whose name begins with" and leave the line as "delete (every item of folder (path to desktop folder))", then you can delete all the contents of a folder in one fell swoop.</p>
+
+<h3 id="ex-handler-to-delete-files-and-folders-with-undo">2.2.2 ex: handler to delete files and folders with undo</h3>
+
+<p>This handler works with both files and folders - targeting a folder with allowUndo set to false therefore permanently deletes that folder's entire subtree.</p>
+
+<div class="code applescript">
+<pre class="applescript"><span class="kw3">on</span> MyDeleteProc<span class="br0">&#40;</span>theFile, allowUndo<span class="br0">&#41;</span>
+  <span class="kw3">if</span> allowUndo <span class="kw3">then</span>
+    <span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span> <span class="kw3">to</span> <span class="kw1">delete</span> theFile <span class="kw2">as</span> <span class="kw1">POSIX file</span>
+  <span class="kw3">else</span>
+    <span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;System Events&quot;</span> <span class="kw3">to</span> <span class="kw1">delete</span> <span class="kw1">alias</span> theFile
+  <span class="kw3">end</span> <span class="kw3">if</span>
+<span class="kw3">end</span> MyDeleteProc</pre>
+</div>
+
+<h3 id="ex-delete-using-shell-script-rm-or-rm-rf">2.2.3 ex: delete using shell script "rm" or "rm -rf"</h3>
+
+<p>Just using rm only works with files - if you wanted to extend it to folders, too, use rm -rf instead - the same caveat re permanently deleting entire subtrees applies.</p>
+
+<div class="code applescript">
+<pre class="applescript"><span class="kw3">on</span> MyDeleteProc<span class="br0">&#40;</span>theFile, allowUndo<span class="br0">&#41;</span>
+  <span class="kw3">if</span> allowUndo <span class="kw3">then</span>
+    <span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span> <span class="kw3">to</span> <span class="kw1">delete</span> theFile <span class="kw2">as</span> <span class="kw1">POSIX file</span>
+  <span class="kw3">else</span>
+    <span class="kw1">do shell script</span> <span class="st0">&quot;rm &quot;</span> <span class="sy0">&amp;</span> <span class="kw1">quoted form</span> <span class="kw3">of</span> theFile
+  <span class="kw3">end</span> <span class="kw3">if</span>
+<span class="kw3">end</span> MyDeleteProc</pre>
+</div>
+
+<p>Note the use of <code>quoted form of</code>, which safely passes the file path to the shell, encoding characters such as spaces properly.</p>
+
+<h2 id="setting-the-path-to-files-and-folders">2.3 Setting the path to files and folders</h2>
+
+<p>There are three ways to write out a path:</p>
+
+<div class="table" id="table-2-1">
+
+    <table>
+<thead>
+<tr>
+  <th>Type</th>
+  <th>Syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Explicit</td>
+  <td>at folder "Documents" of folder "smerth" of folder "Users" of folder "Macintosh HD"</td>
+</tr>
+<tr>
+  <td>POSIX</td>
+  <td>at "/Macintosh HD/Users/user/Documents/"</td>
+</tr>
+<tr>
+  <td>Colon Notation</td>
+  <td>at "Macintosh HD:User:Documents"</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<p>When using POSIX notation for the path, note the preceding and trailing slashes...</p>
+
+<h3 id="ex-specify-a-path-using-explicit-notation">2.3.1 ex: specify a path using explicit notation</h3>
+
+<div class="code applescript">
+<pre class="applescript"><span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+  <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">folder</span> at <span class="kw1">folder</span> <span class="st0">&quot;Desktop&quot;</span> <span class="kw3">of</span> <span class="kw1">folder</span> <span class="st0">&quot;user&quot;</span> <span class="kw3">of</span> <span class="kw1">folder</span> <span class="st0">&quot;Users&quot;</span> <span class="kw3">of</span> <span class="kw1">folder</span> <span class="st0">&quot;Macintosh HD&quot;</span> <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;My_Super_Folder&quot;</span><span class="br0">&#125;</span>
+<span class="kw3">end</span> <span class="kw3">tell</span></pre>
+</div>
+
+<p>However this path uses the user name. To make the path generic (not specific to a user's name) you can write: <code>at (path to documents folder)</code></p>
+
+<p>This works for: documents, downloads, desktop, applications</p>
+
+<h3 id="ex-specify-path-to-documents-downloads-desktop-and-applications">2.3.2 ex: Specify path to documents, downloads, desktop, and applications</h3>
+
+<div class="code applescript">
+<pre class="applescript"><span class="co1">-- set path to documents folder</span>
+<span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+  <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">folder</span> at <span class="br0">&#40;</span><span class="kw1">path to</span> documents <span class="kw1">folder</span><span class="br0">&#41;</span> <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;My_Super_Folder&quot;</span><span class="br0">&#125;</span>
+<span class="kw3">end</span> <span class="kw3">tell</span>
+&nbsp;
+<span class="co1">-- set path to download folder</span>
+<span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+  <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">folder</span> at <span class="br0">&#40;</span><span class="kw1">path to</span> downloads <span class="kw1">folder</span><span class="br0">&#41;</span> <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;My_Super_Folder&quot;</span><span class="br0">&#125;</span>
+<span class="kw3">end</span> <span class="kw3">tell</span>
+&nbsp;
+<span class="co1">-- set path to desktop folder</span>
+<span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+  <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">folder</span> at <span class="br0">&#40;</span><span class="kw1">path to</span> <span class="kw1">desktop</span> <span class="kw1">folder</span><span class="br0">&#41;</span> <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;My_Super_Folder&quot;</span><span class="br0">&#125;</span>
+<span class="kw3">end</span> <span class="kw3">tell</span>
+&nbsp;
+<span class="co1">-- set path to applications folder</span>
+<span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+  <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">folder</span> at <span class="br0">&#40;</span><span class="kw1">path to</span> applications <span class="kw1">folder</span><span class="br0">&#41;</span> <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;My_Super_Folder&quot;</span><span class="br0">&#125;</span>
+<span class="kw3">end</span> <span class="kw3">tell</span></pre>
+</div>
+
+<p>To make it easier when setting a path to a file or a folder, set a variable for the path and append that using <code>&amp;</code>...</p>
+
+<h3 id="ex-appending-a-path-to-documents-downloads-desktop-and-applications-folder-location">2.3.3 ex: appending a path to documents, downloads, desktop, and applications folder location</h3>
+
+<div class="code applescript">
+<pre class="applescript"><span class="co1">-- example 1</span>
+<span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+    <span class="kw3">set</span> myFolderPath <span class="kw3">to</span> <span class="br0">&#40;</span><span class="kw1">path to</span> documents <span class="kw1">folder</span> <span class="kw2">as</span> <span class="kw1">string</span><span class="br0">&#41;</span> <span class="sy0">&amp;</span> <span class="st0">&quot;Test&quot;</span>
+    <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">folder</span> at myFolderPath <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;Test_2&quot;</span><span class="br0">&#125;</span>
+<span class="kw3">end</span> <span class="kw3">tell</span>
+&nbsp;
+<span class="co1">-- example 2</span>
+<span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Atom&quot;</span>
+    <span class="kw3">set</span> filePath <span class="kw3">to</span> <span class="br0">&#40;</span><span class="kw1">path to</span> <span class="kw1">desktop</span> <span class="kw1">folder</span> <span class="kw2">as</span> <span class="kw1">string</span><span class="br0">&#41;</span> <span class="sy0">&amp;</span> <span class="st0">&quot;test.txt&quot;</span>
+    <span class="kw1">open</span> filePath
+<span class="kw3">end</span> <span class="kw3">tell</span></pre>
+</div>
+
+<p>… The folder you are targeting must exist...</p>
+
+<h2 id="moving-files-and-folders">2.4 Moving files and folders</h2>
+
+<p>Now that you can handle paths you can try moving files and folders.</p>
+
+<div class="code applescript">
+<pre class="applescript"><span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+    <span class="kw3">set</span> myFolderPath <span class="kw3">to</span> <span class="br0">&#40;</span><span class="kw1">path to</span> documents <span class="kw1">folder</span> <span class="kw2">as</span> <span class="kw1">string</span><span class="br0">&#41;</span> <span class="sy0">&amp;</span> <span class="st0">&quot;Test&quot;</span>
+    <span class="kw1">move</span> <span class="kw1">folder</span> myFolderPath <span class="kw3">to</span> <span class="br0">&#40;</span><span class="kw1">path to</span> <span class="kw1">desktop</span> <span class="kw1">folder</span><span class="br0">&#41;</span>
+<span class="kw3">end</span> <span class="kw3">tell</span></pre>
+</div>
+
+<h2 id="read-properties-of-a-file">2.5 Read properties of a file</h2>
+
+<p>ToDo...</p>
+
+<h2 id="add-properties-to-files-and-folders">2.6 Add Properties to files and folders</h2>
+
+<p>When creating files and folders you can add properties to them.  Look up properties you want to add using the dictionary. Curly braces are used to hold a list of key value pairs for the properties you want to add.</p>
+
+<div class="code applescript">
+<pre class="applescript"><span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+    <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">folder</span> <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;newFolder&quot;</span><span class="br0">&#125;</span>
+<span class="kw3">end</span> <span class="kw3">tell</span></pre>
+</div>
+
+<p>Looking up the <code>file</code> Class in the dictionary we find a list of properties we can interact with.</p>
+
+<blockquote>
+  <p>file n [inh. item] : A file</p>
+  
+  <p>properties</p>
+  
+  <p>file type (type) : the OSType identifying the type of data contained in the item</p>
+  
+  <p>creator type (type) : the OSType identifying the application that created the item</p>
+  
+  <p>stationery (boolean) : Is the file a stationery pad?</p>
+  
+  <p>product version (text, r/o) : the version of the product (visible at the top of the “Get Info” window)</p>
+  
+  <p>version (text, r/o) : the version of the file (visible at the bottom of the “Get Info” window)</p>
+</blockquote>
+
+<p>The <code>file</code> Class inherits from the <code>item</code> Class so we can also interact with the <code>item</code> properties.</p>
+
+<p>The dictionary lists the <code>item</code> properties.</p>
+
+<blockquote>
+  <p>item n : An item</p>
+  
+  <p>elements</p>
+  
+  <p>contained by application, containers, disks, folders, desktop-objects, trash-objects.</p>
+  
+  <p>properties</p>
+  
+  <p>name (text) : the name of the item</p>
+  
+  <p>displayed name (text, r/o) : the user-visible name of the item</p>
+  
+  <p>name extension (text) : the name extension of the item (such as “txt”)</p>
+  
+  <p>extension hidden (boolean) : Is the item's extension hidden from the user?</p>
+  
+  <p>index (integer, r/o) : the index in the front-to-back ordering within its container</p>
+  
+  <p>container (specifier, r/o) : the container of the item</p>
+  
+  <p>disk (specifier, r/o) : the disk on which the item is stored</p>
+  
+  <p>position (point) : the position of the item within its parent window (can only be set for an item in a window viewed as icons or buttons)</p>
+  
+  <p>desktop position (point) : the position of the item on the desktop</p>
+  
+  <p>bounds (rectangle) : the bounding rectangle of the item (can only be set for an item in a window viewed as icons or buttons)</p>
+  
+  <p>label index (integer) : the label of the item</p>
+  
+  <p>locked (boolean) : Is the file locked?</p>
+  
+  <p>kind (text, r/o) : the kind of the item</p>
+  
+  <p>description (text, r/o) : a description of the item</p>
+  
+  <p>comment (text) : the comment of the item, displayed in the “Get Info” window</p>
+  
+  <p>size (double integer, r/o) : the logical size of the item</p>
+  
+  <p>physical size (double integer, r/o) : the actual space used by the item on disk</p>
+  
+  <p>creation date (date, r/o) : the date on which the item was created</p>
+  
+  <p>modification date (date) : the date on which the item was last modified</p>
+  
+  <p>icon (icon family) : the icon bitmap of the item</p>
+  
+  <p>URL (text, r/o) : the URL of the item</p>
+  
+  <p>owner (text) : the user that owns the container</p>
+  
+  <p>group (text) : the user or group that has special access to the container</p>
+  
+  <p>owner privileges (read only/‌read write/‌write only/‌none)</p>
+  
+  <p>group privileges (read only/‌read write/‌write only/‌none)</p>
+  
+  <p>everyones privileges (read only/‌read write/‌write only/‌none)</p>
+  
+  <p>information window (specifier, r/o) : the information window for the item</p>
+  
+  <p>properties (record) : every property of an item</p>
+  
+  <p>class (type, r/o) : the class of the item</p>
+</blockquote>
+
+<h3 id="example-add-name-property">2.6.1 example: add name property</h3>
+
+<div class="code applescript">
+<pre class="applescript"><span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+    <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">folder</span> at <span class="st0">&quot;Macintosh HD&quot;</span> <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;My_new_folder&quot;</span><span class="br0">&#125;</span>
+<span class="kw3">end</span> <span class="kw3">tell</span></pre>
+</div>
+
+<h3 id="example-the-name-property-with-extension">2.6.2 example: the name property with extension</h3>
+
+<div class="code applescript">
+<pre class="applescript"><span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+    <span class="kw3">set</span> filename <span class="kw3">to</span> <span class="st0">&quot;NewFile&quot;</span>
+    <span class="kw1">make</span> <span class="kw1">new</span> <span class="kw1">file</span> at <span class="br0">&#40;</span><span class="kw1">path to</span> <span class="kw1">desktop</span> <span class="kw1">folder</span><span class="br0">&#41;</span> <span class="kw3">with</span> <span class="kw1">properties</span> <span class="br0">&#123;</span><span class="kw1">name</span>:filename <span class="sy0">&amp;</span> <span class="st0">&quot;.md&quot;</span><span class="br0">&#125;</span>
+<span class="kw3">end</span> <span class="kw3">tell</span></pre>
+</div>
+
+<p>For information about setting file type and extensions see <a href="https://developer.apple.com/library/mac/documentation/FileManagement/Conceptual/understanding_utis/understand_utis_conc/understand_utis_conc.html#//apple_ref/doc/uid/TP40001319-CH202-CHDHIJDE">Uniform Type Identifier Concepts</a></p>
+
+<h2 id="check-if-a-file-exists">2.7 Check if a file exists.</h2>
+
+<p>Under the standard suite in the dictionary you will find the command "exists"</p>
+
+<h3 id="ex-fileexists">2.7.1 ex: fileExists</h3>
+
+<div class="code applescript">
+<pre class="applescript"><span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span>
+    <span class="kw3">set</span> fileExists <span class="kw3">to</span> <span class="kw1">exists</span> <span class="kw3">of</span> <span class="br0">&#40;</span><span class="kw1">file</span> <span class="st0">&quot;my_empty_file&quot;</span> <span class="kw3">of</span> <span class="br0">&#40;</span><span class="kw1">path to</span> <span class="kw1">desktop</span> <span class="kw1">folder</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+<span class="kw3">end</span> <span class="kw3">tell</span></pre>
+</div>
+
+<p>Here you are setting the result of the <code>exists</code> command executed on a file at a speficied path to the value of the varible <code>fileExists</code>.  That result of the exists command is the boolean. So the value of <code>fileExists</code> variable will be true or false.</p>
+
+<p>There are applications that overwrite the standard exists command like "System Events" and "Finder".  So to use the exists command on a file to check if the file exists you should wrap your code in an tell application "System Events" or "Finder" block.</p>
+
+<h3 id="ex-check-exists-with-system-events">2.7.2 ex: check exists with system events</h3>
+
+<div class="code applescript">
+<pre class="applescript"><span class="kw3">set</span> theFile <span class="kw3">to</span> <span class="st0">&quot;/Users/wrong user name/Desktop&quot;</span>
+&nbsp;
+<span class="co1">--using system events </span>
+<span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;System Events&quot;</span> <span class="kw3">to</span> <span class="kw3">set</span> fileExists <span class="kw3">to</span> <span class="kw1">exists</span> <span class="kw1">disk</span> <span class="kw1">item</span> <span class="br0">&#40;</span><span class="kw3">my</span> <span class="kw1">POSIX file</span> theFile <span class="kw2">as</span> <span class="kw1">string</span><span class="br0">&#41;</span></pre>
+</div>
+
+<div class="code applescript">
+<pre class="applescript"><span class="co1">--using finder</span>
+<span class="kw3">tell</span> <span class="kw1">application</span> <span class="st0">&quot;Finder&quot;</span> <span class="kw3">to</span> <span class="kw3">set</span> fileExists <span class="kw3">to</span> <span class="kw1">exists</span> <span class="kw3">my</span> <span class="kw1">POSIX file</span> theFile</pre>
+</div>
+
+<div class="code applescript">
+<pre class="applescript"><span class="co1">--using alias coercion with try catch</span>
+<span class="kw3">try</span>
+    <span class="kw1">POSIX file</span> theFile <span class="kw2">as</span> <span class="kw1">alias</span>
+    <span class="kw3">set</span> fileExists <span class="kw3">to</span> <span class="kw1">true</span>
+<span class="kw3">on</span> <span class="kw3">error</span>
+    <span class="kw3">set</span> fileExists <span class="kw3">to</span> <span class="kw1">false</span>
+<span class="kw3">end</span> <span class="kw3">try</span></pre>
+</div>
+
+<div class="code applescript">
+<pre class="applescript"><span class="co1">--using a do shell script</span>
+<span class="kw3">set</span> fileExists <span class="kw3">to</span> <span class="br0">&#40;</span><span class="kw1">do shell script</span> <span class="st0">&quot;[ -e &quot;</span> <span class="sy0">&amp;</span> <span class="kw1">quoted form</span> <span class="kw3">of</span> theFile <span class="sy0">&amp;</span> <span class="st0">&quot; ] &amp;&amp; echo true || echo false&quot;</span><span class="br0">&#41;</span> <span class="kw2">as</span> boolean</pre>
+</div>
+
+<div class="code applescript">
+<pre class="applescript"><span class="co1">--do the actual existence check yourself</span>
+<span class="co1">--it's a bit cumbersome but gives you an idea how an file check actually works</span>
+<span class="kw3">set</span> AppleScript<span class="co2">'</span>s <span class="kw1">text</span> <span class="kw1">item</span> <span class="kw1">delimiters</span> <span class="kw3">to</span> <span class="st0">&quot;/&quot;</span>
+<span class="kw3">set</span> pathComponents <span class="kw3">to</span> <span class="kw1">text</span> <span class="kw1">items</span> <span class="nu0">2</span> <span class="kw2">thru</span> <span class="sy0">-</span><span class="nu0">1</span> <span class="kw3">of</span> theFile
+<span class="kw3">set</span> AppleScript<span class="co2">'</span>s <span class="kw1">text</span> <span class="kw1">item</span> <span class="kw1">delimiters</span> <span class="kw3">to</span> <span class="st0">&quot;&quot;</span>
+<span class="kw3">set</span> currentPath <span class="kw3">to</span> <span class="st0">&quot;/&quot;</span>
+<span class="kw3">set</span> fileExists <span class="kw3">to</span> <span class="kw1">true</span>
+<span class="kw3">repeat</span> <span class="kw3">with</span> component <span class="kw3">in</span> pathComponents
+    <span class="kw3">if</span> component <span class="kw3">is</span> <span class="kw2">not</span> <span class="kw3">in</span> <span class="kw2">every</span> <span class="kw1">paragraph</span> <span class="kw3">of</span> <span class="br0">&#40;</span><span class="kw1">do shell script</span> <span class="st0">&quot;ls &quot;</span> <span class="sy0">&amp;</span> <span class="kw1">quoted form</span> <span class="kw3">of</span> currentPath<span class="br0">&#41;</span> <span class="kw3">then</span>
+        <span class="kw3">set</span> fileExists <span class="kw3">to</span> <span class="kw1">false</span>
+        <span class="kw3">exit</span> <span class="kw3">repeat</span>
+    <span class="kw3">end</span> <span class="kw3">if</span>
+    <span class="kw3">set</span> currentPath <span class="kw3">to</span> currentPath <span class="sy0">&amp;</span> component <span class="sy0">&amp;</span> <span class="st0">&quot;/&quot;</span>
+<span class="kw3">end</span> <span class="kw3">repeat</span>
+<span class="kw3">return</span> fileExists</pre>
+</div>
+
+                    </div>
+    </div>
+</div>
+
+<footer class="columns small-12 topspace">
+    <div class="row footer-top">
+        <div class="medium-6 columns">
+<!--             <ul class="menu">
+                <li><a href="#">Legal</a></li>
+                <li><a href="#">Partner</a></li>
+                <li><a href="#">Explore</a></li>
+            </ul> -->
+        </div>
+        <div class="medium-6 columns align-middle text-right">
+            
+                <div class="copyright">Copyright © 2016 Smedia</div>
+            
+        </div>
+    </div>
+    <div class="row footer-middle">
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Offices</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Solar Systems</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+        <div class="small-6 medium-offset-6 large-3 columns">
+            <p class="lead">Contact</p>
+            <ul class="menu vertical">
+                <li><a href="#"><i class="fi-social-twitter"></i> Twitter</a></li>
+                <li><a href="#"><i class="fi-social-facebook"></i> Facebook</a></li>
+                <li><a href="#"><i class="fi-social-instagram"></i> Instagram</a></li>
+                <li><a href="#"><i class="fi-social-pinterest"></i> Pinterest</a></li>
+            </ul>
+        </div>
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Widgets</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+    </div>
+    <div class="row footer-bottom">
+        <div class="large-12 columns text-center">
+            <p>Le Grande Hotel, Latin Quarter, Paris • 261 Rue Saint-Séverin, 75005 Paris, France </p>
+            <p>Phone 01 42 517 85 • info@dummy.com • www.dummy.com</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="../../../../assets/js/app.js"></script>
+  </body>
+</html>

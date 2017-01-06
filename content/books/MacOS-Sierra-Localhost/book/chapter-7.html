@@ -1,0 +1,418 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebooks - Building a Development Environment in MacOS Sierra - PHP Exentions</title>
+    <link rel="stylesheet" href="../../../../assets/css/app.css">
+    <link href='//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+  </head>
+  <body>
+
+<div class="row navigation-row">
+    <div class="columns small-12">
+
+        <div class="mobile-branding show-for-small-only">
+          <a href="../../../../index.html"><div class="menu-text mobile-branding">Smerth</div></a>
+        </div>
+        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+          <button class="menu-icon" type="button" data-toggle></button>
+          <div class="title-bar-title">Menu</div>
+        </div>
+        <nav id="main-menu" class="top-bar">
+
+            <div class="top-bar-left">
+                <!-- Navigation on medium and up screens -->
+                <ul class="vertical menu medium-horizontal show-for-medium" data-responsive-menu="dropdown">
+<li class="menu-text"><a class="sitename" href="../../../../index.html">Smerth</a></li>
+<li><a href="../../../../projects.html">Projects</a></li>
+<li><a href="../../../../cases.html">Case Studies</a></li>
+<li>
+    <a href="../../../../books.html">Notebooks</a>
+        <ul class="menu vertical" style="width: 300px;">
+            <li><a href="../../../../content/books/javascript-working-with-the-dom/book/index.html">Javascript: working with the dom</a></li>
+            <li><a href="../../../../content/books/unix-for-macos/book/index.html">Unix for MacOS</a></li>
+            <li><a href="../../../../content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="../../../../content/books/webpack/book/index.html">Webpack</a></li>
+            
+        </ul>
+<!--           <ul class="menu vertical" style="width: 300px;">
+            <li><a href="content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="content/books/easybook_notes/book/index.html">Easybook Notes</a></li>
+            <li><a href="content/books/introduction-to-mysql/book/index.html">Introduction to MySQL</a></li>
+            <li><a href="content/books/javascript-and-ajax/book/index.html">Javascript and AJAX</a></li>
+            <li><a href="content/books/javascript-and-json/book/index.html">Javascript and JSON</a></li>
+            <li><a href="content/books/jquery-data-with-ajax/book/index.html">jQuery Data with AJAX</a></li>
+            <li><a href="content/books/unix-for-macos/book/index.html">UNIX for MacOS</a></li>
+            <li><a href="content/books/GIT-Workflow/book/index.html">GIT Workflow</a></li>
+            <li><a href="content/books/webpack/book/index.html">Webpack</a></li>
+        </ul> -->
+<!--     <ul class="menu vertical" style="width: 100%;">
+        <li><a href="/content/books/applescript-notes/book"><span class="fi-book-bookmark"></span> AppleScript Notes</a></li>
+        <li><a href="/content/books/build-a-polling-app-with-socket-io-and-react/book"><span class="fi-book-bookmark"></span> Polling App with Socket.io and React.js</a></li>
+        <li><a href="/content/books/introduction-to-mysql/book"><span class="fi-book-bookmark"></span> Introduction to MySQL</a></li>
+        <li><a href="/content/books/unix-for-macos/book"><span class="fi-book-bookmark"></span> UNIX for MacOS</a></li>
+        <li><a href="/content/books/javascript-working-with-the-dom/book"><span class="fi-book-bookmark"></span> Javascript working with the DOM</a></li>
+    </ul> -->
+</li>
+<!-- <li><a href="../../../../about.html">About</a></li> -->
+<li><a href="../../../../content/books/about/book/chapter-1.html">About</a></li>
+                </ul>
+                <!-- Navigation on small screens -->
+                <ul class="vertical menu medium-horizontal show-for-small-only" data-responsive-menu="dropdown" data-accordion-menu>
+<li class="menu-text"><a href="../../../../index.html">Notebook</a></li>
+<li><a href="../../../../projects.html">Projects</a></li>
+<li><a href="../../../../cases.html">Case Studies</a></li>
+<li>
+    <a href="../../../../books.html">Notebooks</a>
+        <ul class="menu vertical" style="width: 100%;">
+            <li><a href="../../../../content/books/javascript-working-with-the-dom/book/index.html">Javascript: working with the dom</a></li>
+            <li><a href="../../../../content/books/unix-for-macos/book/index.html">Unix for MacOS</a></li>
+            <li><a href="../../../../content/books/applescript/book/index.html">Applescript</a></li>
+            <li><a href="../../../../content/books/webpack/book/index.html">Webpack</a></li>
+            
+        </ul>
+<!--     <ul class="menu vertical" style="width: 100%;">
+        <li><a href="/content/books/applescript-notes/book"><span class="fi-book-bookmark"></span> AppleScript Notes</a></li>
+        <li><a href="/content/books/build-a-polling-app-with-socket-io-and-react/book"><span class="fi-book-bookmark"></span> Polling App with Socket.io and React.js</a></li>
+        <li><a href="/content/books/introduction-to-mysql/book"><span class="fi-book-bookmark"></span> Introduction to MySQL</a></li>
+        <li><a href="/content/books/unix-for-macos/book"><span class="fi-book-bookmark"></span> UNIX for MacOS</a></li>
+        <li><a href="/content/books/javascript-working-with-the-dom/book"><span class="fi-book-bookmark"></span> Javascript working with the DOM</a></li>
+    </ul> -->
+</li>
+<!-- <li><a href="../../../../about.html">About</a></li> -->
+<li><a href="../../../../content/books/about/book/chapter-1.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="row pageheader-row">
+    <div class="small-12 column index text-center">
+        <div class="callout small pageheader">
+            <h1 id="php-exentions" class="book-title title-text">
+                <a href="./index.html" class="">Building a Development Environment in MacOS Sierra</a>
+            </h1>
+            <h6>Smerth</h6>
+        </div>
+    </div>
+</div>
+
+
+<div class="row " data-sticky-container>
+    <div class="column small-12 chapter-navigation-bar sticky" data-sticky data-anchor="main" data-options="marginTop:0;" style="width: 100%;">
+
+
+
+<div class="row chapter-navigation-row">
+    <div class="column small-6 small-order-2 medium-order-1 medium-3 prev-container">
+                    <h6><a class="prev" href="./chapter-6.html">&larr; Previous<div><small>Chapter 6 - Apache Virtual Hosts</small></div></a></h6>
+            </div>
+
+    <div class="column small-12 small-order-1 medium-order-2 medium-6 text-center title-container">
+        <h6 id="php-exentions" class="bk-title"><span class="fi-book-bookmark"></span> <a href="./index.html">Building a Development Environment in MacOS Sierra</a></h6>
+        <h6 id="php-exentions" class="ch-title align-self-middle"><small>Chapter 7 - PHP Exentions</small></h6>
+    </div>
+
+    <div class="column small-6 small-order-3 medium-order-3 medium-3 next-container">
+                    <h6><a class="next" href="./chapter-8.html"><div class="text-right">Next &rarr;</div><div class="text-right"><small>Chapter 8 - Drupal DevOps</small></div></a></h6>
+            </div>
+
+</div>
+</div>
+    </div> 
+    <div id="book-page" class="row">
+        
+        
+        <div id="sidebar" class="column small-12 medium-4  large-3" data-sticky-container>
+            <nav id="sidebar-toc" class=" sticky" data-sticky data-anchor="main" data-options="marginTop:5;">
+
+                
+                                <h3>
+                    <a href=".">Table of contents</a>
+                </h3>
+                <ul class="toc">
+                                                                                <li class="level-1">
+                        <span class="chapter-label">1.</span> <a href="./chapter-1.html"> Package Mangers and Toolsets</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">2.</span> <a href="./chapter-2.html"> Editors and Packages</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">3.</span> <a href="./chapter-3.html"> Apache Installation</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">4.</span> <a href="./chapter-4.html"> PHP Installation</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">5.</span> <a href="./chapter-5.html"> MySQL</a>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">6.</span> <a href="./chapter-6.html"> Apache Virtual Hosts</a>
+                    </li>
+                                                                                                                <li class="level-1 active">
+                                <a class="chapter" href="./chapter-7.html">
+                                    <span class="chapter-label">Chapter 7.</span>
+                                    PHP Exentions
+                                </a>
+                                <ul id="page-toc" class="unstyled toc-l2">
+                                                                                                                        <li class="level-2" data-scroll="uninstalling-extensions">
+                                                <span>7.1</span>
+                                                <a class="internal" href="./chapter-7.html#uninstalling-extensions">Uninstalling extensions</a>
+                                            </li>
+                                                                                    <li class="level-2" data-scroll="apc-cache">
+                                                <span>7.2</span>
+                                                <a class="internal" href="./chapter-7.html#apc-cache">APC Cache</a>
+                                            </li>
+                                                                                    <li class="level-2" data-scroll="yaml">
+                                                <span>7.3</span>
+                                                <a class="internal" href="./chapter-7.html#yaml">YAML</a>
+                                            </li>
+                                                                                    <li class="level-2" data-scroll="xdebug">
+                                                <span>7.4</span>
+                                                <a class="internal" href="./chapter-7.html#xdebug">Xdebug</a>
+                                            </li>
+                                                                                    <li class="level-2" data-scroll="twig-c">
+                                                <span>7.5</span>
+                                                <a class="internal" href="./chapter-7.html#twig-c">Twig (C)</a>
+                                            </li>
+                                                                                    <li class="level-2" data-scroll="uploadprogress">
+                                                <span>7.6</span>
+                                                <a class="internal" href="./chapter-7.html#uploadprogress">Uploadprogress</a>
+                                            </li>
+                                                                                    <li class="level-2" data-scroll="intl">
+                                                <span>7.7</span>
+                                                <a class="internal" href="./chapter-7.html#intl">Intl</a>
+                                            </li>
+                                                                                    <li class="level-2" data-scroll="">
+                                                <span>7.8</span>
+                                                <a class="internal" href="./chapter-7.html#"> </a>
+                                            </li>
+                                                                                                    </ul>
+                    </li>
+                                                                                            <li class="level-1">
+                        <span class="chapter-label">8.</span> <a href="./chapter-8.html"> Drupal DevOps</a>
+                    </li>
+                                            </ul>
+        </nav>
+    </div>
+
+        <div id="main" class="main column small-12 medium-8 large-9 ">
+        <div class="main-content">
+                                                    <h2 id="uninstalling-extensions">7.1 Uninstalling extensions</h2>
+
+<p>NOTE: The brew installation actually creates configuration files in /usr/local/etc/php/5.5/conf.d, /usr/local/etc/php/5.6/conf.d, and /usr/local/etc/php/7.0/conf.d respectively. If you want to uninstall a PHP extension, simply rename the .ini file to .ini.bak and restart apache. Alternatively, you can simply use brew to uninstall it, and reinstall it again when you need it.</p>
+
+<h2 id="apc-cache">7.2 APC Cache</h2>
+
+<p>Caching in PHP is a big part of the performance equation. There are two types of caching typically available, and both have a big impact on speed and performance.</p>
+
+<p>The first type of cache is called an opcode cache, and this is what takes your PHP script and compiles it for faster execution. This alone can typically result in a 3X speed increase!.</p>
+
+<p>The second type of cache is a user cache, and this is a data-store that PHP can use to quickly store and retrieve data from. These typically run in memory which means they are transient, but very fast.</p>
+
+<p>For PHP 5.5 and newer runs best with Zend OPcache by default but you can still use APCu Cache as a data store.</p>
+
+<p>Install OPcache and APCu</p>
+
+<p>Switch to the version of PHP you want to install for:  PHP 5.6 by uncommenting the module in httpd.conf</p>
+
+<p>then run the following brew commands:</p>
+
+<div class="code bash">
+<pre class="bash">brew <span class="kw2">install</span> php56-opcache
+brew <span class="kw2">install</span> php55-apcu</pre>
+</div>
+
+<p>repeat the process for other versions of php:</p>
+
+<p>Restart Apache with the standard</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">sudo</span> <span class="kw2">apachectl</span> <span class="re5">-k</span> restart</pre>
+</div>
+
+<p>Point your browser to http://localhost/info.php and ensure you see a reference to Zend OPcache in the Zend Engine block.</p>
+
+<p>Also scroll down and check you have an APCu section.</p>
+
+<p><strong>Note - if you have issues may have to reinstall with</strong></p>
+
+<div class="code bash">
+<pre class="bash">brew reinstall <span class="re5">--build-from-source</span> php56-opcache</pre>
+</div>
+
+<p>You actually have quite a few options when it comes to caching. There are also brews available for XCache, Memcache. To find an exhaustive list of all the available packages simply type:</p>
+
+<div class="code bash">
+<pre class="bash">brew search php56</pre>
+</div>
+
+<h2 id="yaml">7.3 YAML</h2>
+
+<p>To make use of the native PECL YAML library that allows YAML processing to be done by highly efficient libYAML C library rather than by the Symfony PHP library install the php55-yaml extension.</p>
+
+<p>This can result in a 5X improvement in YAML processing times! Luckily this is a simple process to install for any PHP version:</p>
+
+<div class="code bash">
+<pre class="bash">brew <span class="kw2">install</span> php56-yaml</pre>
+</div>
+
+<h2 id="xdebug">7.4 Xdebug</h2>
+
+<p>One of the most important aspects of any kind of development is the ability to debug and fix your code. PHP comes with limited support to dump variables or log to a file, but for more complex situations you need something more powerful. Xdebug provide a debugging and profiling extension for PHP that provides an HTML-friendly output for the var_dump() method that improves the readability of the default version.</p>
+
+<p>It also provides other useful dumping methods as well as displaying stack traces. One of the best features however, is the ability to remote debug your code. This means you can set breakpoints, and step through your PHP code inspecting as you go. Full documentation on Xdebug contains extensive information about all the functionality available.</p>
+
+<p>Installation of Xdebug is just as easy as the previous installation of APC or YAML:</p>
+
+<div class="code bash">
+<pre class="bash">brew <span class="kw2">install</span> php56-xdebug</pre>
+</div>
+
+<p>Restart the server</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">sudo</span> <span class="kw2">apachectl</span> <span class="re5">-k</span> restart</pre>
+</div>
+
+<p>You should also check the http://localhost/info.php to ensure that Xdebug information is displayed:</p>
+
+<h3 id="xdebug-enable-disable-tool">7.4.1 Xdebug enable/disable tool</h3>
+
+<p>W00fz created a great tool for quickly enabling/disabling xdebug. Install this with brew:</p>
+
+<div class="code bash">
+<pre class="bash">brew <span class="kw2">install</span> xdebug-osx</pre>
+</div>
+
+<h3 id="usage">7.4.2 Usage</h3>
+
+<div class="table" id="table-7-1">
+
+    <table>
+<thead>
+<tr>
+  <th>Command</th>
+  <th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>xdebug-toggle</td>
+  <td>outputs the current status</td>
+</tr>
+<tr>
+  <td>xdebug-toggle on</td>
+  <td>enables xdebug</td>
+</tr>
+<tr>
+  <td>xdebug-toggle off</td>
+  <td>disables xdebug</td>
+</tr>
+<tr>
+  <td>xdebug-toggle on&#124;off --no-server-restart</td>
+  <td>toggles xdebug without restarting apache or php-fpm</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<h2 id="twig-c">7.5 Twig (C)</h2>
+
+<p>Used by Drupal 8 for faster compiling of twig templates</p>
+
+<div class="code bash">
+<pre class="bash">brew <span class="kw2">install</span> php56-twig</pre>
+</div>
+
+<h2 id="uploadprogress">7.6 Uploadprogress</h2>
+
+<p>Used by Drupal to render multiple file upload progress indicators</p>
+
+<div class="code bash">
+<pre class="bash">brew <span class="kw2">install</span> php56-uploadprogress</pre>
+</div>
+
+<h2 id="intl">7.7 Intl</h2>
+
+<p>Internationalization used by some Symfony apps (Akineo?)</p>
+
+<div class="code bash">
+<pre class="bash">brew <span class="kw2">install</span> <span class="re5">--build-from-source</span> php56-intl</pre>
+</div>
+
+<h2 id=""> </h2>
+
+                    </div>
+    </div>
+</div>
+
+<footer class="columns small-12 topspace">
+    <div class="row footer-top">
+        <div class="medium-6 columns">
+<!--             <ul class="menu">
+                <li><a href="#">Legal</a></li>
+                <li><a href="#">Partner</a></li>
+                <li><a href="#">Explore</a></li>
+            </ul> -->
+        </div>
+        <div class="medium-6 columns align-middle text-right">
+            
+                <div class="copyright">Copyright © 2016 Smedia</div>
+            
+        </div>
+    </div>
+    <div class="row footer-middle">
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Offices</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Solar Systems</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+        <div class="small-6 medium-offset-6 large-3 columns">
+            <p class="lead">Contact</p>
+            <ul class="menu vertical">
+                <li><a href="#"><i class="fi-social-twitter"></i> Twitter</a></li>
+                <li><a href="#"><i class="fi-social-facebook"></i> Facebook</a></li>
+                <li><a href="#"><i class="fi-social-instagram"></i> Instagram</a></li>
+                <li><a href="#"><i class="fi-social-pinterest"></i> Pinterest</a></li>
+            </ul>
+        </div>
+<!--         <div class="small-6 large-3 columns">
+            <p class="lead">Widgets</p>
+            <ul class="menu vertical">
+                <li><a href="#">One</a></li>
+                <li><a href="#">Two</a></li>
+                <li><a href="#">Three</a></li>
+                <li><a href="#">Four</a></li>
+            </ul>
+        </div> -->
+    </div>
+    <div class="row footer-bottom">
+        <div class="large-12 columns text-center">
+            <p>Le Grande Hotel, Latin Quarter, Paris • 261 Rue Saint-Séverin, 75005 Paris, France </p>
+            <p>Phone 01 42 517 85 • info@dummy.com • www.dummy.com</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="../../../../assets/js/app.js"></script>
+  </body>
+</html>
