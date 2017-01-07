@@ -41,13 +41,11 @@
         </ul>
 <!--           <ul class="menu vertical" style="width: 300px;">
             <li><a href="content/books/applescript/book/index.html">Applescript</a></li>
-            <li><a href="content/books/easybook_notes/book/index.html">Easybook Notes</a></li>
-            <li><a href="content/books/introduction-to-mysql/book/index.html">Introduction to MySQL</a></li>
-            <li><a href="content/books/javascript-and-ajax/book/index.html">Javascript and AJAX</a></li>
-            <li><a href="content/books/javascript-and-json/book/index.html">Javascript and JSON</a></li>
-            <li><a href="content/books/jquery-data-with-ajax/book/index.html">jQuery Data with AJAX</a></li>
-            <li><a href="content/books/unix-for-macos/book/index.html">UNIX for MacOS</a></li>
+            <li><a href="content/books/Git-Essential-Training/book/index.html">Git Essential Training</a></li>
             <li><a href="content/books/GIT-Workflow/book/index.html">GIT Workflow</a></li>
+            <li><a href="content/books/introduction-to-mysql/book/index.html">Introduction to MySQL</a></li>
+            <li><a href="content/books/MacOS-Sierra-Localhost/book/index.html">Setting up a Development Environment on MacOS Sierra</a></li>
+            <li><a href="content/books/unix-for-macos/book/index.html">UNIX for MacOS</a></li>
             <li><a href="content/books/webpack/book/index.html">Webpack</a></li>
         </ul> -->
 <!--     <ul class="menu vertical" style="width: 100%;">
@@ -178,7 +176,7 @@
 
         <div id="main" class="main column small-12 medium-8 large-9 ">
         <div class="main-content">
-                                                    <p>A very handy development option is to have multiple virtual hosts set up for you various projects. This means that you can set up names such as <code>project-x.mydomain.com</code> for a project-specific URL.</p>
+                                                    <p>A very handy development option is to have multiple virtual hosts set up for your various projects. This means that you can set up names such as <code>project-x.mydomain.com</code> for a project-specific URL.</p>
 
 <p>Apache generally performs name-based matching, so you don't need to configure multiple IP addresses. Detailed information can be found on the <code>apache.org</code> site.</p>
 
@@ -203,7 +201,7 @@ Include /usr/local/etc/apache2/2.4/extra/httpd-vhosts.conf</pre>
 
 <div class="code code">
 <pre class="code"># Manage Virtual Hosts
-alias conf_vhosts=&quot;sublime /private/etc/hosts &amp;&amp; sublime /private/etc/apache2/extra/httpd-vhosts.conf&quot;</pre>
+alias conf_vhosts=&quot;sublime /private/etc/hosts &amp;&amp; sublime /usr/local/etc/apache2/2.4/extra/httpd-vhosts.conf&quot;</pre>
 </div>
 
 <p>This file has some instructions already but the important thing to remember is that these rules are matched in order.</p>
@@ -241,7 +239,7 @@ alias conf_vhosts=&quot;sublime /private/etc/hosts &amp;&amp; sublime /private/e
 127.0.0.1    www.this-site.com</pre>
 </div>
 
-<p>However when managing a large number of site thsi becomes tedious.</p>
+<p>However when managing a large number of sites this becomes tedious.</p>
 
 <p>One option is to install and configure Dnsmasq to automatically handle wildcard <code>*.dev</code> names and forward all of them to localhost (127.0.0.1).</p>
 
@@ -266,7 +264,7 @@ and edit to taste.</p>
 
 <div class="code code">
 <pre class="code"># Manage Virtual Hosts
-alias conf_vhosts=&quot;sublime /private/etc/hosts &amp;&amp; sublime /private/etc/apache2/extra/httpd-vhosts.conf &amp;&amp; /usr/local/etc/dnsmasq.conf&quot;</pre>
+alias conf_vhosts=&quot;sublime /private/etc/hosts &amp;&amp; sublime /usr/local/etc/apache2/2.4/extra/httpd-vhosts.conf &amp;&amp; /usr/local/etc/dnsmasq.conf&quot;</pre>
 </div>
 
 <p>edit dnsmasq.conf</p>
