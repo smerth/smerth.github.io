@@ -8,168 +8,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notebooks - Applescript - Lists and Records</title>
     <link rel="stylesheet" href="../../../../assets/css/app.css">
-    <link href='//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+    <link href='https://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+    <!--<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body>
+<body class="innerpage chapter-3">
 
-    <div class="row navigation-row">
-        <div class="columns small-12">
-
-            <div class="mobile-branding show-for-small-only">
-                <a href="../../../../index.html">
-                    <div class="menu-text mobile-branding">Smerth</div>
+<header class="row">
+    <!--<div class="small-2 columns">
+                <a href="../../../../index.html">    
+                    <img class="logo" src="../../../../assets/img/robo-1.png"  alt="company logo">
                 </a>
+            </div>-->
+    <div class="small-10 columns">
+        <div class="" id="name-slogan"> 
+            <h1 class="name"><a href="../../../../index.html">SMERTH</a><ul class="inline-list social">
+           <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+           <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+           <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+           <li><a href="#"><i class="fi-social-github"></i></a></li>
+        </ul>
+        </h1>
+        <p class="tagline">Full-stack Web Developer</p>
+            <h2 class="slogan">building with <span class="percent">100%</span> re-cycled electrons.</h2>
+        </div>
+        
+    </div>
+    <div class="small-12 columns responsive-menu">
+        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle></button>
+            <div class="title-bar-title">Menu</div>
+        </div>
+        <div class="top-bar" id="main-menu">
+            <div class="top-bar-left">
+                <ul class="menu vertical medium-horizontal collapsed medium-text-center" data-responsive-menu="accordion medium-dropdown"
+                    data-accordion-menu>
+                    <li class="menu-text"><a href="../../../../index.html">Hello</a></li>
+                    <li><a href="../../../../projects.html">Projects</a></li>
+                    <li><a href="../../../../content/books/books.html">Notes</a></li>
+                    <li><a href="../../../../screenshots.html">Screenshots</a></li>
+                    <li><a href="../../../../about/book/chapter-1.html">About</a></li>
+                    <!--<li><a href="../../../../hp-singlepage-scroll.html">fpage scroll</a></li>
+                    <li><a href="../../../../hp-desk-foundation.html">desk foundation</a></li>-->
+                </ul>
             </div>
-            <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
-                <button class="menu-icon" type="button" data-toggle></button>
-                <div class="title-bar-title">Menu</div>
+            <div class="top-bar-right">
+                <!--<ul class="inline-list social">
+   <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+   <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+   <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+   <li><a href="#"><i class="fi-social-github"></i></a></li>
+</ul>
+-->
             </div>
-            <nav id="main-menu" class="top-bar">
-
-                <div class="top-bar-left">
-                    <!-- Navigation on medium and up screens -->
-                    <ul class="vertical menu medium-horizontal show-for-medium" data-responsive-menu="dropdown">
-                        <li class="menu-text"><a class="sitename" href="../../../../index.html">Smerth</a></li>
-                        <li><a href="../../../../projects.html">Projects</a></li>
-                        <li><a href="../../../../cases.html">Case Studies</a></li>
-                        <li>
-                            <a href="../../../../books.html">Notebooks</a>
-                            <!--<ul class="menu vertical" style="width: 300px;">
-                                <li><a href="../../../../content/books/javascript-working-with-the-dom/book/index.html">Javascript: working with the dom</a></li>
-                                <li><a href="../../../../content/books/unix-for-macos/book/index.html">Unix for MacOS</a></li>
-                                <li><a href="../../../../content/books/applescript/book/index.html">Applescript</a></li>
-                                <li><a href="../../../../content/books/webpack/book/index.html">Webpack</a></li>
-                                
-                            </ul>-->
-                        </li>
-                        <li><a href="../../../../screenshots.html">Screenshots</a></li>
-                        <li><a href="../../../../content/books/about/book/chapter-1.html">About</a></li>
-                    </ul>
-                    <!-- Navigation on small screens -->
-                    <ul class="vertical menu medium-horizontal show-for-small-only" data-responsive-menu="dropdown" data-accordion-menu>
-                        <li class="menu-text"><a href="../../../../index.html">Notebook</a></li>
-                        <li><a href="../../../../projects.html">Projects</a></li>
-                        <li><a href="../../../../cases.html">Case Studies</a></li>
-                        <li>
-                            <a href="../../../../books.html">Notebooks</a>
-                            <!--<ul class="menu vertical" style="width: 100%;">
-                                <li><a href="../../../../content/books/javascript-working-with-the-dom/book/index.html">Javascript: working with the dom</a></li>
-                                <li><a href="../../../../content/books/unix-for-macos/book/index.html">Unix for MacOS</a></li>
-                                <li><a href="../../../../content/books/applescript/book/index.html">Applescript</a></li>
-                                <li><a href="../../../../content/books/webpack/book/index.html">Webpack</a></li>
-                                
-                            </ul>-->
-                        </li>
-                        <li><a href="../../../../screenshots.html">Screenshots</a></li>
-                        <li><a href="../../../../content/books/about/book/chapter-1.html">About</a></li>
-                    </ul>
-                </div>
-            </nav>
         </div>
     </div>
-     <div class="row pageheader-row">
-    <div class="small-12 column index text-center">
-        <div class="callout small pageheader">
-            <h1 id="lists-and-records" class="book-title title-text">
-                <a href="./index.html" class="">Applescript</a>
-            </h1>
-            <h6>Smerth</h6>
-        </div>
-    </div>
-</div>
+</header>
+
+                    
 
 
-<div class="row " data-sticky-container>
-    <div class="column small-12 chapter-navigation-bar sticky" data-sticky data-anchor="main" data-options="marginTop:0;" style="width: 100%;">
+<div class="row Applescript" data-sticky-container>
+        <div id="chapter-sticky-header" class="column small-12 sticky" data-sticky data-anchor="main" data-options="marginTop:0;" style="width: 100%;">
+        <div class="callout">
+            <div class="row">
+                <div class="column small-6 small-order-2 medium-order-1 medium-3 prev-container">
+                                        <h6><a class="prev" href="./chapter-2.html"><i class="fi-arrow-left"></i> Previous<div><small>Chapter 2 - Files and Folders</small></div></a></h6>
+                                    </div> 
+                <div class="column small-12 small-order-1 medium-order-2 medium-6 text-center title-container">
+                    <div class="row">
+                        <div class="small-3 medium-5 columns">
+                                                        <a href="../../../../../index.html">
+                                <h4 class="name">SMERTH</h4>
+                            </a>
+                        </div>
+                        <div class="columns medium-7">
+                            <h6 id="lists-and-records" class="bk-title text-left">
+                                <i class="fi-book-bookmark"> </i>
+                                <a href="./index.html">Applescript</a>
+                            </h6>
+                            <h6 id="lists-and-records" class="ch-title text-left"><small>Chapter 3 - Lists and Records</small></h6>
+                        </div>
+                    </div>
+                </div> 
+                <div class="column small-6 small-order-3 medium-order-3 medium-3 next-container">
+                                            <p class="next disabled">Next
+                            &rarr;
+                            <span></span>
+                        </p>
+                                    </div>
+
+            </div>         </div>     </div> </div> 
+<div id="book-page" class="Applescript row">
+  
+
+
+ 
+    <div  class="column small-12 medium-4 large-3" >
 
 
 
-<div class="row chapter-navigation-row">
-    <div class="column small-6 small-order-2 medium-order-1 medium-3 prev-container">
-                    <h6><a class="prev" href="./chapter-2.html">&larr; Previous<div><small>Chapter 2 - Files and Folders</small></div></a></h6>
-            </div>
+<div id="sidebar" data-sticky-container>
 
-    <div class="column small-12 small-order-1 medium-order-2 medium-6 text-center title-container">
-        <h6 id="lists-and-records" class="bk-title"><span class="fi-book-bookmark"></span> <a href="./index.html">Applescript</a></h6>
-        <h6 id="lists-and-records" class="ch-title align-self-middle"><small>Chapter 3 - Lists and Records</small></h6>
-    </div>
-
-    <div class="column small-6 small-order-3 medium-order-3 medium-3 next-container">
-                    <h6><a class="next" href="./chapter-4.html"><div class="text-right">Next &rarr;</div><div class="text-right"><small>Chapter 4 - Loops</small></div></a></h6>
-            </div>
-
-</div>
-</div>
-    </div> 
-    <div id="book-page" class="row">
-        
-        
-        <div id="sidebar" class="column small-12 medium-4  large-3" data-sticky-container>
-            <nav id="sidebar-toc" class=" sticky" data-sticky data-anchor="main" data-options="marginTop:5;">
-
-                
-                                <h3>
-                    <a href=".">Table of contents</a>
-                </h3>
+                        
+        <div class="callout" data-sticky data-anchor="main" data-options="marginTop:6.3;" style="width:100%">
+            <nav id="sidebar-toc" >
+                <h3><a href=".">Table of contents</a></h3>
                 <ul class="toc">
-                                                                                <li class="level-1">
-                        <span class="chapter-label">1.</span> <a href="./chapter-1.html"> AppleScript Overview</a>
+                                                                                        <li class="level-1">
+                            <span class="chapter-label">1.</span> <a href="./chapter-1.html"> AppleScript Overview</a>
+                        </li>
+                                                                                                            <li class="level-1">
+                            <span class="chapter-label">2.</span> <a href="./chapter-2.html"> Files and Folders</a>
+                        </li>
+                                                                                                    <li class="level-1 active">
+                        <a class="chapter" href="./chapter-3.html"><span class="chapter-label">Chapter 3.</span>Lists and Records</a>
+                        <ul id="page-toc" class="unstyled toc-l2">
+                                                                                            <li class="level-2" data-scroll="using-lists">
+                                    <span class="chapter-sub-label">3.1</span>
+                                    <a class="internal" href="./chapter-3.html#using-lists">Using Lists</a>
+                                </li>
+                                                                <li class="level-2" data-scroll="using-records">
+                                    <span class="chapter-sub-label">3.2</span>
+                                    <a class="internal" href="./chapter-3.html#using-records">Using Records</a>
+                                </li>
+                                                                <li class="level-2" data-scroll="listing-files-in-a-folder">
+                                    <span class="chapter-sub-label">3.3</span>
+                                    <a class="internal" href="./chapter-3.html#listing-files-in-a-folder">Listing files in a folder</a>
+                                </li>
+                                                                                    </ul>
                     </li>
-                                                                                            <li class="level-1">
-                        <span class="chapter-label">2.</span> <a href="./chapter-2.html"> Files and Folders</a>
-                    </li>
-                                                                                                                <li class="level-1 active">
-                                <a class="chapter" href="./chapter-3.html">
-                                    <span class="chapter-label">Chapter 3.</span>
-                                    Lists and Records
-                                </a>
-                                <ul id="page-toc" class="unstyled toc-l2">
-                                                                                                                        <li class="level-2" data-scroll="using-lists-and-records">
-                                                <span>3.1</span>
-                                                <a class="internal" href="./chapter-3.html#using-lists-and-records">Using Lists and Records</a>
-                                            </li>
-                                                                                    <li class="level-2" data-scroll="listing-files-in-a-folder">
-                                                <span>3.2</span>
-                                                <a class="internal" href="./chapter-3.html#listing-files-in-a-folder">Listing files in a folder</a>
-                                            </li>
-                                                                                                    </ul>
-                    </li>
-                                                                                            <li class="level-1">
-                        <span class="chapter-label">4.</span> <a href="./chapter-4.html"> Loops</a>
-                    </li>
-                                                                                            <li class="level-1">
-                        <span class="chapter-label">5.</span> <a href="./chapter-5.html"> Conditionals</a>
-                    </li>
-                                                                                            <li class="level-1">
-                        <span class="chapter-label">6.</span> <a href="./chapter-6.html"> Functions</a>
-                    </li>
-                                                                                            <li class="level-1">
-                        <span class="chapter-label">7.</span> <a href="./chapter-7.html"> Alerts, Dialogs, and Notifications</a>
-                    </li>
-                                                                                            <li class="level-1">
-                        <span class="chapter-label">8.</span> <a href="./chapter-8.html"> Using AppleScript with Applications</a>
-                    </li>
-                                                                                            <li class="level-1">
-                        <span class="chapter-label">9.</span> <a href="./chapter-9.html"> AppleScript from the command line</a>
-                    </li>
-                                                                                            <li class="level-1">
-                        <span class="chapter-label">10.</span> <a href="./chapter-10.html"> Preventing and catching errors</a>
-                    </li>
-                                                                                            <li class="level-1">
-                        <span class="chapter-label">11.</span> <a href="./chapter-11.html"> Saving and distributing applications</a>
-                    </li>
-                                                                                            <li class="level-1">
-                        <span class="chapter-label">12.</span> <a href="./chapter-12.html"> AppleScript Examples</a>
-                    </li>
-                                            </ul>
-        </nav>
-    </div>
+                                                        </ul>             </nav>         </div> 
+</div>
 
+    </div> 
         <div id="main" class="main column small-12 medium-8 large-9 ">
-        <div class="main-content">
-                                                    <h3 id="define-a-list">3.0.1 Define a list</h3>
+        <div class="callout">
+            <div class="main-content">
+
+                                                                 <h2 id="using-lists">3.1 Using Lists</h2>
+
+<p>The simplest data structure in Applescipt is a list.</p>
+
+<h3 id="define-a-list">3.1.1 Define a list</h3>
 
 <p>You can set a variable to contain an array using <code>set</code> and <code>to</code> and the curly braces:</p>
 
@@ -177,7 +159,7 @@
 <pre class="applescript"><span class="kw3">set</span> myList <span class="kw3">to</span> <span class="br0">&#123;</span><span class="st0">&quot;apple&quot;</span>, <span class="nu0">4</span>, <span class="st0">&quot;blue&quot;</span> <span class="sy0">&amp;</span> <span class="st0">&quot;berries&quot;</span>, <span class="nu0">20</span><span class="br0">&#125;</span></pre>
 </div>
 
-<h3 id="retrieve-an-item-from-a-list">3.0.2 Retrieve an item from a list</h3>
+<h3 id="retrieve-an-item-from-a-list">3.1.2 Retrieve an item from a list</h3>
 
 <p>To retreive an item from this array just ask for it</p>
 
@@ -187,7 +169,7 @@
 <span class="kw3">set</span> output <span class="kw3">to</span> myVal</pre>
 </div>
 
-<h3 id="count-items-in-a-list">3.0.3 Count items in a list</h3>
+<h3 id="count-items-in-a-list">3.1.3 Count items in a list</h3>
 
 <p>AppleScript arrays are NOT zero-indexed.  That's because AppleScript uses natural language to count items in the list.</p>
 
@@ -200,7 +182,7 @@
 <span class="kw3">set</span> output <span class="kw3">to</span> <span class="st0">&quot;Item 3 of &quot;</span> <span class="sy0">&amp;</span> howMany <span class="sy0">&amp;</span> <span class="st0">&quot; is &quot;</span> <span class="sy0">&amp;</span> myVal</pre>
 </div>
 
-<h3 id="retrieve-a-range-of-items">3.0.4 Retrieve a range of items</h3>
+<h3 id="retrieve-a-range-of-items">3.1.4 Retrieve a range of items</h3>
 
 <p>use natural language to list a range of items from the list "x through y of z"</p>
 
@@ -210,7 +192,7 @@
 <span class="kw3">set</span> output <span class="kw3">to</span> rangeOfItems</pre>
 </div>
 
-<h3 id="change-an-item-in-a-list-based-on-index">3.0.5 Change an item in a list based on index</h3>
+<h3 id="change-an-item-in-a-list-based-on-index">3.1.5 Change an item in a list based on index</h3>
 
 <p>change an item in the list using the item index</p>
 
@@ -221,7 +203,7 @@
 <span class="kw3">set</span> output <span class="kw3">to</span> rangeOfItems</pre>
 </div>
 
-<h3 id="add-lists-together">3.0.6 Add lists together</h3>
+<h3 id="add-lists-together">3.1.6 Add lists together</h3>
 
 <p>You can add lists together using the ampersand: <code>&amp;</code></p>
 
@@ -239,19 +221,19 @@ Items 2 through 4 are: &quot;</span> <span class="sy0">&amp;</span> rangeOfItems
 Item number 3 is: &quot;</span> <span class="sy0">&amp;</span> myVal</pre>
 </div>
 
-<h2 id="using-lists-and-records">3.1 Using Lists and Records</h2>
+<h2 id="using-records">3.2 Using Records</h2>
 
 <p>In AppleScript records are like a hash in ruby or an associative array.</p>
 
-<h3 id="set-the-values-in-an-acossiative-array">3.1.1 Set the values in an acossiative array</h3>
+<h3 id="set-the-values-in-an-associative-array">3.2.1 Set the values in an associative array</h3>
 
-<p>Set the values in an acossiative array using <code>set</code> and <code>to</code> and curly braces <code>{}</code>.</p>
+<p>Set the values in an associative array using <code>set</code> and <code>to</code> and curly braces <code>{}</code>.</p>
 
 <div class="code applescript">
 <pre class="applescript"><span class="kw3">set</span> myAlien <span class="kw3">to</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;Mr. Largon&quot;</span>, type:<span class="st0">&quot;Andro-Gruub&quot;</span>, language:<span class="st0">&quot;Common Borbulian&quot;</span>, sex:<span class="st0">&quot;Only with Other Gruubs&quot;</span><span class="br0">&#125;</span></pre>
 </div>
 
-<h3 id="retrieve-a-record">3.1.2 Retrieve a record</h3>
+<h3 id="retrieve-a-record">3.2.2 Retrieve a record</h3>
 
 <div class="code applescript">
 <pre class="applescript"><span class="kw3">set</span> myAlien <span class="kw3">to</span> <span class="br0">&#123;</span><span class="kw1">name</span>:<span class="st0">&quot;Mr. Largon&quot;</span>, type:<span class="st0">&quot;Andro-Gruub&quot;</span>, language:<span class="st0">&quot;Common Borbulian&quot;</span>, sex:<span class="st0">&quot;Only with Other Gruubs&quot;</span><span class="br0">&#125;</span>
@@ -259,7 +241,7 @@ Item number 3 is: &quot;</span> <span class="sy0">&amp;</span> myVal</pre>
 <span class="kw3">set</span> output <span class="kw3">to</span> <span class="st0">&quot;The name of this Alien is: &quot;</span> <span class="sy0">&amp;</span> thisName</pre>
 </div>
 
-<h3 id="change-a-value-in-the-array">3.1.3 Change a value in the array</h3>
+<h3 id="change-a-value-in-the-array">3.2.3 Change a value in the array</h3>
 
 <p>To do this specify the item you want to change and the array in which you want to change it</p>
 
@@ -284,7 +266,7 @@ Item number 3 is: &quot;</span> <span class="sy0">&amp;</span> myVal</pre>
 &quot;</span> <span class="sy0">&amp;</span> thisName <span class="sy0">&amp;</span> <span class="st0">&quot;: '&quot;</span> <span class="sy0">&amp;</span> thisSex <span class="sy0">&amp;</span> <span class="st0">&quot;'&quot;</span></pre>
 </div>
 
-<h3 id="perform-an-operation-on-a-record">3.1.4 Perform an operation on a record</h3>
+<h3 id="perform-an-operation-on-a-record">3.2.4 Perform an operation on a record</h3>
 
 <p>In this case the operation is "count" using the syntax: "set <code>variable</code> to <code>count</code> of <code>array name</code>"</p>
 
@@ -297,9 +279,9 @@ Item number 3 is: &quot;</span> <span class="sy0">&amp;</span> myVal</pre>
 <span class="kw3">set</span> output <span class="kw3">to</span> myLength</pre>
 </div>
 
-<h2 id="listing-files-in-a-folder">3.2 Listing files in a folder</h2>
+<h2 id="listing-files-in-a-folder">3.3 Listing files in a folder</h2>
 
-<h3 id="listing-files-in-a-folder-2">3.2.1 Listing files in a folder</h3>
+<h3 id="listing-files-in-a-folder-2">3.3.1 Listing files in a folder</h3>
 
 <p>You know how to create a folder with a file in it:</p>
 
@@ -345,73 +327,82 @@ Item number 3 is: &quot;</span> <span class="sy0">&amp;</span> myVal</pre>
 <span class="kw3">end</span> <span class="kw3">tell</span></pre>
 </div>
 
-                    </div>
-    </div>
-</div>
+                            </div>
+        </div>
+    </div> 
+</div> 
+<footer class="row">
+    <div class="columns medium-12 topspace">
 
- <footer class="columns small-12 topspace">
-    <div class="row footer-top">
-        <div class="medium-6 columns">
-<!--             <ul class="menu">
-                <li><a href="#">Legal</a></li>
-                <li><a href="#">Partner</a></li>
-                <li><a href="#">Explore</a></li>
-            </ul> -->
+        <div class=" footer-top align-right text-right">
+            <p class="copywrite">Copywrite © 2017</p>
         </div>
-        <div class="medium-6 columns align-middle text-right">
-            
-                <div class="copyright">Copyright © 2016 Smedia</div>
-            
+
+        <div class="footer-middle">
+            <div class="row">
+                <div class="small-12 medium-6 large-4 columns">
+                    <a href="../../../../index.html">    
+                        <img class="logo" src="../../../../assets/img/robo-1.png"  alt="company logo">
+                    </a>
+                    <div class="" id="name-slogan"> 
+                        <h1 class="name"><a href="../../../../index.html">SMERTH</a><ul class="inline-list social">
+                       <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+                       <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+                       <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+                       <li><a href="#"><i class="fi-social-github"></i></a></li>
+                    </ul>
+                    </h1>
+                    <p class="tagline">Full-stack Web Developer</p>
+                        <h2 class="slogan">building with <span class="percent">100%</span> re-cycled electrons.</h2>
+                    </div>
+                    
+                    <ul class="footer-menu no-bullet inline-dot-list">
+                        <li><a href="../../../../projects.html">Projects</a></li>
+                        <li><a href="../../../../content/books/books.html">Notes</a></li>
+                        <li><a href="../../../../screenshots.html">Screenshots</a></li>
+                        <li><a href="../../../../about/book/chapter-1.html">About</a></li>
+                        <!--<li><a href="../../../../hp-singlepage-scroll.html">fpage scroll</a></li>
+                        <li><a href="../../../../hp-desk-foundation.html">desk foundation</a></li>-->
+                    </ul>
+                </div>
+                <div class="small-12 medium-6 large-4 columns align-middle">
+                    <ul class="contact">
+                      <li><p><i class="fi-marker"></i>address</p></li>
+                      <li><p><i class="fi-telephone"></i>telephone</p></li>
+                      <li><p><i class="fi-mail"></i>email</p></li>
+                    </ul>
+                </div>
+                <div class=" small-12 medium-12 large-4 columns align-middle">
+                    <blockquote class="quote">
+                        <p>Outside of a dog, a book is a man's best friend.</p>
+                        <p>Inside of a dog it's too dark to read.</p>
+                        <cite>Groucho Marx</cite>
+                    </blockquote>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="row footer-middle">
-<!--         <div class="small-6 large-3 columns">
-            <p class="lead">Offices</p>
-            <ul class="menu vertical">
-                <li><a href="#">One</a></li>
-                <li><a href="#">Two</a></li>
-                <li><a href="#">Three</a></li>
-                <li><a href="#">Four</a></li>
-            </ul>
-        </div> -->
-<!--         <div class="small-6 large-3 columns">
-            <p class="lead">Solar Systems</p>
-            <ul class="menu vertical">
-                <li><a href="#">One</a></li>
-                <li><a href="#">Two</a></li>
-                <li><a href="#">Three</a></li>
-                <li><a href="#">Four</a></li>
-            </ul>
-        </div> -->
-        <div class="small-6 medium-offset-6 large-3 columns">
-            <p class="lead">Contact</p>
-            <ul class="menu vertical">
-                <li><a href="#"><i class="fi-social-twitter"></i> Twitter</a></li>
-                <li><a href="#"><i class="fi-social-facebook"></i> Facebook</a></li>
-                <li><a href="#"><i class="fi-social-instagram"></i> Instagram</a></li>
-                <li><a href="#"><i class="fi-social-pinterest"></i> Pinterest</a></li>
-            </ul>
+
+        <div class="footer-bottom">
+            <div class="row">
+                <div class="large-12 columns text-center align-middle">
+                    <ul class="no-bullet inline-dot-list">
+                        <li><a href="../../../../index.html">London</a></li>
+                        <li><a href="../../../../projects.html">Vancouver</a></li>
+                        <li><a href="../../../../books.html">Tokyo</a></li>
+                        <li><a href="../../../../screenshots.html">Beijing</a></li>
+                        <li><a href="../../../../index.html">Hong Kong</a></li>
+                        <li><a href="../../../../projects.html">Kuala Lumpur</a></li>
+                        <li><a href="../../../../books.html">Singapore</a></li>
+                        <li><a href="../../../../screenshots.html">Tuktoyaktuk</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-<!--         <div class="small-6 large-3 columns">
-            <p class="lead">Widgets</p>
-            <ul class="menu vertical">
-                <li><a href="#">One</a></li>
-                <li><a href="#">Two</a></li>
-                <li><a href="#">Three</a></li>
-                <li><a href="#">Four</a></li>
-            </ul>
-        </div> -->
-    </div>
-    <div class="row footer-bottom">
-        <div class="large-12 columns text-center">
-            <p>Le Grande Hotel, Latin Quarter, Paris • 261 Rue Saint-Séverin, 75005 Paris, France </p>
-            <p>Phone 01 42 517 85 • info@dummy.com • www.dummy.com</p>
-        </div>
+
     </div>
 </footer>
+<script src="../../../../assets/js/app.js"></script>
 
-
-    <script src="../../../../assets/js/app.js"></script>
 </body>
 
 </html>

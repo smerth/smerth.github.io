@@ -1,0 +1,371 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebooks - Javascript and the DOM - Selecting Elements</title>
+    <link rel="stylesheet" href="../../../../assets/css/app.css">
+    <link href='https://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+    <!--<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="innerpage chapter-3">
+
+<header class="row">
+    <!--<div class="small-2 columns">
+                <a href="../../../../index.html">    
+                    <img class="logo" src="../../../../assets/img/robo-1.png"  alt="company logo">
+                </a>
+            </div>-->
+    <div class="small-10 columns">
+        <div class="" id="name-slogan"> 
+            <h1 class="name"><a href="../../../../index.html">SMERTH</a><ul class="inline-list social">
+           <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+           <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+           <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+           <li><a href="#"><i class="fi-social-github"></i></a></li>
+        </ul>
+        </h1>
+        <p class="tagline">Full-stack Web Developer</p>
+            <h2 class="slogan">building with <span class="percent">100%</span> re-cycled electrons.</h2>
+        </div>
+        
+    </div>
+    <div class="small-12 columns responsive-menu">
+        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle></button>
+            <div class="title-bar-title">Menu</div>
+        </div>
+        <div class="top-bar" id="main-menu">
+            <div class="top-bar-left">
+                <ul class="menu vertical medium-horizontal collapsed medium-text-center" data-responsive-menu="accordion medium-dropdown"
+                    data-accordion-menu>
+                    <li class="menu-text"><a href="../../../../index.html">Hello</a></li>
+                    <li><a href="../../../../projects.html">Projects</a></li>
+                    <li><a href="../../../../content/books/books.html">Notes</a></li>
+                    <li><a href="../../../../screenshots.html">Screenshots</a></li>
+                    <li><a href="../../../../about/book/chapter-1.html">About</a></li>
+                    <!--<li><a href="../../../../hp-singlepage-scroll.html">fpage scroll</a></li>
+                    <li><a href="../../../../hp-desk-foundation.html">desk foundation</a></li>-->
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <!--<ul class="inline-list social">
+   <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+   <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+   <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+   <li><a href="#"><i class="fi-social-github"></i></a></li>
+</ul>
+-->
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="row Javascript and the DOM" data-sticky-container>
+        <div id="chapter-sticky-header" class="column small-12 sticky" data-sticky data-anchor="main" data-options="marginTop:0;"
+        style="width: 100%;">
+        <div class="callout">
+            <div class="row">
+                <div class="column small-6 small-order-2 medium-order-1 medium-3 prev-container">
+                                        <h6><a class="prev" href="./chapter-2.html"><i class="fi-arrow-left"></i> Previous<div><small>Chapter 2 - The Console</small></div></a></h6>
+                                    </div>                 <div class="column small-12 small-order-1 medium-order-2 medium-6 text-center title-container">
+                    <div class="row">
+                        <div class="small-3 medium-5 columns">
+                                                        <a href="../../../../../index.html">
+                                <h4 class="name">SMERTH</h4>
+                            </a>
+                        </div>
+                        <div class="columns medium-7">
+                            <h6 id="selecting-elements" class="bk-title text-left">
+                                <i class="fi-book-bookmark"> </i>
+                                <a href="./index.html">Javascript and the DOM</a>
+                            </h6>
+                            <h6 id="selecting-elements" class="ch-title text-left"><small>Chapter 3 - Selecting Elements</small></h6>
+                        </div>
+                    </div>
+                </div>                 <div class="column small-6 small-order-3 medium-order-3 medium-3 next-container">
+                                        <p class="next disabled">Next &rarr;
+                        <span></span>
+                    </p>
+                                    </div>
+            </div>         </div> </div> </div>  <div id="book-page" class="Javascript and the DOM row">
+    <div class="column small-12 medium-4 large-3">
+        <div id="sidebar" data-sticky-container>
+                        <div class="callout" data-sticky data-anchor="main" data-options="marginTop:6.3;" style="width:100%">
+                <nav id="sidebar-toc">
+                    <h3><a href=".">Table of contents</a></h3>
+                    <ul class="toc">
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">1.</span>
+                                    <a href="./chapter-1.html"> Introduction</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">2.</span>
+                                    <a href="./chapter-2.html"> The Console</a>
+                                </li>
+                              
+                         
+                             
+                                 
+                                <li class="level-1 active">
+                                    <a class="chapter" href="./chapter-3.html"><span class="chapter-label">Chapter 3.</span>Selecting Elements</a>
+                                    <ul id="page-toc" class="unstyled toc-l2">
+                                         
+                                                                                        <li class="level-2" data-scroll="by-id">
+                                                <span class="chapter-sub-label">3.1</span>
+                                                <a class="internal" href="./chapter-3.html#by-id">By ID</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="by-html-tag">
+                                                <span class="chapter-sub-label">3.2</span>
+                                                <a class="internal" href="./chapter-3.html#by-html-tag">By HTML tag</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="by-class">
+                                                <span class="chapter-sub-label">3.3</span>
+                                                <a class="internal" href="./chapter-3.html#by-class">By Class</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="querying-css">
+                                                <span class="chapter-sub-label">3.4</span>
+                                                <a class="internal" href="./chapter-3.html#querying-css">Querying CSS</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="named-form-elements">
+                                                <span class="chapter-sub-label">3.5</span>
+                                                <a class="internal" href="./chapter-3.html#named-form-elements">Named Form Elements</a>
+                                            </li>
+                                                                                                                        </ul>
+                                </li>
+                                 
+                                            </ul>                 </nav>             </div>         </div>
+    </div>      <div id="main" class="main column small-12 medium-8 large-9 ">
+        <div class="callout">
+            <div class="main-content">
+                  <h2 id="by-id">3.1 By ID</h2>
+
+<p><code>getElementById()</code> expects to find only one ID since an ID should appear only once in each document.</p>
+
+<p>Do not type <code>getElementsById()</code> by mistake, it is singular, not plural.</p>
+
+<p>It is typical to assign this node to a variable so you can do something with the result of the selection.</p>
+
+<div class="code javascript">
+<pre class="javascript"><span class="kw1">var</span> myNode <span class="sy0">=</span> document.<span class="me1">getElementById</span><span class="br0">&#40;</span><span class="st0">&quot;sidebar&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+</div>
+
+<p>Henceforth, to access that node just type the variable in the console: <code>mynode</code>.</p>
+
+<p>For instance you can pass <code>myNode</code> into the <code>dir()</code> method.</p>
+
+<div class="code javascript">
+<pre class="javascript">dir<span class="br0">&#40;</span>myNode<span class="br0">&#41;</span><span class="sy0">;</span></pre>
+</div>
+
+<p>Or find its <code>.firstChild</code></p>
+
+<div class="code javascript">
+<pre class="javascript">myNode.<span class="me1">firstChild</span><span class="sy0">;</span></pre>
+</div>
+
+<p>Remember everything is a node, even a carriage return.  So if <code>.firstChild</code> returns something unexpected it is whatever the first node is...</p>
+
+<h2 id="by-html-tag">3.2 By HTML tag</h2>
+
+<p><code>getElementsByTagName()</code> lets you access elements by their HTML tags. <strong>It returns an array</strong>.</p>
+
+<div class="code javascript">
+<pre class="javascript"><span class="kw1">var</span> myListItems <span class="sy0">=</span> document.<span class="me1">getElementsByTagName</span><span class="br0">&#40;</span><span class="st0">&quot;li&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+</div>
+
+<p>Above the array is assigned to a variable that can be accessed by typing the variable name.</p>
+
+<p>To get to individual elements, you can use an array notation: <code>arrayName[0]</code>. Remember that arrays are 0 indexed, so item 2 is actually the third item <code>[ 0, 1 ,2 ]</code>.</p>
+
+<div class="code javascript">
+<pre class="javascript">myListItems<span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span><span class="sy0">;</span></pre>
+</div>
+
+<p>or just target the third item in the array directly:</p>
+
+<div class="code javascript">
+<pre class="javascript"><span class="kw1">var</span> myListItem <span class="sy0">=</span> document.<span class="me1">getElementsByTagName</span><span class="br0">&#40;</span><span class="st0">&quot;li&quot;</span><span class="br0">&#41;</span><span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span><span class="sy0">;</span></pre>
+</div>
+
+<p>To access all items in an array you will need to loop through the array which will be covered later.</p>
+
+<p>You can chain together selection methods to accomplish complex targeting.</p>
+
+<div class="code javascript">
+<pre class="javascript"><span class="kw1">var</span> myNodes <span class="sy0">=</span> document.<span class="me1">getElementById</span><span class="br0">&#40;</span><span class="st0">&quot;sidebar&quot;</span><span class="br0">&#41;</span>.<span class="me1">getElementsByTagName</span><span class="br0">&#40;</span><span class="st0">&quot;li&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+</div>
+
+<p>Now since <code>.getElementById()</code> returns an array we should specify which item we want to operate on when stringing together with a method that takes a single argument:</p>
+
+<div class="code javascript">
+<pre class="javascript">myNodes<span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span>.<span class="me1">firstChild</span><span class="sy0">;</span></pre>
+</div>
+
+<h2 id="by-class">3.3 By Class</h2>
+
+<p>Note that <code>getElementsByClassName</code>  is incompatible with older browsers.</p>
+
+<p>(Using jQuery to query by class is more broadly supported.)</p>
+
+<div class="code javascript">
+<pre class="javascript"><span class="kw1">var</span> myClasses <span class="sy0">=</span> document.<span class="me1">getElementsByClassName</span><span class="br0">&#40;</span><span class="st0">&quot;level-2&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+</div>
+
+<p>Again you can chain selections to acheive greater specificity.</p>
+
+<div class="code javascript">
+<pre class="javascript"><span class="kw1">var</span> myNodes <span class="sy0">=</span> document.<span class="me1">getElementById</span><span class="br0">&#40;</span><span class="st0">&quot;sidebar&quot;</span><span class="br0">&#41;</span>.<span class="me1">getElementsByClassName</span><span class="br0">&#40;</span><span class="st0">&quot;level-2&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+</div>
+
+<h2 id="querying-css">3.4 Querying CSS</h2>
+
+<p><code>querySelector()</code> and <code>querySelectorAll()</code> allow users to target selectors using CSS notation.</p>
+
+<p><code>querySelector()</code> targets the first instance of the CSS target it encounters.</p>
+
+<p>and <code>querySelectorAll()</code> returns an array of targeted selectors.</p>
+
+<p><em>Just like with CSS you can target mixtures of IDs, Classes, and HTML Elements.</em></p>
+
+<h3 id="queryselector">3.4.1 querySelector()</h3>
+
+<p>To target the first instance of <code>&lt;p&gt;</code> inside the <code>&lt;footer&gt;</code></p>
+
+<div class="code javascript">
+<pre class="javascript">document.<span class="me1">querySelector</span><span class="br0">&#40;</span><span class="st0">&quot;footer p&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+</div>
+
+<p>To target the an instance of <code>&lt;p&gt;</code> which is an immediate descendant of  <code>&lt;footer&gt;</code></p>
+
+<div class="code javascript">
+<pre class="javascript">document.<span class="me1">querySelector</span><span class="br0">&#40;</span><span class="st0">&quot;footer &gt; p&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+</div>
+
+<p><code>.childNodes</code>, <code>.firstChild</code>, and <code>.lastChild</code> will work on querySelector() but not querySelectorAll() since it returns an array</p>
+
+<div class="code javascript">
+<pre class="javascript">document.<span class="me1">querySelector</span><span class="br0">&#40;</span><span class="st0">&quot;footer .footer-menu&quot;</span><span class="br0">&#41;</span>.<span class="me1">childNodes</span><span class="sy0">;</span></pre>
+</div>
+
+<h3 id="queryselectorall">3.4.2 querySelectorAll()</h3>
+
+<p>Returns an array</p>
+
+<div class="code javascript">
+<pre class="javascript">document.<span class="me1">querySelectorAll</span><span class="br0">&#40;</span><span class="st0">&quot;#sidebar .level-1&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+</div>
+
+<p>Again, when calling a method that operates on a single argument, you need to specify which item in the array you are targeting.</p>
+
+<div class="code javascript">
+<pre class="javascript">document.<span class="me1">querySelectorAll</span><span class="br0">&#40;</span><span class="st0">&quot;#sidebar .level-1&quot;</span><span class="br0">&#41;</span><span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span>.<span class="me1">childNodes</span><span class="sy0">;</span></pre>
+</div>
+
+<p>You can target the type attributes of HTML elements.  Such as, select all input fields on the page of <code>[type=radio].</code></p>
+
+<div class="code javascript">
+<pre class="javascript">document.<span class="me1">querySelectorAll</span><span class="br0">&#40;</span><span class="st0">&quot;input[type=radio]&quot;</span><span class="br0">&#41;</span></pre>
+</div>
+
+<p>You can even target img tags from two different sections each with their own id.</p>
+
+<div class="code javascript">
+<pre class="javascript">document.<span class="me1">querySelectorAll</span><span class="br0">&#40;</span><span class="st0">'#artists li&gt;img'</span><span class="sy0">,</span> <span class="st0">'#comingtoevent img'</span><span class="br0">&#41;</span></pre>
+</div>
+
+<p>Notice each set of selectors is wrapped in its own quotation marks and separated by a coma.</p>
+
+<p>N.B. <code>.querySelector()</code>  is not compatible with older browsers. But it does have a little bit better support than <code>getElementsByClassName</code>.</p>
+
+<h2 id="named-form-elements">3.5 Named Form Elements</h2>
+
+<p>...</p>
+             </div>
+        </div>
+    </div>     </div>  
+<footer class="row">
+    <div class="columns medium-12 topspace">
+
+        <div class=" footer-top align-right text-right">
+            <p class="copywrite">Copywrite © 2017</p>
+        </div>
+
+        <div class="footer-middle">
+            <div class="row">
+                <div class="small-12 medium-6 large-4 columns">
+                    <a href="../../../../index.html">    
+                        <img class="logo" src="../../../../assets/img/robo-1.png"  alt="company logo">
+                    </a>
+                    <div class="" id="name-slogan"> 
+                        <h1 class="name"><a href="../../../../index.html">SMERTH</a><ul class="inline-list social">
+                       <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+                       <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+                       <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+                       <li><a href="#"><i class="fi-social-github"></i></a></li>
+                    </ul>
+                    </h1>
+                    <p class="tagline">Full-stack Web Developer</p>
+                        <h2 class="slogan">building with <span class="percent">100%</span> re-cycled electrons.</h2>
+                    </div>
+                    
+                    <ul class="footer-menu no-bullet inline-dot-list">
+                        <li><a href="../../../../projects.html">Projects</a></li>
+                        <li><a href="../../../../content/books/books.html">Notes</a></li>
+                        <li><a href="../../../../screenshots.html">Screenshots</a></li>
+                        <li><a href="../../../../about/book/chapter-1.html">About</a></li>
+                        <!--<li><a href="../../../../hp-singlepage-scroll.html">fpage scroll</a></li>
+                        <li><a href="../../../../hp-desk-foundation.html">desk foundation</a></li>-->
+                    </ul>
+                </div>
+                <div class="small-12 medium-6 large-4 columns align-middle">
+                    <ul class="contact">
+                      <li><p><i class="fi-marker"></i>address</p></li>
+                      <li><p><i class="fi-telephone"></i>telephone</p></li>
+                      <li><p><i class="fi-mail"></i>email</p></li>
+                    </ul>
+                </div>
+                <div class=" small-12 medium-12 large-4 columns align-middle">
+                    <blockquote class="quote">
+                        <p>Outside of a dog, a book is a man's best friend.</p>
+                        <p>Inside of a dog it's too dark to read.</p>
+                        <cite>Groucho Marx</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="row">
+                <div class="large-12 columns text-center align-middle">
+                    <ul class="no-bullet inline-dot-list">
+                        <li><a href="../../../../index.html">London</a></li>
+                        <li><a href="../../../../projects.html">Vancouver</a></li>
+                        <li><a href="../../../../books.html">Tokyo</a></li>
+                        <li><a href="../../../../screenshots.html">Beijing</a></li>
+                        <li><a href="../../../../index.html">Hong Kong</a></li>
+                        <li><a href="../../../../projects.html">Kuala Lumpur</a></li>
+                        <li><a href="../../../../books.html">Singapore</a></li>
+                        <li><a href="../../../../screenshots.html">Tuktoyaktuk</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
+<script src="../../../../assets/js/app.js"></script>
+
+</body>
+
+</html>

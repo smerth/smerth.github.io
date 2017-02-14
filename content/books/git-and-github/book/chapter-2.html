@@ -1,0 +1,354 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebooks - Git and Github - Configuring Git</title>
+    <link rel="stylesheet" href="../../../../assets/css/app.css">
+    <link href='https://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+    <!--<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="innerpage chapter-2">
+
+<header class="row">
+    <!--<div class="small-2 columns">
+                <a href="../../../../index.html">    
+                    <img class="logo" src="../../../../assets/img/robo-1.png"  alt="company logo">
+                </a>
+            </div>-->
+    <div class="small-10 columns">
+        <div class="" id="name-slogan"> 
+            <h1 class="name"><a href="../../../../index.html">SMERTH</a><ul class="inline-list social">
+           <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+           <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+           <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+           <li><a href="#"><i class="fi-social-github"></i></a></li>
+        </ul>
+        </h1>
+        <p class="tagline">Full-stack Web Developer</p>
+            <h2 class="slogan">building with <span class="percent">100%</span> re-cycled electrons.</h2>
+        </div>
+        
+    </div>
+    <div class="small-12 columns responsive-menu">
+        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle></button>
+            <div class="title-bar-title">Menu</div>
+        </div>
+        <div class="top-bar" id="main-menu">
+            <div class="top-bar-left">
+                <ul class="menu vertical medium-horizontal collapsed medium-text-center" data-responsive-menu="accordion medium-dropdown"
+                    data-accordion-menu>
+                    <li class="menu-text"><a href="../../../../index.html">Hello</a></li>
+                    <li><a href="../../../../projects.html">Projects</a></li>
+                    <li><a href="../../../../content/books/books.html">Notes</a></li>
+                    <li><a href="../../../../screenshots.html">Screenshots</a></li>
+                    <li><a href="../../../../about/book/chapter-1.html">About</a></li>
+                    <!--<li><a href="../../../../hp-singlepage-scroll.html">fpage scroll</a></li>
+                    <li><a href="../../../../hp-desk-foundation.html">desk foundation</a></li>-->
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <!--<ul class="inline-list social">
+   <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+   <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+   <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+   <li><a href="#"><i class="fi-social-github"></i></a></li>
+</ul>
+-->
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="row Git and Github" data-sticky-container>
+        <div id="chapter-sticky-header" class="column small-12 sticky" data-sticky data-anchor="main" data-options="marginTop:0;"
+        style="width: 100%;">
+        <div class="callout">
+            <div class="row">
+                <div class="column small-6 small-order-2 medium-order-1 medium-3 prev-container">
+                                        <h6><a class="prev" href="./chapter-1.html"><i class="fi-arrow-left"></i> Previous<div><small>Chapter 1 - Installing Git</small></div></a></h6>
+                                    </div>                 <div class="column small-12 small-order-1 medium-order-2 medium-6 text-center title-container">
+                    <div class="row">
+                        <div class="small-3 medium-5 columns">
+                                                        <a href="../../../../../index.html">
+                                <h4 class="name">SMERTH</h4>
+                            </a>
+                        </div>
+                        <div class="columns medium-7">
+                            <h6 id="configuring-git" class="bk-title text-left">
+                                <i class="fi-book-bookmark"> </i>
+                                <a href="./index.html">Git and Github</a>
+                            </h6>
+                            <h6 id="configuring-git" class="ch-title text-left"><small>Chapter 2 - Configuring Git</small></h6>
+                        </div>
+                    </div>
+                </div>                 <div class="column small-6 small-order-3 medium-order-3 medium-3 next-container">
+                                        <p class="next disabled">Next &rarr;
+                        <span></span>
+                    </p>
+                                    </div>
+            </div>         </div> </div> </div>  <div id="book-page" class="Git and Github row">
+    <div class="column small-12 medium-4 large-3">
+        <div id="sidebar" data-sticky-container>
+                        <div class="callout" data-sticky data-anchor="main" data-options="marginTop:6.3;" style="width:100%">
+                <nav id="sidebar-toc">
+                    <h3><a href=".">Table of contents</a></h3>
+                    <ul class="toc">
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">1.</span>
+                                    <a href="./chapter-1.html"> Installing Git</a>
+                                </li>
+                              
+                         
+                             
+                                 
+                                <li class="level-1 active">
+                                    <a class="chapter" href="./chapter-2.html"><span class="chapter-label">Chapter 2.</span>Configuring Git</a>
+                                    <ul id="page-toc" class="unstyled toc-l2">
+                                         
+                                                                                        <li class="level-2" data-scroll="the-gitconfig-file">
+                                                <span class="chapter-sub-label">2.1</span>
+                                                <a class="internal" href="./chapter-2.html#the-gitconfig-file">The .gitconfig File</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="git-auto-completion">
+                                                <span class="chapter-sub-label">2.2</span>
+                                                <a class="internal" href="./chapter-2.html#git-auto-completion">Git Auto-Completion</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="informative-git-prompt">
+                                                <span class="chapter-sub-label">2.3</span>
+                                                <a class="internal" href="./chapter-2.html#informative-git-prompt">Informative Git Prompt</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="using-git-help">
+                                                <span class="chapter-sub-label">2.4</span>
+                                                <a class="internal" href="./chapter-2.html#using-git-help">Using Git Help</a>
+                                            </li>
+                                                                                                                        </ul>
+                                </li>
+                                 
+                                            </ul>                 </nav>             </div>         </div>
+    </div>      <div id="main" class="main column small-12 medium-8 large-9 ">
+        <div class="callout">
+            <div class="main-content">
+                  <h2 id="the-gitconfig-file">2.1 The .gitconfig File</h2>
+
+<p>There are three places that Git stores configuration information.  Which one you use depends on how widely you want those configurations to apply.</p>
+
+<p>The first is System level configuration, they apply to every user of your computer.  These are the default configurations.</p>
+
+<p>On Unix that will be inside the <code>etc</code> directory, in a file called <code>.gitconfig</code>.</p>
+
+<p>The second is User level configurations. These are going to apply to a single user.</p>
+
+<p>On Unix, that's going to be in your home directory, inside a file called <code>.gitconfig</code>.</p>
+
+<p>@ user directory</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">cat</span> .gitconfig</pre>
+</div>
+
+<p>The third is on a project-by-project basis. These configurations will apply only to that project.</p>
+
+<p>If there is something specific to a single project, you can put it inside of the project.  Look for a folder inside the project called <code>.git</code>, and inside that folder a file called <code>config</code>.</p>
+
+<p>Git gives us some commands that we can use to make editing these configurations easy. For all three of them, it's going to be <code>git config</code>, followed by a modifier that tells at what level we want to do the configuration, and then followed by the configuration itself that we want to do.</p>
+
+<p>So if we want to do a system-wide configuration, then it's <code>—system</code> at the end, if it's User level then that's <code>—global</code>, (global doesn't mean system, it means global to the user,) and then if we don't have any modifier then it's just on a single project basis.</p>
+
+<p>Setting configuration at the user level: set the user's name</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">git config</span> <span class="re5">--global</span> user.name <span class="st0">&quot;name&quot;</span></pre>
+</div>
+
+<p>Setting configuration at the user level: set the user's email</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">git config</span> <span class="re5">--global</span> user.email <span class="st0">&quot;email address&quot;</span></pre>
+</div>
+
+<p>To read configurations:</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">git config</span> <span class="re5">--list</span></pre>
+</div>
+
+<p>To read a specific configuration, you can say user.name, user.email, etc...</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">git config</span> user.email</pre>
+</div>
+
+<p>This is the minimum that you need to configure and to start working with git.</p>
+
+<p>Optional, useful configurations:</p>
+
+<p>Tell Git what Text Editor you will be using.</p>
+
+<p>For Nano</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">git config</span> <span class="re5">--global</span> core.editor <span class="st0">&quot;nano -wl1&quot;</span></pre>
+</div>
+
+<p>or for Textmate</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">git config</span> <span class="re5">--global</span> core.editor <span class="st0">&quot;mate -wl1&quot;</span></pre>
+</div>
+
+<p>In addition to just launching it though, we need to provide a couple of options with it, which are:</p>
+
+<ul>
+<li>the <code>-w</code> option tells Git to wait until the editor is finished (save and close the document) before continuing.</li>
+<li>the <code>l1</code> option tells Git to start the editor at line 1.</li>
+</ul>
+
+<p>Next you can tell Git to use colors when outputting things to the command line.</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">git config</span> <span class="re5">--global</span> color.ui=<span class="kw2">true</span></pre>
+</div>
+
+<p>By setting this option, it will allow Git to try and use colors like red and green and blue to help illustrate what point it's trying to get across, what information it's trying to convey.</p>
+
+<h2 id="git-auto-completion">2.2 Git Auto-Completion</h2>
+
+<p>@ user directory</p>
+
+<div class="code bash">
+<pre class="bash">curl <span class="re5">-OL</span> https:<span class="sy0">//</span>github.com<span class="sy0">/</span>git<span class="sy0">/</span>git<span class="sy0">/</span>raw<span class="sy0">/</span>master<span class="sy0">/</span>contrib<span class="sy0">/</span>completion<span class="sy0">/</span>git-completion.bash</pre>
+</div>
+
+<p>check the file is there</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">ls</span> <span class="re5">-la</span></pre>
+</div>
+
+<p>Rename the file (adding a dot in front of the name...)</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">mv</span> ~<span class="sy0">/</span>git-completion.bash ~<span class="sy0">/</span>.git-completion.bash</pre>
+</div>
+
+<p>Tell UNIX to load the file if its there</p>
+
+<div class="code bash">
+<pre class="bash"><span class="co0"># Load git-competion.bash if it exists</span>
+<span class="kw1">if</span> <span class="br0">&#91;</span> <span class="re5">-f</span> ~<span class="sy0">/</span>.git-completion.bash <span class="br0">&#93;</span>; <span class="kw1">then</span>
+    <span class="kw3">source</span> ~<span class="sy0">/</span>.git-completion.bash
+<span class="kw1">fi</span></pre>
+</div>
+
+<p>Now if you type <code>git h</code> followed by the <code>tab</code> it will auto-complete the command to <code>git help</code></p>
+
+<h2 id="informative-git-prompt">2.3 Informative Git Prompt</h2>
+
+<p>If you want to install a more informative Git prompt then you can check out this <a href="https://github.com/olivierverdier/zsh-git-prompt">project on Github</a> which is a port of the "Informative git prompt for zsh".</p>
+
+<p>In particular the branch name, difference with remote branch, number of files staged, changed, etc. will be displayed</p>
+
+<h3 id="examples">2.3.1 Examples</h3>
+
+<ul>
+<li><code>(master↑3|✚1)</code>: on branch <code>master</code>, ahead of remote by 3 commits, 1 file changed but not staged</li>
+<li><code>(status|●2)</code>: on branch <code>status</code>, 2 files staged</li>
+<li><code>(master|✚7…)</code>: on branch <code>master</code>, 7 files changed, some files untracked</li>
+<li><code>(master|✖2✚3)</code>: on branch <code>master</code>, 2 conflicts, 3 files changed</li>
+<li><code>(master|⚑2)</code>: on branch <code>master</code>, 2 stash entries</li>
+<li><code>(experimental↓2↑3|✔)</code>: on branch <code>experimental</code>; your branch has diverged by 3 commits, remote by 2 commits; the repository is otherwise clean</li>
+<li><code>(:70c2952|✔)</code>: not on any branch; parent commit has hash <code>70c2952</code>; the repository is otherwise clean</li>
+</ul>
+
+<h2 id="using-git-help">2.4 Using Git Help</h2>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">git <span class="kw3">help</span></span></pre>
+</div>
+             </div>
+        </div>
+    </div>     </div>  
+<footer class="row">
+    <div class="columns medium-12 topspace">
+
+        <div class=" footer-top align-right text-right">
+            <p class="copywrite">Copywrite © 2017</p>
+        </div>
+
+        <div class="footer-middle">
+            <div class="row">
+                <div class="small-12 medium-6 large-4 columns">
+                    <a href="../../../../index.html">    
+                        <img class="logo" src="../../../../assets/img/robo-1.png"  alt="company logo">
+                    </a>
+                    <div class="" id="name-slogan"> 
+                        <h1 class="name"><a href="../../../../index.html">SMERTH</a><ul class="inline-list social">
+                       <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+                       <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+                       <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+                       <li><a href="#"><i class="fi-social-github"></i></a></li>
+                    </ul>
+                    </h1>
+                    <p class="tagline">Full-stack Web Developer</p>
+                        <h2 class="slogan">building with <span class="percent">100%</span> re-cycled electrons.</h2>
+                    </div>
+                    
+                    <ul class="footer-menu no-bullet inline-dot-list">
+                        <li><a href="../../../../projects.html">Projects</a></li>
+                        <li><a href="../../../../content/books/books.html">Notes</a></li>
+                        <li><a href="../../../../screenshots.html">Screenshots</a></li>
+                        <li><a href="../../../../about/book/chapter-1.html">About</a></li>
+                        <!--<li><a href="../../../../hp-singlepage-scroll.html">fpage scroll</a></li>
+                        <li><a href="../../../../hp-desk-foundation.html">desk foundation</a></li>-->
+                    </ul>
+                </div>
+                <div class="small-12 medium-6 large-4 columns align-middle">
+                    <ul class="contact">
+                      <li><p><i class="fi-marker"></i>address</p></li>
+                      <li><p><i class="fi-telephone"></i>telephone</p></li>
+                      <li><p><i class="fi-mail"></i>email</p></li>
+                    </ul>
+                </div>
+                <div class=" small-12 medium-12 large-4 columns align-middle">
+                    <blockquote class="quote">
+                        <p>Outside of a dog, a book is a man's best friend.</p>
+                        <p>Inside of a dog it's too dark to read.</p>
+                        <cite>Groucho Marx</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="row">
+                <div class="large-12 columns text-center align-middle">
+                    <ul class="no-bullet inline-dot-list">
+                        <li><a href="../../../../index.html">London</a></li>
+                        <li><a href="../../../../projects.html">Vancouver</a></li>
+                        <li><a href="../../../../books.html">Tokyo</a></li>
+                        <li><a href="../../../../screenshots.html">Beijing</a></li>
+                        <li><a href="../../../../index.html">Hong Kong</a></li>
+                        <li><a href="../../../../projects.html">Kuala Lumpur</a></li>
+                        <li><a href="../../../../books.html">Singapore</a></li>
+                        <li><a href="../../../../screenshots.html">Tuktoyaktuk</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
+<script src="../../../../assets/js/app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,355 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebooks - GIT Workflow - Working with Hotfix Branches</title>
+    <link rel="stylesheet" href="../../../../assets/css/app.css">
+    <link href='https://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+    <!--<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="innerpage chapter-4">
+
+<header class="row">
+    <!--<div class="small-2 columns">
+                <a href="../../../../index.html">    
+                    <img class="logo" src="../../../../assets/img/robo-1.png"  alt="company logo">
+                </a>
+            </div>-->
+    <div class="small-10 columns">
+        <div class="" id="name-slogan"> 
+            <h1 class="name"><a href="../../../../index.html">SMERTH</a><ul class="inline-list social">
+           <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+           <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+           <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+           <li><a href="#"><i class="fi-social-github"></i></a></li>
+        </ul>
+        </h1>
+        <p class="tagline">Full-stack Web Developer</p>
+            <h2 class="slogan">building with <span class="percent">100%</span> re-cycled electrons.</h2>
+        </div>
+        
+    </div>
+    <div class="small-12 columns responsive-menu">
+        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle></button>
+            <div class="title-bar-title">Menu</div>
+        </div>
+        <div class="top-bar" id="main-menu">
+            <div class="top-bar-left">
+                <ul class="menu vertical medium-horizontal collapsed medium-text-center" data-responsive-menu="accordion medium-dropdown"
+                    data-accordion-menu>
+                    <li class="menu-text"><a href="../../../../index.html">Hello</a></li>
+                    <li><a href="../../../../projects.html">Projects</a></li>
+                    <li><a href="../../../../content/books/books.html">Notes</a></li>
+                    <li><a href="../../../../screenshots.html">Screenshots</a></li>
+                    <li><a href="../../../../about/book/chapter-1.html">About</a></li>
+                    <!--<li><a href="../../../../hp-singlepage-scroll.html">fpage scroll</a></li>
+                    <li><a href="../../../../hp-desk-foundation.html">desk foundation</a></li>-->
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <!--<ul class="inline-list social">
+   <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+   <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+   <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+   <li><a href="#"><i class="fi-social-github"></i></a></li>
+</ul>
+-->
+            </div>
+        </div>
+    </div>
+</header>
+
+                    
+
+
+<div class="row GIT Workflow" data-sticky-container>
+        <div id="chapter-sticky-header" class="column small-12 sticky" data-sticky data-anchor="main" data-options="marginTop:0;" style="width: 100%;">
+        <div class="callout">
+            <div class="row">
+                <div class="column small-6 small-order-2 medium-order-1 medium-3 prev-container">
+                                        <h6><a class="prev" href="./chapter-3.html"><i class="fi-arrow-left"></i> Previous<div><small>Chapter 3 - Working with Release Branches</small></div></a></h6>
+                                    </div> 
+                <div class="column small-12 small-order-1 medium-order-2 medium-6 text-center title-container">
+                    <div class="row">
+                        <div class="small-3 medium-5 columns">
+                                                        <a href="../../../../../index.html">
+                                <h4 class="name">SMERTH</h4>
+                            </a>
+                        </div>
+                        <div class="columns medium-7">
+                            <h6 id="working-with-hotfix-branches" class="bk-title text-left">
+                                <i class="fi-book-bookmark"> </i>
+                                <a href="./index.html">GIT Workflow</a>
+                            </h6>
+                            <h6 id="working-with-hotfix-branches" class="ch-title text-left"><small>Chapter 4 - Working with Hotfix Branches</small></h6>
+                        </div>
+                    </div>
+                </div> 
+                <div class="column small-6 small-order-3 medium-order-3 medium-3 next-container">
+                                            <p class="next disabled">Next
+                            &rarr;
+                            <span></span>
+                        </p>
+                                    </div>
+
+            </div>         </div>     </div> </div> 
+<div id="book-page" class="GIT Workflow row">
+  
+
+
+ 
+    <div  class="column small-12 medium-4 large-3" >
+
+
+
+<div id="sidebar" data-sticky-container>
+
+                        
+        <div class="callout" data-sticky data-anchor="main" data-options="marginTop:6.3;" style="width:100%">
+            <nav id="sidebar-toc" >
+                <h3><a href=".">Table of contents</a></h3>
+                <ul class="toc">
+                                                                                        <li class="level-1">
+                            <span class="chapter-label">1.</span> <a href="./chapter-1.html"> Introduction</a>
+                        </li>
+                                                                                                            <li class="level-1">
+                            <span class="chapter-label">2.</span> <a href="./chapter-2.html"> Working with Feature Branches</a>
+                        </li>
+                                                                                                            <li class="level-1">
+                            <span class="chapter-label">3.</span> <a href="./chapter-3.html"> Working with Release Branches</a>
+                        </li>
+                                                                                                    <li class="level-1 active">
+                        <a class="chapter" href="./chapter-4.html"><span class="chapter-label">Chapter 4.</span>Working with Hotfix Branches</a>
+                        <ul id="page-toc" class="unstyled toc-l2">
+                                                                                            <li class="level-2" data-scroll="overview-4">
+                                    <span class="chapter-sub-label">4.1</span>
+                                    <a class="internal" href="./chapter-4.html#overview-4">Overview</a>
+                                </li>
+                                                                <li class="level-2" data-scroll="workflow-3">
+                                    <span class="chapter-sub-label">4.2</span>
+                                    <a class="internal" href="./chapter-4.html#workflow-3">Workflow</a>
+                                </li>
+                                                                                    </ul>
+                    </li>
+                                                        </ul>             </nav>         </div> 
+</div>
+
+    </div> 
+        <div id="main" class="main column small-12 medium-8 large-9 ">
+        <div class="callout">
+            <div class="main-content">
+
+                                                                 <h2 id="overview-4">4.1 Overview</h2>
+
+<p>Hotfix branches are created specifically to address bugs. When bugs are fixed the Hotfix branch is merged into stage and master.  This process results in a new release - a bug fix release.  The assumption is that one branch is created for each bug and a release is generated for each bug.  If you want to bundle bug fixes together for a big release this workflow would need to be modified.  But for small projects this seems pretty good.</p>
+
+<p><strong>Branched from:</strong> master</p>
+
+<p><strong>Merge into:</strong> stage and master</p>
+
+<p><strong>Naming Convention:</strong> hotfix-x.y.z</p>
+
+<h2 id="workflow-3">4.2 Workflow</h2>
+
+<h3 id="1-create-hotfix-branch">4.2.1 1) Create Hotfix Branch</h3>
+
+<p>Create a branch to deal with a bug off of master.  Hotfix branches are created off of master because presumably the bug report is coming in from the production site.</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">git checkout</span> <span class="re5">-b</span> hotfix-x.y.z master</pre>
+</div>
+
+<p>Pay attention to the naming convension.</p>
+
+<p>In naming this branch only bump <code>.z</code> which is the incrementer used for bug fixes.</p>
+
+<h3 id="2-append-the-version-change-to-the-readmemd-file">4.2.2 2) Append the version change to the readme.md file</h3>
+
+<p>Its good to do this now when you create the branch so you don't forget and also to others can see the version when working on the bug.</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw3">echo</span> <span class="st0">&quot;Hotfix version x.y.z&quot;</span> <span class="sy0">&gt;&gt;</span> readme.md</pre>
+</div>
+
+<p>Add and commit changes</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">git commit</span> <span class="re5">-a</span> <span class="re5">-m</span> <span class="st0">&quot;Released version x.y.z&quot;</span></pre>
+</div>
+
+<p>Push branch to Github so other developers can help fix the bug</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">git push</span> origin hotfix-x.y.z</pre>
+</div>
+
+<h3 id="3-fix-the-bug">4.2.3 3) Fix the bug</h3>
+
+<div class="code bash">
+<pre class="bash">magic code goes here</pre>
+</div>
+
+<p>Commit the changes</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">git commit</span> <span class="re5">-a</span> <span class="re5">-m</span> <span class="st0">&quot;Whatever hotfix action was taken&quot;</span></pre>
+</div>
+
+<p>and push changes to github if its an iterative process...</p>
+
+<h3 id="4-merge-hotfix-branch-into-master">4.2.4 4) Merge Hotfix branch into master</h3>
+
+<p>switch to master branch</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">git checkout</span> master</pre>
+</div>
+
+<p>merge the fix to master</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">git merge</span> <span class="re5">--no-ff</span> hotfix-x.y.z</pre>
+</div>
+
+<p>push local master to origin master</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">git push</span> origin master</pre>
+</div>
+
+<p>Tell Git what version master currently is</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">git tag</span> <span class="re5">-a</span> x.y.z</pre>
+</div>
+
+<p>push that specific tag to master</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">git push</span> origin <span class="sy0">&lt;</span>tag_name<span class="sy0">&gt;</span></pre>
+</div>
+
+<h3 id="5-merge-hotfix-branch-into-stage">4.2.5 5) Merge Hotfix branch into stage</h3>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">git checkout</span> stage</pre>
+</div>
+
+<p>merge the fix to stage</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">git merge</span> <span class="re5">--no-ff</span> hotfix-x.y.z</pre>
+</div>
+
+<p>delete the hotfix branch</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">git branch</span> <span class="re5">-d</span> hotfix-x.y.z</pre>
+</div>
+
+<p>Lastly push local stage to origin stage</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">git push</span> origin stage</pre>
+</div>
+
+<h3 id="6-delete-the-hotfix-branch">4.2.6 6) Delete the Hotfix branch</h3>
+
+<p>Delete locally</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">git branch</span> <span class="re5">-d</span> release-x.y.z</pre>
+</div>
+
+<p>Delete on Github if you didn't do all the work locally.</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">git push</span> origin <span class="re5">--delete</span> <span class="sy0">&lt;</span>branch_name<span class="sy0">&gt;</span></pre>
+</div>
+
+                            </div>
+        </div>
+    </div> 
+</div> 
+<footer class="row">
+    <div class="columns medium-12 topspace">
+
+        <div class=" footer-top align-right text-right">
+            <p class="copywrite">Copywrite © 2017</p>
+        </div>
+
+        <div class="footer-middle">
+            <div class="row">
+                <div class="small-12 medium-6 large-4 columns">
+                    <a href="../../../../index.html">    
+                        <img class="logo" src="../../../../assets/img/robo-1.png"  alt="company logo">
+                    </a>
+                    <div class="" id="name-slogan"> 
+                        <h1 class="name"><a href="../../../../index.html">SMERTH</a><ul class="inline-list social">
+                       <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+                       <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+                       <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+                       <li><a href="#"><i class="fi-social-github"></i></a></li>
+                    </ul>
+                    </h1>
+                    <p class="tagline">Full-stack Web Developer</p>
+                        <h2 class="slogan">building with <span class="percent">100%</span> re-cycled electrons.</h2>
+                    </div>
+                    
+                    <ul class="footer-menu no-bullet inline-dot-list">
+                        <li><a href="../../../../projects.html">Projects</a></li>
+                        <li><a href="../../../../content/books/books.html">Notes</a></li>
+                        <li><a href="../../../../screenshots.html">Screenshots</a></li>
+                        <li><a href="../../../../about/book/chapter-1.html">About</a></li>
+                        <!--<li><a href="../../../../hp-singlepage-scroll.html">fpage scroll</a></li>
+                        <li><a href="../../../../hp-desk-foundation.html">desk foundation</a></li>-->
+                    </ul>
+                </div>
+                <div class="small-12 medium-6 large-4 columns align-middle">
+                    <ul class="contact">
+                      <li><p><i class="fi-marker"></i>address</p></li>
+                      <li><p><i class="fi-telephone"></i>telephone</p></li>
+                      <li><p><i class="fi-mail"></i>email</p></li>
+                    </ul>
+                </div>
+                <div class=" small-12 medium-12 large-4 columns align-middle">
+                    <blockquote class="quote">
+                        <p>Outside of a dog, a book is a man's best friend.</p>
+                        <p>Inside of a dog it's too dark to read.</p>
+                        <cite>Groucho Marx</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="row">
+                <div class="large-12 columns text-center align-middle">
+                    <ul class="no-bullet inline-dot-list">
+                        <li><a href="../../../../index.html">London</a></li>
+                        <li><a href="../../../../projects.html">Vancouver</a></li>
+                        <li><a href="../../../../books.html">Tokyo</a></li>
+                        <li><a href="../../../../screenshots.html">Beijing</a></li>
+                        <li><a href="../../../../index.html">Hong Kong</a></li>
+                        <li><a href="../../../../projects.html">Kuala Lumpur</a></li>
+                        <li><a href="../../../../books.html">Singapore</a></li>
+                        <li><a href="../../../../screenshots.html">Tuktoyaktuk</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
+<script src="../../../../assets/js/app.js"></script>
+
+</body>
+
+</html>

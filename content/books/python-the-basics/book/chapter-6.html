@@ -1,0 +1,383 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebooks - Python the Basics - Classes</title>
+    <link rel="stylesheet" href="../../../../assets/css/app.css">
+    <link href='https://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+    <!--<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="innerpage chapter-6">
+
+<header class="row">
+    <!--<div class="small-2 columns">
+                <a href="../../../../index.html">    
+                    <img class="logo" src="../../../../assets/img/robo-1.png"  alt="company logo">
+                </a>
+            </div>-->
+    <div class="small-10 columns">
+        <div class="" id="name-slogan"> 
+            <h1 class="name"><a href="../../../../index.html">SMERTH</a><ul class="inline-list social">
+           <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+           <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+           <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+           <li><a href="#"><i class="fi-social-github"></i></a></li>
+        </ul>
+        </h1>
+        <p class="tagline">Full-stack Web Developer</p>
+            <h2 class="slogan">building with <span class="percent">100%</span> re-cycled electrons.</h2>
+        </div>
+        
+    </div>
+    <div class="small-12 columns responsive-menu">
+        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle></button>
+            <div class="title-bar-title">Menu</div>
+        </div>
+        <div class="top-bar" id="main-menu">
+            <div class="top-bar-left">
+                <ul class="menu vertical medium-horizontal collapsed medium-text-center" data-responsive-menu="accordion medium-dropdown"
+                    data-accordion-menu>
+                    <li class="menu-text"><a href="../../../../index.html">Hello</a></li>
+                    <li><a href="../../../../projects.html">Projects</a></li>
+                    <li><a href="../../../../content/books/books.html">Notes</a></li>
+                    <li><a href="../../../../screenshots.html">Screenshots</a></li>
+                    <li><a href="../../../../about/book/chapter-1.html">About</a></li>
+                    <!--<li><a href="../../../../hp-singlepage-scroll.html">fpage scroll</a></li>
+                    <li><a href="../../../../hp-desk-foundation.html">desk foundation</a></li>-->
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <!--<ul class="inline-list social">
+   <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+   <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+   <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+   <li><a href="#"><i class="fi-social-github"></i></a></li>
+</ul>
+-->
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="row Python the Basics" data-sticky-container>
+        <div id="chapter-sticky-header" class="column small-12 sticky" data-sticky data-anchor="main" data-options="marginTop:0;"
+        style="width: 100%;">
+        <div class="callout">
+            <div class="row">
+                <div class="column small-6 small-order-2 medium-order-1 medium-3 prev-container">
+                                        <h6><a class="prev" href="./chapter-5.html"><i class="fi-arrow-left"></i> Previous<div><small>Chapter 5 - Loops</small></div></a></h6>
+                                    </div>                 <div class="column small-12 small-order-1 medium-order-2 medium-6 text-center title-container">
+                    <div class="row">
+                        <div class="small-3 medium-5 columns">
+                                                        <a href="../../../../../index.html">
+                                <h4 class="name">SMERTH</h4>
+                            </a>
+                        </div>
+                        <div class="columns medium-7">
+                            <h6 id="classes" class="bk-title text-left">
+                                <i class="fi-book-bookmark"> </i>
+                                <a href="./index.html">Python the Basics</a>
+                            </h6>
+                            <h6 id="classes" class="ch-title text-left"><small>Chapter 6 - Classes</small></h6>
+                        </div>
+                    </div>
+                </div>                 <div class="column small-6 small-order-3 medium-order-3 medium-3 next-container">
+                                        <h6>
+                        <a class="next" href="./chapter-7.html">
+                            <div class="text-right">Next <i class="fi-arrow-right"></i></div>
+                            <div class="text-right"><small>Chapter 7 - Dates</small></div>
+                        </a>
+                    </h6>
+                                    </div>
+            </div>         </div> </div> </div>  <div id="book-page" class="Python the Basics row">
+    <div class="column small-12 medium-4 large-3">
+        <div id="sidebar" data-sticky-container>
+                        <div class="callout" data-sticky data-anchor="main" data-options="marginTop:5.5;" style="width:100%">
+                <nav id="sidebar-toc">
+                    <h3><a href=".">Table of contents</a></h3>
+                    <ul class="toc">
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">1.</span>
+                                    <a href="./chapter-1.html"> Python</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">2.</span>
+                                    <a href="./chapter-2.html"> Variables</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">3.</span>
+                                    <a href="./chapter-3.html"> Functions</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">4.</span>
+                                    <a href="./chapter-4.html"> Conditionals</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">5.</span>
+                                    <a href="./chapter-5.html"> Loops</a>
+                                </li>
+                              
+                         
+                             
+                                 
+                                <li class="level-1 active">
+                                    <a class="chapter" href="./chapter-6.html"><span class="chapter-label">Chapter 6.</span>Classes</a>
+                                    <ul id="page-toc" class="unstyled toc-l2">
+                                         
+                                                                                        <li class="level-2" data-scroll="inheritance">
+                                                <span class="chapter-sub-label">6.1</span>
+                                                <a class="internal" href="./chapter-6.html#inheritance">Inheritance</a>
+                                            </li>
+                                                                                                                        </ul>
+                                </li>
+                                 
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">7.</span>
+                                    <a href="./chapter-7.html"> Dates</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">8.</span>
+                                    <a href="./chapter-8.html"> Formatting</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">9.</span>
+                                    <a href="./chapter-9.html"> Timedeltas</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">10.</span>
+                                    <a href="./chapter-10.html"> Calendars</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">11.</span>
+                                    <a href="./chapter-11.html"> Files</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">12.</span>
+                                    <a href="./chapter-12.html"> Path utilities</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">13.</span>
+                                    <a href="./chapter-13.html"> shell</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">14.</span>
+                                    <a href="./chapter-14.html"> Internet Data</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">15.</span>
+                                    <a href="./chapter-15.html"> JSON data</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">16.</span>
+                                    <a href="./chapter-16.html"> HTML</a>
+                                </li>
+                              
+                                            </ul>                 </nav>             </div>         </div>
+    </div>      <div id="main" class="main column small-12 medium-8 large-9 ">
+        <div class="callout">
+            <div class="main-content">
+                  <p>In Python you can write procedural code, or object oriented code.</p>
+
+<div class="code python">
+<pre class="python"><span class="kw1">class</span> myClass<span class="br0">&#40;</span><span class="br0">&#41;</span>:
+  <span class="kw1">def</span> method1<span class="br0">&#40;</span><span class="kw2">self</span><span class="br0">&#41;</span>:
+    <span class="kw1">print</span> <span class="st0">&quot;myClass method1&quot;</span>
+&nbsp;
+  <span class="kw1">def</span> method2<span class="br0">&#40;</span><span class="kw2">self</span><span class="sy0">,</span> someString<span class="br0">&#41;</span>:
+    <span class="kw1">print</span> <span class="st0">&quot;myClass method2: &quot;</span> + someString
+&nbsp;
+<span class="kw1">def</span> main<span class="br0">&#40;</span><span class="br0">&#41;</span>:
+  x <span class="sy0">=</span> <span class="nu0">0</span>
+&nbsp;
+<span class="co1"># exercise the class methods</span>
+  c <span class="sy0">=</span> myClass<span class="br0">&#40;</span><span class="br0">&#41;</span>
+  c.<span class="me1">method1</span><span class="br0">&#40;</span><span class="br0">&#41;</span>
+  c.<span class="me1">method2</span><span class="br0">&#40;</span><span class="st0">&quot;This is a string&quot;</span><span class="br0">&#41;</span>
+&nbsp;
+<span class="kw1">if</span> __name__ <span class="sy0">==</span> <span class="st0">&quot;__main__&quot;</span>:
+  main<span class="br0">&#40;</span><span class="br0">&#41;</span></pre>
+</div>
+
+<p>Note the class is defined above main.  Main is the program that will run when this file is called from the command line.  So, inside main we create an instance of the class and call methods on the class.  The class definition is independant of that...</p>
+
+<p>If the class is dependant on anything it can go in the brackets <code>class myClass():</code></p>
+
+<p>Ussually the first argument to a class method is self <code>def method1(self):</code> self will refer to the particular instance of the class that is being operated on...</p>
+
+<p>After you instantiate a class and call a method on that instance it is not necessary to pass <code>self</code>as an argument to the method.</p>
+
+<h2 id="inheritance">6.1 Inheritance</h2>
+
+<div class="code python">
+<pre class="python"><span class="kw1">class</span> myClass<span class="br0">&#40;</span><span class="br0">&#41;</span>:
+  <span class="kw1">def</span> method1<span class="br0">&#40;</span><span class="kw2">self</span><span class="br0">&#41;</span>:
+    <span class="kw1">print</span> <span class="st0">&quot;myClass method1&quot;</span>
+&nbsp;
+  <span class="kw1">def</span> method2<span class="br0">&#40;</span><span class="kw2">self</span><span class="sy0">,</span> someString<span class="br0">&#41;</span>:
+    <span class="kw1">print</span> <span class="st0">&quot;myClass method2: &quot;</span> + someString
+&nbsp;
+<span class="kw1">class</span> anotherClass<span class="br0">&#40;</span>myClass<span class="br0">&#41;</span>:
+  <span class="kw1">def</span> method2<span class="br0">&#40;</span><span class="kw2">self</span><span class="br0">&#41;</span>:
+    <span class="kw1">print</span> <span class="st0">&quot;anotherClass method2&quot;</span>
+&nbsp;
+  <span class="kw1">def</span> method1<span class="br0">&#40;</span><span class="kw2">self</span><span class="br0">&#41;</span>:
+    myClass.<span class="me1">method1</span><span class="br0">&#40;</span><span class="kw2">self</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="kw1">print</span> <span class="st0">&quot;anotherClass method1&quot;</span>
+&nbsp;
+<span class="kw1">def</span> main<span class="br0">&#40;</span><span class="br0">&#41;</span>:
+  x <span class="sy0">=</span> <span class="nu0">0</span>
+&nbsp;
+<span class="co1"># exercise the class methods</span>
+  c <span class="sy0">=</span> myClass<span class="br0">&#40;</span><span class="br0">&#41;</span>
+  c.<span class="me1">method1</span><span class="br0">&#40;</span><span class="br0">&#41;</span>
+  c.<span class="me1">method2</span><span class="br0">&#40;</span><span class="st0">&quot;This is a string&quot;</span><span class="br0">&#41;</span>
+&nbsp;
+<span class="co1"># exercise the class methods</span>
+  c2 <span class="sy0">=</span> anotherClass<span class="br0">&#40;</span><span class="br0">&#41;</span>
+  c2.<span class="me1">method1</span><span class="br0">&#40;</span><span class="br0">&#41;</span>
+&nbsp;
+<span class="kw1">if</span> __name__ <span class="sy0">==</span> <span class="st0">&quot;__main__&quot;</span>:
+  main<span class="br0">&#40;</span><span class="br0">&#41;</span></pre>
+</div>
+
+<p>In this code above anotherClass inherits from myClass <code>class anotherClass(myClass):</code></p>
+
+<p><code>method2</code> and <code>method1</code> from <code>myClass</code> are overridden in <code>anotherClass</code>.</p>
+
+<p>also,</p>
+
+<div class="code python">
+<pre class="python">  <span class="kw1">def</span> method1<span class="br0">&#40;</span><span class="kw2">self</span><span class="br0">&#41;</span>:
+    myClass.<span class="me1">method1</span><span class="br0">&#40;</span><span class="kw2">self</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="kw1">print</span> <span class="st0">&quot;anotherClass method1&quot;</span></pre>
+</div>
+
+<p>inside method1 of anotherClass we are calling method1(self); on the super class or the class anotherClass inherits from - myClass, before we print "anotherClass method1"</p>
+             </div>
+        </div>
+    </div>     </div>  
+<footer class="row">
+    <div class="columns medium-12 topspace">
+
+        <div class=" footer-top align-right text-right">
+            <p class="copywrite">Copywrite © 2017</p>
+        </div>
+
+        <div class="footer-middle">
+            <div class="row">
+                <div class="small-12 medium-6 large-4 columns">
+                    <a href="../../../../index.html">    
+                        <img class="logo" src="../../../../assets/img/robo-1.png"  alt="company logo">
+                    </a>
+                    <div class="" id="name-slogan"> 
+                        <h1 class="name"><a href="../../../../index.html">SMERTH</a><ul class="inline-list social">
+                       <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+                       <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+                       <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+                       <li><a href="#"><i class="fi-social-github"></i></a></li>
+                    </ul>
+                    </h1>
+                    <p class="tagline">Full-stack Web Developer</p>
+                        <h2 class="slogan">building with <span class="percent">100%</span> re-cycled electrons.</h2>
+                    </div>
+                    
+                    <ul class="footer-menu no-bullet inline-dot-list">
+                        <li><a href="../../../../projects.html">Projects</a></li>
+                        <li><a href="../../../../content/books/books.html">Notes</a></li>
+                        <li><a href="../../../../screenshots.html">Screenshots</a></li>
+                        <li><a href="../../../../about/book/chapter-1.html">About</a></li>
+                        <!--<li><a href="../../../../hp-singlepage-scroll.html">fpage scroll</a></li>
+                        <li><a href="../../../../hp-desk-foundation.html">desk foundation</a></li>-->
+                    </ul>
+                </div>
+                <div class="small-12 medium-6 large-4 columns align-middle">
+                    <ul class="contact">
+                      <li><p><i class="fi-marker"></i>address</p></li>
+                      <li><p><i class="fi-telephone"></i>telephone</p></li>
+                      <li><p><i class="fi-mail"></i>email</p></li>
+                    </ul>
+                </div>
+                <div class=" small-12 medium-12 large-4 columns align-middle">
+                    <blockquote class="quote">
+                        <p>Outside of a dog, a book is a man's best friend.</p>
+                        <p>Inside of a dog it's too dark to read.</p>
+                        <cite>Groucho Marx</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="row">
+                <div class="large-12 columns text-center align-middle">
+                    <ul class="no-bullet inline-dot-list">
+                        <li><a href="../../../../index.html">London</a></li>
+                        <li><a href="../../../../projects.html">Vancouver</a></li>
+                        <li><a href="../../../../books.html">Tokyo</a></li>
+                        <li><a href="../../../../screenshots.html">Beijing</a></li>
+                        <li><a href="../../../../index.html">Hong Kong</a></li>
+                        <li><a href="../../../../projects.html">Kuala Lumpur</a></li>
+                        <li><a href="../../../../books.html">Singapore</a></li>
+                        <li><a href="../../../../screenshots.html">Tuktoyaktuk</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
+<script src="../../../../assets/js/app.js"></script>
+
+</body>
+
+</html>

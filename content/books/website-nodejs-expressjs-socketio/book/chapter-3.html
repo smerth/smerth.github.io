@@ -1,0 +1,329 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebooks - Website with NodeJS ExpressJS and SocketIO - Serve JSON data</title>
+    <link rel="stylesheet" href="../../../../assets/css/app.css">
+    <link href='https://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+    <!--<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="innerpage chapter-3">
+
+<header class="row">
+    <!--<div class="small-2 columns">
+                <a href="../../../../index.html">    
+                    <img class="logo" src="../../../../assets/img/robo-1.png"  alt="company logo">
+                </a>
+            </div>-->
+    <div class="small-10 columns">
+        <div class="" id="name-slogan"> 
+            <h1 class="name"><a href="../../../../index.html">SMERTH</a><ul class="inline-list social">
+           <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+           <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+           <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+           <li><a href="#"><i class="fi-social-github"></i></a></li>
+        </ul>
+        </h1>
+        <p class="tagline">Full-stack Web Developer</p>
+            <h2 class="slogan">building with <span class="percent">100%</span> re-cycled electrons.</h2>
+        </div>
+        
+    </div>
+    <div class="small-12 columns responsive-menu">
+        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle></button>
+            <div class="title-bar-title">Menu</div>
+        </div>
+        <div class="top-bar" id="main-menu">
+            <div class="top-bar-left">
+                <ul class="menu vertical medium-horizontal collapsed medium-text-center" data-responsive-menu="accordion medium-dropdown"
+                    data-accordion-menu>
+                    <li class="menu-text"><a href="../../../../index.html">Hello</a></li>
+                    <li><a href="../../../../projects.html">Projects</a></li>
+                    <li><a href="../../../../content/books/books.html">Notes</a></li>
+                    <li><a href="../../../../screenshots.html">Screenshots</a></li>
+                    <li><a href="../../../../about/book/chapter-1.html">About</a></li>
+                    <!--<li><a href="../../../../hp-singlepage-scroll.html">fpage scroll</a></li>
+                    <li><a href="../../../../hp-desk-foundation.html">desk foundation</a></li>-->
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <!--<ul class="inline-list social">
+   <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+   <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+   <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+   <li><a href="#"><i class="fi-social-github"></i></a></li>
+</ul>
+-->
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="row Website with NodeJS ExpressJS and SocketIO" data-sticky-container>
+        <div id="chapter-sticky-header" class="column small-12 sticky" data-sticky data-anchor="main" data-options="marginTop:0;"
+        style="width: 100%;">
+        <div class="callout">
+            <div class="row">
+                <div class="column small-6 small-order-2 medium-order-1 medium-3 prev-container">
+                                        <h6><a class="prev" href="./chapter-2.html"><i class="fi-arrow-left"></i> Previous<div><small>Chapter 2 - Create a Server with Express</small></div></a></h6>
+                                    </div>                 <div class="column small-12 small-order-1 medium-order-2 medium-6 text-center title-container">
+                    <div class="row">
+                        <div class="small-3 medium-5 columns">
+                                                        <a href="../../../../../index.html">
+                                <h4 class="name">SMERTH</h4>
+                            </a>
+                        </div>
+                        <div class="columns medium-7">
+                            <h6 id="serve-json-data" class="bk-title text-left">
+                                <i class="fi-book-bookmark"> </i>
+                                <a href="./index.html">Website with NodeJS ExpressJS and SocketIO</a>
+                            </h6>
+                            <h6 id="serve-json-data" class="ch-title text-left"><small>Chapter 3 - Serve JSON data</small></h6>
+                        </div>
+                    </div>
+                </div>                 <div class="column small-6 small-order-3 medium-order-3 medium-3 next-container">
+                                        <p class="next disabled">Next &rarr;
+                        <span></span>
+                    </p>
+                                    </div>
+            </div>         </div> </div> </div>  <div id="book-page" class="Website with NodeJS ExpressJS and SocketIO row">
+    <div class="column small-12 medium-4 large-3">
+        <div id="sidebar" data-sticky-container>
+                        <div class="callout" data-sticky data-anchor="main" data-options="marginTop:6.3;" style="width:100%">
+                <nav id="sidebar-toc">
+                    <h3><a href=".">Table of contents</a></h3>
+                    <ul class="toc">
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">1.</span>
+                                    <a href="./chapter-1.html"> Create a Server with NodeJS</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">2.</span>
+                                    <a href="./chapter-2.html"> Create a Server with Express</a>
+                                </li>
+                              
+                         
+                             
+                                 
+                                <li class="level-1 active">
+                                    <a class="chapter" href="./chapter-3.html"><span class="chapter-label">Chapter 3.</span>Serve JSON data</a>
+                                    <ul id="page-toc" class="unstyled toc-l2">
+                                         
+                                                                                        <li class="level-2" data-scroll="add-data-folder">
+                                                <span class="chapter-sub-label">3.1</span>
+                                                <a class="internal" href="./chapter-3.html#add-data-folder">Add data folder</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="add-a-json-file">
+                                                <span class="chapter-sub-label">3.2</span>
+                                                <a class="internal" href="./chapter-3.html#add-a-json-file">Add a JSON File</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="require-json-files">
+                                                <span class="chapter-sub-label">3.3</span>
+                                                <a class="internal" href="./chapter-3.html#require-json-files">Require JSON Files</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="user-defined-port-option">
+                                                <span class="chapter-sub-label">3.4</span>
+                                                <a class="internal" href="./chapter-3.html#user-defined-port-option">User Defined Port Option</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="modify-server-listening-function">
+                                                <span class="chapter-sub-label">3.5</span>
+                                                <a class="internal" href="./chapter-3.html#modify-server-listening-function">Modify server listening function</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="specify-a-port-during-run-time">
+                                                <span class="chapter-sub-label">3.6</span>
+                                                <a class="internal" href="./chapter-3.html#specify-a-port-during-run-time">Specify a Port During Run-time</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="respond-with-json-data">
+                                                <span class="chapter-sub-label">3.7</span>
+                                                <a class="internal" href="./chapter-3.html#respond-with-json-data">Respond with JSON data</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="commit-changes-2">
+                                                <span class="chapter-sub-label">3.8</span>
+                                                <a class="internal" href="./chapter-3.html#commit-changes-2">Commit changes</a>
+                                            </li>
+                                                                                                                        </ul>
+                                </li>
+                                 
+                                            </ul>                 </nav>             </div>         </div>
+    </div>      <div id="main" class="main column small-12 medium-8 large-9 ">
+        <div class="callout">
+            <div class="main-content">
+                  <h2 id="add-data-folder">3.1 Add data folder</h2>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">mkdir</span> data <span class="sy0">&amp;&amp;</span> <span class="kw2">touch</span> data<span class="sy0">/</span>data.json</pre>
+</div>
+
+<h2 id="add-a-json-file">3.2 Add a JSON File</h2>
+
+<p>@ data.json</p>
+
+<p>Use a valid JSON structure similar to:</p>
+
+<div class="code json">
+<pre class="json">{
+  &quot;speakers&quot;: [{
+    &quot;title&quot; : &quot;Art in Full Bloom&quot;,
+    &quot;name&quot;: &quot;Lorenzo Garcia&quot;,
+    &quot;shortname&quot; : &quot;Lorenzo_Garcia&quot;,
+    &quot;summary&quot; : &quot;Drawing and painting flowers may seem like a first-year art student's assignment, but Lorenzo Garcia brings depth, shadows, light, form and color to new heights with his unique and revolutionary technique of painting on canvas with ceramic glaze. This session is sure to be a hit with mixed media buffs.&quot;,
+    &quot;description&quot;: &quot;&lt;p&gt;Lorenzo was born in Mexico, but grew up in Southern California after his mother immigrated to Los Angeles when he was a year old. His mother worked as a seamstress in the Fashion District and brought home scrap materials for Lorenzo to create his early mixed media art. From that point on, Lorenzo became hooked on creating art from scrap metals, fabrics, wood, canvas, and many others. During his junior year at Bischon Art School in Los Angeles, he perfected his own proprietary method of painting on canvas with ceramic glaze, which he will demonstrate on Monday in his session, 'Art in Full Bloom'.&lt;/p&gt;&lt;p&gt;Lorenzo paints with an extraordinary amount of color, and prefers to create art centered around nature, animals, and science. Now in his senior year at Bischon, Lorenzo has been creating mixed media totem poles made from old telephone poles, and other recycled materials, and is already planning his next new technique that will likely inspire a trend for years to come.&lt;/p&gt;&quot;,
+    &quot;artwork&quot;: [&quot;Lorenzo_Garcia_01_tn.jpg&quot;, &quot;Lorenzo_Garcia_02_tn.jpg&quot;, &quot;Lorenzo_Garcia_03_tn.jpg&quot;, &quot;Lorenzo_Garcia_04_tn.jpg&quot;]
+  },{
+...
+  },...
+  ] // NO COMMA AFTER LAST NODE
+}</pre>
+</div>
+
+<h2 id="require-json-files">3.3 Require JSON Files</h2>
+
+<p>Since the server will need to deliver the JSON content in a response we need to tell it where to find the files.</p>
+
+<div class="code javascript">
+<pre class="javascript"><span class="kw1">var</span> dataFile <span class="sy0">=</span> require<span class="br0">&#40;</span><span class="st0">'./data/data.json'</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+</div>
+
+<h2 id="user-defined-port-option">3.4 User Defined Port Option</h2>
+
+<p>The ExpressJS <code>.set()</code> method allows us to customize the listening port.</p>
+
+<div class="code javascript">
+<pre class="javascript">app.<span class="kw1">set</span><span class="br0">&#40;</span><span class="st0">'port'</span><span class="sy0">,</span> process.<span class="me1">env</span>.<span class="me1">PORT</span> <span class="sy0">||</span> <span class="nu0">3000</span> <span class="br0">&#41;</span><span class="sy0">;</span></pre>
+</div>
+
+<h2 id="modify-server-listening-function">3.5 Modify server listening function</h2>
+
+<p>The ExpressJS <code>.get()</code> method allows us to retrieve variables set for the server.</p>
+
+<div class="code javascript">
+<pre class="javascript"><span class="kw1">var</span> server <span class="sy0">=</span> app.<span class="me1">listen</span><span class="br0">&#40;</span>app.<span class="kw1">get</span><span class="br0">&#40;</span><span class="st0">'port'</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  console.<span class="me1">log</span><span class="br0">&#40;</span><span class="st0">'Listening on port '</span> <span class="sy0">+</span> app.<span class="kw1">get</span><span class="br0">&#40;</span><span class="st0">'port'</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+</div>
+
+<h2 id="specify-a-port-during-run-time">3.6 Specify a Port During Run-time</h2>
+
+<div class="code bash">
+<pre class="bash"><span class="re2">PORT</span>=<span class="nu0">8080</span> node app.js</pre>
+</div>
+
+<h2 id="respond-with-json-data">3.7 Respond with JSON data</h2>
+
+<p>The <code>.get()</code> method allows us to define the response to a get request. It takes in the route and a callback function inside of which anything can happen but the ultimate result is calling the <code>.send()</code> method with some package of content to deliver back to the browser.</p>
+
+<div class="code javascript">
+<pre class="javascript">app.<span class="kw1">get</span><span class="br0">&#40;</span><span class="st0">'/'</span><span class="sy0">,</span> <span class="kw1">function</span><span class="br0">&#40;</span>req<span class="sy0">,</span> res<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  <span class="kw1">var</span> info <span class="sy0">=</span> <span class="st0">''</span><span class="sy0">;</span>
+  dataFile.<span class="me1">speakers</span>.<span class="me1">forEach</span><span class="br0">&#40;</span><span class="kw1">function</span><span class="br0">&#40;</span>item<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    info <span class="sy0">+=</span> `
+    <span class="sy0">&lt;</span>li<span class="sy0">&gt;</span>
+      <span class="sy0">&lt;</span>h2<span class="sy0">&gt;</span>$<span class="br0">&#123;</span>item.<span class="me1">name</span><span class="br0">&#125;</span><span class="sy0">&lt;/</span>h2<span class="sy0">&gt;</span>
+      <span class="sy0">&lt;</span>p<span class="sy0">&gt;</span>$<span class="br0">&#123;</span>item.<span class="me1">summary</span><span class="br0">&#125;</span><span class="sy0">&lt;/</span>p<span class="sy0">&gt;</span>
+    <span class="sy0">&lt;/</span>li<span class="sy0">&gt;</span>
+    `<span class="sy0">;</span>
+  <span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  res.<span class="me1">send</span><span class="br0">&#40;</span>`
+      <span class="sy0">&lt;</span>h1<span class="sy0">&gt;</span>Roux Academy Meetups<span class="sy0">&lt;/</span>h1<span class="sy0">&gt;</span>
+      $<span class="br0">&#123;</span>info<span class="br0">&#125;</span>
+  `<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+</div>
+
+<p>The <code>.forEach(function(item) {})</code> method parses the content of the JSON file into dot notation variables.</p>
+
+<h2 id="commit-changes-2">3.8 Commit changes</h2>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">git add</span> . <span class="sy0">&amp;&amp;</span> <span class="kw2">git commit</span> <span class="re5">-m</span></pre>
+</div>
+             </div>
+        </div>
+    </div>     </div>  
+<footer class="row">
+    <div class="columns medium-12 topspace">
+
+        <div class=" footer-top align-right text-right">
+            <p class="copywrite">Copywrite © 2017</p>
+        </div>
+
+        <div class="footer-middle">
+            <div class="row">
+                <div class="small-12 medium-6 large-4 columns">
+                    <a href="../../../../index.html">    
+                        <img class="logo" src="../../../../assets/img/robo-1.png"  alt="company logo">
+                    </a>
+                    <div class="" id="name-slogan"> 
+                        <h1 class="name"><a href="../../../../index.html">SMERTH</a><ul class="inline-list social">
+                       <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+                       <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+                       <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+                       <li><a href="#"><i class="fi-social-github"></i></a></li>
+                    </ul>
+                    </h1>
+                    <p class="tagline">Full-stack Web Developer</p>
+                        <h2 class="slogan">building with <span class="percent">100%</span> re-cycled electrons.</h2>
+                    </div>
+                    
+                    <ul class="footer-menu no-bullet inline-dot-list">
+                        <li><a href="../../../../projects.html">Projects</a></li>
+                        <li><a href="../../../../content/books/books.html">Notes</a></li>
+                        <li><a href="../../../../screenshots.html">Screenshots</a></li>
+                        <li><a href="../../../../about/book/chapter-1.html">About</a></li>
+                        <!--<li><a href="../../../../hp-singlepage-scroll.html">fpage scroll</a></li>
+                        <li><a href="../../../../hp-desk-foundation.html">desk foundation</a></li>-->
+                    </ul>
+                </div>
+                <div class="small-12 medium-6 large-4 columns align-middle">
+                    <ul class="contact">
+                      <li><p><i class="fi-marker"></i>address</p></li>
+                      <li><p><i class="fi-telephone"></i>telephone</p></li>
+                      <li><p><i class="fi-mail"></i>email</p></li>
+                    </ul>
+                </div>
+                <div class=" small-12 medium-12 large-4 columns align-middle">
+                    <blockquote class="quote">
+                        <p>Outside of a dog, a book is a man's best friend.</p>
+                        <p>Inside of a dog it's too dark to read.</p>
+                        <cite>Groucho Marx</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="row">
+                <div class="large-12 columns text-center align-middle">
+                    <ul class="no-bullet inline-dot-list">
+                        <li><a href="../../../../index.html">London</a></li>
+                        <li><a href="../../../../projects.html">Vancouver</a></li>
+                        <li><a href="../../../../books.html">Tokyo</a></li>
+                        <li><a href="../../../../screenshots.html">Beijing</a></li>
+                        <li><a href="../../../../index.html">Hong Kong</a></li>
+                        <li><a href="../../../../projects.html">Kuala Lumpur</a></li>
+                        <li><a href="../../../../books.html">Singapore</a></li>
+                        <li><a href="../../../../screenshots.html">Tuktoyaktuk</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
+<script src="../../../../assets/js/app.js"></script>
+
+</body>
+
+</html>

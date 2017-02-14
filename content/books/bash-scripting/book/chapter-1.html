@@ -1,0 +1,432 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebooks - Bash Scripting - The Command Line</title>
+    <link rel="stylesheet" href="../../../../assets/css/app.css">
+    <link href='https://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+    <!--<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="innerpage chapter-1">
+
+<header class="row">
+    <!--<div class="small-2 columns">
+                <a href="../../../../index.html">    
+                    <img class="logo" src="../../../../assets/img/robo-1.png"  alt="company logo">
+                </a>
+            </div>-->
+    <div class="small-10 columns">
+        <div class="" id="name-slogan"> 
+            <h1 class="name"><a href="../../../../index.html">SMERTH</a><ul class="inline-list social">
+           <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+           <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+           <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+           <li><a href="#"><i class="fi-social-github"></i></a></li>
+        </ul>
+        </h1>
+        <p class="tagline">Full-stack Web Developer</p>
+            <h2 class="slogan">building with <span class="percent">100%</span> re-cycled electrons.</h2>
+        </div>
+        
+    </div>
+    <div class="small-12 columns responsive-menu">
+        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle></button>
+            <div class="title-bar-title">Menu</div>
+        </div>
+        <div class="top-bar" id="main-menu">
+            <div class="top-bar-left">
+                <ul class="menu vertical medium-horizontal collapsed medium-text-center" data-responsive-menu="accordion medium-dropdown"
+                    data-accordion-menu>
+                    <li class="menu-text"><a href="../../../../index.html">Hello</a></li>
+                    <li><a href="../../../../projects.html">Projects</a></li>
+                    <li><a href="../../../../content/books/books.html">Notes</a></li>
+                    <li><a href="../../../../screenshots.html">Screenshots</a></li>
+                    <li><a href="../../../../about/book/chapter-1.html">About</a></li>
+                    <!--<li><a href="../../../../hp-singlepage-scroll.html">fpage scroll</a></li>
+                    <li><a href="../../../../hp-desk-foundation.html">desk foundation</a></li>-->
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <!--<ul class="inline-list social">
+   <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+   <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+   <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+   <li><a href="#"><i class="fi-social-github"></i></a></li>
+</ul>
+-->
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="row Bash Scripting" data-sticky-container>
+        <div id="chapter-sticky-header" class="column small-12 sticky" data-sticky data-anchor="main" data-options="marginTop:0;"
+        style="width: 100%;">
+        <div class="callout">
+            <div class="row">
+                <div class="column small-6 small-order-2 medium-order-1 medium-3 prev-container">
+                                        <h6><a class="prev" href="./index.html"><i class="fi-arrow-left"></i> Previous<div><small> - </small></div></a></h6>
+                                    </div>                 <div class="column small-12 small-order-1 medium-order-2 medium-6 text-center title-container">
+                    <div class="row">
+                        <div class="small-3 medium-5 columns">
+                                                        <a href="../../../../../index.html">
+                                <h4 class="name">SMERTH</h4>
+                            </a>
+                        </div>
+                        <div class="columns medium-7">
+                            <h6 id="the-command-line" class="bk-title text-left">
+                                <i class="fi-book-bookmark"> </i>
+                                <a href="./index.html">Bash Scripting</a>
+                            </h6>
+                            <h6 id="the-command-line" class="ch-title text-left"><small>Chapter 1 - The Command Line</small></h6>
+                        </div>
+                    </div>
+                </div>                 <div class="column small-6 small-order-3 medium-order-3 medium-3 next-container">
+                                        <p class="next disabled">Next &rarr;
+                        <span></span>
+                    </p>
+                                    </div>
+            </div>         </div> </div> </div>  <div id="book-page" class="Bash Scripting row">
+    <div class="column small-12 medium-4 large-3">
+        <div id="sidebar" data-sticky-container>
+                        <div class="callout" data-sticky data-anchor="main" data-options="marginTop:6.3;" style="width:100%">
+                <nav id="sidebar-toc">
+                    <h3><a href=".">Table of contents</a></h3>
+                    <ul class="toc">
+                         
+                             
+                                 
+                                <li class="level-1 active">
+                                    <a class="chapter" href="./chapter-1.html"><span class="chapter-label">Chapter 1.</span>The Command Line</a>
+                                    <ul id="page-toc" class="unstyled toc-l2">
+                                         
+                                                                                        <li class="level-2" data-scroll="about-bash">
+                                                <span class="chapter-sub-label">1.1</span>
+                                                <a class="internal" href="./chapter-1.html#about-bash">About Bash</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="bash-commands">
+                                                <span class="chapter-sub-label">1.2</span>
+                                                <a class="internal" href="./chapter-1.html#bash-commands">Bash Commands</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="tilde-and-brace-expansion">
+                                                <span class="chapter-sub-label">1.3</span>
+                                                <a class="internal" href="./chapter-1.html#tilde-and-brace-expansion">Tilde and brace expansion</a>
+                                            </li>
+                                                                                                                        </ul>
+                                </li>
+                                 
+                                            </ul>                 </nav>             </div>         </div>
+    </div>      <div id="main" class="main column small-12 medium-8 large-9 ">
+        <div class="callout">
+            <div class="main-content">
+                  <h2 id="about-bash">1.1 About Bash</h2>
+
+<p>Bash is short for Bourne-again shell. It is a very popular interactive command line interpreter, or shell.</p>
+
+<p>Bash is the default shell on Mac OS 10 and Linux, making it incredibly widespread.</p>
+
+<p>Bash brings to the table some nice built-ins, which make building scripts a lot easier. Echo, printf, read, declare and some of the ones I won't cover here but are very handy, like bind and alias.</p>
+
+<p>In addition to these built-ins, Bash provides some very useful features like expansions, shell arithmetic, and the extended test construct.</p>
+
+<h2 id="bash-commands">1.2 Bash Commands</h2>
+
+<p>Here's a quick reveiw of some Bash commands to get started.</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw3">pwd</span></pre>
+</div>
+
+<p>Prints the working directory.  If you run a command, this is where the system will execute it. If you say, delete all the files here, it'll delete all the files in this current working directory.</p>
+
+<p>On Macs, your home folder will be inside the <code>/users</code> folder at the root of the drive.</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">ls</span></pre>
+</div>
+
+<p>Lists the files and folders in the current working directory.</p>
+
+<p>List files in a specific folder</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">ls</span> ~<span class="sy0">/</span>Desktop<span class="sy0">/</span>my-files</pre>
+</div>
+
+<p>Show the difference between files and folders</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">ls</span> <span class="re5">-l</span></pre>
+</div>
+
+<p>Returns a list where there is <code>d</code> at the beginning of each line for a directory</p>
+
+<div class="code bash">
+<pre class="bash">drwxr-xr-x  <span class="nu0">24</span> smerth  staff   816B  <span class="nu0">8</span> Feb <span class="nu0">13</span>:<span class="nu0">46</span> Writing-Books<span class="sy0">/</span>
+-rw-r--r--<span class="sy0">@</span>  <span class="nu0">1</span> smerth  staff   2.3K <span class="nu0">10</span> Feb 09:05 chapter-<span class="nu0">6</span>.md</pre>
+</div>
+
+<p>Lookup options for a command in the man page (short for manual pages)</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">man</span> <span class="kw2">ls</span></pre>
+</div>
+
+<p>Press the <code>spacebar</code> to page through. Press <code>h</code> to bring up the reference for navigating around. And when you're done, just press <code>q</code>.</p>
+
+<p>To make directory:</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">mkdir</span> people</pre>
+</div>
+
+<p>I'll make one called people.</p>
+
+<p>Delete a directory:</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">rmdir</span></pre>
+</div>
+
+<p>Clear the screen</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">clear</span></pre>
+</div>
+
+<p>To change directory:</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw3">cd</span></pre>
+</div>
+
+<p>Make a copy of the file:</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">cp</span></pre>
+</div>
+
+<p>followed first by the file I want to copy, and then the name of the file I want to copy it to</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">cp</span> maple.txt new_maple.txt</pre>
+</div>
+
+<p>Remove the file:</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">rm</span></pre>
+</div>
+
+<p>Concatenate or stick files together:</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">cat</span> file.one file.two</pre>
+</div>
+
+<p>But it is most often used to read files. Press <code>spacebar</code> to move through the pages. And <code>q</code> when you're done.</p>
+
+<p>Peek at the beginning of a file with</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">head</span> some.file</pre>
+</div>
+
+<p>Look at the end of a file:</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">tail</span></pre>
+</div>
+
+<p>This is really handy for log files.</p>
+
+<h2 id="tilde-and-brace-expansion">1.3 Tilde and brace expansion</h2>
+
+<p>The tilde character to represents your home directory.  Thats an example of  expansion. The tilde character represents the value of the user's home variable.</p>
+
+<div class="code bash">
+<pre class="bash">~</pre>
+</div>
+
+<p>The tilde followed by a dash or a minus represents the batch variable called old PWD, which is the directory that you were just in, if you've recently changed directories.</p>
+
+<div class="code bash">
+<pre class="bash">~-</pre>
+</div>
+
+<p>Another handy type of expansion is called brace expansion. This is written with braces around an expression, and it can help with repeated commands with different terms or interpolation within a range.</p>
+
+<p>This is expansion:</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">touch</span> <span class="br0">&#123;</span>apple,banana,orange<span class="br0">&#125;</span></pre>
+</div>
+
+<p>The touch command executes on each item in the braces, like performing a loop on an array.</p>
+
+<p><strong>N.B. No spaces between the items in the list!!</strong></p>
+
+<p>This is interpolation</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">touch</span> file_<span class="br0">&#123;</span><span class="nu0">1</span>..<span class="nu0">1000</span><span class="br0">&#125;</span>.txt</pre>
+</div>
+
+<p>Makes and names 1000 files!</p>
+
+<p>MacOS seems to have an upper limit of about 14,000 iterations...</p>
+
+<hr />
+
+<p>To pad the expansion with zeros..</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">touch</span> file_<span class="br0">&#123;</span>01..<span class="nu0">1000</span><span class="br0">&#125;</span>.txt</pre>
+</div>
+
+<p><strong>This only works in Bash 4</strong></p>
+
+<hr />
+
+<p>Try</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw3">echo</span> <span class="br0">&#123;</span><span class="nu0">1</span>..<span class="nu0">10</span>..<span class="nu0">2</span><span class="br0">&#125;</span></pre>
+</div>
+
+<p>counts from 1 to 10 in intervals of 2</p>
+
+<p><strong>This only works in Bash 4</strong></p>
+
+<hr />
+
+<p>works with text</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw3">echo</span> <span class="br0">&#123;</span>a..z<span class="br0">&#125;</span></pre>
+</div>
+
+<p>and</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw3">echo</span> <span class="br0">&#123;</span>A..z<span class="br0">&#125;</span></pre>
+</div>
+
+<p>returns all the upper-case letters followed by all the lower-case letters.</p>
+
+<p><strong>This only works in Bash 4</strong></p>
+
+<hr />
+
+<p>Expansion will try to interpret what you give it.</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw3">echo</span> <span class="br0">&#123;</span>w..d..<span class="nu0">2</span><span class="br0">&#125;</span></pre>
+</div>
+
+<p>returns letters from w back down to d at an interval of 2</p>
+
+<p><strong>This only works in Bash 4</strong></p>
+
+<hr />
+
+<p>These expressions can be chained together</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">touch</span> <span class="br0">&#123;</span>banana,apple,orange<span class="br0">&#125;</span>_<span class="br0">&#123;</span><span class="nu0">1</span>..<span class="nu0">100</span><span class="br0">&#125;</span>-<span class="br0">&#123;</span>w..d<span class="br0">&#125;</span></pre>
+</div>
+
+<p>Results in 1000's of files named as you might expect.</p>
+
+<hr />
+
+<p>Get a quick count of the files by piping the list of files into word count with the flag for count by line:</p>
+
+<div class="code bash">
+<pre class="bash"><span class="kw2">ls</span> <span class="re5">-1</span> <span class="sy0">|</span> <span class="kw2">wc</span> <span class="re5">-l</span></pre>
+</div>
+             </div>
+        </div>
+    </div>     </div>  
+<footer class="row">
+    <div class="columns medium-12 topspace">
+
+        <div class=" footer-top align-right text-right">
+            <p class="copywrite">Copywrite © 2017</p>
+        </div>
+
+        <div class="footer-middle">
+            <div class="row">
+                <div class="small-12 medium-6 large-4 columns">
+                    <a href="../../../../index.html">    
+                        <img class="logo" src="../../../../assets/img/robo-1.png"  alt="company logo">
+                    </a>
+                    <div class="" id="name-slogan"> 
+                        <h1 class="name"><a href="../../../../index.html">SMERTH</a><ul class="inline-list social">
+                       <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+                       <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+                       <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+                       <li><a href="#"><i class="fi-social-github"></i></a></li>
+                    </ul>
+                    </h1>
+                    <p class="tagline">Full-stack Web Developer</p>
+                        <h2 class="slogan">building with <span class="percent">100%</span> re-cycled electrons.</h2>
+                    </div>
+                    
+                    <ul class="footer-menu no-bullet inline-dot-list">
+                        <li><a href="../../../../projects.html">Projects</a></li>
+                        <li><a href="../../../../content/books/books.html">Notes</a></li>
+                        <li><a href="../../../../screenshots.html">Screenshots</a></li>
+                        <li><a href="../../../../about/book/chapter-1.html">About</a></li>
+                        <!--<li><a href="../../../../hp-singlepage-scroll.html">fpage scroll</a></li>
+                        <li><a href="../../../../hp-desk-foundation.html">desk foundation</a></li>-->
+                    </ul>
+                </div>
+                <div class="small-12 medium-6 large-4 columns align-middle">
+                    <ul class="contact">
+                      <li><p><i class="fi-marker"></i>address</p></li>
+                      <li><p><i class="fi-telephone"></i>telephone</p></li>
+                      <li><p><i class="fi-mail"></i>email</p></li>
+                    </ul>
+                </div>
+                <div class=" small-12 medium-12 large-4 columns align-middle">
+                    <blockquote class="quote">
+                        <p>Outside of a dog, a book is a man's best friend.</p>
+                        <p>Inside of a dog it's too dark to read.</p>
+                        <cite>Groucho Marx</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="row">
+                <div class="large-12 columns text-center align-middle">
+                    <ul class="no-bullet inline-dot-list">
+                        <li><a href="../../../../index.html">London</a></li>
+                        <li><a href="../../../../projects.html">Vancouver</a></li>
+                        <li><a href="../../../../books.html">Tokyo</a></li>
+                        <li><a href="../../../../screenshots.html">Beijing</a></li>
+                        <li><a href="../../../../index.html">Hong Kong</a></li>
+                        <li><a href="../../../../projects.html">Kuala Lumpur</a></li>
+                        <li><a href="../../../../books.html">Singapore</a></li>
+                        <li><a href="../../../../screenshots.html">Tuktoyaktuk</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
+<script src="../../../../assets/js/app.js"></script>
+
+</body>
+
+</html>

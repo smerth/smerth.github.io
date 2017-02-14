@@ -8,206 +8,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notebooks - Introduction to MySQL - MySQL Notes</title>
     <link rel="stylesheet" href="../../../../assets/css/app.css">
-    <link href='//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+    <link href='https://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+    <!--<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body>
+<body class="innerpage chapter-1">
 
-    <div class="row navigation-row">
-        <div class="columns small-12">
-
-            <div class="mobile-branding show-for-small-only">
-                <a href="../../../../index.html">
-                    <div class="menu-text mobile-branding">Smerth</div>
+<header class="row">
+    <!--<div class="small-2 columns">
+                <a href="../../../../index.html">    
+                    <img class="logo" src="../../../../assets/img/robo-1.png"  alt="company logo">
                 </a>
+            </div>-->
+    <div class="small-10 columns">
+        <div class="" id="name-slogan"> 
+            <h1 class="name"><a href="../../../../index.html">SMERTH</a><ul class="inline-list social">
+           <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+           <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+           <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+           <li><a href="#"><i class="fi-social-github"></i></a></li>
+        </ul>
+        </h1>
+        <p class="tagline">Full-stack Web Developer</p>
+            <h2 class="slogan">building with <span class="percent">100%</span> re-cycled electrons.</h2>
+        </div>
+        
+    </div>
+    <div class="small-12 columns responsive-menu">
+        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle></button>
+            <div class="title-bar-title">Menu</div>
+        </div>
+        <div class="top-bar" id="main-menu">
+            <div class="top-bar-left">
+                <ul class="menu vertical medium-horizontal collapsed medium-text-center" data-responsive-menu="accordion medium-dropdown"
+                    data-accordion-menu>
+                    <li class="menu-text"><a href="../../../../index.html">Hello</a></li>
+                    <li><a href="../../../../projects.html">Projects</a></li>
+                    <li><a href="../../../../content/books/books.html">Notes</a></li>
+                    <li><a href="../../../../screenshots.html">Screenshots</a></li>
+                    <li><a href="../../../../about/book/chapter-1.html">About</a></li>
+                    <!--<li><a href="../../../../hp-singlepage-scroll.html">fpage scroll</a></li>
+                    <li><a href="../../../../hp-desk-foundation.html">desk foundation</a></li>-->
+                </ul>
             </div>
-            <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
-                <button class="menu-icon" type="button" data-toggle></button>
-                <div class="title-bar-title">Menu</div>
+            <div class="top-bar-right">
+                <!--<ul class="inline-list social">
+   <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+   <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+   <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+   <li><a href="#"><i class="fi-social-github"></i></a></li>
+</ul>
+-->
             </div>
-            <nav id="main-menu" class="top-bar">
-
-                <div class="top-bar-left">
-                    <!-- Navigation on medium and up screens -->
-                    <ul class="vertical menu medium-horizontal show-for-medium" data-responsive-menu="dropdown">
-                        <li class="menu-text"><a class="sitename" href="../../../../index.html">Smerth</a></li>
-                        <li><a href="../../../../projects.html">Projects</a></li>
-                        <li><a href="../../../../cases.html">Case Studies</a></li>
-                        <li>
-                            <a href="../../../../books.html">Notebooks</a>
-                            <!--<ul class="menu vertical" style="width: 300px;">
-                                <li><a href="../../../../content/books/javascript-working-with-the-dom/book/index.html">Javascript: working with the dom</a></li>
-                                <li><a href="../../../../content/books/unix-for-macos/book/index.html">Unix for MacOS</a></li>
-                                <li><a href="../../../../content/books/applescript/book/index.html">Applescript</a></li>
-                                <li><a href="../../../../content/books/webpack/book/index.html">Webpack</a></li>
-                                
-                            </ul>-->
-                        </li>
-                        <li><a href="../../../../screenshots.html">Screenshots</a></li>
-                        <li><a href="../../../../content/books/about/book/chapter-1.html">About</a></li>
-                    </ul>
-                    <!-- Navigation on small screens -->
-                    <ul class="vertical menu medium-horizontal show-for-small-only" data-responsive-menu="dropdown" data-accordion-menu>
-                        <li class="menu-text"><a href="../../../../index.html">Notebook</a></li>
-                        <li><a href="../../../../projects.html">Projects</a></li>
-                        <li><a href="../../../../cases.html">Case Studies</a></li>
-                        <li>
-                            <a href="../../../../books.html">Notebooks</a>
-                            <!--<ul class="menu vertical" style="width: 100%;">
-                                <li><a href="../../../../content/books/javascript-working-with-the-dom/book/index.html">Javascript: working with the dom</a></li>
-                                <li><a href="../../../../content/books/unix-for-macos/book/index.html">Unix for MacOS</a></li>
-                                <li><a href="../../../../content/books/applescript/book/index.html">Applescript</a></li>
-                                <li><a href="../../../../content/books/webpack/book/index.html">Webpack</a></li>
-                                
-                            </ul>-->
-                        </li>
-                        <li><a href="../../../../screenshots.html">Screenshots</a></li>
-                        <li><a href="../../../../content/books/about/book/chapter-1.html">About</a></li>
-                    </ul>
-                </div>
-            </nav>
         </div>
     </div>
-     <div class="row pageheader-row">
-    <div class="small-12 column index text-center">
-        <div class="callout small pageheader">
-            <h1 id="mysql-notes" class="book-title title-text">
-                <a href="./index.html" class="">Introduction to MySQL</a>
-            </h1>
-            <h6>Smerth</h6>
-        </div>
-    </div>
-</div>
+</header>
+
+                    
 
 
-<div class="row " data-sticky-container>
-    <div class="column small-12 chapter-navigation-bar sticky" data-sticky data-anchor="main" data-options="marginTop:0;" style="width: 100%;">
+<div class="row Introduction to MySQL" data-sticky-container>
+        <div id="chapter-sticky-header" class="column small-12 sticky" data-sticky data-anchor="main" data-options="marginTop:0;" style="width: 100%;">
+        <div class="callout">
+            <div class="row">
+                <div class="column small-6 small-order-2 medium-order-1 medium-3 prev-container">
+                                        <h6><a class="prev" href="./index.html"><i class="fi-arrow-left"></i> Previous<div><small> - </small></div></a></h6>
+                                    </div> 
+                <div class="column small-12 small-order-1 medium-order-2 medium-6 text-center title-container">
+                    <div class="row">
+                        <div class="small-3 medium-5 columns">
+                                                        <a href="../../../../../index.html">
+                                <h4 class="name">SMERTH</h4>
+                            </a>
+                        </div>
+                        <div class="columns medium-7">
+                            <h6 id="mysql-notes" class="bk-title text-left">
+                                <i class="fi-book-bookmark"> </i>
+                                <a href="./index.html">Introduction to MySQL</a>
+                            </h6>
+                            <h6 id="mysql-notes" class="ch-title text-left"><small>Chapter 1 - MySQL Notes</small></h6>
+                        </div>
+                    </div>
+                </div> 
+                <div class="column small-6 small-order-3 medium-order-3 medium-3 next-container">
+                                            <p class="next disabled">Next
+                            &rarr;
+                            <span></span>
+                        </p>
+                                    </div>
+
+            </div>         </div>     </div> </div> 
+<div id="book-page" class="Introduction to MySQL row">
+  
+
+
+ 
+    <div  class="column small-12 medium-4 large-3" >
 
 
 
-<div class="row chapter-navigation-row">
-    <div class="column small-6 small-order-2 medium-order-1 medium-3 prev-container">
-                    <h6><a class="prev" href="./index.html">&larr; Previous<div><small> - </small></div></a></h6>
-            </div>
+<div id="sidebar" data-sticky-container>
 
-    <div class="column small-12 small-order-1 medium-order-2 medium-6 text-center title-container">
-        <h6 id="mysql-notes" class="bk-title"><span class="fi-book-bookmark"></span> <a href="./index.html">Introduction to MySQL</a></h6>
-        <h6 id="mysql-notes" class="ch-title align-self-middle"><small>Chapter 1 - MySQL Notes</small></h6>
-    </div>
-
-    <div class="column small-6 small-order-3 medium-order-3 medium-3 next-container">
-                    <p class="next disabled">Next
-                &rarr;
-                <span></span>
-            </p>
-            </div>
-
-</div>
-</div>
-    </div> 
-    <div id="book-page" class="row">
-        
-        
-        <div id="sidebar" class="column small-12 medium-4  large-3" data-sticky-container>
-            <nav id="sidebar-toc" class=" sticky" data-sticky data-anchor="main" data-options="marginTop:5;">
-
-                
-                                <h3>
-                    <a href=".">Table of contents</a>
-                </h3>
+                        
+        <div class="callout" data-sticky data-anchor="main" data-options="marginTop:6.3;" style="width:100%">
+            <nav id="sidebar-toc" >
+                <h3><a href=".">Table of contents</a></h3>
                 <ul class="toc">
-                                                                                                    <li class="level-1 active">
-                                <a class="chapter" href="./chapter-1.html">
-                                    <span class="chapter-label">Chapter 1.</span>
-                                    MySQL Notes
-                                </a>
-                                <ul id="page-toc" class="unstyled toc-l2">
-                                                                                                                        <li class="level-3" data-scroll="which-mysql">
-                                                <span>1.1.1</span>
-                                                <a class="internal" href="./chapter-1.html#which-mysql">Which MySQL</a>
-                                            </li>
-                                                                                    <li class="level-3" data-scroll="current-mysql-version">
-                                                <span>1.1.2</span>
-                                                <a class="internal" href="./chapter-1.html#current-mysql-version">Current MySQL Version</a>
-                                            </li>
-                                                                                    <li class="level-3" data-scroll="get-help">
-                                                <span>1.1.3</span>
-                                                <a class="internal" href="./chapter-1.html#get-help">Get Help</a>
-                                            </li>
-                                                                                    <li class="level-3" data-scroll="mysql-comments">
-                                                <span>1.1.4</span>
-                                                <a class="internal" href="./chapter-1.html#mysql-comments">MySQL Comments</a>
-                                            </li>
-                                                                                    <li class="level-3" data-scroll="commands-start-at-the-mysql-prompt">
-                                                <span>1.1.5</span>
-                                                <a class="internal" href="./chapter-1.html#commands-start-at-the-mysql-prompt">Commands start at the MySQL prompt</a>
-                                            </li>
-                                                                                    <li class="level-3" data-scroll="current-version">
-                                                <span>1.1.6</span>
-                                                <a class="internal" href="./chapter-1.html#current-version">Current Version</a>
-                                            </li>
-                                                                                    <li class="level-3" data-scroll="multi-line-commands">
-                                                <span>1.1.7</span>
-                                                <a class="internal" href="./chapter-1.html#multi-line-commands">Multi-line Commands</a>
-                                            </li>
-                                                                                    <li class="level-3" data-scroll="connect-to-a-database">
-                                                <span>1.1.8</span>
-                                                <a class="internal" href="./chapter-1.html#connect-to-a-database">Connect To A Database</a>
-                                            </li>
-                                                                                    <li class="level-3" data-scroll="quit">
-                                                <span>1.2.1</span>
-                                                <a class="internal" href="./chapter-1.html#quit">QUIT</a>
-                                            </li>
-                                                                                    <li class="level-3" data-scroll="show">
-                                                <span>1.2.2</span>
-                                                <a class="internal" href="./chapter-1.html#show">SHOW</a>
-                                            </li>
-                                                                                    <li class="level-3" data-scroll="use">
-                                                <span>1.2.3</span>
-                                                <a class="internal" href="./chapter-1.html#use">USE</a>
-                                            </li>
-                                                                                    <li class="level-3" data-scroll="create">
-                                                <span>1.2.4</span>
-                                                <a class="internal" href="./chapter-1.html#create">CREATE</a>
-                                            </li>
-                                                                                    <li class="level-3" data-scroll="grant">
-                                                <span>1.2.5</span>
-                                                <a class="internal" href="./chapter-1.html#grant">GRANT</a>
-                                            </li>
-                                                                                    <li class="level-3" data-scroll="show-tables">
-                                                <span>1.2.6</span>
-                                                <a class="internal" href="./chapter-1.html#show-tables">SHOW TABLES</a>
-                                            </li>
-                                                                                    <li class="level-3" data-scroll="create-table">
-                                                <span>1.2.7</span>
-                                                <a class="internal" href="./chapter-1.html#create-table">CREATE TABLE</a>
-                                            </li>
-                                                                                    <li class="level-3" data-scroll="describe-table">
-                                                <span>1.2.8</span>
-                                                <a class="internal" href="./chapter-1.html#describe-table">DESCRIBE TABLE</a>
-                                            </li>
-                                                                                    <li class="level-3" data-scroll="load-data">
-                                                <span>1.2.9</span>
-                                                <a class="internal" href="./chapter-1.html#load-data">LOAD DATA</a>
-                                            </li>
-                                                                                    <li class="level-3" data-scroll="insert">
-                                                <span>1.2.10</span>
-                                                <a class="internal" href="./chapter-1.html#insert">INSERT</a>
-                                            </li>
-                                                                                    <li class="level-3" data-scroll="troubleshooting">
-                                                <span>1.2.11</span>
-                                                <a class="internal" href="./chapter-1.html#troubleshooting">Troubleshooting</a>
-                                            </li>
-                                                                                                    </ul>
+                                                                                <li class="level-1 active">
+                        <a class="chapter" href="./chapter-1.html"><span class="chapter-label">Chapter 1.</span>MySQL Notes</a>
+                        <ul id="page-toc" class="unstyled toc-l2">
+                                                                                            <li class="level-2" data-scroll="introduction">
+                                    <span class="chapter-sub-label">1.1</span>
+                                    <a class="internal" href="./chapter-1.html#introduction">Introduction</a>
+                                </li>
+                                                                <li class="level-2" data-scroll="mysql-commands">
+                                    <span class="chapter-sub-label">1.2</span>
+                                    <a class="internal" href="./chapter-1.html#mysql-commands">MySQL Commands</a>
+                                </li>
+                                                                <li class="level-2" data-scroll="quick-reference">
+                                    <span class="chapter-sub-label">1.3</span>
+                                    <a class="internal" href="./chapter-1.html#quick-reference">Quick reference</a>
+                                </li>
+                                                                                    </ul>
                     </li>
-                                            </ul>
-        </nav>
-    </div>
+                                                        </ul>             </nav>         </div> 
+</div>
 
+    </div> 
         <div id="main" class="main column small-12 medium-8 large-9 ">
-        <div class="main-content">
-                                                    <h2 id="introduction">1.1 Introduction</h2>
+        <div class="callout">
+            <div class="main-content">
+
+                                                                 <h2 id="introduction">1.1 Introduction</h2>
 
 <p>Here are some quick reminders about how to work with MySQL...</p>
 
@@ -543,73 +477,82 @@ multiple-line comment
 
 <hr />
 
-                    </div>
-    </div>
-</div>
+                            </div>
+        </div>
+    </div> 
+</div> 
+<footer class="row">
+    <div class="columns medium-12 topspace">
 
- <footer class="columns small-12 topspace">
-    <div class="row footer-top">
-        <div class="medium-6 columns">
-<!--             <ul class="menu">
-                <li><a href="#">Legal</a></li>
-                <li><a href="#">Partner</a></li>
-                <li><a href="#">Explore</a></li>
-            </ul> -->
+        <div class=" footer-top align-right text-right">
+            <p class="copywrite">Copywrite © 2017</p>
         </div>
-        <div class="medium-6 columns align-middle text-right">
-            
-                <div class="copyright">Copyright © 2016 Smedia</div>
-            
+
+        <div class="footer-middle">
+            <div class="row">
+                <div class="small-12 medium-6 large-4 columns">
+                    <a href="../../../../index.html">    
+                        <img class="logo" src="../../../../assets/img/robo-1.png"  alt="company logo">
+                    </a>
+                    <div class="" id="name-slogan"> 
+                        <h1 class="name"><a href="../../../../index.html">SMERTH</a><ul class="inline-list social">
+                       <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+                       <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+                       <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+                       <li><a href="#"><i class="fi-social-github"></i></a></li>
+                    </ul>
+                    </h1>
+                    <p class="tagline">Full-stack Web Developer</p>
+                        <h2 class="slogan">building with <span class="percent">100%</span> re-cycled electrons.</h2>
+                    </div>
+                    
+                    <ul class="footer-menu no-bullet inline-dot-list">
+                        <li><a href="../../../../projects.html">Projects</a></li>
+                        <li><a href="../../../../content/books/books.html">Notes</a></li>
+                        <li><a href="../../../../screenshots.html">Screenshots</a></li>
+                        <li><a href="../../../../about/book/chapter-1.html">About</a></li>
+                        <!--<li><a href="../../../../hp-singlepage-scroll.html">fpage scroll</a></li>
+                        <li><a href="../../../../hp-desk-foundation.html">desk foundation</a></li>-->
+                    </ul>
+                </div>
+                <div class="small-12 medium-6 large-4 columns align-middle">
+                    <ul class="contact">
+                      <li><p><i class="fi-marker"></i>address</p></li>
+                      <li><p><i class="fi-telephone"></i>telephone</p></li>
+                      <li><p><i class="fi-mail"></i>email</p></li>
+                    </ul>
+                </div>
+                <div class=" small-12 medium-12 large-4 columns align-middle">
+                    <blockquote class="quote">
+                        <p>Outside of a dog, a book is a man's best friend.</p>
+                        <p>Inside of a dog it's too dark to read.</p>
+                        <cite>Groucho Marx</cite>
+                    </blockquote>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="row footer-middle">
-<!--         <div class="small-6 large-3 columns">
-            <p class="lead">Offices</p>
-            <ul class="menu vertical">
-                <li><a href="#">One</a></li>
-                <li><a href="#">Two</a></li>
-                <li><a href="#">Three</a></li>
-                <li><a href="#">Four</a></li>
-            </ul>
-        </div> -->
-<!--         <div class="small-6 large-3 columns">
-            <p class="lead">Solar Systems</p>
-            <ul class="menu vertical">
-                <li><a href="#">One</a></li>
-                <li><a href="#">Two</a></li>
-                <li><a href="#">Three</a></li>
-                <li><a href="#">Four</a></li>
-            </ul>
-        </div> -->
-        <div class="small-6 medium-offset-6 large-3 columns">
-            <p class="lead">Contact</p>
-            <ul class="menu vertical">
-                <li><a href="#"><i class="fi-social-twitter"></i> Twitter</a></li>
-                <li><a href="#"><i class="fi-social-facebook"></i> Facebook</a></li>
-                <li><a href="#"><i class="fi-social-instagram"></i> Instagram</a></li>
-                <li><a href="#"><i class="fi-social-pinterest"></i> Pinterest</a></li>
-            </ul>
+
+        <div class="footer-bottom">
+            <div class="row">
+                <div class="large-12 columns text-center align-middle">
+                    <ul class="no-bullet inline-dot-list">
+                        <li><a href="../../../../index.html">London</a></li>
+                        <li><a href="../../../../projects.html">Vancouver</a></li>
+                        <li><a href="../../../../books.html">Tokyo</a></li>
+                        <li><a href="../../../../screenshots.html">Beijing</a></li>
+                        <li><a href="../../../../index.html">Hong Kong</a></li>
+                        <li><a href="../../../../projects.html">Kuala Lumpur</a></li>
+                        <li><a href="../../../../books.html">Singapore</a></li>
+                        <li><a href="../../../../screenshots.html">Tuktoyaktuk</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-<!--         <div class="small-6 large-3 columns">
-            <p class="lead">Widgets</p>
-            <ul class="menu vertical">
-                <li><a href="#">One</a></li>
-                <li><a href="#">Two</a></li>
-                <li><a href="#">Three</a></li>
-                <li><a href="#">Four</a></li>
-            </ul>
-        </div> -->
-    </div>
-    <div class="row footer-bottom">
-        <div class="large-12 columns text-center">
-            <p>Le Grande Hotel, Latin Quarter, Paris • 261 Rue Saint-Séverin, 75005 Paris, France </p>
-            <p>Phone 01 42 517 85 • info@dummy.com • www.dummy.com</p>
-        </div>
+
     </div>
 </footer>
+<script src="../../../../assets/js/app.js"></script>
 
-
-    <script src="../../../../assets/js/app.js"></script>
 </body>
 
 </html>

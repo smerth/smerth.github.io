@@ -8,145 +8,601 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smerth - Screenshots</title>
     <link rel="stylesheet" href="assets/css/app.css">
-    <link href='//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+    <link href='https://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+    <!--<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body>
+<body class="innerpage screenshots">
 
-    <div class="row navigation-row">
-        <div class="columns small-12">
-
-            <div class="mobile-branding show-for-small-only">
-                <a href="index.html">
-                    <div class="menu-text mobile-branding">Smerth</div>
+<header class="row">
+    <!--<div class="small-2 columns">
+                <a href="index.html">    
+                    <img class="logo" src="assets/img/robo-1.png"  alt="company logo">
                 </a>
+            </div>-->
+    <div class="small-10 columns">
+        <div class="" id="name-slogan"> 
+            <h1 class="name"><a href="index.html">SMERTH</a><ul class="inline-list social">
+           <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+           <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+           <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+           <li><a href="#"><i class="fi-social-github"></i></a></li>
+        </ul>
+        </h1>
+        <p class="tagline">Full-stack Web Developer</p>
+            <h2 class="slogan">building with <span class="percent">100%</span> re-cycled electrons.</h2>
+        </div>
+        
+    </div>
+    <div class="small-12 columns responsive-menu">
+        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle></button>
+            <div class="title-bar-title">Menu</div>
+        </div>
+        <div class="top-bar" id="main-menu">
+            <div class="top-bar-left">
+                <ul class="menu vertical medium-horizontal collapsed medium-text-center" data-responsive-menu="accordion medium-dropdown"
+                    data-accordion-menu>
+                    <li class="menu-text"><a href="index.html">Hello</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="content/books/books.html">Notes</a></li>
+                    <li><a href="screenshots.html">Screenshots</a></li>
+                    <li><a href="about/book/chapter-1.html">About</a></li>
+                    <!--<li><a href="hp-singlepage-scroll.html">fpage scroll</a></li>
+                    <li><a href="hp-desk-foundation.html">desk foundation</a></li>-->
+                </ul>
             </div>
-            <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
-                <button class="menu-icon" type="button" data-toggle></button>
-                <div class="title-bar-title">Menu</div>
+            <div class="top-bar-right">
+                <!--<ul class="inline-list social">
+   <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+   <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+   <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+   <li><a href="#"><i class="fi-social-github"></i></a></li>
+</ul>
+-->
             </div>
-            <nav id="main-menu" class="top-bar">
-
-                <div class="top-bar-left">
-                    <!-- Navigation on medium and up screens -->
-                    <ul class="vertical menu medium-horizontal show-for-medium" data-responsive-menu="dropdown">
-                        <li class="menu-text"><a class="sitename" href="index.html">Smerth</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="cases.html">Case Studies</a></li>
-                        <li>
-                            <a href="books.html">Notebooks</a>
-                            <!--<ul class="menu vertical" style="width: 300px;">
-                                <li><a href="content/books/javascript-working-with-the-dom/book/index.html">Javascript: working with the dom</a></li>
-                                <li><a href="content/books/unix-for-macos/book/index.html">Unix for MacOS</a></li>
-                                <li><a href="content/books/applescript/book/index.html">Applescript</a></li>
-                                <li><a href="content/books/webpack/book/index.html">Webpack</a></li>
-                                
-                            </ul>-->
-                        </li>
-                        <li><a href="screenshots.html">Screenshots</a></li>
-                        <li><a href="content/books/about/book/chapter-1.html">About</a></li>
-                    </ul>
-                    <!-- Navigation on small screens -->
-                    <ul class="vertical menu medium-horizontal show-for-small-only" data-responsive-menu="dropdown" data-accordion-menu>
-                        <li class="menu-text"><a href="index.html">Notebook</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="cases.html">Case Studies</a></li>
-                        <li>
-                            <a href="books.html">Notebooks</a>
-                            <!--<ul class="menu vertical" style="width: 100%;">
-                                <li><a href="content/books/javascript-working-with-the-dom/book/index.html">Javascript: working with the dom</a></li>
-                                <li><a href="content/books/unix-for-macos/book/index.html">Unix for MacOS</a></li>
-                                <li><a href="content/books/applescript/book/index.html">Applescript</a></li>
-                                <li><a href="content/books/webpack/book/index.html">Webpack</a></li>
-                                
-                            </ul>-->
-                        </li>
-                        <li><a href="screenshots.html">Screenshots</a></li>
-                        <li><a href="content/books/about/book/chapter-1.html">About</a></li>
-                    </ul>
-                </div>
-            </nav>
         </div>
     </div>
-     
+</header>
+
 <div class="row">
-    <div class="large-12 columns">
-        <div class="callout small pageheader">
-            <h1>Project Screenshots</h1>
+    <div class="columns small-12">
+        <div class="callout small pageheader align-right">
+            <h1 class="text-right">Project Screenshots</h1>
+            <p class="text-right">Click on an image to read about the project.</p>
         </div>
-<h1 id="coming-soon-wait-theres-more-">Coming soon... wait theres more...</h1>
-
-
-<a href="https://github.com/smerth/react-15-booking-app-fountainjs/blob/master/Screenshot.jpg?raw=true">Screenshot</a>
-
-<img src="https://github.com/smerth/react-15-booking-app-fountainjs/blob/master/Screenshot.jpg?raw=true" alt="">
-
     </div>
 </div>
- <footer class="columns small-12 topspace">
-    <div class="row footer-top">
-        <div class="medium-6 columns">
-<!--             <ul class="menu">
-                <li><a href="#">Legal</a></li>
-                <li><a href="#">Partner</a></li>
-                <li><a href="#">Explore</a></li>
-            </ul> -->
-        </div>
-        <div class="medium-6 columns align-middle text-right">
-            
-                <div class="copyright">Copyright © 2016 Smedia</div>
-            
-        </div>
+
+<div class="row">
+    <div class="large-12 columns">
+        <main class="main-area">
+            <section class="gallery">
+                <article class="photo single">
+                    <a data-toggle="screenshot-modal-016">
+                        <figure>
+                            <img data-interchange="
+                                [../assets/img/screenshots/016-small.jpeg, default], 
+                                [../assets/img/screenshots/016-small.jpeg, small], 
+                                [../assets/img/screenshots/016-retina.jpeg, retina],
+                                [../assets/img/screenshots/016-medium.jpeg, medium], 
+                                [../assets/img/screenshots/016-large.jpeg, large]">
+                            <noscript><img src="../assets/img/screenshots/016-large.jpeg" alt="This app takes in json data and presents the user with a list of artists.  The user can then search the list for artist names, and sort the list. The app is written in Angular 1. The starting point for the project is Foundation 6 for Apps (now deprecated.) The Angular code is modified from the Lynda.com course &#x27;Up and running with angularjs 1&#x27;"></noscript>
+                            <figcaption>
+                                <h2>[Angular 1] JSON Data &#x27;Live Filtering&#x27; Demo</h2>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </article>
+                <div id="screenshot-modal-016" class="modal reveal large" data-reveal>
+                    <div class="row">
+                        <div class="column small-12">
+                            <h1>[Angular 1] JSON Data &#x27;Live Filtering&#x27; Demo</h1>
+                            <p class="lead">This app takes in json data and presents the user with a list of artists.  The user can then search the list for artist names, and sort the list. The app is written in Angular 1. The starting point for the project is Foundation 6 for Apps (now deprecated.) The Angular code is modified from the Lynda.com course &#x27;Up and running with angularjs 1&#x27;</p>
+                            <img src="../assets/img/screenshots/016-large.jpeg" alt="This app takes in json data and presents the user with a list of artists.  The user can then search the list for artist names, and sort the list. The app is written in Angular 1. The starting point for the project is Foundation 6 for Apps (now deprecated.) The Angular code is modified from the Lynda.com course &#x27;Up and running with angularjs 1&#x27;">
+                            <button class="close-button" data-close aria-label="Close modal" type="button">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <article class="photo single">
+                    <a data-toggle="screenshot-modal-015">
+                        <figure>
+                            <img data-interchange="
+                                [../assets/img/screenshots/015-small.jpeg, default], 
+                                [../assets/img/screenshots/015-small.jpeg, small], 
+                                [../assets/img/screenshots/015-retina.jpeg, retina],
+                                [../assets/img/screenshots/015-medium.jpeg, medium], 
+                                [../assets/img/screenshots/015-large.jpeg, large]">
+                            <noscript><img src="../assets/img/screenshots/015-large.jpeg" alt="This app demonstrates many key features of Angular. A user can add/delete media to a list. TV shows and Movies can be displayed as separate lists. Each item can be tagged with keywords, and items can be favorited. Data is read-from and written-to the app JSON file. This is my completed project from the Lynda.com course: &#x27;Angular 2 Essential Training.&#x27; However the starting point is the Yeoman FountainJS angular-2-generator instead of the tutorial code."></noscript>
+                            <figcaption>
+                                <h2>[Angular 2] A CRUD Media List App</h2>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </article>
+                <div id="screenshot-modal-015" class="modal reveal large" data-reveal>
+                    <div class="row">
+                        <div class="column small-12">
+                            <h1>[Angular 2] A CRUD Media List App</h1>
+                            <p class="lead">This app demonstrates many key features of Angular. A user can add/delete media to a list. TV shows and Movies can be displayed as separate lists. Each item can be tagged with keywords, and items can be favorited. Data is read-from and written-to the app JSON file. This is my completed project from the Lynda.com course: &#x27;Angular 2 Essential Training.&#x27; However the starting point is the Yeoman FountainJS angular-2-generator instead of the tutorial code.</p>
+                            <img src="../assets/img/screenshots/015-large.jpeg" alt="This app demonstrates many key features of Angular. A user can add/delete media to a list. TV shows and Movies can be displayed as separate lists. Each item can be tagged with keywords, and items can be favorited. Data is read-from and written-to the app JSON file. This is my completed project from the Lynda.com course: &#x27;Angular 2 Essential Training.&#x27; However the starting point is the Yeoman FountainJS angular-2-generator instead of the tutorial code.">
+                            <button class="close-button" data-close aria-label="Close modal" type="button">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <article class="photo single">
+                    <a data-toggle="screenshot-modal-014">
+                        <figure>
+                            <img data-interchange="
+                                [../assets/img/screenshots/014-small.jpeg, default], 
+                                [../assets/img/screenshots/014-small.jpeg, small], 
+                                [../assets/img/screenshots/014-retina.jpeg, retina],
+                                [../assets/img/screenshots/014-medium.jpeg, medium], 
+                                [../assets/img/screenshots/014-large.jpeg, large]">
+                            <noscript><img src="../assets/img/screenshots/014-large.jpeg" alt="This react component reads a json file of comments into a comment array.  A user can add a comment which updates the array. This is a simple React component built following Facebook&#x27;s comment tutorial. "></noscript>
+                            <figcaption>
+                                <h2>[React 15] A React Comment Component]</h2>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </article>
+                <div id="screenshot-modal-014" class="modal reveal large" data-reveal>
+                    <div class="row">
+                        <div class="column small-12">
+                            <h1>[React 15] A React Comment Component]</h1>
+                            <p class="lead">This react component reads a json file of comments into a comment array.  A user can add a comment which updates the array. This is a simple React component built following Facebook&#x27;s comment tutorial. </p>
+                            <img src="../assets/img/screenshots/014-large.jpeg" alt="This react component reads a json file of comments into a comment array.  A user can add a comment which updates the array. This is a simple React component built following Facebook&#x27;s comment tutorial. ">
+                            <button class="close-button" data-close aria-label="Close modal" type="button">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <article class="photo single">
+                    <a data-toggle="screenshot-modal-013">
+                        <figure>
+                            <img data-interchange="
+                                [../assets/img/screenshots/013-small.jpeg, default], 
+                                [../assets/img/screenshots/013-small.jpeg, small], 
+                                [../assets/img/screenshots/013-retina.jpeg, retina],
+                                [../assets/img/screenshots/013-medium.jpeg, medium], 
+                                [../assets/img/screenshots/013-large.jpeg, large]">
+                            <noscript><img src="../assets/img/screenshots/013-large.jpeg" alt="This app demonstrates how to consume a large amound of data from an external API and display that data on a Google map with live manipulation of the data through interactive widgets. This project was built following the Google code lab and using Polymer 1 elements."></noscript>
+                            <figcaption>
+                                <h2>[Polymer 1] App To Visualize Tornado Big Data</h2>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </article>
+                <div id="screenshot-modal-013" class="modal reveal large" data-reveal>
+                    <div class="row">
+                        <div class="column small-12">
+                            <h1>[Polymer 1] App To Visualize Tornado Big Data</h1>
+                            <p class="lead">This app demonstrates how to consume a large amound of data from an external API and display that data on a Google map with live manipulation of the data through interactive widgets. This project was built following the Google code lab and using Polymer 1 elements.</p>
+                            <img src="../assets/img/screenshots/013-large.jpeg" alt="This app demonstrates how to consume a large amound of data from an external API and display that data on a Google map with live manipulation of the data through interactive widgets. This project was built following the Google code lab and using Polymer 1 elements.">
+                            <button class="close-button" data-close aria-label="Close modal" type="button">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <article class="photo single">
+                    <a data-toggle="screenshot-modal-012">
+                        <figure>
+                            <img data-interchange="
+                                [../assets/img/screenshots/012-small.jpeg, default], 
+                                [../assets/img/screenshots/012-small.jpeg, small], 
+                                [../assets/img/screenshots/012-retina.jpeg, retina],
+                                [../assets/img/screenshots/012-medium.jpeg, medium], 
+                                [../assets/img/screenshots/012-large.jpeg, large]">
+                            <noscript><img src="../assets/img/screenshots/012-large.jpeg" alt="This React component allows users to look up data from a json file source.  It is based on Hendrik Swanepoel&#x27;s Thinking in React video on YouTube."></noscript>
+                            <figcaption>
+                                <h2>[React 15] React Component To Lookup Data From JSON</h2>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </article>
+                <div id="screenshot-modal-012" class="modal reveal large" data-reveal>
+                    <div class="row">
+                        <div class="column small-12">
+                            <h1>[React 15] React Component To Lookup Data From JSON</h1>
+                            <p class="lead">This React component allows users to look up data from a json file source.  It is based on Hendrik Swanepoel&#x27;s Thinking in React video on YouTube.</p>
+                            <img src="../assets/img/screenshots/012-large.jpeg" alt="This React component allows users to look up data from a json file source.  It is based on Hendrik Swanepoel&#x27;s Thinking in React video on YouTube.">
+                            <button class="close-button" data-close aria-label="Close modal" type="button">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <article class="photo single">
+                    <a data-toggle="screenshot-modal-011">
+                        <figure>
+                            <img data-interchange="
+                                [../assets/img/screenshots/011-small.jpeg, default], 
+                                [../assets/img/screenshots/011-small.jpeg, small], 
+                                [../assets/img/screenshots/011-retina.jpeg, retina],
+                                [../assets/img/screenshots/011-medium.jpeg, medium], 
+                                [../assets/img/screenshots/011-large.jpeg, large]">
+                            <noscript><img src="../assets/img/screenshots/011-large.jpeg" alt="A booking app with appointment form and appointment list built from React components on a Yeoman FountainJS-React base. Initial data is read from a json file and additional appointments are held in an array until the next page refresh. Based on the Lynda.com course: &#x27;Building a Web Interface with React.js&#x27;"></noscript>
+                            <figcaption>
+                                <h2>[React 15] CRUD Appointment Booking App</h2>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </article>
+                <div id="screenshot-modal-011" class="modal reveal large" data-reveal>
+                    <div class="row">
+                        <div class="column small-12">
+                            <h1>[React 15] CRUD Appointment Booking App</h1>
+                            <p class="lead">A booking app with appointment form and appointment list built from React components on a Yeoman FountainJS-React base. Initial data is read from a json file and additional appointments are held in an array until the next page refresh. Based on the Lynda.com course: &#x27;Building a Web Interface with React.js&#x27;</p>
+                            <img src="../assets/img/screenshots/011-large.jpeg" alt="A booking app with appointment form and appointment list built from React components on a Yeoman FountainJS-React base. Initial data is read from a json file and additional appointments are held in an array until the next page refresh. Based on the Lynda.com course: &#x27;Building a Web Interface with React.js&#x27;">
+                            <button class="close-button" data-close aria-label="Close modal" type="button">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <article class="photo single">
+                    <a data-toggle="screenshot-modal-010">
+                        <figure>
+                            <img data-interchange="
+                                [../assets/img/screenshots/010-small.jpeg, default], 
+                                [../assets/img/screenshots/010-small.jpeg, small], 
+                                [../assets/img/screenshots/010-retina.jpeg, retina],
+                                [../assets/img/screenshots/010-medium.jpeg, medium], 
+                                [../assets/img/screenshots/010-large.jpeg, large]">
+                            <noscript><img src="../assets/img/screenshots/010-large.jpeg" alt="A simple fixed width HTML3 and CSS3 website showing off some of HTML5&#x27;s progressive functionality."></noscript>
+                            <figcaption>
+                                <h2>[HTML5] HTML Two Page Static Site</h2>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </article>
+                <div id="screenshot-modal-010" class="modal reveal large" data-reveal>
+                    <div class="row">
+                        <div class="column small-12">
+                            <h1>[HTML5] HTML Two Page Static Site</h1>
+                            <p class="lead">A simple fixed width HTML3 and CSS3 website showing off some of HTML5&#x27;s progressive functionality.</p>
+                            <img src="../assets/img/screenshots/010-large.jpeg" alt="A simple fixed width HTML3 and CSS3 website showing off some of HTML5&#x27;s progressive functionality.">
+                            <button class="close-button" data-close aria-label="Close modal" type="button">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <article class="photo single">
+                    <a data-toggle="screenshot-modal-009">
+                        <figure>
+                            <img data-interchange="
+                                [../assets/img/screenshots/009-small.jpeg, default], 
+                                [../assets/img/screenshots/009-small.jpeg, small], 
+                                [../assets/img/screenshots/009-retina.jpeg, retina],
+                                [../assets/img/screenshots/009-medium.jpeg, medium], 
+                                [../assets/img/screenshots/009-large.jpeg, large]">
+                            <noscript><img src="../assets/img/screenshots/009-large.jpeg" alt="Based on Zurb&#x27;s Foundation 6 &#x27;ZURB Template&#x27; starter-kit this site is fed by &#x27;chunks&#x27; of formatted HTML exported from a PHP Easybook instance. The core of the site consists of &#x27;books&#x27; which can be authored in markdown then processed by Easybook into HTML, eBook, PDF, or Mobi format. The remainder of the site is fed by internal and external JSON data."></noscript>
+                            <figcaption>
+                                <h2>[Foundation 6 / Easybook] Static Website</h2>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </article>
+                <div id="screenshot-modal-009" class="modal reveal large" data-reveal>
+                    <div class="row">
+                        <div class="column small-12">
+                            <h1>[Foundation 6 / Easybook] Static Website</h1>
+                            <p class="lead">Based on Zurb&#x27;s Foundation 6 &#x27;ZURB Template&#x27; starter-kit this site is fed by &#x27;chunks&#x27; of formatted HTML exported from a PHP Easybook instance. The core of the site consists of &#x27;books&#x27; which can be authored in markdown then processed by Easybook into HTML, eBook, PDF, or Mobi format. The remainder of the site is fed by internal and external JSON data.</p>
+                            <img src="../assets/img/screenshots/009-large.jpeg" alt="Based on Zurb&#x27;s Foundation 6 &#x27;ZURB Template&#x27; starter-kit this site is fed by &#x27;chunks&#x27; of formatted HTML exported from a PHP Easybook instance. The core of the site consists of &#x27;books&#x27; which can be authored in markdown then processed by Easybook into HTML, eBook, PDF, or Mobi format. The remainder of the site is fed by internal and external JSON data.">
+                            <button class="close-button" data-close aria-label="Close modal" type="button">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <article class="photo single">
+                    <a data-toggle="screenshot-modal-001">
+                        <figure>
+                            <img data-interchange="
+                                [../assets/img/screenshots/001-small.jpeg, default], 
+                                [../assets/img/screenshots/001-small.jpeg, small], 
+                                [../assets/img/screenshots/001-retina.jpeg, retina],
+                                [../assets/img/screenshots/001-medium.jpeg, medium], 
+                                [../assets/img/screenshots/001-large.jpeg, large]">
+                            <noscript><img src="../assets/img/screenshots/001-large.jpeg" alt="This Symfony 3 site consist of two bundles: a blogging bundle and a job lissting board bundle. On top of this ser authentication, an admin back-end, a menu system, and data fixtures were implemented."></noscript>
+                            <figcaption>
+                                <h2>[Symfony 3] Single User Blog &amp; Multi-user Job Posting Site</h2>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </article>
+                <div id="screenshot-modal-001" class="modal reveal large" data-reveal>
+                    <div class="row">
+                        <div class="column small-12">
+                            <h1>[Symfony 3] Single User Blog &amp; Multi-user Job Posting Site</h1>
+                            <p class="lead">This Symfony 3 site consist of two bundles: a blogging bundle and a job lissting board bundle. On top of this ser authentication, an admin back-end, a menu system, and data fixtures were implemented.</p>
+                            <img src="../assets/img/screenshots/001-large.jpeg" alt="This Symfony 3 site consist of two bundles: a blogging bundle and a job lissting board bundle. On top of this ser authentication, an admin back-end, a menu system, and data fixtures were implemented.">
+                            <button class="close-button" data-close aria-label="Close modal" type="button">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <article class="photo single">
+                    <a data-toggle="screenshot-modal-002">
+                        <figure>
+                            <img data-interchange="
+                                [../assets/img/screenshots/002-small.jpeg, default], 
+                                [../assets/img/screenshots/002-small.jpeg, small], 
+                                [../assets/img/screenshots/002-retina.jpeg, retina],
+                                [../assets/img/screenshots/002-medium.jpeg, medium], 
+                                [../assets/img/screenshots/002-large.jpeg, large]">
+                            <noscript><img src="../assets/img/screenshots/002-large.jpeg" alt="This site allows a user to add publication to a list of publications and then add magazines to each publication.. It&#x27;s a demonstration how to build a CRUD bundle using Symfony.  This is my completed project from the Lynda.com course: &#x27;Up and Running with Symfony 2 for PHP&#x27; with the addition of KPN menu bundle and Foudation 6."></noscript>
+                            <figcaption>
+                                <h2>[Symfony 3] Single User Collectors Website</h2>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </article>
+                <div id="screenshot-modal-002" class="modal reveal large" data-reveal>
+                    <div class="row">
+                        <div class="column small-12">
+                            <h1>[Symfony 3] Single User Collectors Website</h1>
+                            <p class="lead">This site allows a user to add publication to a list of publications and then add magazines to each publication.. It&#x27;s a demonstration how to build a CRUD bundle using Symfony.  This is my completed project from the Lynda.com course: &#x27;Up and Running with Symfony 2 for PHP&#x27; with the addition of KPN menu bundle and Foudation 6.</p>
+                            <img src="../assets/img/screenshots/002-large.jpeg" alt="This site allows a user to add publication to a list of publications and then add magazines to each publication.. It&#x27;s a demonstration how to build a CRUD bundle using Symfony.  This is my completed project from the Lynda.com course: &#x27;Up and Running with Symfony 2 for PHP&#x27; with the addition of KPN menu bundle and Foudation 6.">
+                            <button class="close-button" data-close aria-label="Close modal" type="button">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <article class="photo single">
+                    <a data-toggle="screenshot-modal-003">
+                        <figure>
+                            <img data-interchange="
+                                [../assets/img/screenshots/003-small.jpeg, default], 
+                                [../assets/img/screenshots/003-small.jpeg, small], 
+                                [../assets/img/screenshots/003-retina.jpeg, retina],
+                                [../assets/img/screenshots/003-medium.jpeg, medium], 
+                                [../assets/img/screenshots/003-large.jpeg, large]">
+                            <noscript><img src="../assets/img/screenshots/003-large.jpeg" alt="A multi-user recipe and blog publishing webiste built on Drupal 7. Recipes can have multiple ingredient lists. All content is structured is using entity reference field-collections rather than community recipe modules to keep the build flexible.  Like all Drupal 7 projects the features are too many to list ;-). Sub-theme of Bootstrap."></noscript>
+                            <figcaption>
+                                <h2>[Drupal 7] Multi-user Recipe and Blogging Website - Frontend</h2>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </article>
+                <div id="screenshot-modal-003" class="modal reveal large" data-reveal>
+                    <div class="row">
+                        <div class="column small-12">
+                            <h1>[Drupal 7] Multi-user Recipe and Blogging Website - Frontend</h1>
+                            <p class="lead">A multi-user recipe and blog publishing webiste built on Drupal 7. Recipes can have multiple ingredient lists. All content is structured is using entity reference field-collections rather than community recipe modules to keep the build flexible.  Like all Drupal 7 projects the features are too many to list ;-). Sub-theme of Bootstrap.</p>
+                            <img src="../assets/img/screenshots/003-large.jpeg" alt="A multi-user recipe and blog publishing webiste built on Drupal 7. Recipes can have multiple ingredient lists. All content is structured is using entity reference field-collections rather than community recipe modules to keep the build flexible.  Like all Drupal 7 projects the features are too many to list ;-). Sub-theme of Bootstrap.">
+                            <button class="close-button" data-close aria-label="Close modal" type="button">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <article class="photo single">
+                    <a data-toggle="screenshot-modal-004">
+                        <figure>
+                            <img data-interchange="
+                                [../assets/img/screenshots/004-small.jpeg, default], 
+                                [../assets/img/screenshots/004-small.jpeg, small], 
+                                [../assets/img/screenshots/004-retina.jpeg, retina],
+                                [../assets/img/screenshots/004-medium.jpeg, medium], 
+                                [../assets/img/screenshots/004-large.jpeg, large]">
+                            <noscript><img src="../assets/img/screenshots/004-large.jpeg" alt="User recipe creation form."></noscript>
+                            <figcaption>
+                                <h2>[Drupal 7] Multi-user Recipe and Blogging Website - Backend</h2>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </article>
+                <div id="screenshot-modal-004" class="modal reveal large" data-reveal>
+                    <div class="row">
+                        <div class="column small-12">
+                            <h1>[Drupal 7] Multi-user Recipe and Blogging Website - Backend</h1>
+                            <p class="lead">User recipe creation form.</p>
+                            <img src="../assets/img/screenshots/004-large.jpeg" alt="User recipe creation form.">
+                            <button class="close-button" data-close aria-label="Close modal" type="button">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <article class="photo single">
+                    <a data-toggle="screenshot-modal-005">
+                        <figure>
+                            <img data-interchange="
+                                [../assets/img/screenshots/005-small.jpeg, default], 
+                                [../assets/img/screenshots/005-small.jpeg, small], 
+                                [../assets/img/screenshots/005-retina.jpeg, retina],
+                                [../assets/img/screenshots/005-medium.jpeg, medium], 
+                                [../assets/img/screenshots/005-large.jpeg, large]">
+                            <noscript><img src="../assets/img/screenshots/005-large.jpeg" alt="A multi-user, multi-channel, podcasting Website built on Drupal 7. Editors can create a podcast channel and allow an editorial team to upload podcast episodes. A podcast episode can consist of Audio, Video, eBook or PDF allowing for delivery of a rich media offering. Users can subscribe to a podcast via iTunes or their favorite podcast client, they can add comments on the podcast episode page and they can explore the podcast archive where episodes can be filtered by type, date or title. Robust tagging is built in. Sub-theme of Bootstrap. And much more..."></noscript>
+                            <figcaption>
+                                <h2>[Drupal 7] Multi-channel Podcasting Website</h2>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </article>
+                <div id="screenshot-modal-005" class="modal reveal large" data-reveal>
+                    <div class="row">
+                        <div class="column small-12">
+                            <h1>[Drupal 7] Multi-channel Podcasting Website</h1>
+                            <p class="lead">A multi-user, multi-channel, podcasting Website built on Drupal 7. Editors can create a podcast channel and allow an editorial team to upload podcast episodes. A podcast episode can consist of Audio, Video, eBook or PDF allowing for delivery of a rich media offering. Users can subscribe to a podcast via iTunes or their favorite podcast client, they can add comments on the podcast episode page and they can explore the podcast archive where episodes can be filtered by type, date or title. Robust tagging is built in. Sub-theme of Bootstrap. And much more...</p>
+                            <img src="../assets/img/screenshots/005-large.jpeg" alt="A multi-user, multi-channel, podcasting Website built on Drupal 7. Editors can create a podcast channel and allow an editorial team to upload podcast episodes. A podcast episode can consist of Audio, Video, eBook or PDF allowing for delivery of a rich media offering. Users can subscribe to a podcast via iTunes or their favorite podcast client, they can add comments on the podcast episode page and they can explore the podcast archive where episodes can be filtered by type, date or title. Robust tagging is built in. Sub-theme of Bootstrap. And much more...">
+                            <button class="close-button" data-close aria-label="Close modal" type="button">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <article class="photo single">
+                    <a data-toggle="screenshot-modal-006">
+                        <figure>
+                            <img data-interchange="
+                                [../assets/img/screenshots/006-small.jpeg, default], 
+                                [../assets/img/screenshots/006-small.jpeg, small], 
+                                [../assets/img/screenshots/006-retina.jpeg, retina],
+                                [../assets/img/screenshots/006-medium.jpeg, medium], 
+                                [../assets/img/screenshots/006-large.jpeg, large]">
+                            <noscript><img src="../assets/img/screenshots/006-large.jpeg" alt="A multi-media, multi-user blogging newspaper built on Drupal 7. Editors can assign writers privileges for sections of the newspaper.  Bloggers can post to their assigned section.  Blog posts can be associated with locations for map display and linked resources can be referenced from a blog post.  Media can be added easily and referenced from multiple blog posts.  Users can manage their profiles. Sub-theme of Omega-4. And much more..."></noscript>
+                            <figcaption>
+                                <h2>[Drupal 7] Multi-media, Multi-user Blogging Newspaper</h2>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </article>
+                <div id="screenshot-modal-006" class="modal reveal large" data-reveal>
+                    <div class="row">
+                        <div class="column small-12">
+                            <h1>[Drupal 7] Multi-media, Multi-user Blogging Newspaper</h1>
+                            <p class="lead">A multi-media, multi-user blogging newspaper built on Drupal 7. Editors can assign writers privileges for sections of the newspaper.  Bloggers can post to their assigned section.  Blog posts can be associated with locations for map display and linked resources can be referenced from a blog post.  Media can be added easily and referenced from multiple blog posts.  Users can manage their profiles. Sub-theme of Omega-4. And much more...</p>
+                            <img src="../assets/img/screenshots/006-large.jpeg" alt="A multi-media, multi-user blogging newspaper built on Drupal 7. Editors can assign writers privileges for sections of the newspaper.  Bloggers can post to their assigned section.  Blog posts can be associated with locations for map display and linked resources can be referenced from a blog post.  Media can be added easily and referenced from multiple blog posts.  Users can manage their profiles. Sub-theme of Omega-4. And much more...">
+                            <button class="close-button" data-close aria-label="Close modal" type="button">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <article class="photo single">
+                    <a data-toggle="screenshot-modal-007">
+                        <figure>
+                            <img data-interchange="
+                                [../assets/img/screenshots/007-small.jpeg, default], 
+                                [../assets/img/screenshots/007-small.jpeg, small], 
+                                [../assets/img/screenshots/007-retina.jpeg, retina],
+                                [../assets/img/screenshots/007-medium.jpeg, medium], 
+                                [../assets/img/screenshots/007-large.jpeg, large]">
+                            <noscript><img src="../assets/img/screenshots/007-large.jpeg" alt="An early Drupal 7 company promotional site. Lots of Panels and Context and Node-refernce and Views, etc... The theme was built from a Photoshop mockup. Sub-theme of Omega-4."></noscript>
+                            <figcaption>
+                                <h2>[Drupal 7] Company Promotional Site</h2>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </article>
+                <div id="screenshot-modal-007" class="modal reveal large" data-reveal>
+                    <div class="row">
+                        <div class="column small-12">
+                            <h1>[Drupal 7] Company Promotional Site</h1>
+                            <p class="lead">An early Drupal 7 company promotional site. Lots of Panels and Context and Node-refernce and Views, etc... The theme was built from a Photoshop mockup. Sub-theme of Omega-4.</p>
+                            <img src="../assets/img/screenshots/007-large.jpeg" alt="An early Drupal 7 company promotional site. Lots of Panels and Context and Node-refernce and Views, etc... The theme was built from a Photoshop mockup. Sub-theme of Omega-4.">
+                            <button class="close-button" data-close aria-label="Close modal" type="button">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <article class="photo single">
+                    <a data-toggle="screenshot-modal-008">
+                        <figure>
+                            <img data-interchange="
+                                [../assets/img/screenshots/008-small.jpeg, default], 
+                                [../assets/img/screenshots/008-small.jpeg, small], 
+                                [../assets/img/screenshots/008-retina.jpeg, retina],
+                                [../assets/img/screenshots/008-medium.jpeg, medium], 
+                                [../assets/img/screenshots/008-large.jpeg, large]">
+                            <noscript><img src="../assets/img/screenshots/008-large.jpeg" alt="One of the first Drupal sites I built for a client. Blogging functionality, a very nice mega-menu...   The theme was based on a drawing by the client on a napkin. Sub-theme of Omega-4. Lots of fun!"></noscript>
+                            <figcaption>
+                                <h2>[Drupal 7] Company Promotional Site - Blogging</h2>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </article>
+                <div id="screenshot-modal-008" class="modal reveal large" data-reveal>
+                    <div class="row">
+                        <div class="column small-12">
+                            <h1>[Drupal 7] Company Promotional Site - Blogging</h1>
+                            <p class="lead">One of the first Drupal sites I built for a client. Blogging functionality, a very nice mega-menu...   The theme was based on a drawing by the client on a napkin. Sub-theme of Omega-4. Lots of fun!</p>
+                            <img src="../assets/img/screenshots/008-large.jpeg" alt="One of the first Drupal sites I built for a client. Blogging functionality, a very nice mega-menu...   The theme was based on a drawing by the client on a napkin. Sub-theme of Omega-4. Lots of fun!">
+                            <button class="close-button" data-close aria-label="Close modal" type="button">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
-    <div class="row footer-middle">
-<!--         <div class="small-6 large-3 columns">
-            <p class="lead">Offices</p>
-            <ul class="menu vertical">
-                <li><a href="#">One</a></li>
-                <li><a href="#">Two</a></li>
-                <li><a href="#">Three</a></li>
-                <li><a href="#">Four</a></li>
-            </ul>
-        </div> -->
-<!--         <div class="small-6 large-3 columns">
-            <p class="lead">Solar Systems</p>
-            <ul class="menu vertical">
-                <li><a href="#">One</a></li>
-                <li><a href="#">Two</a></li>
-                <li><a href="#">Three</a></li>
-                <li><a href="#">Four</a></li>
-            </ul>
-        </div> -->
-        <div class="small-6 medium-offset-6 large-3 columns">
-            <p class="lead">Contact</p>
-            <ul class="menu vertical">
-                <li><a href="#"><i class="fi-social-twitter"></i> Twitter</a></li>
-                <li><a href="#"><i class="fi-social-facebook"></i> Facebook</a></li>
-                <li><a href="#"><i class="fi-social-instagram"></i> Instagram</a></li>
-                <li><a href="#"><i class="fi-social-pinterest"></i> Pinterest</a></li>
-            </ul>
+</div>
+<footer class="row">
+    <div class="columns medium-12 topspace">
+
+        <div class=" footer-top align-right text-right">
+            <p class="copywrite">Copywrite © 2017</p>
         </div>
-<!--         <div class="small-6 large-3 columns">
-            <p class="lead">Widgets</p>
-            <ul class="menu vertical">
-                <li><a href="#">One</a></li>
-                <li><a href="#">Two</a></li>
-                <li><a href="#">Three</a></li>
-                <li><a href="#">Four</a></li>
-            </ul>
-        </div> -->
-    </div>
-    <div class="row footer-bottom">
-        <div class="large-12 columns text-center">
-            <p>Le Grande Hotel, Latin Quarter, Paris • 261 Rue Saint-Séverin, 75005 Paris, France </p>
-            <p>Phone 01 42 517 85 • info@dummy.com • www.dummy.com</p>
+
+        <div class="footer-middle">
+            <div class="row">
+                <div class="small-12 medium-6 large-4 columns">
+                    <a href="index.html">    
+                        <img class="logo" src="assets/img/robo-1.png"  alt="company logo">
+                    </a>
+                    <div class="" id="name-slogan"> 
+                        <h1 class="name"><a href="index.html">SMERTH</a><ul class="inline-list social">
+                       <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+                       <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+                       <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+                       <li><a href="#"><i class="fi-social-github"></i></a></li>
+                    </ul>
+                    </h1>
+                    <p class="tagline">Full-stack Web Developer</p>
+                        <h2 class="slogan">building with <span class="percent">100%</span> re-cycled electrons.</h2>
+                    </div>
+                    
+                    <ul class="footer-menu no-bullet inline-dot-list">
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="content/books/books.html">Notes</a></li>
+                        <li><a href="screenshots.html">Screenshots</a></li>
+                        <li><a href="about/book/chapter-1.html">About</a></li>
+                        <!--<li><a href="hp-singlepage-scroll.html">fpage scroll</a></li>
+                        <li><a href="hp-desk-foundation.html">desk foundation</a></li>-->
+                    </ul>
+                </div>
+                <div class="small-12 medium-6 large-4 columns align-middle">
+                    <ul class="contact">
+                      <li><p><i class="fi-marker"></i>address</p></li>
+                      <li><p><i class="fi-telephone"></i>telephone</p></li>
+                      <li><p><i class="fi-mail"></i>email</p></li>
+                    </ul>
+                </div>
+                <div class=" small-12 medium-12 large-4 columns align-middle">
+                    <blockquote class="quote">
+                        <p>Outside of a dog, a book is a man's best friend.</p>
+                        <p>Inside of a dog it's too dark to read.</p>
+                        <cite>Groucho Marx</cite>
+                    </blockquote>
+                </div>
+            </div>
         </div>
+
+        <div class="footer-bottom">
+            <div class="row">
+                <div class="large-12 columns text-center align-middle">
+                    <ul class="no-bullet inline-dot-list">
+                        <li><a href="index.html">London</a></li>
+                        <li><a href="projects.html">Vancouver</a></li>
+                        <li><a href="books.html">Tokyo</a></li>
+                        <li><a href="screenshots.html">Beijing</a></li>
+                        <li><a href="index.html">Hong Kong</a></li>
+                        <li><a href="projects.html">Kuala Lumpur</a></li>
+                        <li><a href="books.html">Singapore</a></li>
+                        <li><a href="screenshots.html">Tuktoyaktuk</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
     </div>
 </footer>
+<script src="assets/js/app.js"></script>
 
-
-    <script src="assets/js/app.js"></script>
 </body>
 
 </html>
