@@ -220,17 +220,21 @@
                                                 <span class="chapter-sub-label">16.2</span>
                                                 <a class="internal" href="./chapter-16.html#open-an-html-file">Open an HTML File</a>
                                             </li>
-                                                                                        <li class="level-2" data-scroll="make-your-parser-class-a-sub-class-of-htmlparser">
+                                                                                        <li class="level-2" data-scroll="make-myhtmlparser-a-sub-class-of-htmlparser">
                                                 <span class="chapter-sub-label">16.3</span>
-                                                <a class="internal" href="./chapter-16.html#make-your-parser-class-a-sub-class-of-htmlparser">Make your parser class a sub-class of HTMLparser</a>
+                                                <a class="internal" href="./chapter-16.html#make-myhtmlparser-a-sub-class-of-htmlparser">Make MyHTMLParser a sub-class of HTMLParser</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="handle-html-comments">
+                                                <span class="chapter-sub-label">16.4</span>
+                                                <a class="internal" href="./chapter-16.html#handle-html-comments">Handle HTML Comments</a>
                                             </li>
                                                                                         <li class="level-2" data-scroll="override-more-methods-of-the-base-class">
-                                                <span class="chapter-sub-label">16.4</span>
+                                                <span class="chapter-sub-label">16.5</span>
                                                 <a class="internal" href="./chapter-16.html#override-more-methods-of-the-base-class">Override more methods of the base class</a>
                                             </li>
-                                                                                        <li class="level-2" data-scroll="count-the-metatags">
-                                                <span class="chapter-sub-label">16.5</span>
-                                                <a class="internal" href="./chapter-16.html#count-the-metatags">Count the metatags</a>
+                                                                                        <li class="level-2" data-scroll="count-the-meta-tags-in-the-head">
+                                                <span class="chapter-sub-label">16.6</span>
+                                                <a class="internal" href="./chapter-16.html#count-the-meta-tags-in-the-head">Count the meta-tags in the head</a>
                                             </li>
                                                                                                                         </ul>
                                 </li>
@@ -241,103 +245,20 @@
             <div class="main-content">
                   <h2 id="parsing-an-html-document">16.1 Parsing an HTML document</h2>
 
-<p>Python provides a built-in way for parsing html data as well as other kinds of data. In this example we're going to see how to create our own html parser based on the html parser class that Python provides. </p>
-
-<div class="code python">
-<pre class="python">&nbsp;
-metacount <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
-&nbsp;
-<span class="co1"># create a subclass and override the handler methods</span>
-<span class="kw1">class</span> MyHTMLParser<span class="br0">&#40;</span><span class="kw3">HTMLParser</span><span class="br0">&#41;</span>:
-  <span class="co1"># function to handle an opening tag in the doc</span>
-  <span class="co1"># this will be called when the closing &quot;&gt;&quot; of the tag is reached</span>
-  <span class="kw1">def</span> handle_starttag<span class="br0">&#40;</span><span class="kw2">self</span><span class="sy0">,</span> tag<span class="sy0">,</span> attrs<span class="br0">&#41;</span>:
-    <span class="kw1">global</span> metacount
-    <span class="kw1">print</span> <span class="st0">&quot;Encountered a start tag:&quot;</span><span class="sy0">,</span> tag
-    <span class="kw1">if</span> tag <span class="sy0">==</span> <span class="st0">&quot;meta&quot;</span>:
-      metacount +<span class="sy0">=</span> <span class="nu0">1</span>
-&nbsp;
-    pos <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">getpos</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="co1"># returns a tuple indication line and character</span>
-    <span class="kw1">print</span> <span class="st0">&quot;At line: &quot;</span><span class="sy0">,</span> pos<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy0">,</span> <span class="st0">&quot; position &quot;</span><span class="sy0">,</span> pos<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span>
-    <span class="kw1">if</span> attrs.<span class="kw4">__len__</span> <span class="sy0">&gt;</span> <span class="nu0">0</span>:
-      <span class="kw1">print</span> <span class="st0">&quot;<span class="es0">\t</span>Attributes:&quot;</span>
-      <span class="kw1">for</span> a <span class="kw1">in</span> attrs:
-        <span class="kw1">print</span> <span class="st0">&quot;<span class="es0">\t</span>&quot;</span><span class="sy0">,</span> a<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy0">,</span><span class="st0">&quot;=&quot;</span><span class="sy0">,</span>a<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span>
-&nbsp;
-  <span class="co1"># function to handle the ending tag</span>
-  <span class="kw1">def</span> handle_endtag<span class="br0">&#40;</span><span class="kw2">self</span><span class="sy0">,</span> tag<span class="br0">&#41;</span>:
-    <span class="kw1">print</span> <span class="st0">&quot;Encountered an end tag:&quot;</span><span class="sy0">,</span> tag
-    pos <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">getpos</span><span class="br0">&#40;</span><span class="br0">&#41;</span>
-    <span class="kw1">print</span> <span class="st0">&quot;At line: &quot;</span><span class="sy0">,</span> pos<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy0">,</span> <span class="st0">&quot; position &quot;</span><span class="sy0">,</span> pos<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span>
-&nbsp;
-  <span class="co1"># function to handle character and text data (tag contents)</span>
-  <span class="kw1">def</span> handle_data<span class="br0">&#40;</span><span class="kw2">self</span><span class="sy0">,</span> data<span class="br0">&#41;</span>:
-    <span class="kw1">print</span> <span class="st0">&quot;Encountered some data:&quot;</span><span class="sy0">,</span> data
-    pos <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">getpos</span><span class="br0">&#40;</span><span class="br0">&#41;</span>
-    <span class="kw1">print</span> <span class="st0">&quot;At line: &quot;</span><span class="sy0">,</span> pos<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy0">,</span> <span class="st0">&quot; position &quot;</span><span class="sy0">,</span> pos<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span>
-&nbsp;
-  <span class="co1"># function to handle the processing of HTML comments</span>
-  <span class="kw1">def</span> handle_comment<span class="br0">&#40;</span><span class="kw2">self</span><span class="sy0">,</span> data<span class="br0">&#41;</span>:
-    <span class="kw1">print</span> <span class="st0">&quot;Encountered comment:&quot;</span><span class="sy0">,</span> data
-    pos <span class="sy0">=</span> <span class="kw2">self</span>.<span class="me1">getpos</span><span class="br0">&#40;</span><span class="br0">&#41;</span>
-    <span class="kw1">print</span> <span class="st0">&quot;At line: &quot;</span><span class="sy0">,</span> pos<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy0">,</span> <span class="st0">&quot; position &quot;</span><span class="sy0">,</span> pos<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span>
-&nbsp;
-&nbsp;
-&nbsp;
-  <span class="co1"># open the sample HTML file and read it</span>
-  f <span class="sy0">=</span> <span class="kw2">open</span><span class="br0">&#40;</span><span class="st0">&quot;samplehtml.html&quot;</span><span class="br0">&#41;</span>
-  <span class="kw1">if</span> f.<span class="me1">mode</span> <span class="sy0">==</span> <span class="st0">&quot;r&quot;</span>:
-    contents <span class="sy0">=</span> f.<span class="me1">read</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="co1"># read the entire file</span>
-    <span class="kw3">parser</span>.<span class="me1">feed</span><span class="br0">&#40;</span>contents<span class="br0">&#41;</span>
-&nbsp;
-  <span class="kw1">print</span> <span class="st0">&quot;%d meta tags encountered&quot;</span> % metacount</pre>
-</div>
-
-<div class="code python">
-<pre class="python"><span class="co1"># import the HTMLParser module</span>
-<span class="kw1">from</span> <span class="kw3">HTMLParser</span> <span class="kw1">import</span> <span class="kw3">HTMLParser</span>
-&nbsp;
-<span class="kw1">def</span> main<span class="br0">&#40;</span><span class="br0">&#41;</span>:
-&nbsp;
-  <span class="co1"># create a subclass and override the handler methods</span>
-  <span class="kw1">class</span> MyHTMLParser<span class="br0">&#40;</span><span class="kw3">HTMLParser</span><span class="br0">&#41;</span>:
-&nbsp;
-  <span class="co1"># open the sample HTML file and read it</span>
-  f <span class="sy0">=</span> <span class="kw2">open</span><span class="br0">&#40;</span><span class="st0">&quot;samplehtml.html&quot;</span><span class="br0">&#41;</span>
-  <span class="kw1">if</span> f.<span class="me1">mode</span> <span class="sy0">==</span> <span class="st0">&quot;r&quot;</span>:
-    contents <span class="sy0">=</span> f.<span class="me1">read</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="co1"># read the entire file</span>
-    <span class="kw3">parser</span>.<span class="me1">feed</span><span class="br0">&#40;</span>contents<span class="br0">&#41;</span>
-&nbsp;
-  <span class="kw1">print</span> <span class="st0">&quot;%d meta tags encountered&quot;</span> % metacount
-&nbsp;
-<span class="kw1">if</span> __name__ <span class="sy0">==</span> <span class="st0">&quot;__main__&quot;</span>:
-  main<span class="br0">&#40;</span><span class="br0">&#41;</span></pre>
-</div>
-
-<p>instantiate a myHTMLParser class</p>
-
-<div class="code python">
-<pre class="python"><span class="co1"># import the HTMLParser module</span>
-<span class="kw1">from</span> <span class="kw3">HTMLParser</span> <span class="kw1">import</span> <span class="kw3">HTMLParser</span>
-&nbsp;
-<span class="kw1">def</span> main<span class="br0">&#40;</span><span class="br0">&#41;</span>:
-&nbsp;
-  <span class="co1"># instantiate the parser and feed it some HTML</span>
-  <span class="kw3">parser</span> <span class="sy0">=</span> MyHTMLParser<span class="br0">&#40;</span><span class="br0">&#41;</span>
-&nbsp;
-<span class="kw1">if</span> __name__ <span class="sy0">==</span> <span class="st0">&quot;__main__&quot;</span>:
-  main<span class="br0">&#40;</span><span class="br0">&#41;</span></pre>
-</div>
+<p>N.B. This code works for Python2</p>
 
 <h2 id="open-an-html-file">16.2 Open an HTML File</h2>
 
-<p>We could use the urllib to open a URL but here we are working with a local file.</p>
+<p>First instantiate a parser. The <code>MyHTMLParser</code> class from which we instantiate <code>parser</code> will need to be written before the code can be run.</p>
 
-<p>Check if the file mode is read, if so, read the file into a variable called contents, and pass the contents into the feed method of the parser function we instantiate above it.</p>
+<p>Use Python's built in file module <code>f</code> to open a file and check if the file mode is set to "read", if so, read the contents of the file into a <code>contents</code> variable.  Pass that variable into the as yet undefined parser.</p>
+
+<p>We could use the <code>urllib</code> to open a URL but here we are working with a local file.</p>
 
 <div class="code python">
-<pre class="python"><span class="co1"># import the HTMLParser module</span>
-<span class="kw1">from</span> <span class="kw3">HTMLParser</span> <span class="kw1">import</span> <span class="kw3">HTMLParser</span>
+<pre class="python"><span class="kw1">class</span> MyHTMLParser<span class="br0">&#40;</span><span class="kw3">HTMLParser</span><span class="br0">&#41;</span>:
+    <span class="co1"># This class needs to be written</span>
+&nbsp;
 &nbsp;
 <span class="kw1">def</span> main<span class="br0">&#40;</span><span class="br0">&#41;</span>:
 &nbsp;
@@ -347,22 +268,50 @@ metacount <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0"
     <span class="co1"># open the sample HTML file and read it</span>
     f <span class="sy0">=</span> <span class="kw2">open</span><span class="br0">&#40;</span><span class="st0">&quot;samplehtml.html&quot;</span><span class="br0">&#41;</span>
     <span class="kw1">if</span> f.<span class="me1">mode</span> <span class="sy0">==</span> <span class="st0">&quot;r&quot;</span>:
-      contents <span class="sy0">=</span> f.<span class="me1">read</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="co1"># read the entire file</span>
-      <span class="kw3">parser</span>.<span class="me1">feed</span><span class="br0">&#40;</span>contents<span class="br0">&#41;</span> 
+        contents <span class="sy0">=</span> f.<span class="me1">read</span><span class="br0">&#40;</span><span class="br0">&#41;</span>  <span class="co1"># read the entire file</span>
+        <span class="kw3">parser</span>.<span class="me1">feed</span><span class="br0">&#40;</span>contents<span class="br0">&#41;</span>
 &nbsp;
 <span class="kw1">if</span> __name__ <span class="sy0">==</span> <span class="st0">&quot;__main__&quot;</span>:
-  main<span class="br0">&#40;</span><span class="br0">&#41;</span></pre>
+    main<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">==</span> <span class="st0">&quot;__main__&quot;</span>:
+        main<span class="br0">&#40;</span><span class="br0">&#41;</span></pre>
 </div>
 
-<h2 id="make-your-parser-class-a-sub-class-of-htmlparser">16.3 Make your parser class a sub-class of HTMLparser</h2>
+<h2 id="make-myhtmlparser-a-sub-class-of-htmlparser">16.3 Make MyHTMLParser a sub-class of HTMLParser</h2>
 
-<p>In python if you want your class to inherit (be a sub-class of) another class, you pass the parent (super-class,) into your class.</p>
+<p>Import <code>HTMLParser</code>.  Pass the <code>HTMLParser</code> into <code>MyHTMLParser</code>.  This makes <code>MyHTMLParser</code> a sub-class of <code>HTMLParser</code>.  Now the methods of <code>HTMLParser</code> can be over-ridden by <code>MyHTMLParser</code>.</p>
 
-<p>We define a class MyHTMLParser and make it a sub-class of HTMLParser <code>class MyHTMLParser(HTMLParser):</code></p>
+<div class="code python">
+<pre class="python"><span class="co1"># import the HTMLParser module</span>
+<span class="kw1">from</span> <span class="kw3">HTMLParser</span> <span class="kw1">import</span> <span class="kw3">HTMLParser</span>
+&nbsp;
+&nbsp;
+<span class="co1"># create a subclass and override the handler methods</span>
+<span class="kw1">class</span> MyHTMLParser<span class="br0">&#40;</span><span class="kw3">HTMLParser</span><span class="br0">&#41;</span>:
+    <span class="co1"># write this.</span>
+&nbsp;
+&nbsp;
+<span class="kw1">def</span> main<span class="br0">&#40;</span><span class="br0">&#41;</span>:
+&nbsp;
+    <span class="co1"># instantiate the parser and feed it some HTML</span>
+    <span class="kw3">parser</span> <span class="sy0">=</span> MyHTMLParser<span class="br0">&#40;</span><span class="br0">&#41;</span>
+&nbsp;
+    <span class="co1"># open the sample HTML file and read it</span>
+    f <span class="sy0">=</span> <span class="kw2">open</span><span class="br0">&#40;</span><span class="st0">&quot;samplehtml.html&quot;</span><span class="br0">&#41;</span>
+    <span class="kw1">if</span> f.<span class="me1">mode</span> <span class="sy0">==</span> <span class="st0">&quot;r&quot;</span>:
+        contents <span class="sy0">=</span> f.<span class="me1">read</span><span class="br0">&#40;</span><span class="br0">&#41;</span>  <span class="co1"># read the entire file</span>
+        <span class="kw3">parser</span>.<span class="me1">feed</span><span class="br0">&#40;</span>contents<span class="br0">&#41;</span>
+&nbsp;
+<span class="kw1">if</span> __name__ <span class="sy0">==</span> <span class="st0">&quot;__main__&quot;</span>:
+    main<span class="br0">&#40;</span><span class="br0">&#41;</span></pre>
+</div>
 
-<p>We add a method for parsing Comments</p>
+<h2 id="handle-html-comments">16.4 Handle HTML Comments</h2>
 
-<p>When you pass the feed contents into the feed parser <code>parser.feed(contents)</code> it will go through and call any functions you have over-ridden from the base class.  Since we have over-ridden the base class method handle_comment it will execute our code each time it encounters a comment.</p>
+<p>We add a method for parsing html comments by over-riding the <code>handle_comment()</code> method of  <code>HTMLParse</code> in our subclass <code>MyHTMLParser</code></p>
+
+<p>When you pass the <code>contents</code> variable into the parser (<code>parser.feed(contents)</code>) the parser will  call any of the superclass functions you have overridden in your subclass.</p>
+
+<p>To have the parser do something with comments we just need to override the comments method in our subclass and instruct what we want done.</p>
 
 <p>Now we can go and override the method for any element we want to deal with...</p>
 
@@ -395,7 +344,7 @@ metacount <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0"
     main<span class="br0">&#40;</span><span class="br0">&#41;</span></pre>
 </div>
 
-<h2 id="override-more-methods-of-the-base-class">16.4 Override more methods of the base class</h2>
+<h2 id="override-more-methods-of-the-base-class">16.5 Override more methods of the base class</h2>
 
 <p>Here we handle start tag, end tag and data, which is the text content of an html element.</p>
 
@@ -465,7 +414,7 @@ metacount <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0"
         <span class="kw1">print</span> <span class="st0">&quot;<span class="es0">\t</span>&quot;</span><span class="sy0">,</span> a<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="sy0">,</span> <span class="st0">&quot;=&quot;</span><span class="sy0">,</span> a<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span></pre>
 </div>
 
-<h2 id="count-the-metatags">16.5 Count the metatags</h2>
+<h2 id="count-the-meta-tags-in-the-head">16.6 Count the meta-tags in the head</h2>
 
 <p>Add a counter and set it zero <code>metacount = 0;</code></p>
 

@@ -117,20 +117,24 @@
                                     <a class="chapter" href="./chapter-2.html"><span class="chapter-label">Chapter 2.</span>Variables</a>
                                     <ul id="page-toc" class="unstyled toc-l2">
                                          
-                                                                                        <li class="level-2" data-scroll="declare-a-variable-and-initialize-it">
+                                                                                        <li class="level-2" data-scroll="variable-names">
                                                 <span class="chapter-sub-label">2.1</span>
+                                                <a class="internal" href="./chapter-2.html#variable-names">Variable Names</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="declare-a-variable-and-initialize-it">
+                                                <span class="chapter-sub-label">2.2</span>
                                                 <a class="internal" href="./chapter-2.html#declare-a-variable-and-initialize-it">Declare a variable and initialize it</a>
                                             </li>
                                                                                         <li class="level-2" data-scroll="re-declare-a-variable">
-                                                <span class="chapter-sub-label">2.2</span>
+                                                <span class="chapter-sub-label">2.3</span>
                                                 <a class="internal" href="./chapter-2.html#re-declare-a-variable">Re-declare a variable</a>
                                             </li>
                                                                                         <li class="level-2" data-scroll="combine-like-type">
-                                                <span class="chapter-sub-label">2.3</span>
+                                                <span class="chapter-sub-label">2.4</span>
                                                 <a class="internal" href="./chapter-2.html#combine-like-type">Combine like type</a>
                                             </li>
                                                                                         <li class="level-2" data-scroll="global-vs-local-variables-in-functions">
-                                                <span class="chapter-sub-label">2.4</span>
+                                                <span class="chapter-sub-label">2.5</span>
                                                 <a class="internal" href="./chapter-2.html#global-vs-local-variables-in-functions">Global vs. local variables in functions</a>
                                             </li>
                                                                                                                         </ul>
@@ -238,7 +242,19 @@
     </div>      <div id="main" class="main column small-12 medium-8 large-9 ">
         <div class="callout">
             <div class="main-content">
-                  <h2 id="declare-a-variable-and-initialize-it">2.1 Declare a variable and initialize it</h2>
+                  <h2 id="variable-names">2.1 Variable Names</h2>
+
+<p>Python variable names can contain any alphabetic characters (A-Z and a-z), digits (0-9), and the underscore character "_". There are some caveats and restrictions:</p>
+
+<ol>
+<li>Uppercase and lowercase letters are distinct. Therefore, "Number" and "number" are two different variables.</li>
+<li>A digit cannot start a variable name. Therefore, "student1" is a valid variable, while "1student" is not.</li>
+<li>Built-in keywords and function names shouldn't be used as a variable name. For example, "print" is obviously a Python keyword, therefore you shouldn't be using it as your variable name.</li>
+</ol>
+
+<p>That being said if you use single letters as variable names most Python linting will complain.  Best practice is to use a short descriptive name to make the code clear.</p>
+
+<h2 id="declare-a-variable-and-initialize-it">2.2 Declare a variable and initialize it</h2>
 
 <div class="code python">
 <pre class="python">f <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
@@ -248,7 +264,7 @@
 
 <p>note the semi-colon at the end of a statement.</p>
 
-<h2 id="re-declare-a-variable">2.2 Re-declare a variable</h2>
+<h2 id="re-declare-a-variable">2.3 Re-declare a variable</h2>
 
 <div class="code python">
 <pre class="python">f <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span>
@@ -259,7 +275,7 @@ f <span class="sy0">=</span> <span class="st0">&quot;abc&quot;</span>
 
 <p>no problem with that</p>
 
-<h2 id="combine-like-type">2.3 Combine like type</h2>
+<h2 id="combine-like-type">2.4 Combine like type</h2>
 
 <p><strong>Pyhon is a strongly typed language</strong></p>
 
@@ -277,7 +293,7 @@ f <span class="sy0">=</span> <span class="st0">&quot;abc&quot;</span>
 
 <p>note the use of python's built in string conversion function <code>str()</code> to cast <code>123</code> as a string</p>
 
-<h2 id="global-vs-local-variables-in-functions">2.4 Global vs. local variables in functions</h2>
+<h2 id="global-vs-local-variables-in-functions">2.5 Global vs. local variables in functions</h2>
 
 <div class="code python">
 <pre class="python"><span class="co1"># Declare a variable and initialize it</span>
