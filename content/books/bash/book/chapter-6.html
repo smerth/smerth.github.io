@@ -1,0 +1,419 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebooks - Bash on MacOS - Configuring Your Working Environment</title>
+    <link rel="stylesheet" href="../../../../assets/css/app.css">
+    <link href='https://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+    <!--<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="innerpage chapter-6">
+
+<header class="row">
+    <!--<div class="small-2 columns">
+                <a href="../../../../index.html">    
+                    <img class="logo" src="../../../../assets/img/robo-1.png"  alt="company logo">
+                </a>            </div>-->
+    <div class="small-10 columns">
+        <div class="" id="name-slogan"> 
+            <h1 class="name"><a href="../../../../index.html">SMERTH</a><ul class="inline-list social">
+           <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+           <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+           <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+           <li><a href="#"><i class="fi-social-github"></i></a></li>
+        </ul></h1>
+        <p class="tagline">Full-stack Web Developer</p>
+            <h2 class="slogan">building with <span class="percent">100%</span> re-cycled electrons.</h2>
+        </div>
+    </div>
+    <div class="small-12 columns responsive-menu">
+        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle></button>
+            <div class="title-bar-title">Menu</div>
+        </div>
+        <div class="top-bar" id="main-menu">
+            <div class="top-bar-left">
+                <ul class="menu vertical medium-horizontal collapsed medium-text-center" data-responsive-menu="accordion medium-dropdown"
+                    data-accordion-menu>
+                    <li class="menu-text"><a href="../../../../index.html">Hello</a></li>
+                    <li><a href="../../../../projects.html">Projects</a></li>
+                    <li><a href="../../../../content/books/books.html">Notes</a></li>
+                    <li><a href="../../../../screenshots.html">Screenshots</a></li>
+                    <li><a href="../../../../about/book/chapter-1.html">About</a></li>
+                    <li><a href="../../../../timeline.html">Timeline</a></li>
+                    <!--<li><a href="../../../../hp-singlepage-scroll.html">fpage scroll</a></li>
+                    <li><a href="../../../../hp-desk-foundation.html">desk foundation</a></li>-->                </ul>
+            </div>
+            <div class="top-bar-right">
+                <!--<ul class="inline-list social">
+   <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+   <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+   <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+   <li><a href="#"><i class="fi-social-github"></i></a></li>
+</ul>-->
+            </div>
+        </div>
+    </div>
+</header>
+<div class="row Bash on MacOS" data-sticky-container>
+        <div id="chapter-sticky-header" class="column small-12 sticky" data-sticky data-anchor="main" data-options="marginTop:0;"
+        style="width: 100%;">
+        <div class="callout">
+            <div class="row">
+                <div class="column small-6 small-order-2 medium-order-1 medium-3 prev-container">
+                                        <h6><a class="prev" href="./chapter-5.html"><i class="fi-arrow-left"></i> Previous<div><small>Chapter 5 - Directing Input and Output</small></div></a></h6>
+                                    </div>                 <div class="column small-12 small-order-1 medium-order-2 medium-6 text-center title-container">
+                    <div class="row">
+                        <div class="small-3 medium-5 columns">
+                                                        <a href="../../../../../index.html">
+                                <h4 class="name">SMERTH</h4>
+                            </a>
+                        </div>
+                        <div class="columns medium-7">
+                            <h6 id="configuring-your-working-environment" class="bk-title text-left">
+                                <i class="fi-book-bookmark"> </i>
+                                <a href="./index.html">Bash on MacOS</a>
+                            </h6>
+                            <h6 id="configuring-your-working-environment" class="ch-title text-left"><small>Chapter 6 - Configuring Your Working Environment</small></h6>
+                        </div>
+                    </div>
+                </div>                 <div class="column small-6 small-order-3 medium-order-3 medium-3 next-container">
+                                        <h6>
+                        <a class="next" href="./chapter-7.html">
+                            <div class="text-right">Next <i class="fi-arrow-right"></i></div>
+                            <div class="text-right"><small>Chapter 7 - Unix Power Tools</small></div>
+                        </a>
+                    </h6>
+                                    </div>
+            </div>         </div> </div> </div>  
+
+<div id="book-page" class="Bash on MacOS row">
+    <div class="column small-12 medium-4 large-3">
+        <div id="sidebar" data-sticky-container>
+                        <div class="callout" data-sticky data-anchor="main" data-options="marginTop:5.5;" style="width:100%">
+                <nav id="sidebar-toc">
+                    <h3><a href=".">Table of contents</a></h3>
+                    <ul class="toc">
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">1.</span>
+                                    <a href="./chapter-1.html"> Introduction</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">2.</span>
+                                    <a href="./chapter-2.html"> Working with files and directories</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">3.</span>
+                                    <a href="./chapter-3.html"> Ownership and Permissions</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">4.</span>
+                                    <a href="./chapter-4.html"> Commands and Programs</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">5.</span>
+                                    <a href="./chapter-5.html"> Directing Input and Output</a>
+                                </li>
+                              
+                         
+                             
+                                 
+                                <li class="level-1 active">
+                                    <a class="chapter" href="./chapter-6.html"><span class="chapter-label">Chapter 6.</span>Configuring Your Working Environment</a>
+                                    <ul id="page-toc" class="unstyled toc-l2">
+                                         
+                                                                                        <li class="level-2" data-scroll="profile-login-and-resource-files">
+                                                <span class="chapter-sub-label">6.1</span>
+                                                <a class="internal" href="./chapter-6.html#profile-login-and-resource-files">Profile, login, and resource files</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="where-to-put-custom-configuration">
+                                                <span class="chapter-sub-label">6.2</span>
+                                                <a class="internal" href="./chapter-6.html#where-to-put-custom-configuration">Where to put custom configuration</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="setting-command-aliases">
+                                                <span class="chapter-sub-label">6.3</span>
+                                                <a class="internal" href="./chapter-6.html#setting-command-aliases">Setting command aliases</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="setting-and-exporting-environment-variables">
+                                                <span class="chapter-sub-label">6.4</span>
+                                                <a class="internal" href="./chapter-6.html#setting-and-exporting-environment-variables">Setting and exporting environment variables</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="setting-the-path-variable">
+                                                <span class="chapter-sub-label">6.5</span>
+                                                <a class="internal" href="./chapter-6.html#setting-the-path-variable">Setting the PATH variable</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="configuring-history-with-variables">
+                                                <span class="chapter-sub-label">6.6</span>
+                                                <a class="internal" href="./chapter-6.html#configuring-history-with-variables">Configuring history with variables</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="customizing-the-command-prompt">
+                                                <span class="chapter-sub-label">6.7</span>
+                                                <a class="internal" href="./chapter-6.html#customizing-the-command-prompt">Customizing the command prompt</a>
+                                            </li>
+                                                                                                                        </ul>
+                                </li>
+                                 
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">7.</span>
+                                    <a href="./chapter-7.html"> Unix Power Tools</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">8.</span>
+                                    <a href="./chapter-8.html"> MacOS Only Commands</a>
+                                </li>
+                              
+                                            </ul>                 </nav>             </div>         </div>
+    </div>      <div id="main" class="main column small-12 medium-8 large-9 ">
+        <div class="callout">
+            <div class="main-content">
+                                    <h1 id="configuring-your-working-environment"><span>Chapter 6: </span> Configuring Your Working Environment</h1>
+                <h2 id="profile-login-and-resource-files">6.1 Profile, login, and resource files</h2>
+
+<p>When Bash starts up, or the user logs into UNIX, Bash looks in the <code>etc/</code> folder for the <code>.profile</code> file.  In <code>profile</code> there should be a list user config files.</p>
+
+<p>UNIX looks for the user config files in the locations specified in the order they are listed. When it finds one of these config files, it reads that file and then ignors any User config files that follow it… (so, it uses the first one it finds.)</p>
+
+<p><strong>The <code>etc/.profile</code> file is best left to MacOS to manage.</strong>  It contains system wide configuration.</p>
+
+<p>There are several places where you can write configuration settings that are specific to your User account without interfering with the MacOS system wide settings.</p>
+
+<p>In the User folder you may find one of several options:</p>
+
+<ol>
+<li>​<code>.bash_profile</code></li>
+<li><code>.bash_login</code></li>
+<li><code>.profile</code></li>
+<li><code>.login</code></li>
+</ol>
+
+<p>You will probably find a <code>.bash_profile</code> file in your User folder. You can also create any of the other files in this list and use them to specify configuration for your user account.</p>
+
+<p>Sidenote: In bash configuration files "comments" are preceded by a pound sign:</p>
+
+<p><code># this is a comment</code></p>
+
+<h2 id="where-to-put-custom-configuration">6.2 Where to put custom configuration</h2>
+
+<p>Lets focus on the configuration files in the User folder.</p>
+
+<p><code>.profile</code> and <code>.login</code> are generic config files and should run when logging into other shells.  We are concerned with logging into the Bash shell which is the default shell used in terminal on the MacOS.</p>
+
+<p>But there are other shells you may use in terminal.  If your logging into another shell its best to use their dedicated config files.</p>
+
+<p>We are logging into the bash shell so you could dump all your custom config into <code>.bash_profile</code> which will load everytime you log into bash (or bash_login.)</p>
+
+<p>But if you are logged into bash and then execute <code>bash</code> to run a new bash sub-shell <code>.bash_profile</code> won't run.  It only runs when you login.  When opening a sub-shell the config file that runs is <code>.bashrc</code>.</p>
+
+<p>So to make config settings you write run both when you open bash as well as when you open a bash sub-shell, create a <code>.bashrc</code> file and then in <code>.bash_profile</code> call the <code>.bashrc</code> file.  Now dump all your commands into <code>.bashrc</code>.</p>
+
+<p>To see how this works put this into <code>.bash_profile</code></p>
+
+<div class="code bash">
+<pre class="code">echo &quot;&quot;
+echo -n &quot;Welcome to Unix on Mac OS X, &quot;; whoami
+echo &quot;&quot;
+echo -n &quot;Today is &quot;; date &quot;+%m-%d-%Y %H:%M:%S&quot;
+echo &quot;&quot;
+cal</pre>
+</div>
+
+<p>This only runs on user login</p>
+
+<p>add:</p>
+
+<div class="code bash">
+<pre class="code">if [ -f ~/.bashrc ]; then
+  source ~/.bashrc
+fi</pre>
+</div>
+
+<p>This loads in the configuration found in <code>.bashrc</code> if a <code>.bashrc</code> file is found.</p>
+
+<p>Lastly, add this into <code>.bashrc</code></p>
+
+<div class="code bash">
+<pre class="code">echo -n &quot;Uptime: &quot;; uptime
+echo &quot;&quot;</pre>
+</div>
+
+<p>This configuration runs both when you login to bash and when you are logged in and open a new bash sub-shell.</p>
+
+<p>Put all your personal user configuration here in <code>.bashrc</code>.</p>
+
+<h2 id="setting-command-aliases">6.3 Setting command aliases</h2>
+
+<p>Use the alias command to specify an alias for a command</p>
+
+<div class="code bash">
+<pre class="code">alias</pre>
+</div>
+
+<p>lists all aliases currently configured</p>
+
+<p>To create an alias:</p>
+
+<div class="code bash">
+<pre class="code">alias ll='ls -la'</pre>
+</div>
+
+<p>You can alias any commands or set of commands.</p>
+
+<p>To get rid of an alias use <code>unalias</code></p>
+
+<div class="code bash">
+<pre class="code">unalias ll</pre>
+</div>
+
+<p>Creating an alias by typing it into terminal only lasts for the open terminal session.</p>
+
+<h2 id="setting-and-exporting-environment-variables">6.4 Setting and exporting environment variables</h2>
+
+<p>Environment variables are also know as shell variables. They are set to help configure your working environment.</p>
+
+<p><code>$SHELL</code></p>
+
+<p>This varible returns the default login shell for the current user.</p>
+
+<p>The <code>$</code> indicates to UNIX that we want it to return the value located in the <code>SHELL</code> variable.</p>
+
+<p>To set a variable for the current session simply assign a name to a value</p>
+
+<div class="code bash">
+<pre class="code">MYNAME='Name'</pre>
+</div>
+
+<p>However, MYNAME won't be available to the child processes that bash starts for us. It will only be available in bash itself. To indicate to bash it should also pass along these variables or export them to other commands, programs, and scripts, we need to use the export command.</p>
+
+<h2 id="setting-the-path-variable">6.5 Setting the PATH variable</h2>
+
+<p>The <code>PATH</code> variable is a list of paths, separated by collens, each of which leads to a folder containing one or more UNIX executables.  To instruct UNIX to check a PATH for executables, add a path you want UNIX to check to the list of existing paths.  It will check the locations in the order you list them.</p>
+
+<div class="code bash">
+<pre class="code">export PATH='/Users/smerth/.phantomjs/bin:/Users/smerth/.platformsh/bin:/Users/smerth/.nvm/versions/node/v8.9.1/bin:/usr/local/opt/git/bin:/usr/local/opt/sqlite/bin:/usr/local/Cellar/mysql/5.7.16/bin:/usr/local/Cellar/ctags/5.8_1/bin:/Users/smerth/.composer/vendor/bin:/usr/local/opt/php70/bin:/Users/smerth/.rbenv/shims:/usr/local/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/smerth/pear/bin:./node_modules/.bin:/Users/smerth/Library/Android/sdk/tools:/Users/smerth/Library/Android/sdk/platform_tools'</pre>
+</div>
+
+<h2 id="configuring-history-with-variables">6.6 Configuring history with variables</h2>
+
+<div class="code bash">
+<pre class="code">#################
+# Setting global variables 
+# for the History program
+#################
+&nbsp;
+# eg. setting variables for the program &quot;history&quot;
+export HISTSIZE=10000                      # 500 is default
+export HISTFILESIZE=1000000
+export HISTTIMEFORMAT='%b %d %I:%M %p '    # using strftime format
+export HISTCONTROL=ignoreboth              # ignoredups:ignorespace
+export HISTIGNORE=&quot;history:pwd:exit:df:ls:ls -la:ll&quot;</pre>
+</div>
+
+<h2 id="customizing-the-command-prompt">6.7 Customizing the command prompt</h2>
+
+<div class="code bash">
+<pre class="code">################
+# customize the bash prompt
+################
+export PS1=&quot;\\[\033[38;5;95m\](\t)\[\033[;38;5;190m\] \u\[\033[1;36m\]@\[\033[;38;5;203m\]macbook: \[\033[;38;5;10m\]\w\[\033[;38;5;39m\]\n👻  &quot;
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced</pre>
+</div>
+ 
+                            </div>
+        </div>
+    </div>     </div>  
+<footer class="row">
+    <div class="columns medium-12 topspace">
+
+        <div class=" footer-top align-right text-right">
+            <p class="copywrite">Copywrite © 2017</p>
+        </div>
+
+        <div class="footer-middle">
+            <div class="row">
+                <div class="small-12 medium-6 large-4 columns">
+                    <a href="../../../../index.html">    
+                        <img class="logo" src="../../../../assets/img/robo-1.png"  alt="company logo">
+                    </a>                    <div class="" id="name-slogan"> 
+                        <h1 class="name"><a href="../../../../index.html">SMERTH</a><ul class="inline-list social">
+                       <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+                       <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+                       <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+                       <li><a href="#"><i class="fi-social-github"></i></a></li>
+                    </ul></h1>
+                    <p class="tagline">Full-stack Web Developer</p>
+                        <h2 class="slogan">building with <span class="percent">100%</span> re-cycled electrons.</h2>
+                    </div>
+                    <ul class="footer-menu no-bullet inline-dot-list">
+                        <li><a href="../../../../projects.html">Projects</a></li>
+                        <li><a href="../../../../content/books/books.html">Notes</a></li>
+                        <li><a href="../../../../screenshots.html">Screenshots</a></li>
+                        <li><a href="../../../../about/book/chapter-1.html">About</a></li>
+                        <li><a href="../../../../timeline.html">Timeline</a></li>
+                        <!--<li><a href="../../../../hp-singlepage-scroll.html">fpage scroll</a></li>
+                        <li><a href="../../../../hp-desk-foundation.html">desk foundation</a></li>-->                    </ul>
+                </div>
+                <div class="small-12 medium-6 large-4 columns align-middle">
+                    <ul class="contact">
+                      <li><p><i class="fi-marker"></i>address</p></li>
+                      <li><p><i class="fi-telephone"></i>telephone</p></li>
+                      <li><p><i class="fi-mail"></i>email</p></li>
+                    </ul>                </div>
+                <div class=" small-12 medium-12 large-4 columns align-middle">
+                    <blockquote class="quote">
+                        <p>Outside of a dog, a book is a man's best friend.</p>
+                        <p>Inside of a dog it's too dark to read.</p>
+                        <cite>Groucho Marx</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="row">
+                <div class="large-12 columns text-center align-middle">
+                    <ul class="no-bullet inline-dot-list">
+                        <li><a href="../../../../index.html">London</a></li>
+                        <li><a href="../../../../projects.html">Vancouver</a></li>
+                        <li><a href="../../../../books.html">Tokyo</a></li>
+                        <li><a href="../../../../screenshots.html">Beijing</a></li>
+                        <li><a href="../../../../index.html">Hong Kong</a></li>
+                        <li><a href="../../../../projects.html">Kuala Lumpur</a></li>
+                        <li><a href="../../../../books.html">Singapore</a></li>
+                        <li><a href="../../../../screenshots.html">Tuktoyaktuk</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer><script src="../../../../assets/js/app.js"></script>
+
+</body>
+
+</html>

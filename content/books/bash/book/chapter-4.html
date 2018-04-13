@@ -1,0 +1,827 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebooks - Bash on MacOS - Commands and Programs</title>
+    <link rel="stylesheet" href="../../../../assets/css/app.css">
+    <link href='https://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+    <!--<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="innerpage chapter-4">
+
+<header class="row">
+    <!--<div class="small-2 columns">
+                <a href="../../../../index.html">    
+                    <img class="logo" src="../../../../assets/img/robo-1.png"  alt="company logo">
+                </a>            </div>-->
+    <div class="small-10 columns">
+        <div class="" id="name-slogan"> 
+            <h1 class="name"><a href="../../../../index.html">SMERTH</a><ul class="inline-list social">
+           <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+           <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+           <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+           <li><a href="#"><i class="fi-social-github"></i></a></li>
+        </ul></h1>
+        <p class="tagline">Full-stack Web Developer</p>
+            <h2 class="slogan">building with <span class="percent">100%</span> re-cycled electrons.</h2>
+        </div>
+    </div>
+    <div class="small-12 columns responsive-menu">
+        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle></button>
+            <div class="title-bar-title">Menu</div>
+        </div>
+        <div class="top-bar" id="main-menu">
+            <div class="top-bar-left">
+                <ul class="menu vertical medium-horizontal collapsed medium-text-center" data-responsive-menu="accordion medium-dropdown"
+                    data-accordion-menu>
+                    <li class="menu-text"><a href="../../../../index.html">Hello</a></li>
+                    <li><a href="../../../../projects.html">Projects</a></li>
+                    <li><a href="../../../../content/books/books.html">Notes</a></li>
+                    <li><a href="../../../../screenshots.html">Screenshots</a></li>
+                    <li><a href="../../../../about/book/chapter-1.html">About</a></li>
+                    <li><a href="../../../../timeline.html">Timeline</a></li>
+                    <!--<li><a href="../../../../hp-singlepage-scroll.html">fpage scroll</a></li>
+                    <li><a href="../../../../hp-desk-foundation.html">desk foundation</a></li>-->                </ul>
+            </div>
+            <div class="top-bar-right">
+                <!--<ul class="inline-list social">
+   <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+   <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+   <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+   <li><a href="#"><i class="fi-social-github"></i></a></li>
+</ul>-->
+            </div>
+        </div>
+    </div>
+</header>
+<div class="row Bash on MacOS" data-sticky-container>
+        <div id="chapter-sticky-header" class="column small-12 sticky" data-sticky data-anchor="main" data-options="marginTop:0;"
+        style="width: 100%;">
+        <div class="callout">
+            <div class="row">
+                <div class="column small-6 small-order-2 medium-order-1 medium-3 prev-container">
+                                        <h6><a class="prev" href="./chapter-3.html"><i class="fi-arrow-left"></i> Previous<div><small>Chapter 3 - Ownership and Permissions</small></div></a></h6>
+                                    </div>                 <div class="column small-12 small-order-1 medium-order-2 medium-6 text-center title-container">
+                    <div class="row">
+                        <div class="small-3 medium-5 columns">
+                                                        <a href="../../../../../index.html">
+                                <h4 class="name">SMERTH</h4>
+                            </a>
+                        </div>
+                        <div class="columns medium-7">
+                            <h6 id="commands-and-programs" class="bk-title text-left">
+                                <i class="fi-book-bookmark"> </i>
+                                <a href="./index.html">Bash on MacOS</a>
+                            </h6>
+                            <h6 id="commands-and-programs" class="ch-title text-left"><small>Chapter 4 - Commands and Programs</small></h6>
+                        </div>
+                    </div>
+                </div>                 <div class="column small-6 small-order-3 medium-order-3 medium-3 next-container">
+                                        <h6>
+                        <a class="next" href="./chapter-5.html">
+                            <div class="text-right">Next <i class="fi-arrow-right"></i></div>
+                            <div class="text-right"><small>Chapter 5 - Directing Input and Output</small></div>
+                        </a>
+                    </h6>
+                                    </div>
+            </div>         </div> </div> </div>  
+
+<div id="book-page" class="Bash on MacOS row">
+    <div class="column small-12 medium-4 large-3">
+        <div id="sidebar" data-sticky-container>
+                        <div class="callout" data-sticky data-anchor="main" data-options="marginTop:5.5;" style="width:100%">
+                <nav id="sidebar-toc">
+                    <h3><a href=".">Table of contents</a></h3>
+                    <ul class="toc">
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">1.</span>
+                                    <a href="./chapter-1.html"> Introduction</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">2.</span>
+                                    <a href="./chapter-2.html"> Working with files and directories</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">3.</span>
+                                    <a href="./chapter-3.html"> Ownership and Permissions</a>
+                                </li>
+                              
+                         
+                             
+                                 
+                                <li class="level-1 active">
+                                    <a class="chapter" href="./chapter-4.html"><span class="chapter-label">Chapter 4.</span>Commands and Programs</a>
+                                    <ul id="page-toc" class="unstyled toc-l2">
+                                         
+                                                                                        <li class="level-2" data-scroll="command-basics">
+                                                <span class="chapter-sub-label">4.1</span>
+                                                <a class="internal" href="./chapter-4.html#command-basics">Command basics</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="common-options-for-most-programs">
+                                                <span class="chapter-sub-label">4.2</span>
+                                                <a class="internal" href="./chapter-4.html#common-options-for-most-programs">Common options for most programs</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="quitting-a-program">
+                                                <span class="chapter-sub-label">4.3</span>
+                                                <a class="internal" href="./chapter-4.html#quitting-a-program">Quitting a program</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="the-path-variable">
+                                                <span class="chapter-sub-label">4.4</span>
+                                                <a class="internal" href="./chapter-4.html#the-path-variable">The PATH variable</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="system-information-commands">
+                                                <span class="chapter-sub-label">4.5</span>
+                                                <a class="internal" href="./chapter-4.html#system-information-commands">System information commands</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="disk-information-commands">
+                                                <span class="chapter-sub-label">4.6</span>
+                                                <a class="internal" href="./chapter-4.html#disk-information-commands">Disk information commands</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="viewing-processes">
+                                                <span class="chapter-sub-label">4.7</span>
+                                                <a class="internal" href="./chapter-4.html#viewing-processes">Viewing processes</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="monitoring-processes">
+                                                <span class="chapter-sub-label">4.8</span>
+                                                <a class="internal" href="./chapter-4.html#monitoring-processes">Monitoring processes</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="stopping-processes">
+                                                <span class="chapter-sub-label">4.9</span>
+                                                <a class="internal" href="./chapter-4.html#stopping-processes">Stopping processes</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="text-file-helpers">
+                                                <span class="chapter-sub-label">4.10</span>
+                                                <a class="internal" href="./chapter-4.html#text-file-helpers">Text file helpers</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="utility-programs">
+                                                <span class="chapter-sub-label">4.11</span>
+                                                <a class="internal" href="./chapter-4.html#utility-programs">Utility programs</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="history-working-with-history">
+                                                <span class="chapter-sub-label">4.12</span>
+                                                <a class="internal" href="./chapter-4.html#history-working-with-history">History - working with history</a>
+                                            </li>
+                                                                                                                        </ul>
+                                </li>
+                                 
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">5.</span>
+                                    <a href="./chapter-5.html"> Directing Input and Output</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">6.</span>
+                                    <a href="./chapter-6.html"> Configuring Your Working Environment</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">7.</span>
+                                    <a href="./chapter-7.html"> Unix Power Tools</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">8.</span>
+                                    <a href="./chapter-8.html"> MacOS Only Commands</a>
+                                </li>
+                              
+                                            </ul>                 </nav>             </div>         </div>
+    </div>      <div id="main" class="main column small-12 medium-8 large-9 ">
+        <div class="callout">
+            <div class="main-content">
+                                    <h1 id="commands-and-programs"><span>Chapter 4: </span> Commands and Programs</h1>
+                <h2 id="command-basics">4.1 Command basics</h2>
+
+<p>Issuing commands always takes the same form:</p>
+
+<p><code>command</code>… then <code>options</code>… then <code>arguments</code></p>
+
+<div class="code bash">
+<pre class="code">echo 'hello world'</pre>
+</div>
+
+<p><code>echo</code> is actually a C program.  UNIX is written in C.  <code>bin</code> is where most of the C programs are stored. The program <code>echo</code> is stored there.  When you type <code>echo</code> into terminal you are just called the compiled program called "echo" which is stored in <code>bin</code>.</p>
+
+<p>If UNIX didn't know where the executable C program called "echo" was located you could explicitly tell it:</p>
+
+<div class="code bash">
+<pre class="code">bin/echo 'hello world'</pre>
+</div>
+
+<p>to find the location of a program file use <code>which</code></p>
+
+<div class="code bash">
+<pre class="code">which echo</pre>
+</div>
+
+<p>or <code>whereis</code></p>
+
+<div class="code bash">
+<pre class="code">whereis echo</pre>
+</div>
+
+<p>for info about a program use <code>info</code></p>
+
+<div class="code bash">
+<pre class="code">info echo</pre>
+</div>
+
+<h2 id="common-options-for-most-programs">4.2 Common options for most programs</h2>
+
+<p>Most unix programs respond to these options:</p>
+
+<p><code>-v</code> or <code>--version</code> to get the version of the program</p>
+
+<p><code>--help</code> to read about how to use the program</p>
+
+<p>for example:</p>
+
+<div class="code bash">
+<pre class="code">npm --version</pre>
+</div>
+
+<h2 id="quitting-a-program">4.3 Quitting a program</h2>
+
+<p>There are several options for quitting programs:</p>
+
+<p><code>q</code>, or <code>x</code>, or <code>Control + q</code>, or <code>Control + x</code>, or <code>ESC</code>, or <code>force quit</code>, or <code>Control + c</code>,...</p>
+
+<p>With some of these options, if you close the window the process may keep running so to be safe, use:</p>
+
+<p><code>Control + c</code></p>
+
+<h2 id="the-path-variable">4.4 The PATH variable</h2>
+
+<p>In UNIX for MacOS most programs are located at <code>/bin/</code>.  UNIX will look there for executable programs.</p>
+
+<p>However, an executable program can be placed anywhere.  But how will UNIX find an executable program if it is just placed ni any old folder?</p>
+
+<p>UNIX finds program by looking through the directories assigned to the $PATH variable</p>
+
+<div class="code bash">
+<pre class="code">echo $PATH</pre>
+</div>
+
+<p>returns something like (depending on your setup):</p>
+
+<div class="code bash">
+<pre class="code">/Users/yourname/.composer/vendor/bin:~/.composer/vendor/bin:/usr/local/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</pre>
+</div>
+
+<p>This is a list of colon separated paths where unix will look for executables.  <strong>Its that simple.</strong></p>
+
+<p>If you want UNIX to find an executable you can add the path to that executable to the  <code>$PATH</code> variable.</p>
+
+<p>Early entries take precedence over later entries.  So if you have two executables of the same name UNIX will use the first one it finds.</p>
+
+<p>In BASH to set the path just type</p>
+
+<div class="code bash">
+<pre class="code">PATH=path:path:etc...</pre>
+</div>
+
+<p><strong>Setting the <code>$PATH</code> variable in this way (by typing it into terminal) only lasts for the current session.</strong></p>
+
+<p><u>To set the <code>$PATH</code> variable permanently, edit the <code>.bash</code> file directly which sets the <code>$PATH</code> variable each time UNIX boots up.</u></p>
+
+<p>Note that when you use <code>whereis</code> to find an executable it may return a different copy of that executable than the one that is in the path and being used by UNIX.  This causes some degree of pain...</p>
+
+<h2 id="system-information-commands">4.5 System information commands</h2>
+
+<h3 id="date">4.5.1 date</h3>
+
+<div class="code bash">
+<pre class="code">date</pre>
+</div>
+
+<p>Returns the date in the default format unless you have changed the format in a <code>.bash</code> file.</p>
+
+<h3 id="uptime">4.5.2 uptime</h3>
+
+<div class="code bash">
+<pre class="code">uptime</pre>
+</div>
+
+<p>Returns: <code>18:18  up  2:18, 3 users, load averages: 1.63 1.58 1.60</code></p>
+
+<p>The number of users reflects the number of processes connected to UNIX.  In this cae there are 3.  The MacOS operating system Finder program is one, and one each for the 2 terminal windows which were open when I ran the command <code>uptime</code></p>
+
+<h3 id="users">4.5.3 users</h3>
+
+<div class="code bash">
+<pre class="code">users</pre>
+</div>
+
+<p>Returns username</p>
+
+<h3 id="who">4.5.4 who</h3>
+
+<div class="code bash">
+<pre class="code">who</pre>
+</div>
+
+<p>Returns each instance of a user connecting to unix!</p>
+
+<p>Do you multiple instances of your user name listed?</p>
+
+<div class="code bash">
+<pre class="code">smerth   console  Mar 30 11:58 
+smerth   ttys001  Mar 30 13:19</pre>
+</div>
+
+<p>Username is using unix as shell (one for every open terminal window), and Username is also logged into unix as the MacOS finder.</p>
+
+<h3 id="uname">4.5.5 uname</h3>
+
+<div class="code bash">
+<pre class="code">uname</pre>
+</div>
+
+<p>Returns Darwin - the unix name</p>
+
+<div class="code bash">
+<pre class="code">uname -mnrsvp</pre>
+</div>
+
+<p>Returns: Darwin USER's-MacBook-Pro.local 15.5.0 Darwin Kernel Version 15.5.0: Tue Apr 19 18:36:36 PDT 2016; root:xnu-3328.51.21~8/RELEASE_X86_64 x86_64 i386</p>
+
+<div class="code bash">
+<pre class="code">uname -ap</pre>
+</div>
+
+<p>Returns same...</p>
+
+<h3 id="hostname">4.5.6 hostname</h3>
+
+<div class="code bash">
+<pre class="code">hostname</pre>
+</div>
+
+<p>Returns localhost</p>
+
+<h3 id="domainname">4.5.7 domainname</h3>
+
+<div class="code bash">
+<pre class="code">domainname</pre>
+</div>
+
+<p>Returns the domain name on a server</p>
+
+<h2 id="disk-information-commands">4.6 Disk information commands</h2>
+
+<h3 id="df-disc-freespace">4.6.1 df - disc freespace</h3>
+
+<p>To humanize the output use -h</p>
+
+<div class="code bash">
+<pre class="code">df -h</pre>
+</div>
+
+<p>Disc size is calculated using base2. To get disc size calculated using base10 use:</p>
+
+<div class="code bash">
+<pre class="code">df -H</pre>
+</div>
+
+<h3 id="du-disc-usage">4.6.2 du - disc usage</h3>
+
+<div class="code bash">
+<pre class="code">du path</pre>
+</div>
+
+<p>Gives the size of every file found at a path.  <strong>Its important to restrict <code>du</code> to a path otherwise the burden of calculating the disc size for the whole disc is onerous.</strong></p>
+
+<div class="table" id="table-4-1">
+
+    <table>
+<thead>
+<tr>
+  <th>options</th>
+  <th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>-d</td>
+  <td>To show directories</td>
+</tr>
+<tr>
+  <td>-a</td>
+  <td>For "all" - to show directories and files</td>
+</tr>
+<tr>
+  <td>-d</td>
+  <td>depth</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<h4 id="example-usage">4.6.2.1 example usage</h4>
+
+<div class="code bash">
+<pre class="code">du -ah path</pre>
+</div>
+
+<p>When looking at directories you can specify depth...</p>
+
+<div class="code bash">
+<pre class="code">du -hd 1</pre>
+</div>
+
+<p>which shows the directories to a depth on one</p>
+
+<p><em>n.b. <code>ls</code> reports the actual size of files, <code>du</code> reports the size of the blocks allocated in memory for the files.</em></p>
+
+<h2 id="viewing-processes">4.7 Viewing processes</h2>
+
+<p><strong>The kernal is UNIX.  The shell is a text based UI.  BASH is the flavor of shell most often used in MacOS to interact with UNIX.</strong></p>
+
+<p>The kernal sets aside memory, and starts a process, then outputs from the process if there is any output from that process, then stops the process when it is complete, then frees the memory it has set aside.</p>
+
+<p>You can check the status of all the processes UNIX is running:</p>
+
+<h3 id="ps-process-status">4.7.1 ps - process status</h3>
+
+<div class="code bash">
+<pre class="code">ps</pre>
+</div>
+
+<p>Shows processes owned by user and in user's control (not background and not owned by others like the "root" user.</p>
+
+<div class="code bash">
+<pre class="code">ps -a</pre>
+</div>
+
+<p>shows all processes</p>
+
+<p>people most commonly use:</p>
+
+<div class="code bash">
+<pre class="code">ps aux</pre>
+</div>
+
+<p>There is no dash in front of the options <code>aux</code> because it is an artifact of backwards compatibility with older UNIX versions.</p>
+
+<h2 id="monitoring-processes">4.8 Monitoring processes</h2>
+
+<h3 id="top">4.8.1 top</h3>
+
+<p>Get a quick overview</p>
+
+<div class="code bash">
+<pre class="code">top</pre>
+</div>
+
+<div class="table" id="table-4-2">
+
+    <table>
+<thead>
+<tr>
+  <th>options</th>
+  <th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>q</td>
+  <td>to exit out (quit)</td>
+</tr>
+<tr>
+  <td>-n</td>
+  <td>specify the number of lines to show</td>
+</tr>
+<tr>
+  <td>-o</td>
+  <td>sort order</td>
+</tr>
+<tr>
+  <td>-o cpu</td>
+  <td>sort by cpu usage</td>
+</tr>
+<tr>
+  <td>-s</td>
+  <td>refresh rate in seconds</td>
+</tr>
+<tr>
+  <td>-U</td>
+  <td>filter by user</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<h4 id="examples">4.8.1.1 examples:</h4>
+
+<p>Show 10 lines:</p>
+
+<div class="code bash">
+<pre class="code">top -n 10</pre>
+</div>
+
+<p>Set refresh rate set to 3 seconds:</p>
+
+<div class="code bash">
+<pre class="code">top -s 3</pre>
+</div>
+
+<p>Get more help for <code>top</code></p>
+
+<div class="code bash">
+<pre class="code">top ?</pre>
+</div>
+
+<h2 id="stopping-processes">4.9 Stopping processes</h2>
+
+<p><code>Ctl+C</code>  is the best way to stop a process.  But for some processes you must use kill them.</p>
+
+<p>To kill a process you need the pid (process id)</p>
+
+<div class="code bash">
+<pre class="code">kill -9 pid</pre>
+</div>
+
+<p><code>-9 pid</code>    means: "Hey, UNIX, really, I know best, kill process with id=9"</p>
+
+<h2 id="text-file-helpers">4.10 Text file helpers</h2>
+
+<h3 id="wc-word-count">4.10.1 wc - word count</h3>
+
+<div class="code bash">
+<pre class="code">wc filename</pre>
+</div>
+
+<p>returns:</p>
+
+<ul>
+<li>no. of lines</li>
+<li>no. of words </li>
+<li>no. of characters</li>
+<li>filename</li>
+</ul>
+
+<p>"lines" are not lines on the screen, they are defined by line-breaks</p>
+
+<h3 id="sort">4.10.2 sort</h3>
+
+<div class="code bash">
+<pre class="code">sort filename</pre>
+</div>
+
+<p><code>sort</code> operates on each line in a text file.  It will sort the lines according to the first letter of each line and return the text to the terminal window.</p>
+
+<p>Capital and lowercase letters are treated differently by <code>sort</code>.  To sort alphabetically, independent of case, pass in the -f option</p>
+
+<div class="code bash">
+<pre class="code">sort -f filename</pre>
+</div>
+
+<p>For a reverse sort pass in the -r option.</p>
+
+<h3 id="uniq">4.10.3 uniq</h3>
+
+<p><code>uniq</code> operates on the lines in a text file. It filters in/out repeated lines.  <u>It doesn't find duplicates in the list of lines</u>. <strong>It finds duplicated lines - one immediately following the next</strong>.</p>
+
+<p>It asks: "is this line the same as the next line?"</p>
+
+<div class="code bash">
+<pre class="code">uniq -d</pre>
+</div>
+
+<p>Returns the line that are repeated</p>
+
+<div class="code bash">
+<pre class="code">uniq -u</pre>
+</div>
+
+<p>Returns the unduplicated lines</p>
+
+<h2 id="utility-programs">4.11 Utility programs</h2>
+
+<h3 id="cal-ncal-calendar">4.11.1 cal / ncal - calendar</h3>
+
+<div class="code bash">
+<pre class="code">cal 3 1964</pre>
+</div>
+
+<p>Returns the calendar for Mar 1964.</p>
+
+<div class="code bash">
+<pre class="code">cal -y 1964</pre>
+</div>
+
+<p>Returns a full year.</p>
+
+<div class="code bash">
+<pre class="code">ncal</pre>
+</div>
+
+<p>Rotates the calendar with the days running down the left side.</p>
+
+<h3 id="bc-calculator">4.11.2 bc - calculator</h3>
+
+<p>Its a calculator!  Just run <code>bc</code> and the program executes, then on the command line enter your calculation, for eg: <code>88 * 10</code></p>
+
+<p>Or,</p>
+
+<div class="code bash">
+<pre class="code">echo &quot;2+5&quot; | bc</pre>
+</div>
+
+<p><a href="http://www.folkstalk.com/2012/09/bc-command-examples-in-unix-linux.html">Good overview of bc</a></p>
+
+<h3 id="expr-expression-evaluator">4.11.3 expr - expression evaluator</h3>
+
+<div class="code bash">
+<pre class="code">expr 5 + 3</pre>
+</div>
+
+<p>You need to have spaces between arguments <code>expr 1+1</code> won't work but <code>expr 1 + 1</code> works.</p>
+
+<p>And you must escape special characters!</p>
+
+<p><a href="http://www.folkstalk.com/2012/09/expr-command-examples-in-unix-linux.html">Good overview of expr</a></p>
+
+<h3 id="units-unit-converter">4.11.4 units - unit converter</h3>
+
+<p><code>units</code> will convert from the first argument to the second.</p>
+
+<p>A shortcut for entering the conversion is to put arguments into quotes on the command line:</p>
+
+<div class="code bash">
+<pre class="code">units &quot;190 degF&quot; &quot;degC&quot;</pre>
+</div>
+
+<h2 id="history-working-with-history">4.12 History - working with history</h2>
+
+<p>The history of your interaction with bash in terminal is tracked in a file in the user driectory.</p>
+
+<p>Bash writes to this history log when it quits so the current session's commands are not reflected (as you might expect...)</p>
+
+<p>Bash holds the current sessions commands in memory until it quits then writes them to the file.</p>
+
+<div class="code bash">
+<pre class="code">history</pre>
+</div>
+
+<p>prints a list of previously executed command to the terminal - now you can use the numbers beside a command to re-issue that command instead of scrolling up with the up-arrow</p>
+
+<div class="code bash">
+<pre class="code">!504</pre>
+</div>
+
+<p>executes command numbered 504 in the history list</p>
+
+<div class="code bash">
+<pre class="code">!-2</pre>
+</div>
+
+<p>executes the command 2 back in the current history</p>
+
+<div class="code bash">
+<pre class="code">!some alpha numeric string</pre>
+</div>
+
+<p>executes the last command matching the string</p>
+
+<div class="code bash">
+<pre class="code">!nano</pre>
+</div>
+
+<p>runs the last nano you executed</p>
+
+<div class="code bash">
+<pre class="code">!!</pre>
+</div>
+
+<p>runs the last command</p>
+
+<div class="code bash">
+<pre class="code">sudo !!</pre>
+</div>
+
+<p>pulls up the last command prepended with sudo</p>
+
+<div class="code bash">
+<pre class="code">!$</pre>
+</div>
+
+<p>references the arguments from the last command.  For example first run:</p>
+
+<div class="code bash">
+<pre class="code">nano textfile.txt</pre>
+</div>
+
+<p>and now:</p>
+
+<div class="code bash">
+<pre class="code">cat !$</pre>
+</div>
+
+<p>will open the file you nano-ed, for you to check the changes, in cat - without having the type the filename again</p>
+
+<p>Delete lines from the history with -d</p>
+
+<div class="code bash">
+<pre class="code">history -d 203</pre>
+</div>
+
+<p>deletes line 203</p>
+ 
+                            </div>
+        </div>
+    </div>     </div>  
+<footer class="row">
+    <div class="columns medium-12 topspace">
+
+        <div class=" footer-top align-right text-right">
+            <p class="copywrite">Copywrite © 2017</p>
+        </div>
+
+        <div class="footer-middle">
+            <div class="row">
+                <div class="small-12 medium-6 large-4 columns">
+                    <a href="../../../../index.html">    
+                        <img class="logo" src="../../../../assets/img/robo-1.png"  alt="company logo">
+                    </a>                    <div class="" id="name-slogan"> 
+                        <h1 class="name"><a href="../../../../index.html">SMERTH</a><ul class="inline-list social">
+                       <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+                       <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+                       <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+                       <li><a href="#"><i class="fi-social-github"></i></a></li>
+                    </ul></h1>
+                    <p class="tagline">Full-stack Web Developer</p>
+                        <h2 class="slogan">building with <span class="percent">100%</span> re-cycled electrons.</h2>
+                    </div>
+                    <ul class="footer-menu no-bullet inline-dot-list">
+                        <li><a href="../../../../projects.html">Projects</a></li>
+                        <li><a href="../../../../content/books/books.html">Notes</a></li>
+                        <li><a href="../../../../screenshots.html">Screenshots</a></li>
+                        <li><a href="../../../../about/book/chapter-1.html">About</a></li>
+                        <li><a href="../../../../timeline.html">Timeline</a></li>
+                        <!--<li><a href="../../../../hp-singlepage-scroll.html">fpage scroll</a></li>
+                        <li><a href="../../../../hp-desk-foundation.html">desk foundation</a></li>-->                    </ul>
+                </div>
+                <div class="small-12 medium-6 large-4 columns align-middle">
+                    <ul class="contact">
+                      <li><p><i class="fi-marker"></i>address</p></li>
+                      <li><p><i class="fi-telephone"></i>telephone</p></li>
+                      <li><p><i class="fi-mail"></i>email</p></li>
+                    </ul>                </div>
+                <div class=" small-12 medium-12 large-4 columns align-middle">
+                    <blockquote class="quote">
+                        <p>Outside of a dog, a book is a man's best friend.</p>
+                        <p>Inside of a dog it's too dark to read.</p>
+                        <cite>Groucho Marx</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="row">
+                <div class="large-12 columns text-center align-middle">
+                    <ul class="no-bullet inline-dot-list">
+                        <li><a href="../../../../index.html">London</a></li>
+                        <li><a href="../../../../projects.html">Vancouver</a></li>
+                        <li><a href="../../../../books.html">Tokyo</a></li>
+                        <li><a href="../../../../screenshots.html">Beijing</a></li>
+                        <li><a href="../../../../index.html">Hong Kong</a></li>
+                        <li><a href="../../../../projects.html">Kuala Lumpur</a></li>
+                        <li><a href="../../../../books.html">Singapore</a></li>
+                        <li><a href="../../../../screenshots.html">Tuktoyaktuk</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer><script src="../../../../assets/js/app.js"></script>
+
+</body>
+
+</html>

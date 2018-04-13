@@ -1,0 +1,580 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebooks - Bash on MacOS - MacOS Only Commands</title>
+    <link rel="stylesheet" href="../../../../assets/css/app.css">
+    <link href='https://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+    <!--<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="innerpage chapter-8">
+
+<header class="row">
+    <!--<div class="small-2 columns">
+                <a href="../../../../index.html">    
+                    <img class="logo" src="../../../../assets/img/robo-1.png"  alt="company logo">
+                </a>            </div>-->
+    <div class="small-10 columns">
+        <div class="" id="name-slogan"> 
+            <h1 class="name"><a href="../../../../index.html">SMERTH</a><ul class="inline-list social">
+           <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+           <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+           <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+           <li><a href="#"><i class="fi-social-github"></i></a></li>
+        </ul></h1>
+        <p class="tagline">Full-stack Web Developer</p>
+            <h2 class="slogan">building with <span class="percent">100%</span> re-cycled electrons.</h2>
+        </div>
+    </div>
+    <div class="small-12 columns responsive-menu">
+        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle></button>
+            <div class="title-bar-title">Menu</div>
+        </div>
+        <div class="top-bar" id="main-menu">
+            <div class="top-bar-left">
+                <ul class="menu vertical medium-horizontal collapsed medium-text-center" data-responsive-menu="accordion medium-dropdown"
+                    data-accordion-menu>
+                    <li class="menu-text"><a href="../../../../index.html">Hello</a></li>
+                    <li><a href="../../../../projects.html">Projects</a></li>
+                    <li><a href="../../../../content/books/books.html">Notes</a></li>
+                    <li><a href="../../../../screenshots.html">Screenshots</a></li>
+                    <li><a href="../../../../about/book/chapter-1.html">About</a></li>
+                    <li><a href="../../../../timeline.html">Timeline</a></li>
+                    <!--<li><a href="../../../../hp-singlepage-scroll.html">fpage scroll</a></li>
+                    <li><a href="../../../../hp-desk-foundation.html">desk foundation</a></li>-->                </ul>
+            </div>
+            <div class="top-bar-right">
+                <!--<ul class="inline-list social">
+   <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+   <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+   <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+   <li><a href="#"><i class="fi-social-github"></i></a></li>
+</ul>-->
+            </div>
+        </div>
+    </div>
+</header>
+<div class="row Bash on MacOS" data-sticky-container>
+        <div id="chapter-sticky-header" class="column small-12 sticky" data-sticky data-anchor="main" data-options="marginTop:0;"
+        style="width: 100%;">
+        <div class="callout">
+            <div class="row">
+                <div class="column small-6 small-order-2 medium-order-1 medium-3 prev-container">
+                                        <h6><a class="prev" href="./chapter-7.html"><i class="fi-arrow-left"></i> Previous<div><small>Chapter 7 - Unix Power Tools</small></div></a></h6>
+                                    </div>                 <div class="column small-12 small-order-1 medium-order-2 medium-6 text-center title-container">
+                    <div class="row">
+                        <div class="small-3 medium-5 columns">
+                                                        <a href="../../../../../index.html">
+                                <h4 class="name">SMERTH</h4>
+                            </a>
+                        </div>
+                        <div class="columns medium-7">
+                            <h6 id="macos-only-commands" class="bk-title text-left">
+                                <i class="fi-book-bookmark"> </i>
+                                <a href="./index.html">Bash on MacOS</a>
+                            </h6>
+                            <h6 id="macos-only-commands" class="ch-title text-left"><small>Chapter 8 - MacOS Only Commands</small></h6>
+                        </div>
+                    </div>
+                </div>                 <div class="column small-6 small-order-3 medium-order-3 medium-3 next-container">
+                                        <p class="next disabled">Next &rarr;
+                        <span></span>
+                    </p>
+                                    </div>
+            </div>         </div> </div> </div>  
+
+<div id="book-page" class="Bash on MacOS row">
+    <div class="column small-12 medium-4 large-3">
+        <div id="sidebar" data-sticky-container>
+                        <div class="callout" data-sticky data-anchor="main" data-options="marginTop:5.5;" style="width:100%">
+                <nav id="sidebar-toc">
+                    <h3><a href=".">Table of contents</a></h3>
+                    <ul class="toc">
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">1.</span>
+                                    <a href="./chapter-1.html"> Introduction</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">2.</span>
+                                    <a href="./chapter-2.html"> Working with files and directories</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">3.</span>
+                                    <a href="./chapter-3.html"> Ownership and Permissions</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">4.</span>
+                                    <a href="./chapter-4.html"> Commands and Programs</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">5.</span>
+                                    <a href="./chapter-5.html"> Directing Input and Output</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">6.</span>
+                                    <a href="./chapter-6.html"> Configuring Your Working Environment</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">7.</span>
+                                    <a href="./chapter-7.html"> Unix Power Tools</a>
+                                </li>
+                              
+                         
+                             
+                                 
+                                <li class="level-1 active">
+                                    <a class="chapter" href="./chapter-8.html"><span class="chapter-label">Chapter 8.</span>MacOS Only Commands</a>
+                                    <ul id="page-toc" class="unstyled toc-l2">
+                                         
+                                                                                        <li class="level-2" data-scroll="finder-integration">
+                                                <span class="chapter-sub-label">8.1</span>
+                                                <a class="internal" href="./chapter-8.html#finder-integration">Finder integration</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="open-stuff">
+                                                <span class="chapter-sub-label">8.2</span>
+                                                <a class="internal" href="./chapter-8.html#open-stuff">Open Stuff</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="clipboard-integration">
+                                                <span class="chapter-sub-label">8.3</span>
+                                                <a class="internal" href="./chapter-8.html#clipboard-integration">Clipboard integration</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="screencapture">
+                                                <span class="chapter-sub-label">8.4</span>
+                                                <a class="internal" href="./chapter-8.html#screencapture">Screencapture</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="text-to-speech">
+                                                <span class="chapter-sub-label">8.5</span>
+                                                <a class="internal" href="./chapter-8.html#text-to-speech">Text to speech</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="spotlight">
+                                                <span class="chapter-sub-label">8.6</span>
+                                                <a class="internal" href="./chapter-8.html#spotlight">Spotlight</a>
+                                            </li>
+                                                                                                                        </ul>
+                                </li>
+                                 
+                                            </ul>                 </nav>             </div>         </div>
+    </div>      <div id="main" class="main column small-12 medium-8 large-9 ">
+        <div class="callout">
+            <div class="main-content">
+                                    <h1 id="macos-only-commands"><span>Chapter 8: </span> MacOS Only Commands</h1>
+                <h2 id="finder-integration">8.1 Finder integration</h2>
+
+<p>First open <code>applications/utilities</code> and drag the Terminal.app icon onto the Dock for easy access to the Terminal App from the Dock.</p>
+
+<p>To open Terminal at a folder's path just drag the folder onto the Terminal icon in the Dock.</p>
+
+<h2 id="open-stuff">8.2 Open Stuff</h2>
+
+<p>Open any file, directory or program</p>
+
+<div class="code bash">
+<pre class="code">open</pre>
+</div>
+
+<h3 id="open-a-directory">8.2.1 Open a directory</h3>
+
+<p>Open the current directory in finder.</p>
+
+<div class="code bash">
+<pre class="code">open .</pre>
+</div>
+
+<p>Opens the parent directory in the finder.</p>
+
+<h3 id="open-an-application">8.2.2 Open an application</h3>
+
+<div class="code bash">
+<pre class="code">open -a calculator</pre>
+</div>
+
+<p><code>-a</code>  flag tells MacOS to go to the application folder and find this application, then open it...</p>
+
+<h3 id="open-a-file">8.2.3 Open a file</h3>
+
+<p>Open a file with a specified application.</p>
+
+<div class="code bash">
+<pre class="code">open -a textedit lorem_ipsum.txt</pre>
+</div>
+
+<h3 id="combine-commands-with-open">8.2.4 Combine commands with open</h3>
+
+<p>Combining commands with open can be powerful.</p>
+
+<h4 id="example-1">8.2.4.1 Example 1</h4>
+
+<p>cut two columns (2,6) from a tab delimited file and open numbers with those columns pasted in</p>
+
+<div class="code bash">
+<pre class="code">cut -f 2,6 mock_tab_data.txt | open -fa numbers</pre>
+</div>
+
+<h4 id="example-2">8.2.4.2 Example 2</h4>
+
+<p>open man pages in preview...</p>
+
+<div class="code bash">
+<pre class="code">man -t bash | open -fa preview</pre>
+</div>
+
+<h2 id="clipboard-integration">8.3 Clipboard integration</h2>
+
+<p>In MacOS there are two important clipboard Commands</p>
+
+<p>One for copying to the clipboard</p>
+
+<div class="code bash">
+<pre class="code">pbcopy</pre>
+</div>
+
+<p>And one for pasting to the clipboard</p>
+
+<div class="code bash">
+<pre class="code">pbpaste</pre>
+</div>
+
+<p>N.B. <code>pb</code> stands for pasteboard</p>
+
+<h3 id="piping-results-to-a-clipboard">8.3.1 Piping results to a clipboard</h3>
+
+<p>Piping the results of a command to the clipboard as a way to quickly get results out of terminal</p>
+
+<div class="code bash">
+<pre class="code">ls -lah | pbcopy</pre>
+</div>
+
+<p>place the contents of a file onto the clipboard without opening the file</p>
+
+<div class="code bash">
+<pre class="code">pbcopy &lt; lorem_ipsum.txt</pre>
+</div>
+
+<h2 id="screencapture">8.4 Screencapture</h2>
+
+<h3 id="screencapture-whole-screen">8.4.1 Screencapture whole screen</h3>
+
+<p>Take a screenshot of the entire screen and save it to the desktop.</p>
+
+<div class="code bash">
+<pre class="code">screencapture -S ~/Desktop/screen.jpg</pre>
+</div>
+
+<h3 id="screencapture-a-window">8.4.2 Screencapture a window</h3>
+
+<p>To take a picture of a window, and save it to the desktop.</p>
+
+<div class="code bash">
+<pre class="code">screencapture -iW ~/Desktop/screen.jpg</pre>
+</div>
+
+<h3 id="screencapture-a-selection">8.4.3 Screencapture a selection</h3>
+
+<p>To take a screenshot of a section of the screen, and save it to the clipboard</p>
+
+<div class="code bash">
+<pre class="code">screencapture -ic</pre>
+</div>
+
+<p>To take a screenshot of the whole screen, and save it to the clipboard</p>
+
+<div class="code bash">
+<pre class="code">screencapture -c</pre>
+</div>
+
+<p>Use the <code>-c</code> flag, but don’t assign a file name or path and the image will be saved to the clipboard.</p>
+
+<p>Now that it’s in your clipboard you can just paste it into Preview, Photoshop, Pages, or whatever else you want to use.</p>
+
+<h3 id="screencapture-with-a-timer">8.4.4 Screencapture with a timer</h3>
+
+<p>The Grab utility lets you take screenshots on a timer, so you can setup an app or situation on the screen and capture things like alert boxes, menus, button actions, etc. You can also specify a timed screenshot from the Terminal:</p>
+
+<div class="code bash">
+<pre class="code">screencapture -T 10 timedshot.jpg</pre>
+</div>
+
+<p>The <code>-T</code> flag needs to be followed by whatever amount in seconds you want to delay the screen shot by.  In the above example, it’s 10 seconds which is also the default when using Grab.</p>
+
+<p>Make a note that the capitalization of these flags matters, if you use a lowercase <code>-t</code>, you’ll be trying to specify a file type for the screenshot instead, like so:</p>
+
+<h3 id="screencapture-to-a-file-type">8.4.5 Screencapture to a file type</h3>
+
+<div class="code bash">
+<pre class="code">screencapture -t tiff sample.tiff</pre>
+</div>
+
+<p>You can select a variety of file types to export to, including <code>.png</code>, <code>.pdf</code>, <code>.tiff</code>, <code>.jpg</code>, and <code>.gif</code>.</p>
+
+<h3 id="screencapture-silent-mode">8.4.6 Screencapture silent mode</h3>
+
+<p>If you plan on scripting out something with the screencapture command, you might not want the shutter sound to fire. To silently take a screen shot just use the <code>-x</code> flag:</p>
+
+<div class="code bash">
+<pre class="code">screencapture -x quiet.jpg</pre>
+</div>
+
+<p>This is a one time thing so you’ll have to always specify <code>-x</code>, it’s not a permanent change to make the screen shots silent.</p>
+
+<h3 id="screenshot-to-application">8.4.7 Screenshot to application</h3>
+
+<p>Another neat trick is sending the screenshot directly to a new Mail.app message:</p>
+
+<div class="code bash">
+<pre class="code">screencapture -M mailme.jpg</pre>
+</div>
+
+<p>This takes the screenshot, saves it as mailme.jpg, then automatically opens a new Mail message with that screenshot attached to it.</p>
+
+<h3 id="other-screencapture-options">8.4.8 Other screencapture options:</h3>
+
+<p>-i    (interactive - brings up the crosshairs)</p>
+
+<p>-m    (main monitor only)</p>
+
+<p>-C    (show cursor)</p>
+
+<p>-t    (format (png, pdf, jpg, tiff))</p>
+
+<p>-T    (delay in seconds)</p>
+
+<p>-P    (open in preview)</p>
+
+<p>-M    (send to mail)</p>
+
+<p>-c    (send to clipboard)</p>
+
+<h3 id="a-complex-screen-capture-example">8.4.9 A complex screen capture example</h3>
+
+<div class="code bash">
+<pre class="code">screencapture -mCP -T 3 -t jpg screen_cap.jpg</pre>
+</div>
+
+<p>main monitor only, show cursor, open in preview, delay 3 seconds, save as jpg</p>
+
+<h2 id="text-to-speech">8.5 Text to speech</h2>
+
+<h3 id="say-a-string">8.5.1 Say a string</h3>
+
+<div class="code bash">
+<pre class="code">say 'unix is awesome'</pre>
+</div>
+
+<h3 id="choose-the-voice">8.5.2 Choose the voice</h3>
+
+<p>-v    (voice option)</p>
+
+<div class="code bash">
+<pre class="code">say 'unix is awesome' -v vicki</pre>
+</div>
+
+<h3 id="read-a-file">8.5.3 Read a file</h3>
+
+<div class="code bash">
+<pre class="code">say -f file.txt</pre>
+</div>
+
+<h3 id="output-audio-as-aiff">8.5.4 Output audio as .aiff</h3>
+
+<div class="code bash">
+<pre class="code">say -f file.txt -o audio.aiff</pre>
+</div>
+
+<h3 id="alert-when-actions-complete">8.5.5 Alert when actions complete</h3>
+
+<div class="code bash">
+<pre class="code">cp -R dir1 dir2; say 'Directory copy done'</pre>
+</div>
+
+<h2 id="spotlight">8.6 Spotlight</h2>
+
+<h3 id="spotlight-searching-metadata">8.6.1 Spotlight: searching metadata</h3>
+
+<h4 id="mdfind">8.6.1.1 mdfind</h4>
+
+<p>The metadata for a file contains much more information about the file than we normally have access to from the command line. As an example, let's say that you have an MP3 or a song that you've purchased on iTunes. Well that has a file name. It's probably the same name as the song and we can see that in the file system. We could search for it using <code>find</code> or <code>grep</code>, but it also has a lot more information associated with it. It has the artists name, the album name, the track number, the running time, the bit rate that it is encoded at.</p>
+
+<h4 id="limit-the-search-to-a-directory">8.6.1.2 Limit the search to a directory</h4>
+
+<p>use -onlyin</p>
+
+<div class="code bash">
+<pre class="code">mdfind -onlyin ~/Library/ &quot;search_word&quot;</pre>
+</div>
+
+<h4 id="exclude-results-with-a-term">8.6.1.3 Exclude results with a term</h4>
+
+<p>use a minus sign before a search term to exclude</p>
+
+<div class="code bash">
+<pre class="code">mdfind -onlyin ~/Library/ &quot;search_word -xxx&quot;</pre>
+</div>
+
+<h4 id="search-within-a-name">8.6.1.4 Search within a name</h4>
+
+<p>use the <code>-name</code> option</p>
+
+<div class="code bash">
+<pre class="code">mdfind -onlyin ~/Library/ -name &quot;new&quot;</pre>
+</div>
+
+<p>It will find the search term in the name, so "new" returns:
+new.txt
+newer.txt
+new_file.txt</p>
+
+<h4 id="pipe-search-result-to-xargs">8.6.1.5 Pipe search result to xargs</h4>
+
+<p>To remove the null characters from the result set and then pipe the result set into xargs use -0</p>
+
+<div class="code bash">
+<pre class="code">mdfind -onlyin ~/Library/ -name &quot;new&quot; -0 | xargs -0 open</pre>
+</div>
+
+<p>That will open the found files in the default app.</p>
+
+<h3 id="spotlight-metadata-attributes">8.6.2 Spotlight: metadata attributes</h3>
+
+<h4 id="mdls">8.6.2.1 mdls</h4>
+
+<p><code>mdls</code> allows us to peek at the metadata associated with a file</p>
+
+<div class="code bash">
+<pre class="code">mdls file.txt</pre>
+</div>
+
+<p>This lists the keys and values for the metadata associated with that file, for instance a key might be: kMDItemFSName.</p>
+
+<p>You you use that key in a search as follows...</p>
+
+<div class="code bash">
+<pre class="code">mdfind -onlyin ~/Library/ 'kMDItemFSName == &quot;lorem_ipsum&quot;'</pre>
+</div>
+
+<p>remember == is an exact match.</p>
+
+<h4 id="search-by-time-using-mdls">8.6.2.2 Search by time using mdls</h4>
+
+<div class="code bash">
+<pre class="code">mdfind -onlyin ~/Library/ 'kMDItemFSCreationDate &gt;= $time.today'</pre>
+</div>
+
+<h5 id="options-for-mdls">8.6.2.2.1 options for mdls</h5>
+
+<p>$time.now
+$time.today
+$time.yesterday
+$time.week
+$time.this_month
+$time.this_year</p>
+
+<h5 id="provide-an-argument-to-these-time-functions">8.6.2.2.2 provide an argument to these time functions</h5>
+
+<p>$time.now(-36000)</p>
+
+<p>yields "now" minus 36000 seconds</p>
+
+<p>$time.today(-2)</p>
+
+<p>yields "today" minus 2 days</p>
+ 
+                            </div>
+        </div>
+    </div>     </div>  
+<footer class="row">
+    <div class="columns medium-12 topspace">
+
+        <div class=" footer-top align-right text-right">
+            <p class="copywrite">Copywrite © 2017</p>
+        </div>
+
+        <div class="footer-middle">
+            <div class="row">
+                <div class="small-12 medium-6 large-4 columns">
+                    <a href="../../../../index.html">    
+                        <img class="logo" src="../../../../assets/img/robo-1.png"  alt="company logo">
+                    </a>                    <div class="" id="name-slogan"> 
+                        <h1 class="name"><a href="../../../../index.html">SMERTH</a><ul class="inline-list social">
+                       <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+                       <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+                       <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+                       <li><a href="#"><i class="fi-social-github"></i></a></li>
+                    </ul></h1>
+                    <p class="tagline">Full-stack Web Developer</p>
+                        <h2 class="slogan">building with <span class="percent">100%</span> re-cycled electrons.</h2>
+                    </div>
+                    <ul class="footer-menu no-bullet inline-dot-list">
+                        <li><a href="../../../../projects.html">Projects</a></li>
+                        <li><a href="../../../../content/books/books.html">Notes</a></li>
+                        <li><a href="../../../../screenshots.html">Screenshots</a></li>
+                        <li><a href="../../../../about/book/chapter-1.html">About</a></li>
+                        <li><a href="../../../../timeline.html">Timeline</a></li>
+                        <!--<li><a href="../../../../hp-singlepage-scroll.html">fpage scroll</a></li>
+                        <li><a href="../../../../hp-desk-foundation.html">desk foundation</a></li>-->                    </ul>
+                </div>
+                <div class="small-12 medium-6 large-4 columns align-middle">
+                    <ul class="contact">
+                      <li><p><i class="fi-marker"></i>address</p></li>
+                      <li><p><i class="fi-telephone"></i>telephone</p></li>
+                      <li><p><i class="fi-mail"></i>email</p></li>
+                    </ul>                </div>
+                <div class=" small-12 medium-12 large-4 columns align-middle">
+                    <blockquote class="quote">
+                        <p>Outside of a dog, a book is a man's best friend.</p>
+                        <p>Inside of a dog it's too dark to read.</p>
+                        <cite>Groucho Marx</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="row">
+                <div class="large-12 columns text-center align-middle">
+                    <ul class="no-bullet inline-dot-list">
+                        <li><a href="../../../../index.html">London</a></li>
+                        <li><a href="../../../../projects.html">Vancouver</a></li>
+                        <li><a href="../../../../books.html">Tokyo</a></li>
+                        <li><a href="../../../../screenshots.html">Beijing</a></li>
+                        <li><a href="../../../../index.html">Hong Kong</a></li>
+                        <li><a href="../../../../projects.html">Kuala Lumpur</a></li>
+                        <li><a href="../../../../books.html">Singapore</a></li>
+                        <li><a href="../../../../screenshots.html">Tuktoyaktuk</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer><script src="../../../../assets/js/app.js"></script>
+
+</body>
+
+</html>

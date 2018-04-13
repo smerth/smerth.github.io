@@ -1,0 +1,982 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebooks - Bash on MacOS - Unix Power Tools</title>
+    <link rel="stylesheet" href="../../../../assets/css/app.css">
+    <link href='https://cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+    <!--<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="innerpage chapter-7">
+
+<header class="row">
+    <!--<div class="small-2 columns">
+                <a href="../../../../index.html">    
+                    <img class="logo" src="../../../../assets/img/robo-1.png"  alt="company logo">
+                </a>            </div>-->
+    <div class="small-10 columns">
+        <div class="" id="name-slogan"> 
+            <h1 class="name"><a href="../../../../index.html">SMERTH</a><ul class="inline-list social">
+           <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+           <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+           <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+           <li><a href="#"><i class="fi-social-github"></i></a></li>
+        </ul></h1>
+        <p class="tagline">Full-stack Web Developer</p>
+            <h2 class="slogan">building with <span class="percent">100%</span> re-cycled electrons.</h2>
+        </div>
+    </div>
+    <div class="small-12 columns responsive-menu">
+        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle></button>
+            <div class="title-bar-title">Menu</div>
+        </div>
+        <div class="top-bar" id="main-menu">
+            <div class="top-bar-left">
+                <ul class="menu vertical medium-horizontal collapsed medium-text-center" data-responsive-menu="accordion medium-dropdown"
+                    data-accordion-menu>
+                    <li class="menu-text"><a href="../../../../index.html">Hello</a></li>
+                    <li><a href="../../../../projects.html">Projects</a></li>
+                    <li><a href="../../../../content/books/books.html">Notes</a></li>
+                    <li><a href="../../../../screenshots.html">Screenshots</a></li>
+                    <li><a href="../../../../about/book/chapter-1.html">About</a></li>
+                    <li><a href="../../../../timeline.html">Timeline</a></li>
+                    <!--<li><a href="../../../../hp-singlepage-scroll.html">fpage scroll</a></li>
+                    <li><a href="../../../../hp-desk-foundation.html">desk foundation</a></li>-->                </ul>
+            </div>
+            <div class="top-bar-right">
+                <!--<ul class="inline-list social">
+   <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+   <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+   <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+   <li><a href="#"><i class="fi-social-github"></i></a></li>
+</ul>-->
+            </div>
+        </div>
+    </div>
+</header>
+<div class="row Bash on MacOS" data-sticky-container>
+        <div id="chapter-sticky-header" class="column small-12 sticky" data-sticky data-anchor="main" data-options="marginTop:0;"
+        style="width: 100%;">
+        <div class="callout">
+            <div class="row">
+                <div class="column small-6 small-order-2 medium-order-1 medium-3 prev-container">
+                                        <h6><a class="prev" href="./chapter-6.html"><i class="fi-arrow-left"></i> Previous<div><small>Chapter 6 - Configuring Your Working Environment</small></div></a></h6>
+                                    </div>                 <div class="column small-12 small-order-1 medium-order-2 medium-6 text-center title-container">
+                    <div class="row">
+                        <div class="small-3 medium-5 columns">
+                                                        <a href="../../../../../index.html">
+                                <h4 class="name">SMERTH</h4>
+                            </a>
+                        </div>
+                        <div class="columns medium-7">
+                            <h6 id="unix-power-tools" class="bk-title text-left">
+                                <i class="fi-book-bookmark"> </i>
+                                <a href="./index.html">Bash on MacOS</a>
+                            </h6>
+                            <h6 id="unix-power-tools" class="ch-title text-left"><small>Chapter 7 - Unix Power Tools</small></h6>
+                        </div>
+                    </div>
+                </div>                 <div class="column small-6 small-order-3 medium-order-3 medium-3 next-container">
+                                        <h6>
+                        <a class="next" href="./chapter-8.html">
+                            <div class="text-right">Next <i class="fi-arrow-right"></i></div>
+                            <div class="text-right"><small>Chapter 8 - MacOS Only Commands</small></div>
+                        </a>
+                    </h6>
+                                    </div>
+            </div>         </div> </div> </div>  
+
+<div id="book-page" class="Bash on MacOS row">
+    <div class="column small-12 medium-4 large-3">
+        <div id="sidebar" data-sticky-container>
+                        <div class="callout" data-sticky data-anchor="main" data-options="marginTop:5.5;" style="width:100%">
+                <nav id="sidebar-toc">
+                    <h3><a href=".">Table of contents</a></h3>
+                    <ul class="toc">
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">1.</span>
+                                    <a href="./chapter-1.html"> Introduction</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">2.</span>
+                                    <a href="./chapter-2.html"> Working with files and directories</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">3.</span>
+                                    <a href="./chapter-3.html"> Ownership and Permissions</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">4.</span>
+                                    <a href="./chapter-4.html"> Commands and Programs</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">5.</span>
+                                    <a href="./chapter-5.html"> Directing Input and Output</a>
+                                </li>
+                              
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">6.</span>
+                                    <a href="./chapter-6.html"> Configuring Your Working Environment</a>
+                                </li>
+                              
+                         
+                             
+                                 
+                                <li class="level-1 active">
+                                    <a class="chapter" href="./chapter-7.html"><span class="chapter-label">Chapter 7.</span>Unix Power Tools</a>
+                                    <ul id="page-toc" class="unstyled toc-l2">
+                                         
+                                                                                        <li class="level-2" data-scroll="intro">
+                                                <span class="chapter-sub-label">7.1</span>
+                                                <a class="internal" href="./chapter-7.html#intro">Intro</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="grep">
+                                                <span class="chapter-sub-label">7.2</span>
+                                                <a class="internal" href="./chapter-7.html#grep">GREP</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="regex">
+                                                <span class="chapter-sub-label">7.3</span>
+                                                <a class="internal" href="./chapter-7.html#regex">REGEX</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="tr">
+                                                <span class="chapter-sub-label">7.4</span>
+                                                <a class="internal" href="./chapter-7.html#tr">TR</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="sed">
+                                                <span class="chapter-sub-label">7.5</span>
+                                                <a class="internal" href="./chapter-7.html#sed">SED</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="cut">
+                                                <span class="chapter-sub-label">7.6</span>
+                                                <a class="internal" href="./chapter-7.html#cut">CUT</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="diff">
+                                                <span class="chapter-sub-label">7.7</span>
+                                                <a class="internal" href="./chapter-7.html#diff">DIFF</a>
+                                            </li>
+                                                                                        <li class="level-2" data-scroll="xargs">
+                                                <span class="chapter-sub-label">7.8</span>
+                                                <a class="internal" href="./chapter-7.html#xargs">XARGS</a>
+                                            </li>
+                                                                                                                        </ul>
+                                </li>
+                                 
+                         
+                             
+                                                                <li class="level-1">
+                                    <span class="chapter-label">8.</span>
+                                    <a href="./chapter-8.html"> MacOS Only Commands</a>
+                                </li>
+                              
+                                            </ul>                 </nav>             </div>         </div>
+    </div>      <div id="main" class="main column small-12 medium-8 large-9 ">
+        <div class="callout">
+            <div class="main-content">
+                                    <h1 id="unix-power-tools"><span>Chapter 7: </span> Unix Power Tools</h1>
+                <h2 id="intro">7.1 Intro</h2>
+
+<p>In working though this seciton its good to have some files of dummy data.  To have some interesting dummy files to work on you can use these services.</p>
+
+<p><a href="https://www.mockaroo.com">Mockaroo</a></p>
+
+<p><a href="http://dummydata.me">Dummy Data Me</a></p>
+
+<h2 id="grep">7.2 GREP</h2>
+
+<p>grep stands for: global regular expression print.  It is a powerful search program from the command line.</p>
+
+<div class="code bash">
+<pre class="code">grep string file.txt</pre>
+</div>
+
+<p>It searches for the string you give it, inside the file you give it, and returns to the screen the <strong>lines</strong> that contain a match for the string you give it.</p>
+
+<p>The search is case sensitive.</p>
+
+<div class="code bash">
+<pre class="code">grep -i apples fruit.txt</pre>
+</div>
+
+<div class="table" id="table-7-1">
+
+    <table>
+<thead>
+<tr>
+  <th>options</th>
+  <th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>-i</td>
+  <td>Sets the search to case  insensitive</td>
+</tr>
+<tr>
+  <td>-w</td>
+  <td>Matches on whole words</td>
+</tr>
+<tr>
+  <td>-v</td>
+  <td>Returns lines that don't match (inverse match)</td>
+</tr>
+<tr>
+  <td>-n</td>
+  <td>Shows line numbers for the returned results</td>
+</tr>
+<tr>
+  <td>-c</td>
+  <td>Shows the number of positive matches</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<h3 id="input-multiple-files">7.2.1 Input multiple files</h3>
+
+<p>To input multiple files give <code>grep</code> a path to a folder full of files</p>
+
+<div class="code bash">
+<pre class="code">grep -R apple Users/smerth/some_interesting_files</pre>
+</div>
+
+<div class="table" id="table-7-2">
+
+    <table>
+<thead>
+<tr>
+  <th>options</th>
+  <th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>-R</td>
+  <td>is used to direct the search recursively into the files in folders</td>
+</tr>
+<tr>
+  <td>-n</td>
+  <td>applies line numbers to the match results</td>
+</tr>
+<tr>
+  <td>-h</td>
+  <td>suppresses the file name and just gives the matched terms</td>
+</tr>
+<tr>
+  <td>-l</td>
+  <td>just returns the file name and not the matched term</td>
+</tr>
+<tr>
+  <td>-L</td>
+  <td>returns whole files that don't contain a match</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<h3 id="wildcards">7.2.2 Wildcards</h3>
+
+<p>Use wildcards to refine the folders and files that are searched</p>
+
+<div class="code bash">
+<pre class="code">ls *.txt</pre>
+</div>
+
+<p>lists only the .txt files</p>
+
+<p>so</p>
+
+<div class="code bash">
+<pre class="code">grep apple Users/smerth/unix_files/*.txt</pre>
+</div>
+
+<p>will look for the string <code>apple</code> in only the text files</p>
+
+<h3 id="pipe-output-from-other-sources-into-grep">7.2.3 Pipe output from other sources into grep</h3>
+
+<p>You can pipe results from a command into grep</p>
+
+<div class="code bash">
+<pre class="code">ps aux | grep terminal</pre>
+</div>
+
+<p><code>ps</code> returns active processes, <code>grep</code> searches these for lines containing the string <code>terminal</code></p>
+
+<p>or</p>
+
+<div class="code bash">
+<pre class="code">ps aux | grep Applications</pre>
+</div>
+
+<p>or</p>
+
+<div class="code bash">
+<pre class="code">history | grep docker</pre>
+</div>
+
+<p>This will search through your terminal history and return any lines (commands) you have run containing the string <code>docker</code>.</p>
+
+<h3 id="pipe-output-into-grep-and-grep-results-into-another-command">7.2.4 Pipe output into grep and grep results into another command</h3>
+
+<div class="code bash">
+<pre class="code">history | grep drupal | less</pre>
+</div>
+
+<p>which pipes the <code>grep</code> results (lines containing the <code>drupal</code> command from the drupal CLI,) into <code>less</code> to give a paginated result list</p>
+
+<h3 id="coloring-matched-text">7.2.5 Coloring matched text</h3>
+
+<div class="code bash">
+<pre class="code">grep --color lorem lorem_ipsum.txt</pre>
+</div>
+
+<p>highlights the search results in a different color</p>
+
+<div class="code bash">
+<pre class="code">grep --color=auto lorem lorem_ipsum.txt</pre>
+</div>
+
+<p><strong>Note that <code>--color=auto</code> will only color results if returning them to terminal window.  You don't want markup in results you pipe to another process.</strong></p>
+
+<p>In <code>.bashrc</code> you can set and export a shell variables to set the default colors you want to use as well as other options you want to set as default for grep.</p>
+
+<p><code>export GREP_OPTIONS="--color=auto"</code></p>
+
+<p><code>color=auto</code> means color is always on...</p>
+
+<p>for case insensitive search always on use:</p>
+
+<p><code>export GREP_OPTIONS="-i"</code></p>
+
+<h3 id="grep-examples">7.2.6 Grep examples</h3>
+
+<h4 id="ex-1-look-in-all-files-for-a-string-and-export-lines-containing-that-string-to-a-new-file">7.2.6.1 Ex. 1 - Look in all files for a string and export lines containing that string to a new file</h4>
+
+<div class="code bash">
+<pre class="code">grep -n &quot;YOUR SEARCH STRING&quot; * &gt; output-file</pre>
+</div>
+
+<p><code>-n</code> (include line numbers)</p>
+
+<p><code>*</code> (look in all files)</p>
+
+<h4 id="ex-2-to-look-in-a-specific-file">7.2.6.2 Ex. 2 - To look in a specific file</h4>
+
+<div class="code bash">
+<pre class="code">grep -n &quot;YOUR SEARCH STRING&quot; input-file &gt; output-file</pre>
+</div>
+
+<h4 id="ex-3-find-all-lines-containing-a-string-in-the-input-file-except-the-lines-that-contain-another-string-and-pipe-the-result-set-to-the-output-file">7.2.6.3 Ex. 3- Find all lines containing a string, in the input-file, <strong>except</strong> the lines that contain another string and pipe the result set to the output-file</h4>
+
+<div class="code bash">
+<pre class="code">grep -n &quot;test&quot; input-file | grep -v &quot;modern&quot; &gt; output-file</pre>
+</div>
+
+<p>-v (inverse switch, returns lines that don't match the condition)</p>
+
+<h4 id="ex-4-grep-from-a-set-of-input-files">7.2.6.4 Ex. 4 - Grep from a set of input files</h4>
+
+<p>Given a set of input files:  demo-1, demo-2, demo-3, demo-4, demo-5</p>
+
+<div class="code bash">
+<pre class="code">grep &quot;this&quot; demo_*</pre>
+</div>
+
+<h2 id="regex">7.3 REGEX</h2>
+
+<p><code>regex</code> is short for regular expression.  Regex is a sequence of characters that define a search pattern.</p>
+
+<p>You can use regular expressions with <code>grep</code>.</p>
+
+<h4 id="using-regular-expressions-with-grep">7.3.0.1 Using regular expressions with grep</h4>
+
+<p>Its a good idea to put quotes around the regex because some "regex symbols" and "special symbols in unix" are the same.</p>
+
+<p>When using character sets <code>[:alpha:]</code> with grep you need to put them into brackets <code>[[:alpha:]]</code> so grep knows you are trying to match these character classes and not the character set '':alpha:"</p>
+
+<p>There are basic and extended regular expressions.  When using a text editor make sure you know which one works.  In terminal you can set an option for using grep to turn the extended regex set on by default:</p>
+
+<p><code>export GREP_OPTIONS="-E"</code></p>
+
+<h4 id="example-grep-with-regex">7.3.0.2 example: grep with regex</h4>
+
+<div class="code bash">
+<pre class="code">grep &quot;foo.*bar&quot; demo_file</pre>
+</div>
+
+<p>matches lines beginning with "foo." and ending with "bar" with anything in between.</p>
+
+<h4 id="resources">7.3.0.3 Resources</h4>
+
+<p><strong><em>N.B. Regex is a whole world unto itself , consult another document for more detail.</em></strong></p>
+
+<p><a href="http://regexone.com">Regex One</a></p>
+
+<p><a href="http://regexr.com">Regexr - Online Sandbox</a></p>
+
+<p><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Guide/Regular_Expressions">Regular expressions in Javascript</a></p>
+
+<h2 id="tr">7.4 TR</h2>
+
+<p>Translating characters.  <code>tr</code> finds and replaces a string.</p>
+
+<p>The first argument to <code>tr</code> is the search string, the second argument is the replacment string</p>
+
+<div class="code bash">
+<pre class="code">echo &quot;a,b,c&quot; | tr ',' '-'</pre>
+</div>
+
+<p>Here it looks like <code>tr</code> searches the input string for <code>,</code> and replaces each one it finds with a <code>-</code> but actually...  it maps the position of the search character to the replacement character</p>
+
+<div class="code bash">
+<pre class="code">tr '123456' 'EBGDAE'</pre>
+</div>
+
+<p>For example, all instances of 1 are replaced by E, all instances of 2  are replaced by B, etc...</p>
+
+<p>Run this example to see it at work.</p>
+
+<div class="code bash">
+<pre class="code">echo &quot;The first argument is the search string, for the second is the replacment string&quot; | tr 'ag' '12345'</pre>
+</div>
+
+<p>(If the replacement set is smaller than the search set the last character of the replacement set is repeated until the necessary spaces are accounted for. (needs an example))</p>
+
+<h3 id="tr-examples">7.4.1 TR Examples</h3>
+
+<h4 id="ex-1-take-a-file-as-input">7.4.1.1 Ex. 1 - take a file as input</h4>
+
+<div class="code bash">
+<pre class="code">tr 'A-Z' 'a-z' &lt; people.txt</pre>
+</div>
+
+<p>takes the file as input and swaps uppercase alphabet for lowercase alphabet</p>
+
+<h4 id="ex-2-take-a-file-as-input-and-output-to-another-file">7.4.1.2 Ex. 2 - take a file as input and output to another file</h4>
+
+<div class="code bash">
+<pre class="code">tr ',' '\t' &lt; people.csv &gt; people.tsv</pre>
+</div>
+
+<p>replace comma with a tab in a csv delimited datafile, then output to a tab delimited file.</p>
+
+<h4 id="ex-3-delete-characters">7.4.1.3 Ex. 3 - delete characters</h4>
+
+<p>-d    (delete characters in a listed set)</p>
+
+<div class="code bash">
+<pre class="code">echo 'abc1233deee567f' | tr -d [:digit:]</pre>
+</div>
+
+<p>returns: abcdeeef</p>
+
+<h4 id="ex-4-squeeze-characters">7.4.1.4 Ex. 4 - squeeze characters</h4>
+
+<p>-s    (squeeze will delete repeats in a listed set)</p>
+
+<div class="code bash">
+<pre class="code">echo 'abc1233deee567f' | tr -s [:digit:]</pre>
+</div>
+
+<p>returns: abc123de567f</p>
+
+<h4 id="ex-5-return-the-complimentary-set">7.4.1.5 Ex. 5 - return the complimentary set</h4>
+
+<p>-c    (use complimentary set)</p>
+
+<h4 id="ex-6-delete-characters-not-in-a-listed-set">7.4.1.6 Ex. 6 - delete characters not in a listed set</h4>
+
+<div class="code bash">
+<pre class="code">echo 'abc1233deee567f' | tr -dc [:digit:]</pre>
+</div>
+
+<p>returns: 1233567</p>
+
+<h4 id="ex-7-squeeze-characters-not-in-a-listed-set">7.4.1.7 Ex. 7 - squeeze characters not in a listed set</h4>
+
+<div class="code bash">
+<pre class="code">echo 'abc1233deee567f' | tr -sc [:digit:]</pre>
+</div>
+
+<p>returns: abc1233de567f</p>
+
+<h4 id="ex-8-specify-an-argument-for-each-option">7.4.1.8 Ex. 8 - specify an argument for each option</h4>
+
+<div class="code bash">
+<pre class="code">echo 'abc1233deee567f' | tr -sd [:digit:] [:alpha:]</pre>
+</div>
+
+<p>this means: squeeze the digits and delete the alpha cahracters</p>
+
+<p>returns: 123567</p>
+
+<h4 id="ex-9-remove-all-non-printable-characters-from-a-file">7.4.1.9 Ex. 9  - remove all non-printable characters from a file</h4>
+
+<div class="code bash">
+<pre class="code">tr -dc [:print:]  &lt; file1 &gt; file2</pre>
+</div>
+
+<h4 id="ex-10-remove-all-surplus-carriage-return-and-end-of-file-characters-cleaning-windows-documents">7.4.1.10 Ex. 10 - remove all surplus carriage return and end of file characters (cleaning windows documents)</h4>
+
+<div class="code bash">
+<pre class="code">tr -d '\015\032' &lt; windows.file &gt; unix.file</pre>
+</div>
+
+<h4 id="ex-11-remove-double-spaces-from-file">7.4.1.11 Ex. 11 - remove double spaces from file</h4>
+
+<div class="code bash">
+<pre class="code">tr -s '  ' &lt; file1 &gt; file2</pre>
+</div>
+
+<h2 id="sed">7.5 SED</h2>
+
+<p>Stream editor takes a stream of input and edits it.</p>
+
+<p><strong>The sed syntax always follows this pattern</strong></p>
+
+<p><code>sed 's/a/b/'</code></p>
+
+<p>s: substitution
+a: search string
+b: replacement string</p>
+
+<div class="code bash">
+<pre class="code">echo 'upstream' | sed 's/up/down/'</pre>
+</div>
+
+<p>returns: downstream</p>
+
+<p>by default it only changes the first occurance of the search string</p>
+
+<h3 id="sed-global-replacement">7.5.1 sed: global replacement</h3>
+
+<p>adding a 'g' for global will change the action to substituting all occurances</p>
+
+<div class="code bash">
+<pre class="code">echo 'upstream and upward' | sed 's/up/down/g'</pre>
+</div>
+
+<p>returns: downstream and downward</p>
+
+<p>the delimiter can be anything you choose:</p>
+
+<div class="code bash">
+<pre class="code">sed 's/up/down/'</pre>
+</div>
+
+<p>or</p>
+
+<div class="code bash">
+<pre class="code">sed 's:up:down:'</pre>
+</div>
+
+<p>or</p>
+
+<div class="code bash">
+<pre class="code">sed 's|up|down|'</pre>
+</div>
+
+<p>You can switch to another delimiter when the search string you are using contains the default delimiter.</p>
+
+<p>When feeding a file into <code>sed</code>, each line in the file is treated as a stream and so each line will be acted upon.</p>
+
+<div class="code bash">
+<pre class="code">sed 's/pear/mango/' fruit.txt</pre>
+</div>
+
+<p><strong>Notice that sed will take a file as input without using the '&lt;' cahracter (although you can use it)</strong></p>
+
+<p>You can string multiple <code>sed</code> commands using the <code>-e</code> option</p>
+
+<p><div class="code bash">
+<pre class="code">sed -e 's/pear/mango/' -e 's/apple/mango/' fruit.txt</pre>
+</div></p>
+
+<h3 id="sed-regex">7.5.2 sed: regex</h3>
+
+<p>Regex works with <code>sed</code> in the same way that it works with <code>grep</code>.  As with <code>grep</code> you need to watch out for extended character sets (or set <code>sed</code> to use the extended regex set in <code>.bashrc</code>)</p>
+
+<p>In the following examples we will set <code>sed</code> to use extended regex set using</p>
+
+<p><code>-E</code></p>
+
+<h3 id="sed-regex-back-references">7.5.3 sed: regex back-references</h3>
+
+<p>Back-references are part of regular expressions and <code>sed</code> makes good use of them</p>
+
+<p><div class="code bash">
+<pre class="code">echo 'daytime' | sed -E 's/(...)time/\1light/'</pre>
+</div>returns: daylight</p>
+
+<p>You can define up to 9 back-references in the search string.  That is, up to 9 sets of parenthesis containing a search string.  These will be referenced by the numbers <code>\1</code> through <code>\9</code> in order to replace any occurance of the search string with the appropriate replacement string.</p>
+
+<p><div class="code bash">
+<pre class="code">echo 'Dan Stevens' | sed -E 's/([A-Za-z]+) ([A-Za-z]+)/\2, \1/'</pre>
+</div>Returns:  Stevens, Dan</p>
+
+<p>You could run that over an entire file.</p>
+
+<h2 id="cut">7.6 CUT</h2>
+
+<p>Cutting select text portions.  <code>Cut</code> allows you to cut one of three options:</p>
+
+<div class="table" id="table-7-3">
+
+    <table>
+<thead>
+<tr>
+  <th>options</th>
+  <th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>-c</td>
+  <td>characters</td>
+</tr>
+<tr>
+  <td>-b</td>
+  <td>bytes</td>
+</tr>
+<tr>
+  <td>-f</td>
+  <td>fields</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<h4 id="non-de-limited-files">7.6.0.1 Non de-limited files</h4>
+
+<p><div class="code bash">
+<pre class="code">cut -c 1-10 &lt; mock_lorem_ipsum.txt</pre>
+</div>Cuts a column of data in the file defined by position of characters 1-10 on each line</p>
+
+<p>you can cut multiple columns</p>
+
+<p><div class="code bash">
+<pre class="code">cut -c 1-10,34-37,47- &lt; mock_lorem_ipsum.txt</pre>
+</div>NB</p>
+
+<p>When working with non-delimited files you define the columns you want to cut by indicating a range of characters (5-19)</p>
+
+<h4 id="de-limited-files">7.6.0.2 De-limited files</h4>
+
+<p>But if the file is delimited all you need to do is indicate the column number and use the <code>-f</code>  fields option</p>
+
+<p><div class="code bash">
+<pre class="code">cut -f 2,3 &lt; mock_tab_data.txt</pre>
+</div>cuts out just columns 2 and 6</p>
+
+<p>you can specify the delimiter with the -d option</p>
+
+<p><div class="code bash">
+<pre class="code">cut -f 2,6 -d &quot;,&quot; &lt; presidents.csv</pre>
+</div></p>
+
+<blockquote>
+  <p>MacOS Note!</p>
+  
+  <p>When using Terminal on MacOS there is a trick to entering the tab character.</p>
+  
+  <p>Hold down <code>ctl + v</code> and then quicky press <code>tab</code>.  Takes a little practice...</p>
+</blockquote>
+
+<h2 id="diff">7.7 DIFF</h2>
+
+<p>Comparing files</p>
+
+<p><div class="code bash">
+<pre class="code">diff mock_lorem_start.txt mock_lorem_edited.txt</pre>
+</div>
+In the outout of this command</p>
+
+<p><code>&gt;</code> indicates an insertion.</p>
+
+<p><code>&lt;</code> indicates a deletion.</p>
+
+<div class="table" id="table-7-4">
+
+    <table>
+<thead>
+<tr>
+  <th>options</th>
+  <th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>-i</td>
+  <td>Case insensitive</td>
+</tr>
+<tr>
+  <td>-b</td>
+  <td>Ignor changes to blank character</td>
+</tr>
+<tr>
+  <td>-w</td>
+  <td>Ignor all whitespace</td>
+</tr>
+<tr>
+  <td>-B</td>
+  <td>Ignor blank lines</td>
+</tr>
+<tr>
+  <td>-r</td>
+  <td>recursively compare directories</td>
+</tr>
+<tr>
+  <td>-s</td>
+  <td>show identical files</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<h3 id="diff-alternative-formats">7.7.1 diff: Alternative formats</h3>
+
+<div class="table" id="table-7-5">
+
+    <table>
+<thead>
+<tr>
+  <th>options</th>
+  <th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>-c</td>
+  <td>Copied context</td>
+</tr>
+<tr>
+  <td>-u</td>
+  <td>Unified context</td>
+</tr>
+<tr>
+  <td>-y</td>
+  <td>side-by-side</td>
+</tr>
+<tr>
+  <td>-q</td>
+  <td>Only whether files differ</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<h3 id="using-a-text-editor-to-view-diffs">7.7.2 Using a text editor to view diffs</h3>
+
+<p>Do a search on your mac for FileMerge.  It comes with Apple's Developer Tools.</p>
+
+<p>It's not pretty but gets the job done.</p>
+
+<h2 id="xargs">7.8 XARGS</h2>
+
+<p>Passing <strong>an argument list</strong> to commands</p>
+
+<p><code>xargs</code> is short for "execute as arguments".</p>
+
+<p><code>xargs</code> parses an input stream into items and then it loops through each item in that list and passes it to a command.</p>
+
+<p>Here's an example</p>
+
+<p><div class="code bash"></p>
+
+<pre class="code">wc lorem_ipsum.txt</pre>
+
+<p></div>
+Word counts returns:</p>
+
+<div class="code bash">
+<pre class="code">3077   37859  256409 mock_lorem_ipsum.txt</pre>
+</div>
+
+<p>3077 - newline count</p>
+
+<p>37859 - word count</p>
+
+<p>256409 - byte count</p>
+
+<div class="code bash">
+<pre class="code">echo 'lorem_ipsum.txt' | wc</pre>
+</div>
+
+<p>Word count returns</p>
+
+<div class="code bash">
+<pre class="code">       1       1      21</pre>
+</div>
+
+<p>Because the string <code>'mock_lorem_ipsum.txt'</code> is being passed to <code>wc</code> instead of the file.</p>
+
+<p>To pass the file to <code>wc</code> as an argument use <code>xargs</code>.</p>
+
+<div class="code bash">
+<pre class="code">echo 'lorem_ipsum.txt' | xargs wc</pre>
+</div>
+
+<p>Returns the word count stats for the file (ie: the file is passed into the command wc as an argument)</p>
+
+<p>you can use the -t argument to see what it does</p>
+
+<div class="code bash">
+<pre class="code">echo 'lorem_ipsum.txt' | xargs -t wc</pre>
+</div>
+
+<p><code>-t</code> outputs the commands as they are run</p>
+
+<p>Now try to pass multiple arguments into <code>wc</code></p>
+
+<div class="code bash">
+<pre class="code">echo 'lorem_1.txt lorem_2.txt' | xargs -t wc</pre>
+</div>
+
+<p>You can see that first one file was passed as an argument into <code>wc</code> then the second file was passed into <code>wc</code> as an argument.</p>
+
+<p>The results for each run of the command are listed one after another.  Rather conviently <code>wc</code> also returns totals.</p>
+
+<p>If you want it to loop through x number of arguments you can use the <code>-n</code> option</p>
+
+<div class="code bash">
+<pre class="code">echo 'lorem_1.txt lorem_2.txt' | xargs -t -n1 wc</pre>
+</div>
+
+<p>Here <code>-n</code> is set to 1.  So, <code>wc</code> runs with argument 1 then loops and runs again with argument2, etc...</p>
+
+<p>To see this clearly run:</p>
+
+<div class="code bash">
+<pre class="code">echo 1 2 3 4 | xargs -t -n2</pre>
+</div>
+
+<p><code>echo</code> is run first with arguments 1 and 2
+<code>echo</code> is then run again with arguments 3 and 4</p>
+
+<p>Here's another example:</p>
+
+<div class="code bash">
+<pre class="code">cat mock_companies.csv | xargs -I {} echo &quot;Buy stock in: {}&quot;</pre>
+</div>
+
+<p><code>-I</code> specifies a placeholder for the looped output from cat.  so the result is something like</p>
+
+<p>Buy stock in: Trilia
+Buy stock in: Cogilith
+Buy stock in: Centidel
+etc...</p>
+
+<p>When passing filenames as arguments there is an issue with names containing a space.  <code>xargs</code> may see each word in the name as a new argument.  use the <code>-O</code> option</p>
+
+<div class="code bash">
+<pre class="code">ls ~/Library/ | grep 'A.*' | xargs -0 -n1</pre>
+</div>
+
+<h3 id="xargs-examples">7.8.1 xargs Examples</h3>
+
+<h4 id="example-1-take-a-list-of-company-names-and-make-a-directory-called-companies-on-the-desktop-containing-a-sub-directory-for-each-company-in-the-list">7.8.1.1 Example 1 - Take a list of company names and make a directory called "Companies" on the desktop containing a sub-directory for each company in the list</h4>
+
+<div class="code bash">
+<pre class="code">cat mock_companies.csv | sort | uniq | xargs -I {} mkdir -p ~/Desktop/Companies/{}</pre>
+</div>
+ 
+                            </div>
+        </div>
+    </div>     </div>  
+<footer class="row">
+    <div class="columns medium-12 topspace">
+
+        <div class=" footer-top align-right text-right">
+            <p class="copywrite">Copywrite © 2017</p>
+        </div>
+
+        <div class="footer-middle">
+            <div class="row">
+                <div class="small-12 medium-6 large-4 columns">
+                    <a href="../../../../index.html">    
+                        <img class="logo" src="../../../../assets/img/robo-1.png"  alt="company logo">
+                    </a>                    <div class="" id="name-slogan"> 
+                        <h1 class="name"><a href="../../../../index.html">SMERTH</a><ul class="inline-list social">
+                       <li><a href="#"><i class="fi-social-facebook"></i></a></li>
+                       <li><a href="#"><i class="fi-social-twitter"></i></a></li>
+                       <li><a href="#"><i class="fi-social-linkedin"></i></a></li>
+                       <li><a href="#"><i class="fi-social-github"></i></a></li>
+                    </ul></h1>
+                    <p class="tagline">Full-stack Web Developer</p>
+                        <h2 class="slogan">building with <span class="percent">100%</span> re-cycled electrons.</h2>
+                    </div>
+                    <ul class="footer-menu no-bullet inline-dot-list">
+                        <li><a href="../../../../projects.html">Projects</a></li>
+                        <li><a href="../../../../content/books/books.html">Notes</a></li>
+                        <li><a href="../../../../screenshots.html">Screenshots</a></li>
+                        <li><a href="../../../../about/book/chapter-1.html">About</a></li>
+                        <li><a href="../../../../timeline.html">Timeline</a></li>
+                        <!--<li><a href="../../../../hp-singlepage-scroll.html">fpage scroll</a></li>
+                        <li><a href="../../../../hp-desk-foundation.html">desk foundation</a></li>-->                    </ul>
+                </div>
+                <div class="small-12 medium-6 large-4 columns align-middle">
+                    <ul class="contact">
+                      <li><p><i class="fi-marker"></i>address</p></li>
+                      <li><p><i class="fi-telephone"></i>telephone</p></li>
+                      <li><p><i class="fi-mail"></i>email</p></li>
+                    </ul>                </div>
+                <div class=" small-12 medium-12 large-4 columns align-middle">
+                    <blockquote class="quote">
+                        <p>Outside of a dog, a book is a man's best friend.</p>
+                        <p>Inside of a dog it's too dark to read.</p>
+                        <cite>Groucho Marx</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="row">
+                <div class="large-12 columns text-center align-middle">
+                    <ul class="no-bullet inline-dot-list">
+                        <li><a href="../../../../index.html">London</a></li>
+                        <li><a href="../../../../projects.html">Vancouver</a></li>
+                        <li><a href="../../../../books.html">Tokyo</a></li>
+                        <li><a href="../../../../screenshots.html">Beijing</a></li>
+                        <li><a href="../../../../index.html">Hong Kong</a></li>
+                        <li><a href="../../../../projects.html">Kuala Lumpur</a></li>
+                        <li><a href="../../../../books.html">Singapore</a></li>
+                        <li><a href="../../../../screenshots.html">Tuktoyaktuk</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer><script src="../../../../assets/js/app.js"></script>
+
+</body>
+
+</html>
